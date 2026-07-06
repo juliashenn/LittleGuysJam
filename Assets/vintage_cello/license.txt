@@ -1,0 +1,11 @@
+Model Information:
+* title:	Vintage Cello
+* source:	https://sketchfab.com/3d-models/vintage-cello-fe24f4e2a1514cf088744316d7c7e0e7
+* author:	k4o7sprectre (https://sketchfab.com/k4o7sprectre)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Vintage Cello" (https://sketchfab.com/3d-models/vintage-cello-fe24f4e2a1514cf088744316d7c7e0e7) by k4o7sprectre (https://sketchfab.com/k4o7sprectre) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

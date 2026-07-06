@@ -1,0 +1,11 @@
+Model Information:
+* title:	Flute
+* source:	https://sketchfab.com/3d-models/flute-79f54661a9e44499b16c11a52f3ae4a8
+* author:	Dmitrijus Polonskis (https://sketchfab.com/3dmi_pol)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Flute" (https://sketchfab.com/3d-models/flute-79f54661a9e44499b16c11a52f3ae4a8) by Dmitrijus Polonskis (https://sketchfab.com/3dmi_pol) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

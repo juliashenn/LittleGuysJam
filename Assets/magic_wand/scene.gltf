@@ -1,0 +1,440 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 377,
+      "max": [
+        0.7937698364257813,
+        0.7922745943069458,
+        90.09784698486328
+      ],
+      "min": [
+        -0.9494922161102295,
+        -0.6935831904411316,
+        23.06511878967285
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 4524,
+      "componentType": 5126,
+      "count": 377,
+      "max": [
+        0.9999378323554993,
+        0.9999603033065796,
+        0.9994852542877197
+      ],
+      "min": [
+        -0.9999997615814209,
+        -0.9999842643737793,
+        -0.9996505975723267
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 377,
+      "max": [
+        0.9999643564224243,
+        0.9997555017471313,
+        0.999219536781311,
+        1.0
+      ],
+      "min": [
+        -0.999992847442627,
+        -0.9999995231628418,
+        -0.9991366267204285,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 377,
+      "max": [
+        0.1302764117717743,
+        0.9826789498329163
+      ],
+      "min": [
+        0.003925779834389687,
+        0.022679036483168602
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1932,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 9048,
+      "componentType": 5126,
+      "count": 350,
+      "max": [
+        0.8417943120002747,
+        0.7360961437225342,
+        81.09107208251953
+      ],
+      "min": [
+        -0.7192005515098572,
+        -0.7433330416679382,
+        79.48522186279297
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 13248,
+      "componentType": 5126,
+      "count": 350,
+      "max": [
+        0.999505877494812,
+        0.9994901418685913,
+        0.9214666485786438
+      ],
+      "min": [
+        -0.9995290040969849,
+        -0.9996175765991211,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 6032,
+      "componentType": 5126,
+      "count": 350,
+      "max": [
+        0.9999920129776001,
+        0.999913215637207,
+        0.9971391558647156,
+        1.0
+      ],
+      "min": [
+        -0.999993622303009,
+        -0.9999380707740784,
+        -0.9972944259643555,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 3016,
+      "componentType": 5126,
+      "count": 350,
+      "max": [
+        0.14307387173175812,
+        0.8338872790336609
+      ],
+      "min": [
+        0.014347566291689873,
+        0.019999999552965164
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 7728,
+      "componentType": 5125,
+      "count": 1872,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "BozhidarKN (https://sketchfab.com/bojidarkn)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/magic-wand-53220e5960e2499ca08c379cd601b62d",
+      "title": "Magic Wand"
+    },
+    "generator": "Sketchfab-12.65.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 15216,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5816,
+      "byteOffset": 15216,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 17448,
+      "byteOffset": 21032,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11632,
+      "byteOffset": 38480,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 50112,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/wand_baseColor.png"
+    },
+    {
+      "uri": "textures/wand_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/wand_normal.png"
+    },
+    {
+      "uri": "textures/rope_baseColor.png"
+    },
+    {
+      "uri": "textures/rope_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/rope_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "wand",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "rope",
+      "normalTexture": {
+        "index": 5
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "wand_wand_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "wand_rope_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "wand.FBX"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        6.248230014331868e-08,
+        -1.429428458213805,
+        -1.586984386363406e-16,
+        0.0,
+        1.586984386363406e-16,
+        0.0,
+        -1.4294284582138062,
+        0.0,
+        0.9999999999999992,
+        4.3711386843448e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "wand"
+    },
+    {
+      "children": [
+        5,
+        6
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -47.24409484863281,
+        1.0
+      ],
+      "name": "Object_4"
+    },
+    {
+      "mesh": 0,
+      "name": "wand_wand_0"
+    },
+    {
+      "mesh": 1,
+      "name": "wand_rope_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}

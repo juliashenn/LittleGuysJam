@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cipxjvswyl3qc"]
+
+[ext_resource type="Script" uid="uid://xlc02rfrk1m3" path="res://Scripts/grabbable.gd" id="1_bhcon"]
+
+[node name="Grabbable" type="RigidBody3D" unique_id=901793431 groups=["grabbable"]]
+script = ExtResource("1_bhcon")

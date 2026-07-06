@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dx8wemxgnq4pv"]
+
+[ext_resource type="Script" uid="uid://ouwpvdtt6ufy" path="res://Scripts/wand.gd" id="1_bcswe"]
+[ext_resource type="PackedScene" uid="uid://d3vualy7vysgi" path="res://Assets/magic_wand/scene.gltf" id="1_qsrja"]
+[ext_resource type="Shader" uid="uid://bbwikcmfirh0g" path="res://Scripts/StrictShader.gdshader" id="3_spax2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gntrk"]
+shading_mode = 0
+albedo_color = Color(0.44044712, 0.77909577, 1, 0.735)
+refraction_enabled = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_c7e87"]
+material = SubResource("StandardMaterial3D_gntrk")
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.05
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5jww0"]
+render_priority = 0
+shader = ExtResource("3_spax2")
+shader_parameter/base_color = Color(0.21461159, 0.7839094, 0.99999994, 1)
+shader_parameter/shadow_color = Color(0.23441732, 0.39153534, 0.9316666, 1)
+shader_parameter/highlight_color = Color(1, 0.95, 0.8, 1)
+shader_parameter/shadow_threshold = 0.4
+shader_parameter/highlight_threshold = 0.85
+shader_parameter/master_alpha = 1.0
+shader_parameter/light_direction = Vector3(1, 2, 1)
+
+[node name="wand" type="Node3D" unique_id=1417012209]
+script = ExtResource("1_bcswe")
+
+[node name="Sketchfab_Scene" parent="." unique_id=989830512 instance=ExtResource("1_qsrja")]
+transform = Transform3D(-4.3711387e-10, 0.01, 0, -0.01, -4.3711387e-10, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="BeamStart" type="Node3D" parent="." unique_id=1461536772]
+transform = Transform3D(0.99999994, -0.00027681983, 0, 0.00027681983, 0.99999994, 0, 0, 0, 1, 0.004352778, 0.24605812, 0.0075147077)
+
+[node name="Beam" type="MeshInstance3D" parent="BeamStart" unique_id=502478823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2046658e-06, 0.024617761, -0.0075147077)
+mesh = SubResource("CylinderMesh_c7e87")
+surface_material_override/0 = SubResource("ShaderMaterial_5jww0")

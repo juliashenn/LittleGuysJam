@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bnawt3u1gmuv8"]
+
+[ext_resource type="PackedScene" uid="uid://caqj217q8yhw" path="res://Assets/gazebo/gazeboEdit.glb" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://bty0aodt8jxnf" path="res://Scenes/water_drop.tscn" id="2_8gbba"]
+[ext_resource type="Shader" uid="uid://dik4ajeh61bsn" path="res://Scripts/shader.gdshader" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://d0k2to4jffc82" path="res://Scenes/Player.tscn" id="3_8gbba"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kry3j"]
+sky_top_color = Color(0.49803922, 0.70980394, 0.96862745, 1)
+sky_horizon_color = Color(0.9372549, 0.8392157, 0.76862746, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_21xkr"]
+sky_material = SubResource("ProceduralSkyMaterial_kry3j")
+
+[sub_resource type="Environment" id="Environment_6bp64"]
+background_mode = 2
+sky = SubResource("Sky_21xkr")
+glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_344ge"]
+render_priority = 0
+shader = ExtResource("2_jjvhh")
+shader_parameter/base_color = Color(0.5847179, 0.9676589, 0.5116678, 1)
+shader_parameter/shadow_color = Color(0.37254903, 0.42352942, 0.5568628, 1)
+shader_parameter/highlight_color = Color(0.5800856, 0.8192399, 0.53436303, 1)
+shader_parameter/shadow_threshold = 0.7
+shader_parameter/highlight_threshold = 0.85
+shader_parameter/master_alpha = 0.9
+
+[node name="Main" type="Node3D" unique_id=596536012]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=187107331]
+transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, 0.47321618, -0.54837286, 0.68945897, -0.16145131, 0.715393, 0.6798134, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 500.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1637429315]
+environment = SubResource("Environment_6bp64")
+
+[node name="gazeboEdit" parent="." unique_id=1063273228 instance=ExtResource("1_bo1nx")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="Gazebo" parent="gazeboEdit" index="0" unique_id=566013751]
+surface_material_override/1 = SubResource("ShaderMaterial_344ge")
+
+[node name="WaterDrop" parent="." unique_id=738370105 instance=ExtResource("2_8gbba")]
+
+[node name="CharacterBody3D" parent="." unique_id=841984925 instance=ExtResource("3_8gbba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17270482, 4.7769804)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=514136838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.034)
+use_collision = true
+size = Vector3(20, 0.001, 20)
+
+[editable path="gazeboEdit"]
+[editable path="WaterDrop"]
+[editable path="WaterDrop/waterBlob"]
+[editable path="WaterDrop/Grabbable"]
