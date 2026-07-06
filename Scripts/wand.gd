@@ -4,36 +4,39 @@ class_name Wand
 @onready var beam: MeshInstance3D = $BeamStart/Beam
 @onready var beam_start: Node3D = $BeamStart
 
-@export var max_length = 200.0
-@export var beam_speed = 175.0
+@export var max_length = 10.0
+@export var beam_speed = 20.0
 
 var is_casting = false
 var target_point: Vector3
 
+var original_rotation: Vector3
+
+func _ready() -> void:
+	original_rotation = rotation
+
 func _process(delta: float) -> void:
 	if is_casting:
 		beam.visible = true
-
+		print(target_point)
 		var direction = target_point - beam_start.global_position
+		print(direction)
 		var distance = clamp(direction.length(), 0.0, max_length)
-
+		print(distance)
+#
 		beam.mesh.height = move_toward(beam.mesh.height, distance, delta * beam_speed)
-		#beam.scale.y = move_toward(beam.scale.y, distance, delta * beam_speed)
-		beam.position = Vector3(0, beam.mesh.height / 2.0, 0)
-
-		if direction.length() > 0.01:
-			var dir_normalized = direction.normalized()
-			var right = dir_normalized.cross(Vector3.UP)
-			if right.length() < 0.01:
-				right = dir_normalized.cross(Vector3.RIGHT)
-			right = right.normalized()
-			var up = right.cross(dir_normalized)
-			beam_start.global_transform.basis = Basis(right, dir_normalized, up).orthonormalized()
+		
+		if distance > 0.01:
+			beam_start.look_at(target_point, Vector3.UP)
+			beam_start.rotate_object_local(-Vector3.RIGHT, PI / 2)
 	else:
-		beam.mesh.height = move_toward(beam.mesh.height, 0.0, delta * beam_speed)
-		beam.position = Vector3(0, beam.mesh.height / 2.0, 0)
 		if beam.mesh.height < 0.05:
 			beam.visible = false
+			beam_start.rotation = Vector3.ZERO
+			return
+		beam.mesh.height = lerp(beam.mesh.height, 0.0, delta * beam_speed)
+	beam.position = Vector3(0, beam.mesh.height / 2.0, 0)
+	
 
 func set_is_casting(val: bool):
 	is_casting = val

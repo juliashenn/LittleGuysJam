@@ -31,7 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8072772, 0)
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1282670836]
 script = ExtResource("2_gntrk")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D" unique_id=1752761417]
+[node name="Crosshair" type="MeshInstance3D" parent="Head/Camera3D" unique_id=1752761417]
 transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 0, 0, -0.498609)
 mesh = SubResource("SphereMesh_c7e87")
 surface_material_override/0 = SubResource("StandardMaterial3D_j1lyr")
