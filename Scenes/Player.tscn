@@ -14,7 +14,7 @@ points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j1lyr"]
 shading_mode = 0
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=841984925]
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=841984925 groups=["player"]]
 script = ExtResource("1_rpqav")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1449095299]
@@ -38,3 +38,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_j1lyr")
 
 [node name="wand" parent="Head/Camera3D" unique_id=1417012209 instance=ExtResource("3_gntrk")]
 transform = Transform3D(-0.34520084, -0.25963485, -0.9019015, 0.8960344, 0.19471529, -0.39900938, 0.2792107, -0.94587266, 0.16542593, 0.6898534, -0.42356062, -1.093617)
+
+[node name="GrabPoint" type="Marker3D" parent="Head/Camera3D" unique_id=1784595468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.731)

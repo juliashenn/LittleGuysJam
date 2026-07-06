@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 
 var speed 
 const WALK_SPEED = 5.0
@@ -15,6 +16,8 @@ var tbob = 0.0
 #fov
 const BASE_FOV = 75.0
 const FOV_CHANGE = 0.75
+
+@onready var grab_point: Marker3D = $Head/Camera3D/GrabPoint
 
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D

@@ -4,6 +4,8 @@ extends Camera3D
 var ray_range = 2000.0
 var holding_cast = false
 
+var grabbed_obj: Grabbable
+
 func _ready() -> void:
 	pass
 
@@ -11,7 +13,7 @@ func _process(delta: float) -> void:
 	if holding_cast:
 		var target = Get_Camera_Collision()
 		if target:
-			var local_target = to_local(target)
+			var local_target = to_local(target.get("position"))
 			local_target.x = clamp(local_target.x,  -5.0, 5.0)
 			local_target.y = clamp(local_target.y, -5.0, 5.0)
 			local_target.z = clamp(local_target.z, -wand.max_length, -0.5)
@@ -26,9 +28,15 @@ func _input(event):
 	if event.is_action_released("cast"):
 		holding_cast = false
 		wand.set_is_casting(false)
+		if grabbed_obj:
+			grabbed_obj.drop()
+			grabbed_obj = null
 	if event.is_action_pressed("cast"):
 		holding_cast = true
 		wand.set_is_casting(true)
+		var hit = Get_Camera_Collision()
+		if hit:
+			handle_grab(hit.collider)
 		
 func Get_Camera_Collision():
 	var center = get_viewport().get_size()/2
@@ -45,5 +53,13 @@ func Get_Camera_Collision():
 	else:
 		print("Nothing")
 		
-	return intersection.get("position")
+	return intersection
+	
+	
+func handle_grab(collider: Node3D):
+	if collider is Grabbable and grabbed_obj == null:
+		grabbed_obj = collider as Grabbable
+		grabbed_obj.grab()
+	# here ill freeze the physics and tell it to move with local so that its moves and rotates with player
+	
 	

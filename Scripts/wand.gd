@@ -16,6 +16,9 @@ func _ready() -> void:
 	original_rotation = rotation
 
 func _process(delta: float) -> void:
+	handle_beam(delta)
+	
+func handle_beam(delta: float):
 	if is_casting:
 		beam.visible = true
 		print(target_point)
@@ -34,10 +37,9 @@ func _process(delta: float) -> void:
 			beam.visible = false
 			beam_start.rotation = Vector3.ZERO
 			return
-		beam.mesh.height = lerp(beam.mesh.height, 0.0, delta * beam_speed)
+		beam.mesh.height = move_toward(beam.mesh.height, 0.0, delta * beam_speed)
 	beam.position = Vector3(0, beam.mesh.height / 2.0, 0)
 	
-
 func set_is_casting(val: bool):
 	is_casting = val
 

@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://bty0aodt8jxnf"]
 
+[ext_resource type="Script" uid="uid://xlc02rfrk1m3" path="res://Scripts/grabbable.gd" id="1_gf4bk"]
 [ext_resource type="PackedScene" uid="uid://bp5cx6brcy8rp" path="res://Assets/simple_slime_creature/waterBlob.glb" id="1_kkpwa"]
 [ext_resource type="Shader" uid="uid://dik4ajeh61bsn" path="res://Scripts/shader.gdshader" id="2_gf4bk"]
-[ext_resource type="PackedScene" uid="uid://cipxjvswyl3qc" path="res://Scenes/grabbable.tscn" id="3_gf4bk"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_gf4bk"]
+height = 0.62719727
+radius = 0.38183594
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8t8f3"]
 render_priority = 0
@@ -14,22 +18,17 @@ shader_parameter/shadow_threshold = 0.4
 shader_parameter/highlight_threshold = 0.995
 shader_parameter/master_alpha = 0.4
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c7e87"]
-radius = 0.42852783
-height = 0.85705566
+[node name="WaterDrop" type="RigidBody3D" unique_id=1114200198 groups=["grabbable"]]
+script = ExtResource("1_gf4bk")
 
-[node name="WaterDrop" type="Node3D" unique_id=738370105]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2023799353 groups=["grabbable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08400741, 0)
+shape = SubResource("CylinderShape3D_gf4bk")
 
 [node name="waterBlob" parent="." unique_id=1684066815 instance=ExtResource("1_kkpwa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.27335343, 0)
 
 [node name="Inside_phong1_0" parent="waterBlob/Sketchfab_model/ce61cdca058b42bbae22e8500a011400_fbx/RootNode/Slime/Inside" parent_id_path=PackedInt32Array(1684066815, 1327462236) index="0" unique_id=63071338]
 surface_material_override/0 = SubResource("ShaderMaterial_8t8f3")
 
-[node name="Grabbable" parent="." unique_id=901793431 instance=ExtResource("3_gf4bk")]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Grabbable" unique_id=2023799353 groups=["grabbable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.378479, 0)
-shape = SubResource("CapsuleShape3D_c7e87")
-
 [editable path="waterBlob"]
-[editable path="Grabbable"]
