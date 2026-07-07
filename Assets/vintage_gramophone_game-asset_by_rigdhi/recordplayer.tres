@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://xgjw5o30p50m"]
+
+[ext_resource type="Texture2D" uid="uid://cxgq7wydbha3d" path="res://Assets/vintage_gramophone_game-asset_by_rigdhi/textures/recordplayer_baseColor.png" id="1_201s5"]
+[ext_resource type="Texture2D" uid="uid://cq8ndtgkn1tcn" path="res://Assets/vintage_gramophone_game-asset_by_rigdhi/textures/recordplayer_metallicRoughness.png" id="2_mgn35"]
+[ext_resource type="Texture2D" uid="uid://bqkwmiteccitd" path="res://Assets/vintage_gramophone_game-asset_by_rigdhi/textures/recordplayer_normal.png" id="3_ty6bj"]
+
+[resource]
+resource_name = "recordplayer"
+cull_mode = 2
+diffuse_mode = 3
+albedo_texture = ExtResource("1_201s5")
+metallic = 0.45
+metallic_specular = 0.24
+metallic_texture = ExtResource("2_mgn35")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_mgn35")
+roughness_texture_channel = 1
+emission_energy_multiplier = 2.4868972
+normal_enabled = true
+normal_texture = ExtResource("3_ty6bj")
+metadata/_gltf_primary_texture_coord = 0

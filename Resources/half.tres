@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Melody" format=3 uid="uid://djtr2gw5nnbi"]
+
+[ext_resource type="Script" uid="uid://cowjt4alkq2d0" path="res://Resources/Note.gd" id="1_ffeym"]
+[ext_resource type="Script" uid="uid://bytk5o2omahjl" path="res://Resources/Melody.gd" id="2_jm3va"]
+[ext_resource type="Resource" uid="uid://hiy3n1m2leo7" path="res://Resources/HalfNotes/F#3 H.tres" id="2_yq3v2"]
+[ext_resource type="Resource" uid="uid://0lsl5fb3gnxg" path="res://Resources/HalfNotes/A3 H.tres" id="3_xvi2d"]
+[ext_resource type="Resource" uid="uid://c4iryqi4htk42" path="res://Resources/HalfNotes/D3 H.tres" id="4_g0aih"]
+[ext_resource type="Resource" uid="uid://c1vlwq6h1hmf1" path="res://Resources/HalfNotes/D4 H.tres" id="5_2csfu"]
+[ext_resource type="Resource" uid="uid://cixpqm1ehpqpl" path="res://Resources/HalfNotes/C#4 H.tres" id="6_ngr6p"]
+[ext_resource type="Resource" uid="uid://dssrp1hjsyekm" path="res://Resources/HalfNotes/E4 H.tres" id="7_0bhca"]
+
+[resource]
+script = ExtResource("2_jm3va")
+notes = Array[ExtResource("1_ffeym")]([ExtResource("2_yq3v2"), ExtResource("3_xvi2d"), ExtResource("4_g0aih"), ExtResource("5_2csfu"), ExtResource("6_ngr6p"), ExtResource("7_0bhca"), ExtResource("5_2csfu")])
+metadata/_custom_type_script = "uid://bytk5o2omahjl"

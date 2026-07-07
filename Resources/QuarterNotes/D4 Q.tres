@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Note" format=3 uid="uid://bsaif8lqgys7r"]
+
+[ext_resource type="Script" uid="uid://cowjt4alkq2d0" path="res://Resources/Note.gd" id="1_mrmsf"]
+
+[resource]
+script = ExtResource("1_mrmsf")
+file = "res://Sound/Notes/Quarter/D4 Q.wav"
+metadata/_custom_type_script = "uid://cowjt4alkq2d0"

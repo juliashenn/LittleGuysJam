@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Melody" format=3 uid="uid://hsvn73w4rc6t"]
+
+[ext_resource type="Script" uid="uid://cowjt4alkq2d0" path="res://Resources/Note.gd" id="1_66xnw"]
+[ext_resource type="Script" uid="uid://bytk5o2omahjl" path="res://Resources/Melody.gd" id="2_qsnol"]
+[ext_resource type="Resource" uid="uid://bsaif8lqgys7r" path="res://Resources/QuarterNotes/D4 Q.tres" id="2_v7u24"]
+[ext_resource type="Resource" uid="uid://csspy7mdln4v3" path="res://Resources/QuarterNotes/E4 Q.tres" id="3_hb243"]
+[ext_resource type="Resource" uid="uid://ct58qkjrai5xx" path="res://Resources/QuarterNotes/F#4 Q.tres" id="4_w3klv"]
+[ext_resource type="Resource" uid="uid://q1ol2gb1v4vi" path="res://Resources/QuarterNotes/G4 Q.tres" id="5_kpjdv"]
+
+[resource]
+script = ExtResource("2_qsnol")
+notes = Array[ExtResource("1_66xnw")]([ExtResource("2_v7u24"), ExtResource("3_hb243"), ExtResource("4_w3klv"), ExtResource("5_kpjdv")])
+file = "res://Sound/tutorial.wav"
+metadata/_custom_type_script = "uid://bytk5o2omahjl"

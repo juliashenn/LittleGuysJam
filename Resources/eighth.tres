@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Melody" format=3 uid="uid://dnjubstbpseij"]
+
+[ext_resource type="Script" uid="uid://cowjt4alkq2d0" path="res://Resources/Note.gd" id="1_yglw5"]
+[ext_resource type="Resource" uid="uid://bsaif8lqgys7r" path="res://Resources/QuarterNotes/D4 Q.tres" id="2_cc4qr"]
+[ext_resource type="Script" uid="uid://bytk5o2omahjl" path="res://Resources/Melody.gd" id="2_jwsqp"]
+[ext_resource type="Resource" uid="uid://csspy7mdln4v3" path="res://Resources/QuarterNotes/E4 Q.tres" id="3_canj6"]
+[ext_resource type="Resource" uid="uid://ct58qkjrai5xx" path="res://Resources/QuarterNotes/F#4 Q.tres" id="4_pn6sd"]
+[ext_resource type="Resource" uid="uid://bhbd14np4ymk0" path="res://Resources/EighthNotes/D4 E.tres" id="5_7nhuc"]
+[ext_resource type="Resource" uid="uid://bsqqrmn13gj0e" path="res://Resources/EighthNotes/E4 E.tres" id="6_refrb"]
+[ext_resource type="Resource" uid="uid://cpldmk0qc8hjg" path="res://Resources/EighthNotes/F#4 E.tres" id="7_ensnd"]
+
+[resource]
+script = ExtResource("2_jwsqp")
+notes = Array[ExtResource("1_yglw5")]([ExtResource("2_cc4qr"), ExtResource("3_canj6"), ExtResource("4_pn6sd"), ExtResource("2_cc4qr"), ExtResource("5_7nhuc"), ExtResource("6_refrb"), ExtResource("7_ensnd"), ExtResource("6_refrb"), ExtResource("7_ensnd"), ExtResource("6_refrb"), ExtResource("7_ensnd"), ExtResource("6_refrb"), ExtResource("2_cc4qr"), ExtResource("3_canj6"), ExtResource("4_pn6sd"), ExtResource("2_cc4qr")])
+metadata/_custom_type_script = "uid://bytk5o2omahjl"

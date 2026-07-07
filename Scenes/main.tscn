@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bty0aodt8jxnf" path="res://Scenes/water_drop.tscn" id="2_8gbba"]
 [ext_resource type="Shader" uid="uid://dik4ajeh61bsn" path="res://Scripts/shader.gdshader" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://d0k2to4jffc82" path="res://Scenes/Player.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://rq8w5nybu10x" path="res://Scenes/recorder.tscn" id="5_kry3j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kry3j"]
 sky_top_color = Color(0.49803922, 0.70980394, 0.96862745, 1)
@@ -45,6 +46,7 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
 surface_material_override/1 = SubResource("ShaderMaterial_344ge")
 
 [node name="WaterDrop" parent="." unique_id=738370105 instance=ExtResource("2_8gbba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80400765, 0)
 
 [node name="CharacterBody3D" parent="." unique_id=841984925 instance=ExtResource("3_8gbba")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17270482, 4.7769804)
@@ -54,6 +56,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.034)
 use_collision = true
 size = Vector3(20, 0.001, 20)
 
+[node name="Recorder" parent="." unique_id=1496842421 instance=ExtResource("5_kry3j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23188245, -1.2162962)
+
 [editable path="gazeboEdit"]
-[editable path="WaterDrop"]
-[editable path="WaterDrop/waterBlob"]

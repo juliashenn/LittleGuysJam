@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Note" format=3 uid="uid://bjln8amkfcdd"]
+
+[ext_resource type="Script" uid="uid://cowjt4alkq2d0" path="res://Resources/Note.gd" id="1_w6rdh"]
+
+[resource]
+script = ExtResource("1_w6rdh")
+metadata/_custom_type_script = "uid://cowjt4alkq2d0"

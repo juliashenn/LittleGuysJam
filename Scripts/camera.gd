@@ -24,7 +24,9 @@ func _process(delta: float) -> void:
 
 func _input(event):
 	if event.is_action_pressed("poke"):
-		Get_Camera_Collision()
+		var hit = Get_Camera_Collision()
+		if hit:
+			handle_poke(hit.collider)
 	if event.is_action_released("cast"):
 		holding_cast = false
 		wand.set_is_casting(false)
@@ -47,11 +49,11 @@ func Get_Camera_Collision():
 	new_intersection.collide_with_bodies = true
 	var intersection = get_world_3d().direct_space_state.intersect_ray(new_intersection)
 	
-	if not intersection.is_empty():
-		print(intersection.collider.is_in_group("grabbable"))
-		print(intersection.collider.name)
-	else:
-		print("Nothing")
+	#if not intersection.is_empty():
+		#print(intersection.collider.is_in_group("grabbable"))
+		#print(intersection.collider.name)
+	#else:
+		#print("Nothing")
 		
 	return intersection
 	
@@ -59,7 +61,9 @@ func Get_Camera_Collision():
 func handle_grab(collider: Node3D):
 	if collider is Grabbable and grabbed_obj == null:
 		grabbed_obj = collider as Grabbable
-		grabbed_obj.grab()
-	# here ill freeze the physics and tell it to move with local so that its moves and rotates with player
+		grabbed_obj.grab()	
 	
-	
+func handle_poke(collider: Node3D):
+	if collider is Grabbable:
+		grabbed_obj = collider as Grabbable
+		grabbed_obj.poke()
