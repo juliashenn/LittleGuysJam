@@ -29,6 +29,15 @@ shader_parameter/shadow_threshold = 0.7
 shader_parameter/highlight_threshold = 0.85
 shader_parameter/master_alpha = 0.9
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bern5"]
+size = Vector3(174.434, 20, 455.809)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gttpj"]
+size = Vector3(185.77002, 300, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_000eq"]
+albedo_color = Color(0.66066, 0.84, 0.32759997, 1)
+
 [node name="Main" type="Node3D" unique_id=596536012]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=187107331]
@@ -40,21 +49,79 @@ directional_shadow_max_distance = 500.0
 environment = SubResource("Environment_6bp64")
 
 [node name="gazeboEdit" parent="." unique_id=1063273228 instance=ExtResource("1_bo1nx")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+transform = Transform3D(0.016, 0, 0, 0, 0.016, 0, 0, 0, 0.016, 0, 0, 0)
 
 [node name="Gazebo" parent="gazeboEdit" index="0" unique_id=566013751]
 surface_material_override/1 = SubResource("ShaderMaterial_344ge")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="gazeboEdit" unique_id=657982655]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=1093810089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10678171, 7.2244067, 3.5727024)
+shape = SubResource("BoxShape3D_bern5")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=1024988151]
+transform = Transform3D(0.6513817, 0, -0.7587502, 0, 1, 0, 0.7587502, 0, 0.6513817, -0.10678171, 7.2244067, 3.5727024)
+shape = SubResource("BoxShape3D_bern5")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=962872258]
+transform = Transform3D(-0.036551498, 0, -0.99933165, 0, 1, 0, 0.99933165, 0, -0.036551498, -0.10678171, 7.2244067, 3.5727024)
+shape = SubResource("BoxShape3D_bern5")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=236951023]
+transform = Transform3D(-0.74863917, 0, -0.66297746, 0, 1, 0, 0.66297746, 0, -0.74863917, -0.10678171, 7.2244067, 3.5727024)
+shape = SubResource("BoxShape3D_bern5")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=1068949060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.122315, 149.63878, -206.3815)
+shape = SubResource("BoxShape3D_gttpj")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=49548116]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, -209.49597, 149.63878, -1.5867202)
+shape = SubResource("BoxShape3D_gttpj")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=1130228198]
+transform = Transform3D(-4.3711378e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711378e-08, 205.02252, 149.63878, -1.5867202)
+shape = SubResource("BoxShape3D_gttpj")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=1781407164]
+transform = Transform3D(0.76604444, 0, -0.6427876, 0, 1, 0, 0.6427876, 0, 0.76604444, 141.3566, 149.63878, -151.93298)
+shape = SubResource("BoxShape3D_gttpj")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=1994928056]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, -153.49226, 149.63878, 144.12424)
+shape = SubResource("BoxShape3D_gttpj")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=356561137]
+transform = Transform3D(0.7660444, 0, 0.6427875, 0, 1, 0, -0.6427875, 0, 0.7660444, -158.52966, 149.63878, -142.58148)
+shape = SubResource("BoxShape3D_gttpj")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=1542600014]
+transform = Transform3D(0.7660444, 0, 0.6427875, 0, 1, 0, -0.6427875, 0, 0.7660444, 150.06677, 149.63878, 153.84293)
+shape = SubResource("BoxShape3D_gttpj")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="WaterDrop2" parent="." unique_id=1114200198 instance=ExtResource("2_8gbba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8791883, 0.80400765, 5.8749523)
+
 [node name="WaterDrop" parent="." unique_id=738370105 instance=ExtResource("2_8gbba")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.80400765, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8791883, 0.80400765, 4.043744)
 
 [node name="CharacterBody3D" parent="." unique_id=841984925 instance=ExtResource("3_8gbba")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17270482, 4.7769804)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=514136838]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.034)
+visible = false
 use_collision = true
-size = Vector3(20, 0.001, 20)
+size = Vector3(50, 0.001, 50)
+material = SubResource("StandardMaterial3D_000eq")
 
 [node name="Recorder" parent="." unique_id=1496842421 instance=ExtResource("5_kry3j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23188245, -1.2162962)

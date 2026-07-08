@@ -21,23 +21,20 @@ func _process(delta: float) -> void:
 func handle_beam(delta: float):
 	if is_casting:
 		beam.visible = true
-		print(target_point)
 		var direction = target_point - beam_start.global_position
-		print(direction)
 		var distance = clamp(direction.length(), 0.0, max_length)
-		print(distance)
-#
+
 		beam.mesh.height = move_toward(beam.mesh.height, distance, delta * beam_speed)
 		
 		if distance > 0.01:
 			beam_start.look_at(target_point, Vector3.UP)
 			beam_start.rotate_object_local(-Vector3.RIGHT, PI / 2)
 	else:
-		if beam.mesh.height < 0.05:
+		if beam.mesh.height < 0.1:
 			beam.visible = false
 			beam_start.rotation = Vector3.ZERO
-			return
-		beam.mesh.height = move_toward(beam.mesh.height, 0.0, delta * beam_speed)
+		else:
+			beam.mesh.height = move_toward(beam.mesh.height, 0.0, delta * beam_speed)
 	beam.position = Vector3(0, beam.mesh.height / 2.0, 0)
 	
 func set_is_casting(val: bool):

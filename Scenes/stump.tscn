@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bocakxxqllx3i"]
+
+[ext_resource type="PackedScene" uid="uid://cwsrjto64yg6v" path="res://Assets/tree_stump/scene.gltf" id="1_4f0e0"]
+[ext_resource type="Script" uid="uid://cxjro0fnwwdkw" path="res://Scripts/stump.gd" id="1_v887s"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_o06y3"]
+height = 1.7754517
+radius = 1.1142578
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c7e87"]
+height = 1.1060791
+radius = 0.6665039
+
+[node name="Stump" type="Node3D" unique_id=1528155010]
+script = ExtResource("1_v887s")
+defaultLight = Color(0.8980392, 0.8784314, 0.5529412, 1)
+correct = Color(0.6994554, 0.944594, 0.54307026, 1)
+incorrect = Color(0.9470516, 0.8104721, 0.9397168, 1)
+
+[node name="Sketchfab_Scene" parent="." unique_id=1750677268 instance=ExtResource("1_4f0e0")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Sketchfab_model" parent="Sketchfab_Scene" index="0" unique_id=372673177]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, -0.012562156, 0)
+
+[node name="Circle" parent="Sketchfab_Scene/Sketchfab_model/Root" parent_id_path=PackedInt32Array(1750677268, 375425210) index="1" unique_id=1970261218]
+visible = false
+
+[node name="Area3D" type="Area3D" parent="." unique_id=568190180]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1639212113]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.3620448, 0)
+shape = SubResource("CylinderShape3D_o06y3")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=729383124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54458237, 0)
+
+[node name="light" type="OmniLight3D" parent="." unique_id=1287365848]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.68680495, 0)
+light_color = Color(0.8980392, 0.8784314, 0.5529412, 1)
+light_energy = 3.0
+omni_range = 0.39386776
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1066940780]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1068115493]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.26357818, 0)
+shape = SubResource("CylinderShape3D_c7e87")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+
+[editable path="Sketchfab_Scene"]

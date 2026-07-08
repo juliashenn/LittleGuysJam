@@ -7,16 +7,17 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_c7e87"]
 radius = 0.77736306
 
-[node name="Recorder" type="Node3D" unique_id=1496842421]
+[node name="Record Player" type="Node3D" unique_id=1496842421]
 script = ExtResource("1_rm32i")
 
 [node name="Sketchfab_Scene" parent="." unique_id=801131626 instance=ExtResource("2_b88mk")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2015714393]
 
-[node name="Interactable" type="Area3D" parent="." unique_id=874053452 node_paths=PackedStringArray("label")]
+[node name="Interactable" type="Area3D" parent="." unique_id=874053452]
 script = ExtResource("3_b88mk")
-label = NodePath("Label3D")
+interact_name = "Play Melody"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable" unique_id=1995107008]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2341389, 0)

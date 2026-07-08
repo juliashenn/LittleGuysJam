@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="musicgarden"
-run/main_scene="uid://bnawt3u1gmuv8"
+run/main_scene="uid://cvikuseir3b4w"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -24,6 +24,7 @@ window/stretch/aspect="expand"
 
 grabbable=""
 player=""
+ground=""
 
 [input]
 

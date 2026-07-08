@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://43lvcrn7ckfj"]
+
+[ext_resource type="Script" uid="uid://m4ovyu3yrs7s" path="res://Scripts/StumpSpawner.gd" id="1_3mtug"]
+[ext_resource type="PackedScene" uid="uid://bjepdprrhssu8" path="res://Assets/music_stand/scene.gltf" id="2_h1qk8"]
+[ext_resource type="Material" uid="uid://cmjwirjmqlsaa" path="res://Assets/sheet-music/source/secretpaper.tres" id="3_x0jf6"]
+[ext_resource type="Material" uid="uid://d3rmaym1ckefa" path="res://Assets/sheet-music/source/line5.tres" id="4_bg14r"]
+[ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="5_bg14r"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_c7e87"]
+material = ExtResource("3_x0jf6")
+
+[sub_resource type="QuadMesh" id="QuadMesh_j1lyr"]
+material = ExtResource("4_bg14r")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7e87"]
+size = Vector3(0.86987305, 2.9648743, 1.3144531)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j1lyr"]
+size = Vector3(0.107055664, 1, 1)
+
+[node name="stumpSpawner" type="Node3D" unique_id=1744331624]
+script = ExtResource("1_3mtug")
+
+[node name="Sketchfab_Scene" parent="." unique_id=1676072025 instance=ExtResource("2_h1qk8")]
+transform = Transform3D(-2.6226834e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226834e-08, 0, 0.75471497, 0)
+
+[node name="pCube11" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1676072025, 781566711) index="3" unique_id=352687191]
+transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
+
+[node name="pCube12" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1676072025, 781566711) index="4" unique_id=1856375496]
+transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
+
+[node name="pCube13" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1676072025, 781566711) index="5" unique_id=151499471]
+transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
+
+[node name="pCube10" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1676072025, 781566711) index="6" unique_id=474862832]
+transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
+
+[node name="pCylinder1" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1676072025, 781566711) index="7" unique_id=2099406229]
+transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
+
+[node name="pCube6" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1676072025, 781566711) index="8" unique_id=1980988612]
+transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
+
+[node name="pCube4" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1676072025, 781566711) index="9" unique_id=986386791]
+transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
+
+[node name="pCube5" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1676072025, 781566711) index="10" unique_id=460818364]
+transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
+
+[node name="pCube14" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1676072025, 781566711) index="11" unique_id=1544271435]
+transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
+
+[node name="pCube15" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1676072025, 781566711) index="12" unique_id=1830815732]
+transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2020254719]
+transform = Transform3D(0.0032276292, 0.2842108, -0.20423955, 0.0023193, 0.20422639, 0.28422913, -0.34997743, 0.0039745118, 8.927595e-09, 0.110412106, 1.2394016, 0.011019631)
+mesh = SubResource("QuadMesh_c7e87")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=776507866]
+transform = Transform3D(0.0032276292, 0.2842108, -0.20423955, 0.0023193, 0.20422639, 0.28422913, -0.34997743, 0.0039745118, 8.927595e-09, 0.118101135, 1.2343886, 0.011450247)
+mesh = SubResource("QuadMesh_j1lyr")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=254385377]
+script = ExtResource("5_bg14r")
+interact_name = "Conduct the Melody"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1223732431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37393445, 1.4600372, 0.0026855469)
+shape = SubResource("BoxShape3D_c7e87")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=349130107]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1442525387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.036071777, 1.0081172, 0)
+shape = SubResource("BoxShape3D_j1lyr")
+
+[editable path="Sketchfab_Scene"]

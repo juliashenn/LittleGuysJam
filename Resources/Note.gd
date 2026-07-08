@@ -8,6 +8,9 @@ var fileName: String:
 var Pitch: String:
 	get:
 		return fileName.substr(0, fileName.length() - 2)
+var Length: String:
+	get:
+		return fileName.substr(fileName.length() - 1, fileName.length())
 var audioFile: String:
 	get:
 		return "res://Sound/Notes/" + fileName + ".wav"

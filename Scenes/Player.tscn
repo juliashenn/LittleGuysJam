@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d0w1p0rjbbid1" path="res://Scripts/camera.gd" id="2_gntrk"]
 [ext_resource type="PackedScene" uid="uid://dx8wemxgnq4pv" path="res://Scenes/wand.tscn" id="3_gntrk"]
 [ext_resource type="Script" uid="uid://dyerchk3gffko" path="res://Scripts/interactingComponent.gd" id="4_dewec"]
+[ext_resource type="PackedScene" uid="uid://c5fglu7coxk8e" path="res://Scenes/ui.tscn" id="5_5ixxa"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c7e87"]
 
@@ -44,14 +45,19 @@ surface_material_override/0 = SubResource("StandardMaterial3D_j1lyr")
 transform = Transform3D(-0.34520084, -0.25963485, -0.9019015, 0.8960344, 0.19471529, -0.39900938, 0.2792107, -0.94587266, 0.16542593, 0.6898534, -0.42356062, -1.093617)
 
 [node name="GrabPoint" type="Marker3D" parent="Head/Camera3D" unique_id=1784595468]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16156769, -2.0738106)
 
-[node name="Interactor" type="Area3D" parent="." unique_id=1309434060]
+[node name="Interactor" type="Area3D" parent="." unique_id=1309434060 node_paths=PackedStringArray("interact_label")]
 script = ExtResource("4_dewec")
+interact_label = NodePath("../UI/VBoxContainer/InteractLabel")
 
 [node name="InteractRange" type="CollisionShape3D" parent="Interactor" unique_id=852891721]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0870311, 0)
 shape = SubResource("SphereShape3D_c7e87")
 
+[node name="UI" parent="." unique_id=1968195755 instance=ExtResource("5_5ixxa")]
+
 [connection signal="area_entered" from="Interactor" to="Interactor" method="_on_area_entered"]
 [connection signal="area_exited" from="Interactor" to="Interactor" method="_on_area_exited"]
+
+[editable path="UI"]

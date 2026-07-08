@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d3rmaym1ckefa"]
+
+[ext_resource type="Texture2D" uid="uid://dj0n2ks1fcotu" path="res://Assets/sheet-music/source/Sheet Music_line5_baseColor.jpg" id="1_cuv2m"]
+
+[resource]
+resource_name = "line5"
+cull_mode = 2
+albedo_texture = ExtResource("1_cuv2m")
+roughness = 0.6
+emission_enabled = true
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bdtr842f3ujv2"]
+
+[ext_resource type="Script" uid="uid://pkp3p63at1vg" path="res://Scripts/cloud.gd" id="1_8hs1w"]
+[ext_resource type="PackedScene" uid="uid://csekk8stq7bjn" path="res://Assets/stylize_clouds/scene.gltf" id="1_sm7h7"]
+
+[node name="Cloud" type="Node3D" unique_id=1548188862]
+script = ExtResource("1_8hs1w")
+
+[node name="Sketchfab_Scene" parent="." unique_id=99985599 instance=ExtResource("1_sm7h7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24793577, 0, 1.7239082)
+
+[node name="Cube_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 737440620) index="0" unique_id=1860240367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_001_5" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 737440620) index="1" unique_id=1995782139]
+visible = false
+
+[node name="Cube_002_6" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 737440620) index="2" unique_id=794208855]
+visible = false
+
+[editable path="Sketchfab_Scene"]

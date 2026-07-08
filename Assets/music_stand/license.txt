@@ -1,0 +1,11 @@
+Model Information:
+* title:	Music Stand
+* source:	https://sketchfab.com/3d-models/music-stand-54f5ea4266824751843a69b009d28006
+* author:	graygabriel (https://sketchfab.com/graygabriel)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Music Stand" (https://sketchfab.com/3d-models/music-stand-54f5ea4266824751843a69b009d28006) by graygabriel (https://sketchfab.com/graygabriel) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
