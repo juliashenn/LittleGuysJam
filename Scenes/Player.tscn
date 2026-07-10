@@ -19,6 +19,52 @@ shading_mode = 0
 [sub_resource type="SphereShape3D" id="SphereShape3D_c7e87"]
 radius = 1.4638796
 
+[sub_resource type="Animation" id="Animation_nn08x"]
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/wand")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.5568758, 0.2387156, 0.11607961, 0.7870385)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/wand:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.85203326, -0.49117124, -1.2864858)]
+}
+
+[sub_resource type="Animation" id="Animation_5ixxa"]
+resource_name = "wave_wand"
+length = 1.0666667
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/wand")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.5568758, 0.2387156, 0.11607961, 0.7870385, 0.43333334, 1, -0.2528956, -0.0474656, 0.1438973, 0.9555545, 0.8, 1, -0.81269777, 0.057313662, 0.14026606, 0.56263953, 1, 1, -0.5568758, 0.2387156, 0.11607961, 0.7870385)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/wand")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.85203326, -0.49117124, -1.2864858, 0.43333334, 1, 0.9264662, -0.28461957, -1.1618105, 0.8, 1, 0.90746, -0.75237274, -1.3259796, 1.0666667, 1, 0.85203326, -0.49117124, -1.2864858)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nn08x"]
+_data = {
+&"RESET": SubResource("Animation_nn08x"),
+&"wave_wand": SubResource("Animation_5ixxa")
+}
+
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=841984925 groups=["player"]]
 collision_mask = 2
 script = ExtResource("1_rpqav")
@@ -34,16 +80,20 @@ shape = SubResource("ConvexPolygonShape3D_kyqiw")
 [node name="Head" type="Node3D" parent="." unique_id=2131679353]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8072772, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1282670836]
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1282670836 node_paths=PackedStringArray("player")]
 script = ExtResource("2_gntrk")
+player = NodePath("../..")
 
 [node name="Crosshair" type="MeshInstance3D" parent="Head/Camera3D" unique_id=1752761417]
 transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 0, 0, -0.498609)
 mesh = SubResource("SphereMesh_c7e87")
 surface_material_override/0 = SubResource("StandardMaterial3D_j1lyr")
 
+[node name="Marker3D" type="Marker3D" parent="Head/Camera3D" unique_id=250008256]
+transform = Transform3D(0.8590808, -0.44858837, 0.24647294, -0.083151676, 0.35282964, 0.9319857, -0.5050407, -0.8211457, 0.26580822, 1.0369111, -0.64060307, -0.9322877)
+
 [node name="wand" parent="Head/Camera3D" unique_id=1417012209 instance=ExtResource("3_gntrk")]
-transform = Transform3D(-0.34520084, -0.25963485, -0.9019015, 0.8960344, 0.19471529, -0.39900938, 0.2792107, -0.94587266, 0.16542593, 0.6898534, -0.42356062, -1.093617)
+transform = Transform3D(0.85908073, -0.4485883, 0.2464729, -0.08315163, 0.35282966, 0.9319857, -0.5050406, -0.8211457, 0.26580828, 0.85203326, -0.49117124, -1.2864858)
 
 [node name="GrabPoint" type="Marker3D" parent="Head/Camera3D" unique_id=1784595468]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16156769, -2.0738106)
@@ -57,6 +107,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0870311, 0)
 shape = SubResource("SphereShape3D_c7e87")
 
 [node name="UI" parent="." unique_id=1968195755 instance=ExtResource("5_5ixxa")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=791288353]
+libraries/ = SubResource("AnimationLibrary_nn08x")
 
 [connection signal="area_entered" from="Interactor" to="Interactor" method="_on_area_entered"]
 [connection signal="area_exited" from="Interactor" to="Interactor" method="_on_area_exited"]

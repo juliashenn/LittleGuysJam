@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bfaji06g0ow6d"]
+
+[resource]
+resource_name = "wave"
+cull_mode = 2
+roughness = 0.92074835

@@ -3,7 +3,7 @@ extends Node3D
 @export var melody: Melody
 @export var stump: PackedScene
 
-@export var arc_ang = deg_to_rad(120.0)
+@export var arc_ang = deg_to_rad(160.0)
 @export var spacing = 1
 @export var min_radius = 3.0
 @onready var interactable: Interactable = $Area3D

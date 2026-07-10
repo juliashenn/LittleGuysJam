@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://blmgp17cqm8uq"]
+
+[ext_resource type="Texture2D" uid="uid://crjkl11i4axbe" path="res://Assets/forest_lighting_wip/textures/Base_Material_baseColor.png" id="1_rif3u"]
+[ext_resource type="Texture2D" uid="uid://kpeym84iboe5" path="res://Assets/forest_lighting_wip/textures/image (4).webp" id="2_rif3u"]
+
+[resource]
+resource_name = "Base_Material"
+transparency = 2
+alpha_scissor_threshold = 0.65
+alpha_antialiasing_mode = 0
+cull_mode = 2
+diffuse_mode = 3
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("1_rif3u")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 1.5
+emission_operator = 1
+emission_on_uv2 = true
+emission_texture = ExtResource("2_rif3u")
+texture_filter = 1
+metadata/_gltf_primary_texture_coord = 0
+metadata/_gltf_secondary_texture_coord = 1

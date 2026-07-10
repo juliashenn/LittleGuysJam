@@ -39,7 +39,85 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"Default_Material": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/Default_Material.tres",
+"use_external/path": "uid://difinwln5bd3b"
+},
+"grass03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/grass03.tres",
+"use_external/path": "uid://g1frpsf5fwio"
+},
+"lambert6": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/lambert6.tres",
+"use_external/path": "uid://c00cpahkb2eh6"
+},
+"pondbase": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/pondbase.tres",
+"use_external/path": "uid://c4hakcp44hafi"
+},
+"rig_01_n_pond_fish1fishbody": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/rig_01_n_pond_fish1fishbody.tres",
+"use_external/path": "uid://crf7ngsibai1y"
+},
+"rig_01_n_pond_fish1fisheye": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/rig_01_n_pond_fish1fisheye.tres",
+"use_external/path": "uid://chktf3bvp4l42"
+},
+"rig_01_n_pond_fish1fishhead": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/rig_01_n_pond_fish1fishhead.tres",
+"use_external/path": "uid://dlhulsmwwpm7p"
+},
+"rig_01_n_pond_fish2fishbody": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/rig_01_n_pond_fish2fishbody.tres",
+"use_external/path": "uid://bvw0ij1dab2aj"
+},
+"rig_01_n_pond_fish2fisheye": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/rig_01_n_pond_fish2fisheye.tres",
+"use_external/path": "uid://dnimkcudtnll4"
+},
+"rig_01_n_pond_fish2fishhead": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/rig_01_n_pond_fish2fishhead.tres",
+"use_external/path": "uid://c3tkj2y70muxg"
+},
+"rig_01_n_pond_fishfishbody": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/rig_01_n_pond_fishfishbody.tres",
+"use_external/path": "uid://b2csssg01vwh3"
+},
+"rig_01_n_pond_fishfisheye": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/rig_01_n_pond_fishfisheye.tres",
+"use_external/path": "uid://ugkivtcxd5tm"
+},
+"rig_01_n_pond_fishfishhead": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/rig_01_n_pond_fishfishhead.tres",
+"use_external/path": "uid://ba5cruhwc0l4s"
+},
+"water": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/water.tres",
+"use_external/path": "uid://catm1jnr1slm7"
+},
+"wave": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/little_pond__fish/textures/wave.tres",
+"use_external/path": "uid://bfaji06g0ow6d"
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

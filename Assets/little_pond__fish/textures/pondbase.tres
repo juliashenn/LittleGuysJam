@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c4hakcp44hafi"]
+
+[ext_resource type="Texture2D" uid="uid://cqowka1fyxnhf" path="res://Assets/little_pond__fish/textures/pondbase_baseColor.jpeg" id="1_sf4m2"]
+
+[resource]
+resource_name = "pondbase"
+cull_mode = 2
+albedo_texture = ExtResource("1_sf4m2")
+roughness = 0.6
+metadata/_gltf_primary_texture_coord = 0

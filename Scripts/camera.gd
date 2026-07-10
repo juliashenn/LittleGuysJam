@@ -1,6 +1,8 @@
 extends Camera3D
 @onready var crosshair: MeshInstance3D = $Crosshair
 @onready var wand: Wand = $wand
+@export var player: Player
+
 var ray_range = 2000.0
 var holding_cast = false
 
@@ -65,5 +67,7 @@ func handle_grab(collider: Node3D):
 	
 func handle_poke(collider: Node3D):
 	if collider is Grabbable:
+		if player:
+			player.poke_anim()
 		grabbed_obj = collider as Grabbable
 		grabbed_obj.poke()

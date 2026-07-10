@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://g1frpsf5fwio"]
+
+[ext_resource type="Texture2D" uid="uid://dqrxk2ey5uk0t" path="res://Assets/little_pond__fish/textures/grass03_baseColor.jpeg" id="1_wkk7y"]
+
+[resource]
+resource_name = "grass03"
+cull_mode = 2
+albedo_texture = ExtResource("1_wkk7y")
+roughness = 0.6
+metadata/_gltf_primary_texture_coord = 0

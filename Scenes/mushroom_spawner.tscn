@@ -1,11 +1,79 @@
 [gd_scene format=3 uid="uid://bc8leqxdrhvfv"]
 
 [ext_resource type="Script" uid="uid://eu3m6i6qkyq0" path="res://Scripts/spawner.gd" id="1_de65v"]
-[ext_resource type="Resource" uid="uid://hsvn73w4rc6t" path="res://Resources/tutorial.tres" id="2_fe6y8"]
+[ext_resource type="Resource" uid="uid://dnjubstbpseij" path="res://Resources/eighth.tres" id="2_u5nsi"]
 [ext_resource type="PackedScene" uid="uid://b5scu561to32f" path="res://Scenes/mushroom.tscn" id="3_7hu1l"]
+[ext_resource type="PackedScene" uid="uid://bjdvwspmx86qq" path="res://Assets/forest_lighting_wip/forestEdit.glb" id="4_7hu1l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u5nsi"]
+size = Vector3(26.29889, 1.0400391, 23.847778)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c7e87"]
+height = 6.7807617
+radius = 0.3178711
 
 [node name="MushroomSpawner" type="Node3D" unique_id=1553713561]
 script = ExtResource("1_de65v")
-melody = ExtResource("2_fe6y8")
+melody = ExtResource("2_u5nsi")
 objToSpawn = ExtResource("3_7hu1l")
 noteType = "E"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1881846869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.9213822, 0)
+collision_layer = 3
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D" unique_id=1809444509]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.9720063, 2.29039, -0.9310155)
+shape = SubResource("BoxShape3D_u5nsi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=697811098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2081263, 3.6234536, 6.5026736)
+shape = SubResource("CylinderShape3D_c7e87")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=36522353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0480506, 3.6234536, 8.547394)
+shape = SubResource("CylinderShape3D_c7e87")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1333865656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.993481, 3.6234536, 6.7785387)
+shape = SubResource("CylinderShape3D_c7e87")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=640185659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.092676, 3.6234536, 2.2007291)
+shape = SubResource("CylinderShape3D_c7e87")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" unique_id=1719547880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.140591, 3.6234536, -2.2333574)
+shape = SubResource("CylinderShape3D_c7e87")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" unique_id=751866564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5960255, 3.6234536, -6.927123)
+shape = SubResource("CylinderShape3D_c7e87")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" unique_id=52624888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2917693, 3.6234536, -9.775338)
+shape = SubResource("CylinderShape3D_c7e87")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" unique_id=756444906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09694791, 3.6234539, -7.429534)
+shape = SubResource("CylinderShape3D_c7e87")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="StaticBody3D" unique_id=1571288542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1756008, 3.6234539, -3.4179835)
+shape = SubResource("CylinderShape3D_c7e87")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="StaticBody3D" unique_id=1706801301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0223618, 3.6234539, 3.0361824)
+shape = SubResource("CylinderShape3D_c7e87")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1827868990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.9213822, 0)
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1746257221]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.9720063, 2.5265636, -0.9310155)
+shape = SubResource("BoxShape3D_u5nsi")
+
+[node name="forestEdit" parent="." unique_id=1523670767 instance=ExtResource("4_7hu1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0145493, 0)
+
+[editable path="forestEdit"]

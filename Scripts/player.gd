@@ -22,6 +22,7 @@ const FOV_CHANGE = 0.75
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
 @export var recordAudio: RecordPlayer
+@onready var anim: AnimationPlayer = $AnimationPlayer
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -90,7 +91,7 @@ func conduct_anim():
 	pass
 
 func poke_anim():
-	pass
+	anim.play("wave_wand")
 
 func stop_audio():
 	if recordAudio:
