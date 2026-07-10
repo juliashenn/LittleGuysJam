@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://cwkdey3a4cku5"]
+
+[ext_resource type="Script" uid="uid://bihiip7wlfqqa" path="res://Scripts/flower.gd" id="1_hbmji"]
+[ext_resource type="PackedScene" uid="uid://bccbvpsh8mltc" path="res://Assets/plant/plantEdit.glb" id="2_hbmji"]
+[ext_resource type="PackedScene" uid="uid://bvngjlq4j1fcv" path="res://Assets/lotus_flower_blooming_animation/scene.gltf" id="3_hbmji"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7e87"]
+size = Vector3(0.22166443, 0.63183594, 0.19580078)
+
+[node name="Flower" type="RigidBody3D" unique_id=1557167778 node_paths=PackedStringArray("animator", "audio", "mesh")]
+script = ExtResource("1_hbmji")
+animator = NodePath("Node3D/Sketchfab_Scene/AnimationPlayer")
+animName = "Animation"
+sectionStart = 1.63
+sectionEnd = 5.0
+audio = NodePath("AudioStreamPlayer3D")
+mesh = NodePath("Node3D")
+metadata/_custom_type_script = "uid://xlc02rfrk1m3"
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1740342773]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Sketchfab_Scene" parent="Node3D" unique_id=1653886565 instance=ExtResource("3_hbmji")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0059444904, 0.31584877, 0.0016984642)
+
+[node name="Mesh_0_001_0" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="0" unique_id=112942496]
+transform = Transform3D(0.16570905, 0, 0, 0, -7.243372e-09, 0.16570903, 0, -0.16570903, -7.243372e-09, 0.017636562, -0.033485413, -0.0039573098)
+
+[node name="Mesh_47_002_2" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="1" unique_id=1193599691]
+transform = Transform3D(0.16532007, 0.010888048, -0.0031955536, 0.0066134073, -0.054531086, 0.15633972, 0.009220843, -0.15610026, -0.054837625, 0.36144546, 1.3441925, 1.042195)
+
+[node name="Mesh_48_002_3" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="2" unique_id=335998291]
+transform = Transform3D(0.08347029, 0.013151668, 0.1425455, -0.1409604, 0.036307536, 0.07919223, -0.024947146, -0.16114675, 0.02947615, -0.48827118, 0.87446004, -0.0915143)
+
+[node name="Mesh_49_002_4" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="3" unique_id=1481212703]
+transform = Transform3D(0.1531815, -0.014255168, 0.061576836, -0.06301868, -0.022047522, 0.15166423, -0.004854189, -0.16361594, -0.02580194, -0.964195, 1.251353, 0.44526938)
+
+[node name="Mesh_50_002_5" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="4" unique_id=855332669]
+transform = Transform3D(0.09777599, 0.051213987, -0.12359801, 0.117324814, 0.040750273, 0.10969863, 0.06429799, -0.15223674, -0.012215827, 0.8582003, 0.73342246, 0.37559208)
+
+[node name="Mesh_51_002_6" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="5" unique_id=1608150027]
+transform = Transform3D(0.16072784, -0.039136257, 0.009716205, -0.013683426, -0.0153748, 0.16442588, -0.037931714, -0.16028555, -0.018144311, -0.60281056, 1.5502936, 0.82852936)
+
+[node name="Mesh_52_002_7" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="6" unique_id=1669051468]
+transform = Transform3D(0.1652642, -0.0023060292, -0.011912991, 0.011971009, 0.004398741, 0.1652175, -0.0019829518, -0.1656346, 0.004553521, 0.95655674, 1.5128024, -0.11246172)
+
+[node name="Mesh_53_002_8" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="7" unique_id=1992898782]
+transform = Transform3D(0.13724907, 3.7604174e-08, 0.09285571, -0.092855714, -1.1663315e-06, 0.13724905, 6.847042e-07, -0.16570903, -9.449462e-07, -0.91577345, 1.2653519, 0.19017336)
+
+[node name="Mesh_54_002_9" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="8" unique_id=143823704]
+transform = Transform3D(0.14239915, 0.01792878, -0.082828335, 0.08189092, 0.012578088, 0.14351013, 0.02181404, -0.16425538, 0.0019486258, 1.1542339, 1.280946, -0.0024051731)
+
+[node name="Mesh_55_002_10" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="9" unique_id=116954609]
+transform = Transform3D(0.16539043, 0.007835782, 0.0066405116, -0.007705744, 0.023826683, 0.16380598, 0.006790976, -0.1637998, 0.024145247, -0.097152896, 1.4152296, -1.0359731)
+
+[node name="Mesh_56_002_11" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="10" unique_id=478749872]
+transform = Transform3D(0.12033779, -0.025668856, -0.11099285, 0.097213194, 0.107312106, 0.08058034, 0.059396118, -0.12363132, 0.0929886, 0.5364151, 1.3293093, -0.6034829)
+
+[node name="Mesh_57_002_12" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="11" unique_id=351181416]
+transform = Transform3D(0.15936187, 0.008145698, -0.044687033, 0.04091124, 0.04509649, 0.15411703, 0.019737128, -0.15924647, 0.041358095, 1.0040468, 1.2228111, -0.56279916)
+
+[node name="Mesh_58_002_13" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="12" unique_id=2035209900]
+transform = Transform3D(0.1627301, -0.021398183, 0.02281499, -0.020985259, 0.01494288, 0.16369426, -0.023195364, -0.16364081, 0.011964402, -0.7467725, 1.4875779, -0.6791109)
+
+[node name="Mesh_59_002_14" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="13" unique_id=2079068050]
+transform = Transform3D(0.15664099, -0.009996208, -0.05313346, 0.052145485, -0.015082174, 0.15656586, -0.014280645, -0.16471824, -0.011111219, 1.016088, 1.3057768, 0.4374874)
+
+[node name="Mesh_60_002_15" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="14" unique_id=2685382]
+transform = Transform3D(0.16432403, -0.0026481196, 0.021215238, -0.021204324, 0.00084220583, 0.16434462, -0.0027341407, -0.16568573, 0.0004963101, -0.9879426, 1.490811, 0.14894378)
+
+[node name="Mesh_61_002_16" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="15" unique_id=1025495644]
+transform = Transform3D(0.16371375, 0.025531102, 0.0023364136, -0.02371879, 0.14509696, 0.076444596, 0.00973217, -0.075858556, 0.14700425, -0.35282815, 1.1955417, -1.2661442)
+
+[node name="Mesh_62_002_17" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="16" unique_id=1515032880]
+transform = Transform3D(0.10861725, 0.0043321555, -0.12507203, 0.12507257, 0.001955665, 0.10868541, 0.0043174545, -0.16564086, -0.0019879106, 1.306892, 1.1750124, -0.05660281)
+
+[node name="Mesh_63_002_18" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="17" unique_id=330382719]
+transform = Transform3D(0.13296536, 0.041433476, -0.08979405, 0.098555475, -0.067929156, 0.11459466, -0.008156333, -0.14535607, -0.079149075, 0.885366, 1.1939421, 0.7612131)
+
+[node name="Mesh_64_002_19" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="18" unique_id=368414642]
+transform = Transform3D(0.16197975, 0.03308414, -0.011291471, 0.030590283, -0.108237706, 0.12168945, 0.016920188, -0.121035226, -0.111909196, 0.120537594, 1.1453655, 1.0079539)
+
+[node name="Mesh_65_002_20" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="19" unique_id=2070621556]
+transform = Transform3D(0.11313461, 0.024795022, 0.118512675, -0.11052483, 0.08737858, 0.087228045, -0.04943996, -0.13859898, 0.076193824, -0.97871226, 1.2068613, -0.7022305)
+
+[node name="Mesh_66_002_21" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="20" unique_id=1101478730]
+transform = Transform3D(0.16500506, -3.7038852e-09, 0.015258279, -0.012034006, 0.10187706, 0.13013735, -0.009380716, -0.13069254, 0.10144427, -0.16899456, 1.2367796, -1.059738)
+
+[node name="Mesh_67_002_22" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="21" unique_id=70742161]
+transform = Transform3D(0.15547484, 0.02323803, -0.052412342, 0.057179913, -0.051789608, 0.1466553, 0.0041854405, -0.15568338, -0.056609638, 0.731656, 1.1863861, 1.0200528)
+
+[node name="Mesh_68_002_23" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="22" unique_id=18089500]
+transform = Transform3D(0.14696977, 0.02482249, 0.07241013, -0.075928584, 0.0671536, 0.13109057, -0.009707416, -0.14944473, 0.07093327, -0.97611034, 1.2073199, -0.7694808)
+
+[node name="Mesh_69_002_24" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="23" unique_id=1663341376]
+transform = Transform3D(0.15681599, 0.026554665, 0.046508953, -0.053276442, 0.06266685, 0.14385399, 0.0054639475, -0.15108673, 0.06784121, -0.7288678, 1.3424302, -1.0648465)
+
+[node name="Mesh_70_002_25" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="24" unique_id=493276133]
+transform = Transform3D(0.16570905, 0, 0, 0, -0.07480687, 0.1478628, 0, -0.1478628, -0.07480687, -0.045421846, 1.2714245, 1.340917)
+
+[node name="Mesh_71_002_26" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="25" unique_id=1562715863]
+transform = Transform3D(0.15422356, -0.060528036, 0.0033073574, -0.02518521, -0.055756208, 0.1540014, -0.05513881, -0.14383005, -0.06109101, -0.44709238, 1.3366418, 1.0674623)
+
+[node name="Mesh_72_002_27" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="26" unique_id=922817800]
+transform = Transform3D(0.098380275, 0.057163008, -0.120470725, 0.13257512, -0.057991993, 0.08074808, -0.014305397, -0.14432189, -0.080162555, 0.51425517, 1.4462292, 0.3510044)
+
+[node name="Mesh_73_002_28" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="27" unique_id=2107164875]
+transform = Transform3D(0.05581932, 6.2289813e-09, 0.15602463, -0.15602465, -1.1971935e-06, 0.055819318, 1.1293253e-06, -0.16570903, -3.9741138e-07, -0.85675037, 1.2788584, 0.086156815)
+
+[node name="Mesh_74_002_29" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="28" unique_id=1156354995]
+transform = Transform3D(0.14577468, -0.021725588, 0.07574452, -0.07411798, -0.091884874, 0.11628921, 0.026753662, -0.13617876, -0.090548724, -0.64988506, 1.2561464, 0.566983)
+
+[node name="Mesh_75_002_30" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="29" unique_id=2086502036]
+transform = Transform3D(0.16489474, 0.008022217, -0.014313001, 0.014746718, -0.009081118, 0.16480157, 0.00719391, -0.16526543, -0.0097504025, 0.72918296, 1.4997927, 0.76933616)
+
+[node name="Mesh_76_002_31" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="30" unique_id=1663927091]
+transform = Transform3D(0.13461626, 0.07139662, 0.06511894, -0.09644025, 0.10631309, 0.08280274, -0.0061020143, -0.10516431, 0.12791684, -0.37436542, 0.91398746, -0.41924632)
+
+[node name="Mesh_77_002_32" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="31" unique_id=2019331339]
+transform = Transform3D(0.14677832, -0.022001935, 0.07369888, -0.0768351, -0.04909071, 0.13836887, 0.0034611728, -0.15673386, -0.05368428, -0.8986627, 1.3449061, 0.6364796)
+
+[node name="Mesh_78_002_33" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="32" unique_id=1985942350]
+transform = Transform3D(0.16424316, -0.01396077, 0.016993247, -0.021608235, -0.12627164, 0.105109654, 0.0040936396, -0.10639573, -0.12697509, -0.2785555, 0.9835187, 0.4717502)
+
+[node name="Mesh_79_002_34" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="33" unique_id=709850382]
+transform = Transform3D(0.16569999, 0.00080011797, 0.0015374416, -0.0017331807, 0.07649382, 0.146987, 1.2963601e-08, -0.14699502, 0.07649802, 0.37272066, 1.277632, -1.1331842)
+
+[node name="Mesh_80_002_35" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="34" unique_id=1846734446]
+transform = Transform3D(0.15911776, -0.03910509, -0.024734974, 0.04623762, 0.13100092, 0.0903345, -0.0017635361, -0.09364308, 0.13670167, 0.41583908, 1.142329, -1.119716)
+
+[node name="Mesh_81_002_36" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="35" unique_id=666601700]
+transform = Transform3D(0.14360903, 0.046888683, 0.068098344, -0.073830806, 0.01129306, 0.14792216, 0.03721485, -0.15853518, 0.030677956, -1.4436334, 1.317226, -0.27381897)
+
+[node name="Mesh_82_002_37" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="36" unique_id=1757527863]
+transform = Transform3D(0.16221076, -0.03380996, 0.0020134335, -0.007528141, -0.026385918, 0.16342153, -0.033022635, -0.16006298, -0.02736486, 0.101214826, 1.5128969, 0.98856306)
+
+[node name="Mesh_83_002_38" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="37" unique_id=1171592323]
+transform = Transform3D(0.14948799, 0.01178967, -0.070525385, 0.058778707, 0.072808444, 0.13676065, 0.040717203, -0.14838941, 0.0614994, 0.9021262, 1.2231498, -0.86246336)
+
+[node name="Mesh_84_002_39" parent="Node3D/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1653886565, 1356111860) index="38" unique_id=918726018]
+transform = Transform3D(0.1650223, -0.009567572, -0.011644271, 0.012751286, 0.02039382, 0.16395421, -0.00803319, -0.16417076, 0.021045526, 0.6428231, 1.4977716, -0.724241)
+
+[node name="plantEdit" parent="Node3D" unique_id=1971798794 instance=ExtResource("2_hbmji")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.06109613, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1656940981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010414124, 0.27792987, -0.006591797)
+shape = SubResource("BoxShape3D_c7e87")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=24738243]
+
+[editable path="Node3D/Sketchfab_Scene"]

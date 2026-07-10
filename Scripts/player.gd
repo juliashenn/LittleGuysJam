@@ -21,6 +21,7 @@ const FOV_CHANGE = 0.75
 
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
+@export var recordAudio: RecordPlayer
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -38,7 +39,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		#get_tree().paused = true
-
+	
+	if Input.is_action_just_pressed("stop"):
+		stop_audio()
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
@@ -82,3 +85,13 @@ func _headbob(t) -> Vector3:
 	pos.y = sin(t * BOB_FREQ) * BOB_AMP 
 	pos.x = cos(t * BOB_FREQ/2) * BOB_AMP 
 	return pos
+	
+func conduct_anim():
+	pass
+
+func poke_anim():
+	pass
+
+func stop_audio():
+	if recordAudio:
+		recordAudio.stop()

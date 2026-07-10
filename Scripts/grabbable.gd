@@ -4,15 +4,19 @@ class_name Grabbable
 var grabbed = false
 var player: Player
 @export var grab_speed = 30.0
-@export var note: Note = preload("res://Resources/QuarterNotes/D4 Q.tres")
-@onready var audio: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@export var note: Note 
+@export var audio: AudioStreamPlayer3D
 @export var mesh: Node3D
+@export var squish_speed = 1.0
+
+var active_tween
 
 var start_scale
 func _ready() -> void:
 	if mesh:
 		start_scale = mesh.scale
-	audio.stream = load(note.audioFile)
+	if note:
+		audio.stream = load(note.audioFile)
 	player = get_tree().get_first_node_in_group("player")
 	contact_monitor = true
 	max_contacts_reported = 4
@@ -27,8 +31,10 @@ func _physics_process(delta: float) -> void:
 		var displacement = target - global_position
 		linear_velocity = displacement * grab_speed
 		
-		var target_basis = Basis.looking_at(player.camera.global_position - global_position, Vector3.UP)
-		global_transform.basis = global_transform.basis.slerp(target_basis, delta * grab_speed)
+		var dir = player.camera.global_position - global_position
+		if dir.length() > 0.01:
+			var target_basis = Basis.looking_at(dir, Vector3.UP).orthonormalized()
+			global_transform.basis = global_transform.basis.orthonormalized().slerp(target_basis, delta * grab_speed).orthonormalized()		
 		angular_velocity = Vector3.ZERO 
 	
 func grab():
@@ -43,26 +49,32 @@ func drop():
 	freeze = false
 	
 func poke():
+	if active_tween: active_tween.kill()
+	mesh.position = Vector3.ZERO
+	mesh.scale = start_scale
 	audio.play(0.0)
-	var tween = create_tween()
-	tween.tween_property(mesh, "scale", Vector3(1, 0.7, 1)*start_scale, 0.2)
-	tween.tween_property(mesh, "scale", start_scale, 0.3)
+	active_tween = create_tween()
+	active_tween.tween_property(mesh, "scale", Vector3(1, 0.7, 1)*start_scale, 0.2/squish_speed)
+	active_tween.tween_property(mesh, "scale", start_scale, 0.3/squish_speed)
 	
 func bounce():
+	if active_tween: active_tween.kill()
+	mesh.position = Vector3.ZERO
+	mesh.scale = start_scale
 	var start_pos = mesh.position
-	var tween = create_tween()
-	tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
+	active_tween = create_tween()
+	active_tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
 	
-	tween.parallel().tween_property(mesh, "position", start_pos + Vector3(0, 0.5, 0), 0.35)
-	tween.parallel().tween_property(mesh, "scale", Vector3(0.85, 1.2, 0.85) * start_scale, 0.35)
+	active_tween.parallel().tween_property(mesh, "position", start_pos + Vector3(0, 0.5, 0), 0.35/squish_speed)
+	active_tween.parallel().tween_property(mesh, "scale", Vector3(0.85, 1.2, 0.85) * start_scale, 0.35/squish_speed)
 	
-	tween.tween_property(mesh, "scale", start_scale, 0.15)
+	active_tween.tween_property(mesh, "scale", start_scale, 0.15/squish_speed)
 	
-	tween.tween_property(mesh, "scale", Vector3(0.9, 0.85, 0.9) * start_scale, 0.1)
-	tween.tween_property(mesh, "position", start_pos, 0.2).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_BOUNCE)
-	tween.parallel().tween_property(mesh, "scale", Vector3(1.3, 0.65, 1.3) * start_scale, 0.2)
+	active_tween.tween_property(mesh, "scale", Vector3(0.9, 0.85, 0.9) * start_scale, 0.1/squish_speed)
+	active_tween.tween_property(mesh, "position", start_pos, 0.2/squish_speed).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_BOUNCE)
+	active_tween.parallel().tween_property(mesh, "scale", Vector3(1.3, 0.65, 1.3) * start_scale, 0.2/squish_speed)
 	
-	tween.tween_property(mesh, "scale", start_scale, 0.15).set_ease(Tween.EASE_OUT)
+	active_tween.tween_property(mesh, "scale", start_scale, 0.15/squish_speed).set_ease(Tween.EASE_OUT)
 	#tween.parallel().tween_property(mesh, "position", start_pos + Vector3(0, 1, 0), 0.4)
 	#tween.parallel().tween_property(mesh, "scale", Vector3(1, 1.1, 1) * start_scale, 0.4)
 	#tween.tween_property(mesh, "position", start_pos, 0.3)
@@ -76,5 +88,10 @@ func _on_body_entered(body: Node) -> void:
 			#linear_velocity = Vector3.ZERO
 			#angular_velocity = Vector3.ZERO
 			var tween = create_tween()
-			tween.tween_property(mesh, "scale", Vector3(1, 0.7, 1)*start_scale, 0.2)
-			tween.tween_property(mesh, "scale", start_scale, 0.3)
+			tween.tween_property(mesh, "scale", Vector3(1, 0.7, 1)*start_scale, 0.2/squish_speed)
+			tween.tween_property(mesh, "scale", start_scale, 0.3/squish_speed)
+
+func set_note(n: Note):
+	if not n: return
+	note = n
+	audio.stream = load(note.audioFile)

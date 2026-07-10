@@ -1,17 +1,23 @@
 [gd_scene format=3 uid="uid://rq8w5nybu10x"]
 
-[ext_resource type="Script" uid="uid://c7vv2lelexeqt" path="res://Scripts/recorder.gd" id="1_rm32i"]
+[ext_resource type="Script" uid="uid://c7vv2lelexeqt" path="res://Scripts/recordPlayer.gd" id="1_rm32i"]
 [ext_resource type="PackedScene" uid="uid://dcct2s64uo2tx" path="res://Assets/vintage_gramophone_game-asset_by_rigdhi/scene.gltf" id="2_b88mk"]
 [ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="3_b88mk"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c7e87"]
 radius = 0.77736306
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_hyly4"]
+radius = 0.7692915
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7e87"]
+size = Vector3(0.44335938, 1, 0.46240234)
+
 [node name="Record Player" type="Node3D" unique_id=1496842421]
 script = ExtResource("1_rm32i")
 
 [node name="Sketchfab_Scene" parent="." unique_id=801131626 instance=ExtResource("2_b88mk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.10339764, 0)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2015714393]
 
@@ -20,12 +26,34 @@ script = ExtResource("3_b88mk")
 interact_name = "Play Melody"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable" unique_id=1995107008]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2341389, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5160603, 0)
 shape = SubResource("SphereShape3D_c7e87")
 
 [node name="Label3D" type="Label3D" parent="Interactable" unique_id=1507925772]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6661073, 0)
 visible = false
 text = "Play Melody"
+
+[node name="Interactable2" type="Area3D" parent="." unique_id=1746998235]
+script = ExtResource("3_b88mk")
+is_interactable = false
+interact_name = "Stop Melody"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable2" unique_id=676782311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50803417, 0)
+shape = SubResource("SphereShape3D_hyly4")
+
+[node name="Label3D" type="Label3D" parent="Interactable2" unique_id=1678807155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6661073, 0)
+visible = false
+text = "Play Melody"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=868666976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.090788186, 0)
+collision_layer = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1274305591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013671875, 0.4085469, -0.008056641)
+shape = SubResource("BoxShape3D_c7e87")
 
 [editable path="Sketchfab_Scene"]

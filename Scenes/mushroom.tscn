@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b5scu561to32f"]
+
+[ext_resource type="Script" uid="uid://xlc02rfrk1m3" path="res://Scripts/grabbable.gd" id="1_0q7t7"]
+[ext_resource type="PackedScene" uid="uid://dk4mclfsco3h0" path="res://Assets/mushroom/mushroomEdit.glb" id="2_e0au5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7e87"]
+size = Vector3(0.45874023, 0.538208, 0.33276367)
+
+[node name="Mushroom" type="RigidBody3D" unique_id=296643333 node_paths=PackedStringArray("audio", "mesh")]
+script = ExtResource("1_0q7t7")
+audio = NodePath("AudioStreamPlayer3D")
+mesh = NodePath("mushroomEdit")
+metadata/_custom_type_script = "uid://xlc02rfrk1m3"
+
+[node name="mushroomEdit" parent="." unique_id=1893028134 instance=ExtResource("2_e0au5")]
+transform = Transform3D(-0.004, 0, -3.496911e-10, 0, 0.004, 0, 3.496911e-10, 0, -0.004, 0, 0, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1135644895]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1306116768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00793457, 0.27301025, -0.00012207031)
+shape = SubResource("BoxShape3D_c7e87")
+
+[editable path="mushroomEdit"]

@@ -4,9 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bp5cx6brcy8rp" path="res://Assets/simple_slime_creature/waterBlob.glb" id="1_kkpwa"]
 [ext_resource type="Shader" uid="uid://dik4ajeh61bsn" path="res://Scripts/shader.gdshader" id="2_gf4bk"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_gf4bk"]
-height = 0.23565674
-radius = 0.16015625
+[sub_resource type="BoxShape3D" id="BoxShape3D_7yui6"]
+size = Vector3(0.29943848, 0.27490234, 0.30828857)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8t8f3"]
 render_priority = 0
@@ -18,20 +17,27 @@ shader_parameter/shadow_threshold = 0.4
 shader_parameter/highlight_threshold = 0.995
 shader_parameter/master_alpha = 0.4
 
-[node name="WaterDrop" type="RigidBody3D" unique_id=1689167999 node_paths=PackedStringArray("mesh") groups=["grabbable"]]
+[node name="WaterDrop" type="RigidBody3D" unique_id=1689167999 node_paths=PackedStringArray("audio", "mesh") groups=["grabbable"]]
 script = ExtResource("1_gf4bk")
+audio = NodePath("AudioStreamPlayer3D")
 mesh = NodePath("waterBlob")
 metadata/_custom_type_script = "uid://xlc02rfrk1m3"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2023799353 groups=["grabbable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14719781, 0)
-shape = SubResource("CylinderShape3D_gf4bk")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.143, 0)
+shape = SubResource("BoxShape3D_7yui6")
 
 [node name="waterBlob" parent="." unique_id=1684066815 instance=ExtResource("1_kkpwa")]
-transform = Transform3D(-0.35, 0, -3.059797e-08, 0, 0.35, 0, 3.059797e-08, 0, -0.35, 0, 0.009868398, 0)
+transform = Transform3D(-0.35, 0, -3.059797e-08, 0, 0.35, 0, 3.059797e-08, 0, -0.35, 0, 0, 0)
 
 [node name="Inside_phong1_0" parent="waterBlob/Sketchfab_model/ce61cdca058b42bbae22e8500a011400_fbx/RootNode/Slime/Inside" parent_id_path=PackedInt32Array(1684066815, 1327462236) index="0" unique_id=63071338]
 surface_material_override/0 = SubResource("ShaderMaterial_8t8f3")
+
+[node name="Left_eye" parent="waterBlob/Sketchfab_model/ce61cdca058b42bbae22e8500a011400_fbx/RootNode/Slime" parent_id_path=PackedInt32Array(1684066815, 1940646253) index="1" unique_id=697143865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.096)
+
+[node name="Left_eye_lambert2_0" parent="waterBlob/Sketchfab_model/ce61cdca058b42bbae22e8500a011400_fbx/RootNode/Slime/Left_eye" index="0" unique_id=1349925889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2013069252]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15129188, 0)

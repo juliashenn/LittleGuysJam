@@ -4,7 +4,5 @@
 
 [resource]
 script = ExtResource("1_1665t")
-Pitch = null
-Length = null
-file = "res://Sound/Notes/Quarter/F#4 Q.wav"
+fileName = "F#4 Q"
 metadata/_custom_type_script = "uid://cowjt4alkq2d0"

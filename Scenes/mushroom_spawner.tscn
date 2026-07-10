@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bc8leqxdrhvfv"]
+
+[ext_resource type="Script" uid="uid://eu3m6i6qkyq0" path="res://Scripts/spawner.gd" id="1_de65v"]
+[ext_resource type="Resource" uid="uid://hsvn73w4rc6t" path="res://Resources/tutorial.tres" id="2_fe6y8"]
+[ext_resource type="PackedScene" uid="uid://b5scu561to32f" path="res://Scenes/mushroom.tscn" id="3_7hu1l"]
+
+[node name="MushroomSpawner" type="Node3D" unique_id=1553713561]
+script = ExtResource("1_de65v")
+melody = ExtResource("2_fe6y8")
+objToSpawn = ExtResource("3_7hu1l")
+noteType = "E"

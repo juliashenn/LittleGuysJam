@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://cxjro0fnwwdkw" path="res://Scripts/stump.gd" id="1_v887s"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_o06y3"]
-height = 1.7754517
-radius = 1.1142578
+height = 1.4441242
+radius = 0.34472656
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_c7e87"]
 height = 1.1060791
@@ -29,7 +29,7 @@ visible = false
 [node name="Area3D" type="Area3D" parent="." unique_id=568190180]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1639212113]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.3620448, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.27921295, 0)
 shape = SubResource("CylinderShape3D_o06y3")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=729383124]
@@ -42,6 +42,7 @@ light_energy = 3.0
 omni_range = 0.39386776
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1066940780]
+collision_layer = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1068115493]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.26357818, 0)

@@ -8,3 +8,7 @@ var fileName: String:
 var audioFile: String:
 	get:
 		return "res://Sound/" + fileName + ".wav"
+
+var quarternotes: Array[Note]:
+	get:
+		return notes.filter(func(note: Note): return note.Length == "Q")

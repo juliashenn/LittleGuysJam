@@ -7,10 +7,11 @@ var can_interact := true
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and can_interact:
-		if current_interactions:
+		var target = get_nearest_interactable()
+		if target:
 			can_interact = false
 			interact_label.hide()
-			await current_interactions[0].interact.call()
+			await target.interact.call()
 			can_interact = true
 
 func _on_area_entered(area: Area3D) -> void:
@@ -21,13 +22,23 @@ func _on_area_exited(area: Area3D) -> void:
 	if area is Interactable:
 		current_interactions.erase(area)
 
+func get_nearest_interactable() -> Interactable:
+	current_interactions.sort_custom(_sort_by_nearest)
+	for area in current_interactions:
+		if area.is_interactable:
+			return area
+	return null
+	
 func _process(delta: float) -> void:
 	if current_interactions and can_interact:
-		current_interactions.sort_custom(_sort_by_nearest)
-		if current_interactions[0].is_interactable :
-			if current_interactions[0].interact_name and interact_label:
-				interact_label.text = "[E] " + current_interactions[0].interact_name
+		var target = get_nearest_interactable()
+		if target:
+			if target.interact_name and interact_label:
+				interact_label.text = "[E]" + target.interact_name
 				interact_label.show()
+		else:
+			if interact_label:
+				interact_label.hide()
 	elif interact_label:
 		interact_label.hide() 
 

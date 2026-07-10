@@ -1,10 +1,10 @@
 extends Resource
 class_name Note
 
-
-var fileName: String: 
-	get: 
-		return resource_path.get_basename().get_file()
+@export var fileName: String
+#var fileName: String: 
+	#get: 
+		#return resource_path.get_basename().get_file()
 var Pitch: String:
 	get:
 		return fileName.substr(0, fileName.length() - 2)

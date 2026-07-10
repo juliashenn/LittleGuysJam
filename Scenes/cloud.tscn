@@ -1,21 +1,33 @@
 [gd_scene format=3 uid="uid://bdtr842f3ujv2"]
 
-[ext_resource type="Script" uid="uid://pkp3p63at1vg" path="res://Scripts/cloud.gd" id="1_8hs1w"]
+[ext_resource type="Script" uid="uid://eu3m6i6qkyq0" path="res://Scripts/spawner.gd" id="1_8hs1w"]
 [ext_resource type="PackedScene" uid="uid://csekk8stq7bjn" path="res://Assets/stylize_clouds/scene.gltf" id="1_sm7h7"]
+[ext_resource type="Resource" uid="uid://hsvn73w4rc6t" path="res://Resources/tutorial.tres" id="2_uourm"]
+[ext_resource type="PackedScene" uid="uid://bty0aodt8jxnf" path="res://Scenes/water_drop.tscn" id="3_pdgc3"]
 
 [node name="Cloud" type="Node3D" unique_id=1548188862]
 script = ExtResource("1_8hs1w")
+radius = 3.5
+melody = ExtResource("2_uourm")
+objToSpawn = ExtResource("3_pdgc3")
+noteType = "Q"
 
 [node name="Sketchfab_Scene" parent="." unique_id=99985599 instance=ExtResource("1_sm7h7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24793577, 0, 1.7239082)
 
-[node name="Cube_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 737440620) index="0" unique_id=1860240367]
+[node name="Sketchfab_model" parent="Sketchfab_Scene" index="0" unique_id=758403000]
+transform = Transform3D(3, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0, 0)
+
+[node name="Cube_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 1541339133) index="0" unique_id=2073212958]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="Cube_001_5" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 737440620) index="1" unique_id=1995782139]
+[node name="Object_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cube_4" index="0" unique_id=1442292334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8418285, -4.351738e-08, 0.9955616)
+
+[node name="Cube_001_5" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 1541339133) index="1" unique_id=613575571]
 visible = false
 
-[node name="Cube_002_6" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 737440620) index="2" unique_id=794208855]
+[node name="Cube_002_6" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 1541339133) index="2" unique_id=1225849940]
 visible = false
 
 [editable path="Sketchfab_Scene"]

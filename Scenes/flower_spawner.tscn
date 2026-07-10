@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://wde1kf2aiecq"]
+
+[ext_resource type="Script" uid="uid://eu3m6i6qkyq0" path="res://Scripts/spawner.gd" id="1_tjmdm"]
+[ext_resource type="PackedScene" uid="uid://bpoha66lh0cm2" path="res://Assets/little_pond__fish/scene.gltf" id="2_48ari"]
+[ext_resource type="Resource" uid="uid://hsvn73w4rc6t" path="res://Resources/tutorial.tres" id="2_w8n5y"]
+[ext_resource type="PackedScene" uid="uid://cwkdey3a4cku5" path="res://Scenes/flower.tscn" id="3_ukpqs"]
+[ext_resource type="Shader" uid="uid://bbwikcmfirh0g" path="res://Scripts/StrictShader.gdshader" id="3_wpsby"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aqiln"]
+render_priority = 0
+shader = ExtResource("3_wpsby")
+shader_parameter/base_color = Color(0.32941177, 0.4117647, 0.4117647, 1)
+shader_parameter/shadow_color = Color(0.21048743, 0.26797265, 0.38645825, 1)
+shader_parameter/highlight_color = Color(0.40491456, 0.57893884, 0.3349622, 1)
+shader_parameter/shadow_threshold = 0.4
+shader_parameter/highlight_threshold = 0.85
+shader_parameter/master_alpha = 1.0
+shader_parameter/light_direction = Vector3(1, 2, 1)
+
+[node name="FlowerSpawner" type="Node3D" unique_id=1922605449]
+script = ExtResource("1_tjmdm")
+melody = ExtResource("2_w8n5y")
+objToSpawn = ExtResource("3_ukpqs")
+noteType = "H"
+
+[node name="Sketchfab_Scene" parent="." unique_id=1604419152 instance=ExtResource("2_48ari")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="pCube1" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 344231245) index="0" unique_id=263118075]
+transform = Transform3D(11.380923, 0, 0, 0, 0.8754556, 0, 0, 0, 15.758202, 0, -0.13749361, 3.0529714e-17)
+
+[node name="pCube1_pondbase_0" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/pCube1" index="0" unique_id=106081067]
+surface_material_override/0 = SubResource("ShaderMaterial_aqiln")
+
+[node name="_Grass_polySurface2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 344231245) index="41" unique_id=2035924347]
+visible = false
+
+[editable path="Sketchfab_Scene"]

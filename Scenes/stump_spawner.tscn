@@ -5,6 +5,8 @@
 [ext_resource type="Material" uid="uid://cmjwirjmqlsaa" path="res://Assets/sheet-music/source/secretpaper.tres" id="3_x0jf6"]
 [ext_resource type="Material" uid="uid://d3rmaym1ckefa" path="res://Assets/sheet-music/source/line5.tres" id="4_bg14r"]
 [ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="5_bg14r"]
+[ext_resource type="PackedScene" uid="uid://cwsrjto64yg6v" path="res://Assets/tree_stump/scene.gltf" id="6_ka44f"]
+[ext_resource type="Shader" uid="uid://dik4ajeh61bsn" path="res://Scripts/shader.gdshader" id="7_r31oc"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_c7e87"]
 material = ExtResource("3_x0jf6")
@@ -13,16 +15,26 @@ material = ExtResource("3_x0jf6")
 material = ExtResource("4_bg14r")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7e87"]
-size = Vector3(0.86987305, 2.9648743, 1.3144531)
+size = Vector3(0.42114258, 2.364151, 0.5163574)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j1lyr"]
 size = Vector3(0.107055664, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lnixj"]
+render_priority = 0
+shader = ExtResource("7_r31oc")
+shader_parameter/base_color = Color(0.6156863, 0.8235294, 0.6392157, 1)
+shader_parameter/shadow_color = Color(0.32941177, 0.4117647, 0.4117647, 1)
+shader_parameter/highlight_color = Color(0.6156863, 0.8235294, 0.6392157, 1)
+shader_parameter/shadow_threshold = 0.3
+shader_parameter/highlight_threshold = 0.7
+shader_parameter/master_alpha = 0.6
 
 [node name="stumpSpawner" type="Node3D" unique_id=1744331624]
 script = ExtResource("1_3mtug")
 
 [node name="Sketchfab_Scene" parent="." unique_id=1676072025 instance=ExtResource("2_h1qk8")]
-transform = Transform3D(-2.6226834e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226834e-08, 0, 0.75471497, 0)
+transform = Transform3D(-2.6226834e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226834e-08, 0, 0.5901824, 0)
 
 [node name="pCube11" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1676072025, 781566711) index="3" unique_id=352687191]
 transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
@@ -55,11 +67,11 @@ transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 
 transform = Transform3D(1.000001, -2.311985e-08, -6.6147727e-09, 2.3119853e-08, 0.84867215, 0.52892053, -6.6147834e-09, -0.52892053, 0.84867215, 1.3390129e-08, 0.12989962, 0.30633035)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2020254719]
-transform = Transform3D(0.0032276292, 0.2842108, -0.20423955, 0.0023193, 0.20422639, 0.28422913, -0.34997743, 0.0039745118, 8.927595e-09, 0.110412106, 1.2394016, 0.011019631)
+transform = Transform3D(0.0032276292, 0.2842108, -0.20423955, 0.0023193, 0.20422639, 0.28422913, -0.34997743, 0.0039745118, 8.927595e-09, 0.110412106, 1.074869, 0.011019631)
 mesh = SubResource("QuadMesh_c7e87")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=776507866]
-transform = Transform3D(0.0032276292, 0.2842108, -0.20423955, 0.0023193, 0.20422639, 0.28422913, -0.34997743, 0.0039745118, 8.927595e-09, 0.118101135, 1.2343886, 0.011450247)
+transform = Transform3D(0.0032276292, 0.2842108, -0.20423955, 0.0023193, 0.20422639, 0.28422913, -0.34997743, 0.0039745118, 8.927595e-09, 0.118101135, 1.069856, 0.011450247)
 mesh = SubResource("QuadMesh_j1lyr")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=254385377]
@@ -67,13 +79,24 @@ script = ExtResource("5_bg14r")
 interact_name = "Conduct the Melody"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1223732431]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37393445, 1.4600372, 0.0026855469)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2787196, 1.1596756, -0.018676758)
 shape = SubResource("BoxShape3D_c7e87")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=349130107]
+collision_layer = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1442525387]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.036071777, 1.0081172, 0)
 shape = SubResource("BoxShape3D_j1lyr")
 
+[node name="Sketchfab_Scene2" parent="." unique_id=1750677268 instance=ExtResource("6_ka44f")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.21107626, 0, 0)
+
+[node name="Cylinder" parent="Sketchfab_Scene2/Sketchfab_model/Root" parent_id_path=PackedInt32Array(1750677268, 375425210) index="0" unique_id=2035466181]
+visible = false
+
+[node name="Circle_0" parent="Sketchfab_Scene2/Sketchfab_model/Root/Circle" parent_id_path=PackedInt32Array(1750677268, 1970261218) index="0" unique_id=952467846]
+surface_material_override/0 = SubResource("ShaderMaterial_lnixj")
+
 [editable path="Sketchfab_Scene"]
+[editable path="Sketchfab_Scene2"]
