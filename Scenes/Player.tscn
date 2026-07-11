@@ -19,50 +19,39 @@ shading_mode = 0
 [sub_resource type="SphereShape3D" id="SphereShape3D_c7e87"]
 radius = 1.4638796
 
-[sub_resource type="Animation" id="Animation_nn08x"]
+[sub_resource type="Animation" id="Animation_5ixxa"]
 length = 0.001
-tracks/0/type = "rotation_3d"
+tracks/0/type = "position_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Head/Camera3D/wand")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -0.5568758, 0.2387156, 0.11607961, 0.7870385)
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Head/Camera3D/wand:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.85203326, -0.49117124, -1.2864858)]
-}
+tracks/0/keys = PackedFloat32Array(0, 1, 1.0412866, -0.5579251, -0.9446107)
 
-[sub_resource type="Animation" id="Animation_5ixxa"]
-resource_name = "wave_wand"
-length = 1.0666667
-tracks/0/type = "rotation_3d"
+[sub_resource type="Animation" id="Animation_nn08x"]
+resource_name = "conduct"
+length = 3.4280000000000004
+loop_mode = 1
+tracks/0/type = "position_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Head/Camera3D/wand")
-tracks/0/interp = 2
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -0.5568758, 0.2387156, 0.11607961, 0.7870385, 0.43333334, 1, -0.2528956, -0.0474656, 0.1438973, 0.9555545, 0.8, 1, -0.81269777, 0.057313662, 0.14026606, 0.56263953, 1, 1, -0.5568758, 0.2387156, 0.11607961, 0.7870385)
-tracks/1/type = "position_3d"
+tracks/0/keys = PackedFloat32Array(0.033333335, 1, 1.0930812, -0.5579251, -0.9446107, 0.2, 1, 1.0884736, -0.5532105, -0.9446107, 0.5, 1, 1.0585238, -0.52256525, -0.9446107, 0.857, 1, 1.0318141, -0.5806749, -0.9446107, 1.1, 1, 1.0104742, -0.65328395, -0.9446107, 1.3333334, 1, 0.9161492, -0.621209, -0.9446107, 1.5666667, 1, 0.84469974, -0.6477432, -0.9446107, 1.714, 1, 0.8184242, -0.6897125, -0.9446107, 1.8333334, 1, 0.87295717, -0.6478137, -0.9446107, 2.1333332, 1, 1.0381366, -0.652244, -0.9446107, 2.3333333, 1, 1.1717252, -0.7241335, -0.9446107, 2.571, 1, 1.2682754, -0.6020831, -0.9446107, 3.1666667, 1, 1.1951728, -0.7284341, -0.9446107, 3.4, 1, 1.0930812, -0.5579251, -0.9446107)
+tracks/1/type = "rotation_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Head/Camera3D/wand")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0.85203326, -0.49117124, -1.2864858, 0.43333334, 1, 0.9264662, -0.28461957, -1.1618105, 0.8, 1, 0.90746, -0.75237274, -1.3259796, 1.0666667, 1, 0.85203326, -0.49117124, -1.2864858)
+tracks/1/keys = PackedFloat32Array(0.033333335, 1, -0.5237967, 0.076153986, 0.047087766, 0.84712476, 0.23333333, 1, -0.57524896, 0.0743804, 0.042849466, 0.8134618, 0.5, 1, -0.66861755, 0.04940654, 0.035458412, 0.7411155, 0.857, 1, -0.80901635, 0.022414755, 0.026830852, 0.58674526, 1.1, 1, -0.77388597, 0.02560016, 0.034715515, 0.6318541, 1.3333334, 1, -0.6560089, 0.031460915, 0.06342974, 0.75142473, 1.5333333, 1, -0.78656596, 0.068627305, 0.08864012, 0.60724545, 1.714, 1, -0.7866436, 0.0640178, 0.082757294, 0.6084773, 1.8333334, 1, -0.7878555, 0.052592415, 0.067844145, 0.60984814, 2.1333332, 1, -0.6845452, -0.011876855, -0.021726452, 0.7285497, 2.3333333, 1, -0.7720562, -0.07553649, -0.08883006, 0.62476605, 2.571, 1, -0.817518, -0.045645837, -0.04685217, 0.5721761, 3.1666667, 1, -0.7747338, 0.02777639, 0.031724382, 0.63088, 3.4, 1, -0.5237967, 0.076153986, 0.047087766, 0.84712476)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nn08x"]
 _data = {
-&"RESET": SubResource("Animation_nn08x"),
-&"wave_wand": SubResource("Animation_5ixxa")
+&"RESET": SubResource("Animation_5ixxa"),
+&"conduct": SubResource("Animation_nn08x")
 }
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=841984925 groups=["player"]]
@@ -90,10 +79,10 @@ mesh = SubResource("SphereMesh_c7e87")
 surface_material_override/0 = SubResource("StandardMaterial3D_j1lyr")
 
 [node name="Marker3D" type="Marker3D" parent="Head/Camera3D" unique_id=250008256]
-transform = Transform3D(0.8590808, -0.44858837, 0.24647294, -0.083151676, 0.35282964, 0.9319857, -0.5050407, -0.8211457, 0.26580822, 1.0369111, -0.64060307, -0.9322877)
+transform = Transform3D(0.8590808, -0.44858837, 0.24647294, -0.083151676, 0.35282964, 0.9319857, -0.5050407, -0.8211457, 0.26580822, 1.0369111, -0.5657455, -0.9322877)
 
 [node name="wand" parent="Head/Camera3D" unique_id=1417012209 instance=ExtResource("3_gntrk")]
-transform = Transform3D(0.85908073, -0.4485883, 0.2464729, -0.08315163, 0.35282966, 0.9319857, -0.5050406, -0.8211457, 0.26580828, 0.85203326, -0.49117124, -1.2864858)
+transform = Transform3D(0.9839669, -0.1595569, 0.07969497, 2.235174e-08, 0.44683942, 0.894614, -0.17835276, -0.88027066, 0.4396749, 1.0412866, -0.5579251, -0.9446107)
 
 [node name="GrabPoint" type="Marker3D" parent="Head/Camera3D" unique_id=1784595468]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16156769, -2.0738106)

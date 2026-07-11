@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://drvxxf7tgfqjs"]
+
+[ext_resource type="Texture2D" uid="uid://dvpukraeg6t7v" path="res://Assets/modular_brick_wall/textures/wall_mat_baseColor.jpeg" id="1_1rnme"]
+[ext_resource type="Texture2D" uid="uid://bh31xgq4pnf66" path="res://Assets/modular_brick_wall/textures/wall_mat_metallicRoughness.png" id="2_yxj2u"]
+[ext_resource type="Texture2D" uid="uid://buyewne8wmnp7" path="res://Assets/modular_brick_wall/textures/wall_mat_normal.jpeg" id="3_ogdyp"]
+
+[resource]
+resource_name = "wall_mat"
+albedo_texture = ExtResource("1_1rnme")
+metallic = 1.0
+metallic_texture = ExtResource("2_yxj2u")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_yxj2u")
+roughness_texture_channel = 1
+emission = Color(0.9372549, 0.8392157, 0.76862746, 1)
+emission_energy_multiplier = 2.0
+emission_operator = 1
+normal_enabled = true
+normal_texture = ExtResource("3_ogdyp")
+ao_enabled = true
+ao_texture = ExtResource("2_yxj2u")
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+metadata/_gltf_primary_texture_coord = 0

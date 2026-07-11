@@ -88,10 +88,10 @@ func _headbob(t) -> Vector3:
 	return pos
 	
 func conduct_anim():
-	pass
+	anim.play("conduct")
 
 func poke_anim():
-	anim.play("wave_wand")
+	anim.play("conduct")
 
 func stop_audio():
 	if recordAudio:
