@@ -15,9 +15,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	if holding_note and not holding_note.grabbed and holding_note.freeze:
+	if holding_note and not holding_note.grabbed:
 		holding_note.global_position = marker.global_position
-		holding_note.rotation = rotation
+		holding_note.rotation = Vector3.ZERO
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is Grabbable and not holding_note:
@@ -29,14 +29,14 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		if obj.mesh:
 			obj.mesh.scale = obj.start_scale
 			obj.mesh.position = Vector3.ZERO
-		obj.freeze = true
+		
 		obj.global_position = marker.global_position
 		obj.linear_velocity = Vector3.ZERO
 		obj.angular_velocity = Vector3.ZERO
-		obj.rotation = rotation
+		obj.rotation = Vector3.ZERO
+		obj.freeze = true
 		light.show()
 		obj.grabbed = false
-
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body is Grabbable and holding_note:

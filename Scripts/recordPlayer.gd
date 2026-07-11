@@ -34,3 +34,8 @@ func _on_interact_stop():
 
 func stop():
 	audiostream.stop()
+	
+func set_melody(m: Melody):
+	if m:
+		melody = m
+		audiostream.stream = load(m.audioFile)

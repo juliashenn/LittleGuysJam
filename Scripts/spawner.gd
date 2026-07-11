@@ -11,7 +11,8 @@ class_name Spawner
 var spawned_objs: Array[Grabbable] = []
 
 func _ready() -> void:
-	spawn()
+	#spawn()
+	pass
 
 	
 func spawn():
@@ -63,3 +64,8 @@ func get_random_notes(n: int) -> Array[Note]:
 	var all = get_all_notes()
 	all.shuffle()
 	return all.slice(0, n)
+
+func clear():
+	for x in spawned_objs:
+		x.queue_free()
+	spawned_objs = []

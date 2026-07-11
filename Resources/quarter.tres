@@ -3,9 +3,7 @@
 [ext_resource type="Script" uid="uid://cowjt4alkq2d0" path="res://Resources/Note.gd" id="1_urhq6"]
 [ext_resource type="Resource" uid="uid://bsaif8lqgys7r" path="res://Resources/QuarterNotes/D4 Q.tres" id="2_b4r2s"]
 [ext_resource type="Resource" uid="uid://cpwo6j2kmaqqo" path="res://Resources/QuarterNotes/A4 Q.tres" id="3_he051"]
-[ext_resource type="Resource" uid="uid://csspy7mdln4v3" path="res://Resources/QuarterNotes/E4 Q.tres" id="3_nyrer"]
 [ext_resource type="Resource" uid="uid://diu7t2sgouhvt" path="res://Resources/QuarterNotes/E5 Q.tres" id="4_1vq7n"]
-[ext_resource type="Resource" uid="uid://ct58qkjrai5xx" path="res://Resources/QuarterNotes/F#4 Q.tres" id="4_8jkw0"]
 [ext_resource type="Resource" uid="uid://cd07y7txrj1xj" path="res://Resources/QuarterNotes/F#5 Q.tres" id="5_lau63"]
 [ext_resource type="Script" uid="uid://bytk5o2omahjl" path="res://Resources/Melody.gd" id="6_1vq7n"]
 [ext_resource type="Resource" uid="uid://d0iv7wbtb86r7" path="res://Resources/QuarterNotes/D5 Q.tres" id="6_q5sec"]
@@ -13,5 +11,6 @@
 
 [resource]
 script = ExtResource("6_1vq7n")
-notes = Array[ExtResource("1_urhq6")]([ExtResource("2_b4r2s"), ExtResource("3_he051"), ExtResource("4_1vq7n"), ExtResource("5_lau63"), ExtResource("6_q5sec"), ExtResource("7_vkpvl"), ExtResource("2_b4r2s"), ExtResource("3_nyrer"), ExtResource("4_8jkw0"), ExtResource("3_nyrer"), ExtResource("2_b4r2s"), ExtResource("7_vkpvl")])
+notes = Array[ExtResource("1_urhq6")]([ExtResource("2_b4r2s"), ExtResource("3_he051"), ExtResource("4_1vq7n"), ExtResource("5_lau63"), ExtResource("6_q5sec"), ExtResource("7_vkpvl"), ExtResource("5_lau63")])
+fileName = "quarter"
 metadata/_custom_type_script = "uid://bytk5o2omahjl"

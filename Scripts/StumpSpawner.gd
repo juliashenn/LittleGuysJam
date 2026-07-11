@@ -2,6 +2,7 @@ extends Node3D
 
 @export var melody: Melody
 @export var stump: PackedScene
+@export var manager: Manager
 
 @export var arc_ang = deg_to_rad(160.0)
 @export var spacing = 1
@@ -13,7 +14,7 @@ var noteToSec = {
 	"Q": 0.857, "H": 1.714, "E": 0.4285
 }
 func _ready() -> void:
-	spawn()
+	#spawn()
 	interactable.is_interactable = true
 	interactable.interact = _on_interact
 
@@ -35,9 +36,9 @@ func spawn():
 		spawned_stumps.append(stump_obj)
 		
 		stump_obj.position = Vector3(cos(ang), 0, sin(ang)) * radius
-		stump_obj.rotation.y = arc_ang - arc_ang/count *i
-	
+		stump_obj.rotation.y = ang 
 		add_child(stump_obj)
+		print(stump_obj.global_rotation)
 		
 func check_solution():
 	if not melody:
@@ -65,4 +66,9 @@ func failed():
 		st.default_light()
 
 func solved():
-	pass # contact the level manager 
+	manager.melody_solved()
+	
+func clear():
+	for x in spawned_stumps:
+		x.queue_free()
+	spawned_stumps = []

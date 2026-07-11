@@ -12,4 +12,5 @@
 [resource]
 script = ExtResource("2_jm3va")
 notes = Array[ExtResource("1_ffeym")]([ExtResource("2_yq3v2"), ExtResource("3_xvi2d"), ExtResource("4_g0aih"), ExtResource("5_2csfu"), ExtResource("6_ngr6p"), ExtResource("7_0bhca"), ExtResource("5_2csfu")])
+fileName = "half"
 metadata/_custom_type_script = "uid://bytk5o2omahjl"

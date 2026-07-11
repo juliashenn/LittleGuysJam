@@ -19,4 +19,5 @@
 [resource]
 script = ExtResource("2_5etl8")
 notes = Array[ExtResource("1_eqr8a")]([ExtResource("2_le4gl"), ExtResource("3_3hn00"), ExtResource("4_ito3j"), ExtResource("5_dmtr8"), ExtResource("6_gr4kh"), ExtResource("5_dmtr8"), ExtResource("4_ito3j"), ExtResource("7_uu7o6"), ExtResource("8_lyrrp"), ExtResource("9_kh0fu"), ExtResource("10_2fdcj"), ExtResource("2_le4gl"), ExtResource("3_3hn00"), ExtResource("4_ito3j"), ExtResource("5_dmtr8"), ExtResource("6_gr4kh"), ExtResource("5_dmtr8"), ExtResource("4_ito3j"), ExtResource("11_yxbym"), ExtResource("12_7x11j"), ExtResource("13_twpd0"), ExtResource("14_f84qe")])
+fileName = "mixed"
 metadata/_custom_type_script = "uid://bytk5o2omahjl"

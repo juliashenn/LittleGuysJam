@@ -171,10 +171,11 @@ recordAudio = NodePath("../Recorder")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37064153, -1.2162962)
 melody = ExtResource("6_7yui6")
 
-[node name="StumpSpawner" parent="." unique_id=1271368526 instance=ExtResource("7_o06y3")]
+[node name="StumpSpawner" parent="." unique_id=1271368526 node_paths=PackedStringArray("manager") instance=ExtResource("7_o06y3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.31344175, -1.1920929e-06, 9.683598)
 melody = ExtResource("8_hgpy0")
 stump = ExtResource("9_5v1tr")
+manager = NodePath("..")
 min_radius = 4.0
 
 [node name="Cloud" parent="." unique_id=1548188862 instance=ExtResource("11_ikia7")]

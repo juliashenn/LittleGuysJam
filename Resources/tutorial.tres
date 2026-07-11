@@ -10,4 +10,5 @@
 [resource]
 script = ExtResource("2_qsnol")
 notes = Array[ExtResource("1_66xnw")]([ExtResource("2_v7u24"), ExtResource("3_hb243"), ExtResource("4_w3klv"), ExtResource("5_kpjdv")])
+fileName = "tutorial"
 metadata/_custom_type_script = "uid://bytk5o2omahjl"
