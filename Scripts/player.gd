@@ -91,7 +91,10 @@ func conduct_anim():
 	anim.play("conduct")
 
 func poke_anim():
-	anim.play("conduct")
+	anim.play("poke")
+
+func stop_anim():
+	anim.stop(false)
 
 func stop_audio():
 	if recordAudio:

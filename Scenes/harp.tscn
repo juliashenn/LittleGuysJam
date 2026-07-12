@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://doq85qoj2rc7q"]
+
+[ext_resource type="PackedScene" uid="uid://doa5va1h7mpk0" path="res://Assets/harp (2)/scene.gltf" id="1_twqlc"]
+
+[sub_resource type="Animation" id="Animation_twqlc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sketchfab_Scene:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sketchfab_Scene:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_68lnk"]
+resource_name = "awake"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sketchfab_Scene:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3666667, 2.2666667, 2.96),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964), Vector3(0, 1.9181168, 0), Vector3(0, 2.172935, 0), Vector3(0.19759281, 2.8156245, -0.021127166)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sketchfab_Scene:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_m88r8"]
+resource_name = "playing"
+length = 2.714
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sketchfab_Scene:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.19759281, 2.8156245, -0.021127166)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sketchfab_Scene:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vb6ve"]
+_data = {
+&"RESET": SubResource("Animation_twqlc"),
+&"awake": SubResource("Animation_68lnk"),
+&"playing": SubResource("Animation_m88r8")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sk01p"]
+albedo_color = Color(0.9372549, 0.8392157, 0.76862746, 1)
+metallic = 0.92
+roughness = 0.0
+emission_enabled = true
+emission = Color(0.76051044, 0.9063383, 0.76395583, 1)
+emission_energy_multiplier = 1000.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_6wkil"]
+material = SubResource("StandardMaterial3D_sk01p")
+radius = 0.01
+height = 0.02
+
+[sub_resource type="Gradient" id="Gradient_x4dan"]
+offsets = PackedFloat32Array(0, 0.51955307, 0.9860335)
+colors = PackedColorArray(0.9372549, 0.8392157, 0.76862746, 1, 0.9648476, 0.90992206, 0.87037563, 1, 1, 1, 1, 0.29411766)
+
+[node name="harp" type="Node3D" unique_id=149440918]
+
+[node name="Sketchfab_Scene" parent="." unique_id=649274533 instance=ExtResource("1_twqlc")]
+transform = Transform3D(1.0508769e-14, -2.4041265e-07, 5.5, -5.4999995, -2.4041265e-07, 0, 2.4041262e-07, -5.5, -2.4041265e-07, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1309269291]
+libraries/ = SubResource("AnimationLibrary_vb6ve")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=451579875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07975066, 1.3756125, 0.22207159)
+emitting = false
+mesh = SubResource("SphereMesh_6wkil")
+emission_shape = 1
+emission_sphere_radius = 1.0
+emission_colors = PackedColorArray(1, 1, 1, 1, 0.9372549, 0.8392157, 0.76862746, 1, 0.7178, 0.97, 0.79766333, 1)
+spread = 146.63
+gravity = Vector3(0, 1, 0)
+color = Color(1, 0.13, 0.13, 1)
+color_ramp = SubResource("Gradient_x4dan")
+hue_variation_min = 0.02
+hue_variation_max = 0.17
+
+[editable path="Sketchfab_Scene"]

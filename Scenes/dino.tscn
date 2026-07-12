@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cpcewxvtpjbev"]
+
+[ext_resource type="Script" uid="uid://bq4js7itg5a06" path="res://Scripts/dino.gd" id="1_hmd0f"]
+[ext_resource type="PackedScene" uid="uid://bj71idcynuqq" path="res://Assets/mushroom-o-saurus/scene.gltf" id="1_l6xby"]
+[ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="2_7ycc7"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hmd0f"]
+radius = 0.3796513
+
+[node name="Dino" type="Node3D" unique_id=452951973]
+script = ExtResource("1_hmd0f")
+
+[node name="dino" parent="." unique_id=777331390 instance=ExtResource("1_l6xby")]
+transform = Transform3D(-0.41151735, 0, 0.9114019, 0, 1, 0, -0.9114019, 0, -0.41151735, 0, 1.9747341, 0)
+
+[node name="Object_7" parent="dino/Sketchfab_model/zbrush_concat_osgb_cleaner_materialmerger_gles/_sketchfab-data_processing_models_a55a1684bb5f4db691ed8b6999c0b09d_dcbc880fb6a74032a838c7a6c0ec3cde_091b3573913b49488cbf74d3f43d4949_preprocess_SubTool-7-12721251_OBJ" parent_id_path=PackedInt32Array(777331390, 2058194306) index="0" unique_id=925710727]
+transform = Transform3D(1, 0, 0, 0, 1, -3.3087225e-24, 0, -3.3087225e-24, 1, 0, 0, 0)
+
+[node name="Interactable" type="Area3D" parent="." unique_id=1074190786]
+script = ExtResource("2_7ycc7")
+interact_name = "???"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable" unique_id=1857240362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11414528, 0.5160603, 0)
+shape = SubResource("SphereShape3D_hmd0f")
+
+[node name="Label3D" type="Label3D" parent="Interactable" unique_id=1209678268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6661073, 0)
+visible = false
+text = "Play Melody"
+
+[editable path="dino"]

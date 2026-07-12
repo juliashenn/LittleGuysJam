@@ -1,0 +1,11 @@
+Model Information:
+* title:	Randomness
+* source:	https://sketchfab.com/3d-models/randomness-dd376218653a44b4818ae8dc2becfe5f
+* author:	1catalogue (https://sketchfab.com/1catalogue)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Randomness" (https://sketchfab.com/3d-models/randomness-dd376218653a44b4818ae8dc2becfe5f) by 1catalogue (https://sketchfab.com/1catalogue) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

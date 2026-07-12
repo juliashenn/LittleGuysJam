@@ -18,8 +18,15 @@
 [ext_resource type="PackedScene" uid="uid://b8pkqbqi35p57" path="res://Scenes/bridge.tscn" id="18_0pcbe"]
 [ext_resource type="Material" uid="uid://dumn64wod5iw7" path="res://Assets/garden_cement_fence_wall_building/textures/material.tres" id="19_1cojt"]
 [ext_resource type="PackedScene" uid="uid://bbkgd1j8kt3e2" path="res://Scenes/cello.tscn" id="19_axeuq"]
-[ext_resource type="PackedScene" uid="uid://ba8b31rn54lr7" path="res://Assets/stylized_log/scene.gltf" id="20_1cojt"]
+[ext_resource type="PackedScene" uid="uid://djho72nvixljf" path="res://Scenes/flute.tscn" id="20_xbk3s"]
+[ext_resource type="PackedScene" uid="uid://c1a38nvysb41d" path="res://Scenes/violin.tscn" id="21_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://disgsypqv85p7" path="res://Assets/garden_cement_fence_wall_building/scene.gltf" id="21_no8kt"]
+[ext_resource type="PackedScene" uid="uid://doq85qoj2rc7q" path="res://Scenes/harp.tscn" id="22_pt3ps"]
+[ext_resource type="PackedScene" uid="uid://bj71idcynuqq" path="res://Assets/mushroom-o-saurus/scene.gltf" id="23_hmc15"]
+[ext_resource type="PackedScene" uid="uid://byav5qkgxcep6" path="res://Assets/quirky_series_-_free_animals_pack/scene.gltf" id="24_dt0r1"]
+[ext_resource type="PackedScene" uid="uid://b4y70v8llwebk" path="res://Assets/snail_garden_sculpture/scene.gltf" id="25_hmc15"]
+[ext_resource type="PackedScene" uid="uid://yno25s3prbyu" path="res://Assets/turtle_garden_sculpture/scene.gltf" id="26_dt0r1"]
+[ext_resource type="PackedScene" uid="uid://bq5yqux4hg52u" path="res://Assets/truffle_man/scene.gltf" id="27_qebug"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7yui6"]
 sky_top_color = Color(0.49803922, 0.70980394, 0.96862745, 1)
@@ -196,6 +203,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ubxuk")
 
+[sub_resource type="Animation" id="Animation_qebug"]
+resource_name = "cello"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o2rbt"]
+_data = {
+&"cello": SubResource("Animation_qebug")
+}
+
 [node name="world" type="Node3D" unique_id=102234744]
 script = ExtResource("1_7yui6")
 
@@ -275,15 +290,16 @@ recordAudio = NodePath("../Recorder")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37064153, -1.2162962)
 melody = ExtResource("6_7yui6")
 
-[node name="StumpSpawner" parent="." unique_id=1271368526 node_paths=PackedStringArray("manager") instance=ExtResource("7_o06y3")]
+[node name="StumpSpawner" parent="." unique_id=1271368526 node_paths=PackedStringArray("manager", "player") instance=ExtResource("7_o06y3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.31344175, -1.1920929e-06, 9.683598)
 melody = ExtResource("8_hgpy0")
 stump = ExtResource("9_5v1tr")
 manager = NodePath("..")
+player = NodePath("../CharacterBody3D")
 min_radius = 4.0
 
 [node name="Cloud" parent="." unique_id=1548188862 instance=ExtResource("11_ikia7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.467562, 4.5144415, 5.1047173)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.712784, 4.5144415, 15.90417)
 radius = 5.0
 
 [node name="MushroomSpawner" parent="." unique_id=1553713561 instance=ExtResource("11_7yui6")]
@@ -358,84 +374,114 @@ shape = SubResource("ConvexPolygonShape3D_t2t4p")
 transform = Transform3D(0.9950041, 0, -0.09983334, 0, 1, 0, 0.09983334, 0, 0.9950041, 18.48022, 1.0723016, 10.275653)
 
 [node name="cello" parent="." unique_id=940691419 instance=ExtResource("19_axeuq")]
-transform = Transform3D(0.99994814, -0.0033028254, 0.0096339695, 0.009700331, 0.5970417, -0.80215144, -0.0031025158, 0.8022033, 0.5970428, -0.754061, 1.306076, 1.2330084)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.9999999, -8.029339, 0, 5.183288)
 
-[node name="Sketchfab_Scene" parent="." unique_id=2014053593 instance=ExtResource("21_no8kt")]
+[node name="fences" parent="." unique_id=2014053593 instance=ExtResource("21_no8kt")]
 transform = Transform3D(4, 0, 0, 0, 6, 0, 0, 0, 4, -28.1636, -0.025406338, -9.937156)
 
-[node name="base" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode" parent_id_path=PackedInt32Array(2014053593, 1102461475) index="1" unique_id=1813811822]
+[node name="base" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode" parent_id_path=PackedInt32Array(2014053593, 1102461475) index="1" unique_id=1813811822]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 39.26899, 30, -168.14496)
 
-[node name="01" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="0" unique_id=1037040104]
+[node name="01" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="0" unique_id=1037040104]
 transform = Transform3D(0.70710677, -1.323489e-23, -0.7071069, -2.646978e-23, 0.9999999, 2.646978e-23, 0.7071069, -1.5777218e-30, 0.70710677, -112.26843, 0.5833702, -64.35187)
 
-[node name="01_Mat_1" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base/01" index="1" unique_id=1559197660]
+[node name="01_Mat_1" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base/01" index="1" unique_id=1559197660]
 transform = Transform3D(1, 0, 0, -1.323489e-23, 0.99999994, 1.323489e-23, 0, 0, 1, 157.9581, 0, -0.50097656)
 mesh = SubResource("ArrayMesh_7blyx")
 
-[node name="02" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="1" unique_id=116491504]
+[node name="02" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="1" unique_id=116491504]
 transform = Transform3D(0.70710677, -1.323489e-23, -0.7071069, -2.646978e-23, 0.9999999, 2.646978e-23, 0.7071069, -1.5777218e-30, 0.70710677, 22.908783, 2.199152, 73.836914)
 
-[node name="02_Mat_0" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base/02" index="0" unique_id=611071419]
+[node name="02_Mat_0" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base/02" index="0" unique_id=611071419]
 transform = Transform3D(1, -1.323489e-23, 0, -1.323489e-23, 0.99999994, 0, 0, -7.888609e-31, 1, -115.466156, 0, -1.5755615)
 
-[node name="02_Mat_1" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base/02" index="1" unique_id=436819541]
+[node name="02_Mat_1" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base/02" index="1" unique_id=436819541]
 transform = Transform3D(1, -2.646978e-23, 0, -2.646978e-23, 0.9999999, 1.323489e-23, 0, 0, 1, 39.35135, -1.5258789e-05, -0.24737549)
 mesh = SubResource("ArrayMesh_pvoew")
 
-[node name="01_Mat_0" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="2" unique_id=123732592]
+[node name="01_Mat_0" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="2" unique_id=123732592]
 transform = Transform3D(0.70710677, -2.646978e-23, 0.70710677, 0, 0.99999976, -5.293956e-23, -0.70710677, -1.5777218e-30, 0.70710677, -1021.48, 0, -59.52289)
 mesh = SubResource("ArrayMesh_7blyx")
 
-[node name="01_Mat_1" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="3" unique_id=2138685923]
+[node name="01_Mat_1" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="3" unique_id=2138685923]
 transform = Transform3D(-4.371139e-08, 0, 1, 1.5777218e-30, 0.9999997, -1.323489e-23, -1, 0, -4.371139e-08, -1070.9619, 0, 1668.1624)
 mesh = SubResource("ArrayMesh_7blyx")
 
-[node name="02_Mat_0" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="4" unique_id=1056384432]
+[node name="02_Mat_0" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="4" unique_id=1056384432]
 transform = Transform3D(-4.371139e-08, 0, 1, 1.5777218e-30, 0.9999997, -1.323489e-23, -1, 0, -4.371139e-08, -1072.1101, -3.2424927e-05, 1589.3379)
 mesh = SubResource("ArrayMesh_pvoew")
 
-[node name="01_Mat_2" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="5" unique_id=2103341776]
+[node name="01_Mat_2" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="5" unique_id=2103341776]
 transform = Transform3D(-0.6784001, 4.7256246e-17, 0.7871767, 1.5063515e-16, 0.9999999, 4.7256286e-17, -0.8658944, 1.3694109e-16, -0.6167274, -1016.7726, 0, 1817.0433)
 mesh = SubResource("ArrayMesh_7blyx")
 
-[node name="02_Mat_2" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="6" unique_id=1313284198]
+[node name="02_Mat_2" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="6" unique_id=1313284198]
 transform = Transform3D(-4.3711374e-08, -1.323489e-23, 0.9999997, 1.5777218e-30, 0.99999934, -1.323489e-23, -0.9999997, -7.888609e-31, -4.3711374e-08, -1071.3934, -3.2424927e-05, 1749.464)
 mesh = SubResource("ArrayMesh_pvoew")
 
-[node name="02_Mat_1" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="7" unique_id=254484720]
+[node name="02_Mat_1" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="7" unique_id=254484720]
 transform = Transform3D(1, -6.617445e-23, 0, -6.617445e-23, 0.9999997, 1.3234885e-23, 0, -2.3665827e-30, 1, -964.94995, -1.1444092e-05, -114.38745)
 mesh = SubResource("ArrayMesh_pvoew")
 
-[node name="all" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode" parent_id_path=PackedInt32Array(2014053593, 1102461475) index="2" unique_id=2044038505]
+[node name="all" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode" parent_id_path=PackedInt32Array(2014053593, 1102461475) index="2" unique_id=2044038505]
 transform = Transform3D(1, 0, 0, 0, 0.9999996, 9.264423e-23, 0, 9.264423e-23, 1, 100.976166, 29.999987, -217.04236)
 
-[node name="all_Mat_2" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="0" unique_id=1938955709]
+[node name="all_Mat_2" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="0" unique_id=1938955709]
 transform = Transform3D(-4.371138e-08, 0, -0.9999997, -5.293956e-23, 1.0000002, 7.888609e-31, 0.9999997, -1.1911401e-22, -4.371138e-08, 1818.9775, 7.6293945e-06, 338.29086)
 mesh = SubResource("ArrayMesh_gvaac")
 
-[node name="all_Mat_0" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="1" unique_id=1704648784]
+[node name="all_Mat_0" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="1" unique_id=1704648784]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, -2.646978e-23, 0, -2.646978e-23, 1, 154.97433, 0, 0)
 
-[node name="all_Mat_1" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="2" unique_id=1553854677]
+[node name="all_Mat_1" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="2" unique_id=1553854677]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 1.323489e-23, 0, 2.646978e-23, 0.99999994, 794.9467, -1.9073486e-06, 0)
 mesh = SubResource("ArrayMesh_gvaac")
 
-[node name="all_Mat_3" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="3" unique_id=1847976542]
+[node name="all_Mat_3" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="3" unique_id=1847976542]
 transform = Transform3D(-4.3711363e-08, 0, 0.9999996, 6.617445e-23, 1.0000004, 3.9443045e-30, -0.9999996, -1.323489e-22, -4.3711363e-08, -176.65521, 1.1444092e-05, 895.48584)
 mesh = SubResource("ArrayMesh_gvaac")
 
-[node name="all_Mat_4" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="4" unique_id=1401375423]
+[node name="all_Mat_4" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="4" unique_id=1401375423]
 transform = Transform3D(-0.99999976, 0, -8.7422734e-08, 4.7331654e-30, 1.0000004, -6.617445e-23, 8.7422734e-08, -7.940934e-23, -0.99999976, 613.7261, 1.1444092e-05, 1120.6348)
 mesh = SubResource("ArrayMesh_gvaac")
 
-[node name="all_Mat_5" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="5" unique_id=1356128237]
+[node name="all_Mat_5" type="MeshInstance3D" parent="fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="5" unique_id=1356128237]
 transform = Transform3D(-0.99999976, 1.2095517e-30, -8.7422734e-08, 3.1554436e-30, 1.0000002, -6.617445e-23, 8.7422734e-08, -5.293956e-23, -0.99999976, 1409.1787, 1.1444092e-05, 1120.6353)
 mesh = SubResource("ArrayMesh_gvaac")
 
-[node name="Sketchfab_Scene2" parent="." unique_id=2012906869 instance=ExtResource("20_1cojt")]
-transform = Transform3D(0.014431043, 0, -0.00545609, 0, 0.015, 0, 0.0040920675, 0, 0.019241389, 43.315468, 0, 14.3336735)
+[node name="Camera3D" type="Camera3D" parent="." unique_id=194768306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.055, 4.75)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=436482735]
+libraries/ = SubResource("AnimationLibrary_o2rbt")
+
+[node name="flute" parent="." unique_id=387917516 instance=ExtResource("20_xbk3s")]
+transform = Transform3D(-0.016249225, 0, -0.999868, 0, 1, 0, 0.999868, 0, -0.016249225, -6.784916, 2.0971634, 6.8078623)
+
+[node name="violin" parent="." unique_id=601918413 instance=ExtResource("21_i4fjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.798115, 0.61359906, 6.040949)
+
+[node name="harp" parent="." unique_id=149440918 instance=ExtResource("22_pt3ps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 5)
+
+[node name="Sketchfab_Scene" parent="." unique_id=549553690 instance=ExtResource("23_hmc15")]
+transform = Transform3D(-0.41151735, 0, 0.9114019, 0, 1, 0, -0.9114019, 0, -0.41151735, -3.5646958, 1.9470166, 5.1580267)
+
+[node name="Object_7" parent="Sketchfab_Scene/Sketchfab_model/zbrush_concat_osgb_cleaner_materialmerger_gles/_sketchfab-data_processing_models_a55a1684bb5f4db691ed8b6999c0b09d_dcbc880fb6a74032a838c7a6c0ec3cde_091b3573913b49488cbf74d3f43d4949_preprocess_SubTool-7-12721251_OBJ" parent_id_path=PackedInt32Array(549553690, 2058194306) index="0" unique_id=925710727]
+transform = Transform3D(1, 0, 0, 0, 1, -3.3087225e-24, 0, -3.3087225e-24, 1, 0, 0, 0)
+
+[node name="Sketchfab_Scene2" parent="." unique_id=21175370 instance=ExtResource("24_dt0r1")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.7395897, 0, 6.9709034)
+
+[node name="Sketchfab_Scene3" parent="." unique_id=1146567016 instance=ExtResource("25_hmc15")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.2453046, 0.29497588, 7.1987753)
+
+[node name="Sketchfab_Scene4" parent="." unique_id=128997888 instance=ExtResource("26_dt0r1")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.826313, 0.28741193, 7.5587397)
+
+[node name="Sketchfab_Scene5" parent="." unique_id=1303560605 instance=ExtResource("27_qebug")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.260035, 0.049968034, 7.0713615)
 
 [editable path="gazeboEdit"]
+[editable path="fences"]
 [editable path="Sketchfab_Scene"]
-[editable path="Sketchfab_Scene2"]

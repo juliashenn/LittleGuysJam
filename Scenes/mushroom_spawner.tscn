@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://dnjubstbpseij" path="res://Resources/eighth.tres" id="2_u5nsi"]
 [ext_resource type="PackedScene" uid="uid://b5scu561to32f" path="res://Scenes/mushroom.tscn" id="3_7hu1l"]
 [ext_resource type="PackedScene" uid="uid://bjdvwspmx86qq" path="res://Assets/forest_lighting_wip/forestEdit.glb" id="4_7hu1l"]
+[ext_resource type="PackedScene" uid="uid://cc7wc2ght1ioy" path="res://Assets/mossy_log/scene.gltf" id="5_u5nsi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u5nsi"]
 size = Vector3(26.29889, 1.0400391, 23.847778)
@@ -76,4 +77,18 @@ shape = SubResource("BoxShape3D_u5nsi")
 [node name="forestEdit" parent="." unique_id=1523670767 instance=ExtResource("4_7hu1l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0145493, 0)
 
+[node name="Sketchfab_Scene" parent="." unique_id=1108805346 instance=ExtResource("5_u5nsi")]
+transform = Transform3D(-0.9275184, 0, -0.37377736, 0, 1, 0, 0.37377736, 0, -0.9275184, 6.952532, -0.7961268, -3.390863)
+
+[node name="Plane_220_ground_0" parent="Sketchfab_Scene/Sketchfab_model/7c6f9f9c5e464ab9bfe6bc1dc28092ea_fbx/Object_2/RootNode/Plane_220" parent_id_path=PackedInt32Array(1108805346, 297984195) index="0" unique_id=188890051]
+visible = false
+
+[node name="Sketchfab_Scene2" parent="." unique_id=1678336611 instance=ExtResource("5_u5nsi")]
+transform = Transform3D(-0.9159642, 0, -0.4012602, 0, 1, 0, -0.4012602, 0, 0.9159642, 6.952532, -0.7961268, 3.1153047)
+
+[node name="Plane_220_ground_0" parent="Sketchfab_Scene2/Sketchfab_model/7c6f9f9c5e464ab9bfe6bc1dc28092ea_fbx/Object_2/RootNode/Plane_220" parent_id_path=PackedInt32Array(1678336611, 297984195) index="0" unique_id=188890051]
+visible = false
+
 [editable path="forestEdit"]
+[editable path="Sketchfab_Scene"]
+[editable path="Sketchfab_Scene2"]

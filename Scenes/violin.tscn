@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://c1a38nvysb41d"]
+
+[ext_resource type="PackedScene" uid="uid://beayf64ckollv" path="res://Assets/violin (2)/violinEdit.glb" id="1_bufdo"]
+
+[sub_resource type="Animation" id="Animation_y3wmp"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("violinEdit/Sketchfab_model/Collada visual scene group/Box005/defaultMaterial")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("violinEdit/Sketchfab_model/Collada visual scene group/Box005/defaultMaterial_001")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_mr8ln"]
+resource_name = "awake"
+length = 2.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("violinEdit/Sketchfab_model/Collada visual scene group/Box005/defaultMaterial")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.93333334, 1, 0, 0.6531379, 0, 2, 1, 0.48244166, 0.6531379, -0.22697884)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("violinEdit/Sketchfab_model/Collada visual scene group/Box005/defaultMaterial_001")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.93333334, 1, 0.5742051, -0.36526075, 0.3176424, 0.6602851, 1.5333333, 1, 0.7453948, -0.6425022, 0.09017322, 0.15312164, 2, 1, 0.7721465, -0.39715326, -0.19016936, 0.4581427)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("violinEdit/Sketchfab_model/Collada visual scene group/Box005/defaultMaterial_001")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.93333334, 1, 0.53955114, 0, -0.07869255, 1.5666667, 1, 0.6425505, 0.3650584, 0.26423076, 2, 1, -0.027341247, 0.8550632, 0.09957358)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("violinEdit/Sketchfab_model/Collada visual scene group/Box005/defaultMaterial")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.9, 1, 0.030961813, -0.14364886, -0.33301967, 0.9313991, 2, 1, -0.060763124, -0.7877655, -0.10796898, 0.6033873)
+
+[sub_resource type="Animation" id="Animation_bufdo"]
+resource_name = "play"
+length = 1.714
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("violinEdit/Sketchfab_model/Collada visual scene group/Box005/defaultMaterial")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.48244166, 0.6531379, -0.22697884, 1.7, 1, 0.48244166, 0.6531379, -0.22697884)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("violinEdit/Sketchfab_model/Collada visual scene group/Box005/defaultMaterial")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.060763124, -0.7877655, -0.10796898, 0.6033873)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("violinEdit/Sketchfab_model/Collada visual scene group/Box005/defaultMaterial_001")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.027341247, 0.8550632, 0.09957358, 0.26666668, 1, 0.21674943, 0.62952954, 0.16087885, 0.5, 1, 0.42111555, 0.5167428, 0.21220697, 0.6666667, 1, 0.6154684, 0.44957387, 0.26102018, 0.857, 1, 0.78629434, 0.41989982, 0.30392444, 1.0333333, 1, 0.6220482, 0.4404508, 0.26267275, 1.2333333, 1, 0.4344185, 0.50886506, 0.2155481, 1.4, 1, 0.25509435, 0.6039934, 0.17050947, 1.5666667, 1, 0.084193766, 0.7302145, 0.12758647, 1.714, 1, -0.027341247, 0.8550632, 0.09957358)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("violinEdit/Sketchfab_model/Collada visual scene group/Box005/defaultMaterial_001")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.7721465, -0.39715323, -0.19016936, 0.4581427, 0.23333333, 1, 0.7922733, -0.3553081, -0.16540615, 0.46765375, 0.5, 1, 0.8088197, -0.3158344, -0.14216006, 0.47523665, 0.6666667, 1, 0.8219222, -0.27997255, -0.12113083, 0.48102665, 0.857, 1, 0.8321271, -0.24800266, -0.10245243, 0.48534814, 1.0333333, 1, 0.8220907, -0.27947754, -0.12084099, 0.48109946, 1.2666667, 1, 0.80916876, -0.3149393, -0.14163406, 0.47539353, 1.4333333, 1, 0.7970474, -0.3444653, -0.15901008, 0.46986702, 1.5666667, 1, 0.78284633, -0.37562284, -0.17741205, 0.4632323, 1.7, 1, 0.7721465, -0.39715323, -0.19016936, 0.4581427)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fg68b"]
+_data = {
+&"RESET": SubResource("Animation_y3wmp"),
+&"awake": SubResource("Animation_mr8ln"),
+&"playing": SubResource("Animation_bufdo")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sk01p"]
+albedo_color = Color(0.9372549, 0.8392157, 0.76862746, 1)
+metallic = 0.92
+roughness = 0.0
+emission_enabled = true
+emission = Color(0.76051044, 0.9063383, 0.76395583, 1)
+emission_energy_multiplier = 1000.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_bufdo"]
+material = SubResource("StandardMaterial3D_sk01p")
+radius = 0.01
+height = 0.02
+
+[sub_resource type="Gradient" id="Gradient_y3wmp"]
+offsets = PackedFloat32Array(0, 0.51955307, 0.9860335)
+colors = PackedColorArray(0.9372549, 0.8392157, 0.76862746, 1, 0.9648476, 0.90992206, 0.87037563, 1, 1, 1, 1, 0.29411766)
+
+[node name="violin" type="Node3D" unique_id=601918413]
+
+[node name="violinEdit" parent="." unique_id=1930364019 instance=ExtResource("1_bufdo")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.10352722, 0, -0.5200077)
+
+[node name="defaultMaterial" parent="violinEdit/Sketchfab_model/Collada visual scene group/Box005" parent_id_path=PackedInt32Array(1930364019, 1009508001) index="0" unique_id=923452704]
+transform = Transform3D(-0.26446348, 0.22602835, -0.937534, -0.034560032, 0.96930104, 0.24343579, 0.9637763, 0.09678109, -0.24853314, 0, 0, 0)
+
+[node name="defaultMaterial_001" parent="violinEdit/Sketchfab_model/Collada visual scene group/Box005" parent_id_path=PackedInt32Array(1930364019, 1009508001) index="1" unique_id=1791886993]
+transform = Transform3D(0.9999999, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0.59317094, 0.45098013, 0.25542)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1642759118]
+libraries/ = SubResource("AnimationLibrary_fg68b")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=630405560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115315914, 0.7525364, -0.12192792)
+emitting = false
+mesh = SubResource("SphereMesh_bufdo")
+emission_shape = 1
+emission_sphere_radius = 1.0
+emission_colors = PackedColorArray(1, 1, 1, 1, 0.9372549, 0.8392157, 0.76862746, 1, 0.7178, 0.97, 0.79766333, 1)
+spread = 146.63
+gravity = Vector3(0, 1, 0)
+color = Color(1, 0.13, 0.13, 1)
+color_ramp = SubResource("Gradient_y3wmp")
+hue_variation_min = 0.02
+hue_variation_max = 0.17
+
+[editable path="violinEdit"]

@@ -10,50 +10,43 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("Sketchfab_Scene/Sketchfab_model/Collada visual scene group/g")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
-tracks/1/type = "position_3d"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sketchfab_Scene/Sketchfab_model/Collada visual scene group/g2")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/0/keys = PackedFloat32Array(0, 1, -1.0864382, 8.937563e-08, -0.053162858)
 
 [sub_resource type="Animation" id="Animation_prosj"]
 resource_name = "awake"
-length = 3.0000000000000004
+length = 2.0
 tracks/0/type = "position_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Sketchfab_Scene/Sketchfab_model/Collada visual scene group/g")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -1.0864382, 8.937563e-08, -0.053162858, 0.8666667, 1, -0.7974821, 0.42989638, 0.17604555, 1.8333334, 1, -0.8134473, 0.9230796, 0.22886428, 2.8333333, 1, -0.21547125, 1.0879527, 0.6377135)
+tracks/0/keys = PackedFloat32Array(0, 1, -1.0864382, 8.937563e-08, -0.053162858, 0.6333333, 1, -0.7974821, 0.42989638, 0.17604555, 1.5, 1, -0.8134473, 0.9230796, 0.22886428, 2, 1, -0.21547125, 1.0879527, 0.6377135)
 tracks/1/type = "rotation_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Sketchfab_Scene/Sketchfab_model/Collada visual scene group/g")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 1.8068056e-15, -0.1828129, 7.991008e-09, 0.9831478, 0.8666667, 1, 0.20183963, 0.1399906, -0.3778552, 0.89268637, 1.8333334, 1, 0.5298145, 0.075874135, -0.36350876, 0.7624967, 2.8666666, 1, 0.7664274, -0.2606541, -0.55779064, 0.18307994)
+tracks/1/keys = PackedFloat32Array(0, 1, 1.8068056e-15, -0.1828129, 7.991008e-09, 0.9831478, 0.6333333, 1, 0.20183963, 0.1399906, -0.3778552, 0.89268637, 1.5, 1, 0.5298145, 0.075874135, -0.36350876, 0.7624967, 2, 1, 0.7664274, -0.2606541, -0.55779064, 0.18307994)
 tracks/2/type = "position_3d"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("Sketchfab_Scene/Sketchfab_model/Collada visual scene group/g2")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0.033333335, 1, 0, 0, 0, 2.8666666, 1, 0, 0.95232004, -4.4703484e-08)
+tracks/2/keys = PackedFloat32Array(0.033333335, 1, 0, 0, 0, 2, 1, 0, 0.95232004, -4.4703484e-08)
 tracks/3/type = "rotation_3d"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("Sketchfab_Scene/Sketchfab_model/Collada visual scene group/g2")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 2.8333333, 1, 0.56255335, 0, 0, 0.82676095)
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 2, 1, 0.56255335, 0, 0, 0.82676095)
 
 [sub_resource type="Animation" id="Animation_4vknb"]
 resource_name = "playing"
-length = 2.0
+length = 1.714
 loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = false
@@ -61,28 +54,28 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("Sketchfab_Scene/Sketchfab_model/Collada visual scene group/g")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0.033333335, 1, -0.22464232, 1.0879527, 0.5575411, 0.36666667, 1, 0.05785518, 1.1036289, 0.5898578, 0.73333335, 1, 0.30035302, 1.1170853, 0.5272685, 1.17, 1, 0.05785518, 1.1036289, 0.5898578, 1.5, 1, -0.22464232, 1.0879527, 0.5575411, 1.7666667, 1, -0.31904736, 1.1692423, 0.5283688, 2, 1, -0.22464232, 1.0879527, 0.5575411)
+tracks/0/keys = PackedFloat32Array(0.033333335, 1, -0.22464232, 1.0879527, 0.5575411, 0.33333337, 1, 0.05785518, 1.1036289, 0.5898578, 0.6, 1, 0.30035302, 1.1170853, 0.5272685, 0.87, 1, 0.05785518, 1.1036289, 0.5898578, 1.2, 1, -0.22464232, 1.0879527, 0.5575411, 1.4666667, 1, -0.31904736, 1.1692423, 0.5283688, 1.7, 1, -0.22464232, 1.0879527, 0.5575411)
 tracks/1/type = "rotation_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Sketchfab_Scene/Sketchfab_model/Collada visual scene group/g")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0.7378022, -0.25124747, -0.59513795, 0.1957896, 0.36666667, 1, 0.6823409, -0.23296832, -0.6579908, 0.21722014, 0.73333335, 1, -0.6348168, 0.21726072, 0.70395225, -0.23293053, 1.17, 1, 0.6823409, -0.23296832, -0.6579908, 0.21722014, 1.5, 1, 0.7378022, -0.25124747, -0.59513795, 0.1957896, 1.7666667, 1, -0.6420338, 0.3053805, 0.6590803, -0.24525146, 2, 1, 0.7378022, -0.25124747, -0.59513795, 0.1957896)
+tracks/1/keys = PackedFloat32Array(0, 1, 0.7378022, -0.25124747, -0.59513795, 0.1957896, 0.33333337, 1, 0.6823409, -0.23296832, -0.6579908, 0.21722014, 0.6, 1, -0.6348168, 0.21726072, 0.70395225, -0.23293053, 0.87, 1, 0.6823409, -0.23296832, -0.6579908, 0.21722014, 1.2, 1, 0.7378022, -0.25124747, -0.59513795, 0.1957896, 1.4666667, 1, -0.6420338, 0.3053805, 0.6590803, -0.24525146, 1.7, 1, 0.7378022, -0.25124747, -0.59513795, 0.1957896)
 tracks/2/type = "position_3d"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("Sketchfab_Scene/Sketchfab_model/Collada visual scene group/g2")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0.0333333, 1, 0, 0.95232004, -4.4703484e-08, 2.0233333, 1, 0, 0.95232004, -4.4703484e-08)
+tracks/2/keys = PackedFloat32Array(0.0333333, 1, 0, 0.95232004, -4.4703484e-08, 1.6333333, 1, 0, 0.95232004, -4.4703484e-08)
 tracks/3/type = "rotation_3d"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("Sketchfab_Scene/Sketchfab_model/Collada visual scene group/g2")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 0.56255335, 0, 0, 0.82676095, 1.99, 1, 0.56255335, 0, 0, 0.82676095)
+tracks/3/keys = PackedFloat32Array(0, 1, 0.56255335, 0, 0, 0.82676095, 1.6, 1, 0.56255335, 0, 0, 0.82676095)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4vknb"]
 _data = {
@@ -91,18 +84,49 @@ _data = {
 &"playing": SubResource("Animation_4vknb")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sk01p"]
+albedo_color = Color(0.9372549, 0.8392157, 0.76862746, 1)
+metallic = 0.92
+roughness = 0.0
+emission_enabled = true
+emission = Color(0.76051044, 0.9063383, 0.76395583, 1)
+emission_energy_multiplier = 1000.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_qsid0"]
+material = SubResource("StandardMaterial3D_sk01p")
+radius = 0.01
+height = 0.02
+
+[sub_resource type="Gradient" id="Gradient_j1lyr"]
+offsets = PackedFloat32Array(0, 0.51955307, 0.9860335)
+colors = PackedColorArray(0.9372549, 0.8392157, 0.76862746, 1, 0.9648476, 0.90992206, 0.87037563, 1, 1, 1, 1, 0.29411766)
+
 [node name="cello" type="Node3D" unique_id=940691419]
 
 [node name="Sketchfab_Scene" parent="." unique_id=1972023139 instance=ExtResource("1_sk01p")]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.15317172, 0, -0.26493078)
 
 [node name="g" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1972023139, 314573302) index="0" unique_id=1491672765]
-transform = Transform3D(0.1653711, -0.13769831, -0.9765712, -0.6037853, -0.7970823, 0.010145902, -0.77980465, 0.5879617, -0.21495463, 0, 0, 0)
+transform = Transform3D(0.16537115, -0.13769823, -0.97657114, -0.6037853, -0.7970823, 0.010145812, -0.7798046, 0.5879617, -0.21495461, -1.0864382, 8.937563e-08, -0.053162858)
 
 [node name="g2" parent="Sketchfab_Scene/Sketchfab_model/Collada visual scene group" parent_id_path=PackedInt32Array(1972023139, 314573302) index="1" unique_id=752165242]
-transform = Transform3D(1, 0, 0, 0, 0.36706743, -0.93019426, 0, 0.93019426, 0.36706743, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.36706743, -0.93019426, 0, 0.93019426, 0.36706743, 0, 0.95232004, -4.4703484e-08)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1582294939]
 libraries/ = SubResource("AnimationLibrary_4vknb")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=1086171513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0489649, 0)
+emitting = false
+mesh = SubResource("SphereMesh_qsid0")
+emission_shape = 1
+emission_sphere_radius = 1.0
+emission_colors = PackedColorArray(1, 1, 1, 1, 0.9372549, 0.8392157, 0.76862746, 1, 0.7178, 0.97, 0.79766333, 1)
+spread = 146.63
+gravity = Vector3(0, 1, 0)
+color = Color(1, 0.13, 0.13, 1)
+color_ramp = SubResource("Gradient_j1lyr")
+hue_variation_min = 0.02
+hue_variation_max = 0.17
 
 [editable path="Sketchfab_Scene"]

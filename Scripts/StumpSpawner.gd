@@ -3,6 +3,7 @@ extends Node3D
 @export var melody: Melody
 @export var stump: PackedScene
 @export var manager: Manager
+@export var player: Player
 
 @export var arc_ang = deg_to_rad(160.0)
 @export var spacing = 1
@@ -44,6 +45,7 @@ func check_solution():
 	if not melody:
 		return
 	var count = melody.notes.size()
+	player.conduct_anim()
 	for i in count:
 		var obj = spawned_stumps[i].holding_note
 		if obj:
@@ -62,10 +64,12 @@ func check_solution():
 	solved()
 	
 func failed():
+	player.stop_anim()
 	for st in spawned_stumps:
 		st.default_light()
 
 func solved():
+	player.stop_anim()
 	manager.melody_solved()
 	
 func clear():

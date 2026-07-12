@@ -80,7 +80,7 @@ noteType = "H"
 [node name="Sketchfab_Scene" parent="." unique_id=1604419152 instance=ExtResource("2_48ari")]
 transform = Transform3D(0.7, 0, 0, 0, 0.2, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="pCube1" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="0" unique_id=1424013164]
+[node name="pCube1" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="0" unique_id=1807369569]
 transform = Transform3D(20, 0, 0, 0, 0.8, 0, 0, 0, 30, 0, -0.13749361, 3.0529714e-17)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/pCube1" index="0" unique_id=322104844]
@@ -90,269 +90,299 @@ collision_layer = 3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/pCube1/StaticBody3D" unique_id=457790209]
 shape = SubResource("ConcavePolygonShape3D_tvjqg")
 
-[node name="pCube1_pondbase_0" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/pCube1" index="1" unique_id=1997462964]
+[node name="pCube1_pondbase_0" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/pCube1" index="1" unique_id=958150419]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 4.135903e-25, 1, 0, 0, 0)
 surface_material_override/0 = SubResource("ShaderMaterial_aqiln")
 
-[node name="pCube1_lambert6_0" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/pCube1" index="2" unique_id=73971726]
+[node name="pCube1_lambert6_0" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/pCube1" index="2" unique_id=1687707184]
 surface_material_override/0 = SubResource("ShaderMaterial_tvjqg")
 
-[node name="pPlane1" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="1" unique_id=1126700684]
+[node name="pPlane1" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="1" unique_id=540445678]
 transform = Transform3D(37, 0, 0, 0, 119.999985, -8.4703295e-22, 0, 6.7762636e-21, 42, -0.39951682, 0.50518984, 0.6896898)
 
-[node name="pPlane1_water_0" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/pPlane1" index="0" unique_id=246026330]
+[node name="pPlane1_water_0" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/pPlane1" index="0" unique_id=2107576145]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, -6.617445e-24, 0, 1.0587912e-22, 1, 0, -0.01642587, 0)
 
-[node name="pCube2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="7" unique_id=881092191]
+[node name="pCube2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="7" unique_id=223169817]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.76397806, 0.009096757, 2.3689227)
+
+[node name="pCube3" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="8" unique_id=579993228]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.335806, 0.009096757, 2.3689227)
+
+[node name="pCube4" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="9" unique_id=2083801629]
+transform = Transform3D(0.0009924769, 0, 0, 0, 0.0040991902, 0, 0, 0, 0.12298542, 0.28134966, 0.16151999, 2.3689227)
+
+[node name="pCube5" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="10" unique_id=741265361]
+transform = Transform3D(0.0013940334, 0, 0, 0, 0.0040991902, 0, 0, 0, 0.12298542, 4.981587, 0.16151999, 2.3689227)
+
+[node name="ani_01_n_pond_pulse_pCube2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="11" unique_id=1107132522]
 transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
 
-[node name="pCube3" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="8" unique_id=1807536034]
+[node name="ani_01_n_pond_pulse_pCube3" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="12" unique_id=1578426013]
 transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
 
-[node name="pCube4" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="9" unique_id=873820811]
+[node name="ani_01_n_pond_pulse_pCube4" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="13" unique_id=1323346736]
+transform = Transform3D(0.0009924769, 0, 0, 0, 0.0040991902, 0, 0, 0, 0.12298542, 0.28134966, 0.16151999, 2.3689227)
+
+[node name="ani_01_n_pond_pulse_pCube5" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="14" unique_id=658079582]
+transform = Transform3D(0.0013940334, 0, 0, 0, 0.0040991902, 0, 0, 0, 0.12298542, 4.981587, 0.16151999, 2.3689227)
+
+[node name="ani_01_n_pond_pulse1_pCube2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="15" unique_id=683273373]
 transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
 
-[node name="pCube5" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="10" unique_id=1502508158]
+[node name="ani_01_n_pond_pulse1_pCube3" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="16" unique_id=1527003771]
 transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
 
-[node name="ani_01_n_pond_pulse_pCube2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="11" unique_id=104860127]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
+[node name="ani_01_n_pond_pulse1_pCube4" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="17" unique_id=130032566]
+transform = Transform3D(0.0009924769, 0, 0, 0, 0.0040991902, 0, 0, 0, 0.12298542, 0.28134966, 0.16151999, 2.3689227)
 
-[node name="ani_01_n_pond_pulse_pCube3" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="12" unique_id=1165238698]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
+[node name="ani_01_n_pond_pulse1_pCube5" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="18" unique_id=631873621]
+transform = Transform3D(0.0013940334, 0, 0, 0, 0.0040991902, 0, 0, 0, 0.12298542, 4.981587, 0.16151999, 2.3689227)
 
-[node name="ani_01_n_pond_pulse_pCube4" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="13" unique_id=1793165512]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse_pCube5" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="14" unique_id=1854333644]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse1_pCube2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="15" unique_id=1155278740]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse1_pCube3" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="16" unique_id=808655548]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse1_pCube4" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="17" unique_id=1690844879]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse1_pCube5" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="18" unique_id=1217899805]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
-
-[node name="pCube6" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="19" unique_id=1866641782]
+[node name="pCube6" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="19" unique_id=1023400600]
 transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -6.546249, 0.16151999, -4.3508053)
 
-[node name="pCube7" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="20" unique_id=985111924]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8458775, 0.16151999, -4.3508053)
+[node name="pCube7" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="20" unique_id=1270920064]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8459464, 0.16151999, -4.3508267)
 
-[node name="pCube8" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="21" unique_id=1552798989]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -6.546249, 0.16151999, -4.3508053)
+[node name="pCube8" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="21" unique_id=1355634526]
+transform = Transform3D(0.054119468, 0, 0, 0, 0.058918238, 0, 0, 0, 1.76768, -6.5346065, 0.16151999, -4.352703)
 
-[node name="pCube9" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="22" unique_id=225697245]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8458775, 0.16151999, -4.3508053)
+[node name="pCube9" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="22" unique_id=1182600513]
+transform = Transform3D(0.059792697, 0, 0, 0, 0.058918238, 0, 0, 0, 1.76768, -1.8520572, 0.16151999, -4.352703)
 
-[node name="pSphere8" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="23" unique_id=523134881]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -3.4834118, 0.52515095, 3.4193141)
+[node name="pSphere8" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="23" unique_id=1949342910]
+transform = Transform3D(0.25640273, 0, 0, 0, 0.25640273, 0, 0, 0, 0.25640273, -3.4834118, -1.6763406, 3.7832909)
 
-[node name="pSphere9" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="24" unique_id=234837431]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8628132, 0.52515095, 4.2849584)
+[node name="pSphere9" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="24" unique_id=1350297475]
+transform = Transform3D(0.0904423, 0, 0, 0, 0.0904423, 0, 0, 0, 0.0904423, -1.8628132, -3.4950433, 4.2849584)
 
-[node name="pSphere10" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="25" unique_id=1242936814]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -2.410042, 0.52515095, 2.828049)
+[node name="pSphere10" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="25" unique_id=868759494]
+transform = Transform3D(0.14999998, 0, 0, 0, 0.14999998, 0, 0, 0, 0.14999998, -2.410042, -3.3268924, 2.828049)
 
-[node name="group5" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="30" unique_id=708910653]
-transform = Transform3D(-0.32723886, 2.1505796e-16, -0.37804067, 4.00752e-17, 1, 1.0752897e-16, 0.37804067, 8.0150407e-17, -0.32723886, -3.1976478, -1.6, -2.8515236)
+[node name="group5" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="30" unique_id=767957350]
+transform = Transform3D(0.42291555, 0, -0.2667254, 0, 1, 0, 0.2667254, 0, 0.42291555, -2.112396, -1.6338476, -1.4315658)
 
-[node name="rig_01_n_pond_fish_polySurface2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group5/Object_254" parent_id_path=PackedInt32Array(1604419152, 1806846938) index="2" unique_id=549565566]
-transform = Transform3D(0.70728785, 0.01222356, 0.30335033, -0.09974637, 0.73573136, 0.20292097, -0.28674293, -0.22578049, 0.6776641, 0.4344635, -0.043864176, -0.0007533444)
+[node name="Skeleton3D" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group5/Object_254" parent_id_path=PackedInt32Array(1604419152, 456684248) index="0" unique_id=1490049135]
+bones/2/position = Vector3(0.7840166, 4.440892e-16, -4.440892e-16)
+bones/3/position = Vector3(0.62899125, 0, -8.881784e-16)
 
-[node name="group6" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="35" unique_id=576750560]
-transform = Transform3D(0.49999356, 0.005079839, -6.81808e-05, -0.002539578, 0.9999765, 0.002306301, 7.989483e-05, -0.00461185, 0.4999947, 2.9077203, -1.3984789, 3.7559292)
+[node name="rig_01_n_pond_fish_polySurface2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group5/Object_254" parent_id_path=PackedInt32Array(1604419152, 456684248) index="2" unique_id=645218832]
+transform = Transform3D(0.7267536, -0.013117663, 0.25314853, -0.066624165, 0.73175246, 0.22918653, -0.2445761, -0.23831315, 0.6897944, 0.4344635, -0.043864176, -0.0007533444)
 
-[node name="rig_01_n_pond_fish1_polySurface2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group6/Object_290" parent_id_path=PackedInt32Array(1604419152, 702562157) index="2" unique_id=423736291]
-transform = Transform3D(0.67298734, 0.0122235725, 0.3733171, -0.11975467, 0.7357314, 0.19179435, -0.3537992, -0.2257805, 0.6451947, 0.37499714, -0.028473139, -0.009191155)
+[node name="group6" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="35" unique_id=833800538]
+transform = Transform3D(-0.47942924, 0.15345506, 0.11941722, 0.051754396, 0.97237754, -0.10460379, -0.1321706, -0.17587899, -0.47412822, 0.016208187, -2.7958784, 2.0166683)
 
-[node name="group7" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="40" unique_id=1748730032]
-transform = Transform3D(0.40324828, 0.018300386, 0.29547772, -0.011709853, 0.99972516, 0.00050135417, -0.29538733, -0.014648684, 0.40335184, 6.984873, -2.1787684, -1.4934343)
+[node name="Skeleton3D" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group6/Object_290" parent_id_path=PackedInt32Array(1604419152, 1877025682) index="0" unique_id=1850958849]
+bones/2/position = Vector3(0.795147, 0, 8.881784e-16)
+bones/3/position = Vector3(0.63610476, 0, 0)
 
-[node name="rig_01_n_pond_fish2_polySurface2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group7/Object_326" parent_id_path=PackedInt32Array(1604419152, 354811946) index="2" unique_id=455712616]
-transform = Transform3D(0.6870142, 0.0122235445, -0.34682688, 0.09133158, 0.7357314, 0.20684485, 0.33480862, -0.2257805, 0.65525055, 0.38999987, -0.068030715, 0.01997723)
+[node name="rig_01_n_pond_fish1_polySurface2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group6/Object_290" parent_id_path=PackedInt32Array(1604419152, 1877025682) index="2" unique_id=456739198]
+transform = Transform3D(0.76433897, 0.02585645, 0.08685861, -0.050266635, 0.73477983, 0.22360416, -0.075407155, -0.22772132, 0.7313575, 0.37179154, 0.013191797, -0.012044802)
 
-[node name="_Grass_polySurface2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 8385254) index="41" unique_id=29419980]
+[node name="group7" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="40" unique_id=1474217903]
+transform = Transform3D(-0.46506873, -0.21761613, -0.14789127, -0.102759264, 0.9760159, -0.03589855, 0.15215632, -0.0059923786, -0.47627673, 1.7808844, -1.7106357, 1.3656657)
+
+[node name="rig_01_n_pond_fish2_polySurface2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group7/Object_326" parent_id_path=PackedInt32Array(1604419152, 1435982298) index="2" unique_id=1514859382]
+transform = Transform3D(0.7167265, -0.10559881, -0.25995928, 0.116411336, 0.76074505, 0.011930126, 0.2553004, -0.050426412, 0.72436583, 0.38999987, -0.068030715, 0.01997723)
+
+[node name="_Grass_polySurface2" parent="Sketchfab_Scene/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1604419152, 1782353911) index="41" unique_id=1785178080]
 visible = false
+
+[node name="AnimationPlayer" parent="Sketchfab_Scene" index="1" unique_id=2039634828]
+autoplay = &"Take 001"
 
 [node name="Sketchfab_Scene2" parent="." unique_id=1589768640 instance=ExtResource("2_48ari")]
 transform = Transform3D(0.30192637, 0, 0.39854795, 0, 0.5, 0, -0.39854795, 0, 0.30192637, 0.09459782, 0.51124954, 8.9522295)
 
-[node name="pCube1" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="0" unique_id=1424013164]
+[node name="pCube1" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="0" unique_id=1807369569]
 visible = false
 
-[node name="pPlane1" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="1" unique_id=1126700684]
+[node name="pPlane1" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="1" unique_id=540445678]
 visible = false
 
-[node name="pCube2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="7" unique_id=881092191]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
+[node name="pCube2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="7" unique_id=223169817]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
 
-[node name="pCube3" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="8" unique_id=1807536034]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
+[node name="pCube3" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="8" unique_id=579993228]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
 
-[node name="pCube4" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="9" unique_id=873820811]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
+[node name="pCube4" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="9" unique_id=2083801629]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
 
-[node name="pCube5" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="10" unique_id=1502508158]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
+[node name="pCube5" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="10" unique_id=741265361]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
 
-[node name="ani_01_n_pond_pulse_pCube2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="11" unique_id=104860127]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
+[node name="ani_01_n_pond_pulse_pCube2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="11" unique_id=1107132522]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
 
-[node name="ani_01_n_pond_pulse_pCube3" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="12" unique_id=1165238698]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
+[node name="ani_01_n_pond_pulse_pCube3" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="12" unique_id=1578426013]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
 
-[node name="ani_01_n_pond_pulse_pCube4" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="13" unique_id=1793165512]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
+[node name="ani_01_n_pond_pulse_pCube4" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="13" unique_id=1323346736]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
 
-[node name="ani_01_n_pond_pulse_pCube5" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="14" unique_id=1854333644]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
+[node name="ani_01_n_pond_pulse_pCube5" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="14" unique_id=658079582]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
 
-[node name="ani_01_n_pond_pulse1_pCube2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="15" unique_id=1155278740]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
+[node name="ani_01_n_pond_pulse1_pCube2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="15" unique_id=683273373]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
 
-[node name="ani_01_n_pond_pulse1_pCube3" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="16" unique_id=808655548]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
+[node name="ani_01_n_pond_pulse1_pCube3" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="16" unique_id=1527003771]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
 
-[node name="ani_01_n_pond_pulse1_pCube4" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="17" unique_id=1690844879]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
+[node name="ani_01_n_pond_pulse1_pCube4" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="17" unique_id=130032566]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
 
-[node name="ani_01_n_pond_pulse1_pCube5" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="18" unique_id=1217899805]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
+[node name="ani_01_n_pond_pulse1_pCube5" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="18" unique_id=631873621]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
 
-[node name="pCube6" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="19" unique_id=1866641782]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -6.546249, 0.16151999, -4.3508053)
+[node name="pCube6" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="19" unique_id=1023400600]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -4.447773, -0.3583912, -4.4488325)
 
-[node name="pCube7" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="20" unique_id=985111924]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8458775, 0.16151999, -4.3508053)
+[node name="pCube7" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="20" unique_id=1270920064]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -3.5968318, -0.3583912, -4.4488325)
 
-[node name="pCube8" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="21" unique_id=1552798989]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -6.546249, 0.16151999, -4.3508053)
+[node name="pCube8" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="21" unique_id=1355634526]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -4.447773, -0.3583912, -4.4488325)
 
-[node name="pCube9" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="22" unique_id=225697245]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8458775, 0.16151999, -4.3508053)
+[node name="pCube9" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="22" unique_id=1182600513]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -3.5968318, -0.3583912, -4.4488325)
 
-[node name="pSphere8" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="23" unique_id=523134881]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -3.4834118, 0.52515095, 3.4193141)
+[node name="pSphere8" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="23" unique_id=1949342910]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -3.4834118, -3.9193556, 3.8303082)
 
-[node name="pSphere9" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="24" unique_id=234837431]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8628132, 0.52515095, 4.2849584)
+[node name="pSphere9" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="24" unique_id=1350297475]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8628132, -3.9193556, 4.2849584)
 
-[node name="pSphere10" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="25" unique_id=1242936814]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -2.410042, 0.52515095, 2.828049)
+[node name="pSphere10" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="25" unique_id=868759494]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -2.410042, -3.9193556, 2.828049)
 
-[node name="group5" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="30" unique_id=708910653]
-transform = Transform3D(-0.32723886, 1.0752898e-16, -0.37804067, 4.00752e-17, 0.5, 1.0752898e-16, 0.37804067, 4.007522e-17, -0.32723886, -3.6064482, -1.6, -7.196609)
+[node name="group5" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="30" unique_id=767957350]
+transform = Transform3D(-0.3292733, 1.0731213e-16, -0.37626997, 4.0324353e-17, 0.5, 1.0731213e-16, 0.37626997, 4.0324357e-17, -0.3292733, -3.1852748, -1.6, -2.853787)
 
-[node name="rig_01_n_pond_fish_polySurface2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group5/Object_254" parent_id_path=PackedInt32Array(1589768640, 1806846938) index="2" unique_id=549565566]
+[node name="Skeleton3D" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group5/Object_254" parent_id_path=PackedInt32Array(1589768640, 456684248) index="0" unique_id=1490049135]
+bones/2/position = Vector3(0.7840166, -8.881784e-16, -4.440892e-16)
+bones/3/position = Vector3(0.6560755, 2.220446e-16, 4.440892e-16)
+
+[node name="rig_01_n_pond_fish_polySurface2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group5/Object_254" parent_id_path=PackedInt32Array(1589768640, 456684248) index="2" unique_id=645218832]
 transform = Transform3D(0.70728785, 0.01222356, 0.30335033, -0.09974637, 0.73573136, 0.20292097, -0.28674293, -0.22578049, 0.6776641, 0.4344635, -0.043864176, -0.0007533444)
 
-[node name="group6" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="35" unique_id=576750560]
-transform = Transform3D(0.49999356, 0.0025399195, -6.818599e-05, -0.002539578, 0.49998826, 0.0023063004, 7.990001e-05, -0.0023059244, 0.4999947, 2.9077196, -1.7707324, 3.755928)
+[node name="group6" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="35" unique_id=833800538]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.9003005, -2.9003806, 3.751535)
 
-[node name="rig_01_n_pond_fish1_polySurface2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group6/Object_290" parent_id_path=PackedInt32Array(1589768640, 702562157) index="2" unique_id=423736291]
+[node name="Skeleton3D" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group6/Object_290" parent_id_path=PackedInt32Array(1589768640, 1877025682) index="0" unique_id=1850958849]
+bones/2/position = Vector3(0.7840166, 0, 0)
+bones/3/position = Vector3(0.6560755, 0, -4.440892e-16)
+
+[node name="rig_01_n_pond_fish1_polySurface2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group6/Object_290" parent_id_path=PackedInt32Array(1589768640, 1877025682) index="2" unique_id=456739198]
 transform = Transform3D(0.67298734, 0.0122235725, 0.3733171, -0.11975467, 0.7357314, 0.19179435, -0.3537992, -0.2257805, 0.6451947, 0.37499714, -0.028473139, -0.009191155)
 
-[node name="group7" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="40" unique_id=1748730032]
-transform = Transform3D(0.55335784, 0.01255636, 0.4054696, -0.016068857, 0.68593687, 0.0006879838, -0.4053455, -0.010050833, 0.5534999, 14.585221, -2.1787686, 7.054744)
+[node name="group7" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="40" unique_id=1474217903]
+transform = Transform3D(0.5531135, 0.014895247, 0.40572366, -0.018470537, 0.6858767, 0, -0.40557656, -0.010922103, 0.55331415, 1.3684651, -2.1780245, -1.2238921)
 
-[node name="rig_01_n_pond_fish2_polySurface2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group7/Object_326" parent_id_path=PackedInt32Array(1589768640, 354811946) index="2" unique_id=455712616]
-transform = Transform3D(0.6870143, 0.0122235445, -0.34682688, 0.091331586, 0.7357314, 0.20684485, 0.33480862, -0.2257805, 0.65525055, 0.38999987, -0.068030715, 0.01997723)
-
-[node name="_Grass_polySurface2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 8385254) index="41" unique_id=29419980]
-visible = false
-
-[node name="Sketchfab_Scene3" parent="." unique_id=1394017331 instance=ExtResource("2_48ari")]
-transform = Transform3D(0.30192637, 0, 0.39854795, 0, 0.5, 0, -0.39854795, 0, 0.30192637, -0.27467537, 1.3220146, -6.255659)
-
-[node name="pCube1" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="0" unique_id=1424013164]
-visible = false
-
-[node name="pPlane1" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="1" unique_id=1126700684]
-visible = false
-
-[node name="pCube2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="7" unique_id=881092191]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
-
-[node name="pCube3" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="8" unique_id=1807536034]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
-
-[node name="pCube4" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="9" unique_id=873820811]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
-
-[node name="pCube5" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="10" unique_id=1502508158]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse_pCube2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="11" unique_id=104860127]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse_pCube3" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="12" unique_id=1165238698]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse_pCube4" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="13" unique_id=1793165512]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse_pCube5" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="14" unique_id=1854333644]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse1_pCube2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="15" unique_id=1155278740]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse1_pCube3" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="16" unique_id=808655548]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse1_pCube4" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="17" unique_id=1690844879]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.28128177, 0.16151999, 2.3689227)
-
-[node name="ani_01_n_pond_pulse1_pCube5" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="18" unique_id=1217899805]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 4.981653, 0.16151999, 2.3689227)
-
-[node name="pCube6" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="19" unique_id=1866641782]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -6.546249, 0.16151999, -4.3508053)
-
-[node name="pCube7" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="20" unique_id=985111924]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8458775, 0.16151999, -4.3508053)
-
-[node name="pCube8" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="21" unique_id=1552798989]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -6.546249, 0.16151999, -4.3508053)
-
-[node name="pCube9" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="22" unique_id=225697245]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8458775, 0.16151999, -4.3508053)
-
-[node name="pSphere8" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="23" unique_id=523134881]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -3.4834118, 0.52515095, 3.4193141)
-
-[node name="pSphere9" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="24" unique_id=234837431]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8628132, 0.52515095, 4.2849584)
-
-[node name="pSphere10" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="25" unique_id=1242936814]
-transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -2.410042, 0.52515095, 2.828049)
-
-[node name="group5" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="30" unique_id=708910653]
-transform = Transform3D(-0.32723886, 1.0752898e-16, -0.37804067, 4.00752e-17, 0.5, 1.07528967e-16, 0.37804067, 4.007522e-17, -0.32723886, -4.0263124, -3.5231428, -11.596136)
-
-[node name="rig_01_n_pond_fish_polySurface2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group5/Object_254" parent_id_path=PackedInt32Array(1394017331, 1806846938) index="2" unique_id=549565566]
-transform = Transform3D(0.70728785, 0.01222356, 0.30335033, -0.09974637, 0.73573136, 0.20292097, -0.28674293, -0.22578049, 0.6776641, 0.4344635, -0.043864176, -0.0007533444)
-
-[node name="group6" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="35" unique_id=576750560]
-transform = Transform3D(0.4999936, 0.0025399195, -6.818771e-05, -0.0025395781, 0.49998826, 0.0023063007, 7.991493e-05, -0.0023059244, 0.4999947, 11.355381, -2.896829, 3.7809148)
-
-[node name="rig_01_n_pond_fish1_polySurface2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group6/Object_290" parent_id_path=PackedInt32Array(1394017331, 702562157) index="2" unique_id=423736291]
-transform = Transform3D(0.67298734, 0.0122235725, 0.3733171, -0.11975467, 0.7357314, 0.19179435, -0.3537992, -0.2257805, 0.6451947, 0.37499714, -0.028473139, -0.009191155)
-
-[node name="group7" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="40" unique_id=1748730032]
-transform = Transform3D(0.32259867, 0.007320155, 0.23638219, -0.009367883, 0.3998901, 0.0004010834, -0.23630989, -0.0058594737, 0.32268146, 1.3662748, -3.0198178, -1.2096086)
-
-[node name="rig_01_n_pond_fish2_polySurface2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group7/Object_326" parent_id_path=PackedInt32Array(1394017331, 354811946) index="2" unique_id=455712616]
+[node name="rig_01_n_pond_fish2_polySurface2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group7/Object_326" parent_id_path=PackedInt32Array(1589768640, 1435982298) index="2" unique_id=1514859382]
 transform = Transform3D(0.6870142, 0.0122235445, -0.34682688, 0.09133158, 0.7357314, 0.20684485, 0.33480862, -0.2257805, 0.65525055, 0.38999987, -0.068030715, 0.01997723)
 
-[node name="_Grass_polySurface2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 8385254) index="41" unique_id=29419980]
+[node name="_Grass_polySurface2" parent="Sketchfab_Scene2/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1589768640, 1782353911) index="41" unique_id=1785178080]
+visible = false
+
+[node name="AnimationPlayer" parent="Sketchfab_Scene2" index="1" unique_id=2039634828]
+autoplay = &"Take 001"
+
+[node name="Sketchfab_Scene3" parent="." unique_id=1394017331 instance=ExtResource("2_48ari")]
+transform = Transform3D(0.30192637, 0, 0.39854795, 0, 0.5, 0, -0.39854795, 0, 0.30192637, -0.27467537, 1.1057785, -6.255659)
+
+[node name="pCube1" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="0" unique_id=1807369569]
+visible = false
+
+[node name="pPlane1" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="1" unique_id=540445678]
+visible = false
+
+[node name="pCube2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="7" unique_id=223169817]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
+
+[node name="pCube3" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="8" unique_id=579993228]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
+
+[node name="pCube4" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="9" unique_id=2083801629]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
+
+[node name="pCube5" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="10" unique_id=741265361]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
+
+[node name="ani_01_n_pond_pulse_pCube2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="11" unique_id=1107132522]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
+
+[node name="ani_01_n_pond_pulse_pCube3" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="12" unique_id=1578426013]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
+
+[node name="ani_01_n_pond_pulse_pCube4" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="13" unique_id=1323346736]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
+
+[node name="ani_01_n_pond_pulse_pCube5" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="14" unique_id=658079582]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
+
+[node name="ani_01_n_pond_pulse1_pCube2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="15" unique_id=683273373]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
+
+[node name="ani_01_n_pond_pulse1_pCube3" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="16" unique_id=1527003771]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
+
+[node name="ani_01_n_pond_pulse1_pCube4" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="17" unique_id=130032566]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 1.9277446, -0.3583912, 2.3689227)
+
+[node name="ani_01_n_pond_pulse1_pCube5" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="18" unique_id=631873621]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 2.778686, -0.3583912, 2.3689227)
+
+[node name="pCube6" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="19" unique_id=1023400600]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -4.447773, -0.3583912, -4.4488325)
+
+[node name="pCube7" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="20" unique_id=1270920064]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -3.5968318, -0.3583912, -4.4488325)
+
+[node name="pCube8" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="21" unique_id=1355634526]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -4.447773, -0.3583912, -4.4488325)
+
+[node name="pCube9" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="22" unique_id=1182600513]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -3.5968318, -0.3583912, -4.4488325)
+
+[node name="pSphere8" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="23" unique_id=1949342910]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -3.4834118, -3.9193556, 3.8303082)
+
+[node name="pSphere9" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="24" unique_id=1350297475]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8628132, -3.9193556, 4.2849584)
+
+[node name="pSphere10" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="25" unique_id=868759494]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -2.410042, -3.9193556, 2.828049)
+
+[node name="group5" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="30" unique_id=767957350]
+transform = Transform3D(-0.3292733, 1.0731214e-16, -0.37626994, 4.0324347e-17, 0.5, 1.0731213e-16, 0.37626994, 4.0324377e-17, -0.3292733, -3.185275, -3.3198662, -2.853787)
+
+[node name="Skeleton3D" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group5/Object_254" parent_id_path=PackedInt32Array(1394017331, 456684248) index="0" unique_id=1490049135]
+bones/2/position = Vector3(0.7840166, -8.881784e-16, -4.440892e-16)
+bones/3/position = Vector3(0.6560755, 2.220446e-16, 4.440892e-16)
+
+[node name="rig_01_n_pond_fish_polySurface2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group5/Object_254" parent_id_path=PackedInt32Array(1394017331, 456684248) index="2" unique_id=645218832]
+transform = Transform3D(0.70728785, 0.01222356, 0.30335033, -0.09974637, 0.73573136, 0.20292097, -0.28674293, -0.22578049, 0.6776641, 0.4344635, -0.043864176, -0.0007533444)
+
+[node name="group6" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="35" unique_id=833800538]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.9003005, -2.9003806, 3.751535)
+
+[node name="Skeleton3D" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group6/Object_290" parent_id_path=PackedInt32Array(1394017331, 1877025682) index="0" unique_id=1850958849]
+bones/2/position = Vector3(0.7840166, 0, 0)
+bones/3/position = Vector3(0.6560755, 0, -4.440892e-16)
+
+[node name="rig_01_n_pond_fish1_polySurface2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group6/Object_290" parent_id_path=PackedInt32Array(1394017331, 1877025682) index="2" unique_id=456739198]
+transform = Transform3D(0.67298734, 0.0122235725, 0.3733171, -0.11975467, 0.7357314, 0.19179435, -0.3537992, -0.2257805, 0.6451947, 0.37499714, -0.028473139, -0.009191155)
+
+[node name="group7" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="40" unique_id=1474217903]
+transform = Transform3D(0.32245627, 0.008683687, 0.2365303, -0.010768025, 0.39985505, 0, -0.23644459, -0.006367409, 0.32257316, 1.3684654, -2.6281908, -1.2238917)
+
+[node name="rig_01_n_pond_fish2_polySurface2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond/group7/Object_326" parent_id_path=PackedInt32Array(1394017331, 1435982298) index="2" unique_id=1514859382]
+transform = Transform3D(0.68701416, 0.0122235445, -0.34682688, 0.09133157, 0.7357314, 0.20684485, 0.3348086, -0.2257805, 0.65525055, 0.38999987, -0.068030715, 0.01997723)
+
+[node name="_Grass_polySurface2" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="41" unique_id=1785178080]
 visible = false
 
 [node name="StaticBodyforFlowers" type="StaticBody3D" parent="." unique_id=732436699]

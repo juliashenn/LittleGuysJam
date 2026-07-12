@@ -28,6 +28,30 @@ tracks/0/path = NodePath("Head/Camera3D/wand")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 1.0412866, -0.5579251, -0.9446107)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/wand:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.4179138, 0.55073994, -0.3847645)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/Camera3D/wand:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.0930812, -0.5579251, -0.9446107)]
+}
 
 [sub_resource type="Animation" id="Animation_nn08x"]
 resource_name = "conduct"
@@ -47,11 +71,72 @@ tracks/1/path = NodePath("Head/Camera3D/wand")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0.033333335, 1, -0.5237967, 0.076153986, 0.047087766, 0.84712476, 0.23333333, 1, -0.57524896, 0.0743804, 0.042849466, 0.8134618, 0.5, 1, -0.66861755, 0.04940654, 0.035458412, 0.7411155, 0.857, 1, -0.80901635, 0.022414755, 0.026830852, 0.58674526, 1.1, 1, -0.77388597, 0.02560016, 0.034715515, 0.6318541, 1.3333334, 1, -0.6560089, 0.031460915, 0.06342974, 0.75142473, 1.5333333, 1, -0.78656596, 0.068627305, 0.08864012, 0.60724545, 1.714, 1, -0.7866436, 0.0640178, 0.082757294, 0.6084773, 1.8333334, 1, -0.7878555, 0.052592415, 0.067844145, 0.60984814, 2.1333332, 1, -0.6845452, -0.011876855, -0.021726452, 0.7285497, 2.3333333, 1, -0.7720562, -0.07553649, -0.08883006, 0.62476605, 2.571, 1, -0.817518, -0.045645837, -0.04685217, 0.5721761, 3.1666667, 1, -0.7747338, 0.02777639, 0.031724382, 0.63088, 3.4, 1, -0.5237967, 0.076153986, 0.047087766, 0.84712476)
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("Head/Camera3D/wand:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.1075671, 0.17931202, 5.0021857e-08)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/path = NodePath("Head/Camera3D/wand:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.0930812, -0.5579251, -0.9446107)]
+}
+
+[sub_resource type="Animation" id="Animation_52ee3"]
+resource_name = "poke"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/wand")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 1.0930812, -0.5579251, -0.9446107, 0.3, 1, 1.1534957, -0.5579251, -1.5144268, 0.56666666, 1, 1.0930812, -0.5579251, -0.9446107)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/wand")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.64682615, 0.068256676, 0.05829671, 0.7573363, 0.26666668, 1, -0.73676556, 0.08617437, 0.024303539, 0.6701938, 0.56666666, 1, -0.64682615, 0.068256676, 0.05829671, 0.7573363)
+
+[sub_resource type="Animation" id="Animation_bhhdu"]
+resource_name = "swirl"
+length = 1.6666666
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/wand")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 1.0930812, -0.5579251, -0.9446107, 0.13333334, 1, 1.0930812, -0.5579251, -0.9446107, 0.4, 1, 1.0930812, -0.5579251, -1.1067038, 0.7, 1, 1.0930812, -0.5579251, -1.1067038, 1.6333333, 1, 1.0930812, -0.5579251, -0.9446107)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/wand")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.64682615, 0.068256676, 0.05829671, 0.7573363, 0.13333334, 1, -0.45060292, 0.052634396, 0.07271247, 0.88820016, 0.26666668, 1, -0.259721, -0.24780802, 0.0068859053, 0.9333214, 0.4, 1, -0.01105781, -0.72107935, -0.064684115, 0.689738, 0.53333336, 1, -0.015668968, 0.93639696, 0.06372436, -0.34475294, 0.7, 1, -0.05882837, 0.86700886, 0.029078038, 0.49395296, 0.8666667, 1, -0.12660469, 0.454363, -0.03944052, 0.8808917, 1.0333333, 1, -0.01105781, -0.72107935, -0.064684115, 0.689738, 1.1666666, 1, -0.015668968, 0.93639696, 0.06372436, -0.34475294, 1.3333334, 1, -0.05882837, 0.86700886, 0.029078038, 0.49395296, 1.5, 1, -0.12660469, 0.454363, -0.03944052, 0.8808917, 1.6666666, 1, -0.64682615, 0.068256676, 0.05829671, 0.7573363)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nn08x"]
 _data = {
 &"RESET": SubResource("Animation_5ixxa"),
-&"conduct": SubResource("Animation_nn08x")
+&"conduct": SubResource("Animation_nn08x"),
+&"poke": SubResource("Animation_52ee3"),
+&"swirl": SubResource("Animation_bhhdu")
 }
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=841984925 groups=["player"]]
@@ -82,7 +167,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_j1lyr")
 transform = Transform3D(0.8590808, -0.44858837, 0.24647294, -0.083151676, 0.35282964, 0.9319857, -0.5050407, -0.8211457, 0.26580822, 1.0369111, -0.5657455, -0.9322877)
 
 [node name="wand" parent="Head/Camera3D" unique_id=1417012209 instance=ExtResource("3_gntrk")]
-transform = Transform3D(0.9839669, -0.1595569, 0.07969497, 2.235174e-08, 0.44683942, 0.894614, -0.17835276, -0.88027066, 0.4396749, 1.0412866, -0.5579251, -0.9446107)
+transform = Transform3D(0.9839667, -0.15955691, 0.07969488, -0.057159793, 0.14115345, 0.9883363, -0.16894509, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
 
 [node name="GrabPoint" type="Marker3D" parent="Head/Camera3D" unique_id=1784595468]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16156769, -2.0738106)
@@ -99,6 +184,8 @@ shape = SubResource("SphereShape3D_c7e87")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=791288353]
 libraries/ = SubResource("AnimationLibrary_nn08x")
+autoplay = &"swirl"
+speed_scale = 1.02
 
 [connection signal="area_entered" from="Interactor" to="Interactor" method="_on_area_entered"]
 [connection signal="area_exited" from="Interactor" to="Interactor" method="_on_area_exited"]
