@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7mnjccq02wtw"]
+
+[resource]
+resource_name = "treetop platano"
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6497, 0.73, 0.6550533, 0)
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+normal_enabled = true
+normal_scale = 0.0

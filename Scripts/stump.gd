@@ -3,10 +3,11 @@ class_name Stump
 
 @export var holding_note: Grabbable
 @onready var marker: Marker3D = $Marker3D
-@onready var light: OmniLight3D = $light
+#@onready var light: OmniLight3D = $light
 @export var defaultLight: Color
 @export var correct: Color
 @export var incorrect: Color
+@onready var light: SpotLight3D = $SpotLight3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,7 +15,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
 	if holding_note and not holding_note.grabbed:
 		holding_note.global_position = marker.global_position
 		holding_note.rotation = Vector3.ZERO

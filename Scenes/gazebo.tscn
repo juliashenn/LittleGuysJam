@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://cq2uex4cfis6q"]
+
+[ext_resource type="PackedScene" uid="uid://caqj217q8yhw" path="res://Assets/gazebo/gazeboEdit.glb" id="1_313n2"]
+[ext_resource type="Script" uid="uid://8ald8y070p6" path="res://Scripts/gazebo.gd" id="1_piy7q"]
+[ext_resource type="Shader" uid="uid://dik4ajeh61bsn" path="res://Scripts/shader.gdshader" id="2_piy7q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5ekmt"]
+render_priority = 0
+shader = ExtResource("2_piy7q")
+shader_parameter/base_color = Color(0.5847179, 0.9676589, 0.5116678, 1)
+shader_parameter/shadow_color = Color(0.37254903, 0.42352942, 0.5568628, 1)
+shader_parameter/highlight_color = Color(0.5800856, 0.8192399, 0.53436303, 1)
+shader_parameter/shadow_threshold = 0.7
+shader_parameter/highlight_threshold = 0.85
+shader_parameter/master_alpha = 0.9
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yt2kp"]
+size = Vector3(174.434, 20, 455.809)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um51f"]
+size = Vector3(185.77002, 300, 10)
+
+[node name="gazebo" type="Node3D" unique_id=1615345696]
+script = ExtResource("1_piy7q")
+
+[node name="gazeboEdit" parent="." unique_id=985472685 instance=ExtResource("1_313n2")]
+transform = Transform3D(0.016, 0, 0, 0, 0.016, 0, 0, 0, 0.016, 0, 0, 0)
+
+[node name="Gazebo" parent="gazeboEdit" index="0" unique_id=1876600754]
+surface_material_override/1 = SubResource("ShaderMaterial_5ekmt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="gazeboEdit" unique_id=296999874]
+collision_layer = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=645837676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10678171, 7.2244067, 3.5727024)
+shape = SubResource("BoxShape3D_yt2kp")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=618482381]
+transform = Transform3D(0.6513817, 0, -0.7587502, 0, 1, 0, 0.7587502, 0, 0.6513817, -0.10678171, 7.2244067, 3.5727024)
+shape = SubResource("BoxShape3D_yt2kp")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=816472780]
+transform = Transform3D(-0.036551498, 0, -0.99933165, 0, 1, 0, 0.99933165, 0, -0.036551498, -0.10678171, 7.2244067, 3.5727024)
+shape = SubResource("BoxShape3D_yt2kp")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=184687236]
+transform = Transform3D(-0.74863917, 0, -0.66297746, 0, 1, 0, 0.66297746, 0, -0.74863917, -0.10678171, 7.2244067, 3.5727024)
+shape = SubResource("BoxShape3D_yt2kp")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=1198882243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.122315, 149.63878, -206.3815)
+shape = SubResource("BoxShape3D_um51f")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=395883990]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, -209.49597, 149.63878, -1.5867202)
+shape = SubResource("BoxShape3D_um51f")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=658288421]
+transform = Transform3D(-4.3711378e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711378e-08, 205.02252, 149.63878, -1.5867202)
+shape = SubResource("BoxShape3D_um51f")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=1387853234]
+transform = Transform3D(0.76604444, 0, -0.6427876, 0, 1, 0, 0.6427876, 0, 0.76604444, 141.3566, 149.63878, -151.93298)
+shape = SubResource("BoxShape3D_um51f")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=1598790748]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, -153.49226, 149.63878, 144.12424)
+shape = SubResource("BoxShape3D_um51f")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=510449343]
+transform = Transform3D(0.7660444, 0, 0.6427875, 0, 1, 0, -0.6427875, 0, 0.7660444, -158.52966, 149.63878, -142.58148)
+shape = SubResource("BoxShape3D_um51f")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="gazeboEdit/StaticBody3D" unique_id=1846158643]
+transform = Transform3D(0.7660444, 0, 0.6427875, 0, 1, 0, -0.6427875, 0, 0.7660444, 150.06677, 149.63878, 153.84293)
+shape = SubResource("BoxShape3D_um51f")
+debug_color = Color(0.98669523, 0, 0.3264042, 1)
+
+[node name="markers" type="Node3D" parent="." unique_id=701746248]
+
+[node name="Marker3D" type="Marker3D" parent="markers" unique_id=1381988095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9304221, 2.2249854, 2.818207)
+
+[node name="Marker3D2" type="Marker3D" parent="markers" unique_id=526784373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2464125, 2.2249854, 2.5306919)
+
+[node name="Marker3D3" type="Marker3D" parent="markers" unique_id=1143908496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5446186, 2.2249854, 2.2314477)
+
+[node name="Marker3D4" type="Marker3D" parent="markers" unique_id=884113333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8571887, 2.2249851, 1.9210124)
+
+[node name="Marker3D5" type="Marker3D" parent="markers" unique_id=1916002354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9675196, 2.2249851, 2.819741)
+
+[node name="Marker3D6" type="Marker3D" parent="markers" unique_id=1064689481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2799015, 2.2249851, 2.5141723)
+
+[node name="Marker3D7" type="Marker3D" parent="markers" unique_id=51974743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.550258, 2.2249851, 2.2153451)
+
+[node name="Marker3D8" type="Marker3D" parent="markers" unique_id=617530635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.810545, 2.2249851, 1.9667425)
+
+[node name="Marker3D9" type="Marker3D" parent="markers" unique_id=576860689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3183239, 2.2249851, 0.44718266)
+
+[node name="Marker3D10" type="Marker3D" parent="markers" unique_id=637131826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3296428, 2.2249851, 0.049039423)
+
+[node name="Marker3D11" type="Marker3D" parent="markers" unique_id=1482022094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3251328, 2.2249851, -0.357617)
+
+[node name="Marker3D12" type="Marker3D" parent="markers" unique_id=1303805247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3184025, 2.2249851, -0.7530792)
+
+[node name="Marker3D13" type="Marker3D" parent="markers" unique_id=71917136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3784235, 2.2249851, 0.61372185)
+
+[node name="Marker3D14" type="Marker3D" parent="markers" unique_id=1888678090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3701518, 2.2249851, 0.16605777)
+
+[node name="Marker3D15" type="Marker3D" parent="markers" unique_id=1987047197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.362692, 2.2249851, -0.3178376)
+
+[node name="Marker3D16" type="Marker3D" parent="markers" unique_id=1358253750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3797214, 2.2249851, -0.73340714)
+
+[node name="Marker3D17" type="Marker3D" parent="markers" unique_id=2055449516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9581213, 2.2249851, -1.8848692)
+
+[node name="Marker3D18" type="Marker3D" parent="markers" unique_id=769188433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64395, 2.2249851, -2.2177062)
+
+[node name="Marker3D19" type="Marker3D" parent="markers" unique_id=2120384527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2791796, 2.2249851, -2.578996)
+
+[node name="Marker3D20" type="Marker3D" parent="markers" unique_id=1894516839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8698918, 2.2249851, -2.9783216)
+
+[node name="Marker3D21" type="Marker3D" parent="markers" unique_id=1094571648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86728346, 2.2249851, -3.3794916)
+
+[node name="Marker3D22" type="Marker3D" parent="markers" unique_id=2060279131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46983647, 2.2249851, -3.3979847)
+
+[node name="Marker3D23" type="Marker3D" parent="markers" unique_id=515075462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1018475, 2.2249851, -3.3994377)
+
+[node name="Marker3D24" type="Marker3D" parent="markers" unique_id=864521728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2502658, 2.2249851, -3.384899)
+
+[node name="Marker3D25" type="Marker3D" parent="markers" unique_id=886978459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62303925, 2.2249851, -3.3931172)
+
+[node name="Marker3D26" type="Marker3D" parent="markers" unique_id=948587790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7650118, 2.2249851, -2.917042)
+
+[node name="Marker3D27" type="Marker3D" parent="markers" unique_id=2093705349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1045048, 2.2249851, -2.5958478)
+
+[node name="Marker3D28" type="Marker3D" parent="markers" unique_id=1874425173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4969893, 2.2249851, -2.2038825)
+
+[node name="Marker3D29" type="Marker3D" parent="markers" unique_id=2053653453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8229365, 2.2249851, -1.8403326)
+
+[editable path="gazeboEdit"]

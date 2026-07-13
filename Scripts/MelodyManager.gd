@@ -6,7 +6,7 @@ var melodyList := [preload("res://Resources/tutorial.tres"),
 	preload("res://Resources/half.tres"),
 	preload("res://Resources/eighth.tres"),
 	preload("res://Resources/mixed.tres")]
-var curr_level = 0
+var curr_level = 4
 var curr_melody: Melody
 
 @onready var recorder: RecordPlayer = $Recorder

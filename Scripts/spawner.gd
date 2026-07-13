@@ -29,9 +29,9 @@ func spawn():
 		30) as Array[Vector2]
 	points.shuffle()
 	var selected_points = points.slice(0, min(count, points.size()))
-	print("spawning " + noteType )
+	#print("spawning " + noteType )
 	for i in count:
-		print(selected_notes[i].fileName)
+		#print(selected_notes[i].fileName)
 		var spawned_obj = objToSpawn.instantiate() as Grabbable
 		spawned_objs.append(spawned_obj)
 		spawned_obj.set_note(selected_notes[i])

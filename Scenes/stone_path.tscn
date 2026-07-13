@@ -52,18 +52,18 @@ shader_parameter/highlight_threshold = 0.85
 shader_parameter/master_alpha = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7e87"]
-size = Vector3(2.0472412, 3.2560005, 0.25354004)
+size = Vector3(1.4163513, 2.3071642, 0.25354004)
 
 [node name="StonePath" type="Node3D" unique_id=647323037]
 transform = Transform3D(0.060035337, 0.07997349, -1.2584708e-09, 0, -4.371139e-09, -0.036, -0.07997349, 0.060035337, -9.44722e-10, 0, 0, 0)
 
 [node name="node_id4_Material_57_0" type="MeshInstance3D" parent="." unique_id=1297124111]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
 mesh = SubResource("ArrayMesh_e0ngr")
 surface_material_override/0 = SubResource("ShaderMaterial_kn0ld")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=64065655]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=893302217]
-transform = Transform3D(0.51623225, -0.8564495, 1.03990665e-07, 0.8564495, 0.51623225, 5.8739396e-08, -1.0399058e-07, 5.873938e-08, 1, 0.40676892, -0.25737974, 0.03964196)
+transform = Transform3D(0.47683987, -0.8789912, 1.0672772e-07, 0.8789912, 0.47683987, 6.3522435e-08, -1.0672762e-07, 6.3522435e-08, 1, 0.25965533, -0.14444415, -0.04390968)
 shape = SubResource("BoxShape3D_c7e87")

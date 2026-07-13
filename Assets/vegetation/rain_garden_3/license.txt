@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rain Garden #3
+* source:	https://sketchfab.com/3d-models/rain-garden-3-cc059b4193a949a6873b76e8d358d59d
+* author:	creaturecreator (https://sketchfab.com/creaturecreator)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rain Garden #3" (https://sketchfab.com/3d-models/rain-garden-3-cc059b4193a949a6873b76e8d358d59d) by creaturecreator (https://sketchfab.com/creaturecreator) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)

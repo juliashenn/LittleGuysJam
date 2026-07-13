@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c5gyh5g3ywvfl"]
+
+[resource]
+resource_name = "leafs Platano"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.4421906, 0.6413784, 0.49000382, 0.8)
+emission = Color(0.52633333, 1, 0.51, 1)
+normal_enabled = true
+normal_scale = 0.0

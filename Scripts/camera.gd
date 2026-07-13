@@ -3,7 +3,7 @@ extends Camera3D
 @onready var wand: Wand = $wand
 @export var player: Player
 
-var ray_range = 2000.0
+var ray_range = 10.0
 var holding_cast = false
 
 var grabbed_obj: Grabbable

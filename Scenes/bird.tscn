@@ -6,6 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://cddwes6nu1x2y" path="res://Assets/birds/Bird_3.fbx" id="4_om1ab"]
 [ext_resource type="PackedScene" uid="uid://bg1joemrrfpi8" path="res://Assets/birds/Bird_4.fbx" id="5_oc6qe"]
 [ext_resource type="PackedScene" uid="uid://ddx8oeif4aubf" path="res://Assets/birds/Bird_5.fbx" id="6_2gbwe"]
+[ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="7_pfwoh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c7e87"]
+radius = 0.16857113
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7e87"]
+size = Vector3(0.15429688, 0.5841217, 0.18463135)
 
 [node name="bird" type="Node3D" unique_id=1692351658 node_paths=PackedStringArray("birds", "anims")]
 script = ExtResource("1_xf4a6")
@@ -79,6 +86,56 @@ bones/21/rotation = Quaternion(-0.2367679, 0.00014250356, -0.043072548, 0.970611
 [node name="Bird_4" parent="." unique_id=1391241657 instance=ExtResource("5_oc6qe")]
 
 [node name="Bird_5" parent="." unique_id=223479321 instance=ExtResource("6_2gbwe")]
+
+[node name="Skeleton3D" parent="Bird_5/Bird1002_Rig" parent_id_path=PackedInt32Array(223479321, 596895244) index="0" unique_id=454998938]
+bones/3/rotation = Quaternion(0.3813805, -1.10199274e-07, 4.54641e-08, 0.9244182)
+bones/4/rotation = Quaternion(-0.09125223, 7.5314016e-10, 1.1025004e-08, 0.9958279)
+bones/5/scale = Vector3(0.99999976, 0.9999999, 0.99999994)
+bones/6/scale = Vector3(0.9999997, 0.99999994, 1)
+bones/7/rotation = Quaternion(0.93064886, 1.2960474e-09, -3.2963232e-09, -0.36591354)
+bones/8/rotation = Quaternion(0.95824605, -0.02003129, 0.047782537, -0.28121203)
+bones/8/scale = Vector3(0.99996483, 0.9999986, 1.0000004)
+bones/9/rotation = Quaternion(-0.56689286, -0.07212583, 0.07448456, 0.8172408)
+bones/10/rotation = Quaternion(0.32241303, 0.060926903, -0.09544559, 0.9398021)
+bones/10/scale = Vector3(0.3413059, 0.9995427, 0.999575)
+bones/11/rotation = Quaternion(0.7552805, 0.0040020347, -0.11316198, 0.645546)
+bones/11/scale = Vector3(1.0000359, 0.9991934, 0.99992394)
+bones/12/rotation = Quaternion(0.96249837, 0.0095460415, -0.084668145, -0.25755987)
+bones/12/scale = Vector3(0.9999646, 0.99999803, 0.9999994)
+bones/13/rotation = Quaternion(-0.74245995, 0.05826763, -0.097553365, 0.6601829)
+bones/14/rotation = Quaternion(0.50959283, -0.036956873, 0.14696252, 0.846966)
+bones/14/scale = Vector3(0.427652, 0.99962384, 0.99949574)
+bones/15/rotation = Quaternion(0.85523087, 0.038560804, 0.1465186, 0.4956062)
+bones/15/scale = Vector3(1.0000323, 0.9991357, 0.9999831)
+bones/16/rotation = Quaternion(-0.6308413, -0.25466815, -0.28523865, 0.6751461)
+bones/17/rotation = Quaternion(0.08949298, 0.0073225806, 0.25715423, 0.9621898)
+bones/18/rotation = Quaternion(-0.2456441, -0.07957008, 0.08331095, 0.96248996)
+bones/19/rotation = Quaternion(-0.6410834, 0.21590589, 0.25383335, 0.6913504)
+bones/19/scale = Vector3(1.0236042, 0.9544121, 1.0236048)
+bones/20/rotation = Quaternion(0.13574655, 0.095742375, -0.16250965, 0.9726237)
+bones/20/scale = Vector3(0.97915816, 1.0318106, 0.9942819)
+bones/21/rotation = Quaternion(-0.2367679, 0.00014250356, -0.043072548, 0.9706111)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1096144836]
+script = ExtResource("7_pfwoh")
+interact_name = "a bird!"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1320941428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15361416, -0.030955285)
+shape = SubResource("SphereShape3D_c7e87")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=2125327590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0057059526, -0.10641531)
+
+[node name="groundDetector" type="Area3D" parent="." unique_id=1138759138]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="groundDetector" unique_id=344162341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005859375, -0.18061066, -0.027191162)
+shape = SubResource("BoxShape3D_c7e87")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="body_entered" from="groundDetector" to="." method="_on_ground_detector_body_entered"]
 
 [editable path="Bird_1"]
 [editable path="Bird_2"]

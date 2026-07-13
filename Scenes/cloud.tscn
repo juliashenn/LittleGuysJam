@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://csekk8stq7bjn" path="res://Assets/stylize_clouds/scene.gltf" id="1_sm7h7"]
 [ext_resource type="Resource" uid="uid://hsvn73w4rc6t" path="res://Resources/tutorial.tres" id="2_uourm"]
 [ext_resource type="PackedScene" uid="uid://bty0aodt8jxnf" path="res://Scenes/water_drop.tscn" id="3_pdgc3"]
+[ext_resource type="PackedScene" uid="uid://bkd4btfbc8k5g" path="res://Assets/vegetation/raingardenandwater/scene.gltf" id="5_xmwcc"]
+[ext_resource type="PackedScene" uid="uid://is303o83dh51" path="res://Assets/vegetation/rain_garden_3/scene.gltf" id="6_sdvkw"]
+[ext_resource type="PackedScene" uid="uid://bcmja614jtrll" path="res://Assets/vegetation/rain_garden_v2/scene.gltf" id="7_ibnag"]
 
 [node name="Cloud" type="Node3D" unique_id=1548188862]
 script = ExtResource("1_8hs1w")
@@ -29,5 +32,17 @@ visible = false
 
 [node name="Cube_002_6" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 1541339133) index="2" unique_id=1225849940]
 visible = false
+
+[node name="Sketchfab_Scene2" parent="." unique_id=1976999474 instance=ExtResource("5_xmwcc")]
+transform = Transform3D(-2.266529, 0, 4.4567747, 0, 4.999999, 0, -4.4567747, 0, -2.266529, 1.9132605, -4.038417, 7.575619)
+
+[node name="Sketchfab_Scene3" parent="." unique_id=1209344850 instance=ExtResource("6_sdvkw")]
+transform = Transform3D(310.36127, 0, -392.0152, 0, 500.00003, 0, 392.0152, 0, 310.36127, -6.275344, -4.0363426, -6.2888923)
+
+[node name="Sketchfab_Scene4" parent="." unique_id=1457081906 instance=ExtResource("7_ibnag")]
+transform = Transform3D(-4.6697025, 0, -1.7871414, 0, 5, 0, 1.7871414, 0, -4.6697025, 5.770233, -4.351227, -6.328102)
+
+[node name="Sketchfab_Scene5" parent="." unique_id=137694277 instance=ExtResource("7_ibnag")]
+transform = Transform3D(4.7744713, 0, 1.4847289, 0, 5, 0, -1.4847289, 0, 4.7744713, -8.146539, -4.313373, 5.0850463)
 
 [editable path="Sketchfab_Scene"]

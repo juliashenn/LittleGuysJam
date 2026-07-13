@@ -24,6 +24,7 @@ const FOV_CHANGE = 0.75
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var ui: UI = $UI
 
+var found_birds : Array[Bird] = []
 var enabled := true
 
 func _ready():

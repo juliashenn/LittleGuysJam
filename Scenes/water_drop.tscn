@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xlc02rfrk1m3" path="res://Scripts/grabbable.gd" id="1_gf4bk"]
 [ext_resource type="PackedScene" uid="uid://bp5cx6brcy8rp" path="res://Assets/simple_slime_creature/waterBlob.glb" id="1_kkpwa"]
+[ext_resource type="Material" uid="uid://07886ytf6dtg" path="res://Assets/simple_slime_creature/Material.001.tres" id="3_gf4bk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7yui6"]
 size = Vector3(0.29943848, 0.27490234, 0.30828857)
@@ -18,6 +19,9 @@ shape = SubResource("BoxShape3D_7yui6")
 
 [node name="waterBlob" parent="." unique_id=1684066815 instance=ExtResource("1_kkpwa")]
 transform = Transform3D(-0.35, 0, -3.059797e-08, 0, 0.35, 0, 3.059797e-08, 0, -0.35, 0, 0, 0)
+
+[node name="Inside_phong1_0" parent="waterBlob/Sketchfab_model/ce61cdca058b42bbae22e8500a011400_fbx/RootNode/Slime/Inside" parent_id_path=PackedInt32Array(1684066815, 1327462236) index="0" unique_id=63071338]
+surface_material_override/0 = ExtResource("3_gf4bk")
 
 [node name="Left_eye" parent="waterBlob/Sketchfab_model/ce61cdca058b42bbae22e8500a011400_fbx/RootNode/Slime" parent_id_path=PackedInt32Array(1684066815, 1940646253) index="1" unique_id=697143865]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.096)

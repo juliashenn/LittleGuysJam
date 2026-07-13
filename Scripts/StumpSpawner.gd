@@ -59,8 +59,10 @@ func check_solution():
 				obj.poke() # failed
 				await get_tree().create_timer(2.0).timeout
 				failed()
+				return
 		else:
 			failed()
+			return
 	solved()
 	
 func failed():
@@ -70,6 +72,7 @@ func failed():
 
 func solved():
 	player.stop_anim()
+	await get_tree().create_timer(0.5).timeout
 	manager.melody_solved()
 	
 func clear():

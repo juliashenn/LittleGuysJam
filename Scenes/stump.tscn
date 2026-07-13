@@ -14,8 +14,8 @@ radius = 0.6665039
 [node name="Stump" type="Node3D" unique_id=1528155010]
 script = ExtResource("1_v887s")
 defaultLight = Color(0.8980392, 0.8784314, 0.5529412, 1)
-correct = Color(0.6994554, 0.944594, 0.54307026, 1)
-incorrect = Color(0.9470516, 0.8104721, 0.9397168, 1)
+correct = Color(0.60784316, 0.9411765, 0.40392157, 1)
+incorrect = Color(0.93, 0.5301, 0.5301, 1)
 
 [node name="Sketchfab_Scene" parent="." unique_id=1750677268 instance=ExtResource("1_4f0e0")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -33,10 +33,17 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.27921295, 0)
 shape = SubResource("CylinderShape3D_o06y3")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=729383124]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54458237, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5595136, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=851512619]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 1.7176073, 0)
+light_color = Color(0.8980392, 0.8784314, 0.5529412, 1)
+light_energy = 3.0
+spot_angle = 19.79769
 
 [node name="light" type="OmniLight3D" parent="." unique_id=1287365848]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.68680495, 0)
+visible = false
 light_color = Color(0.8980392, 0.8784314, 0.5529412, 1)
 omni_range = 0.39386776
 

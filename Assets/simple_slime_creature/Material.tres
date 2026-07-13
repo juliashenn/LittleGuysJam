@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://crusp3ltl07s"]
+
+[resource]
+resource_name = "Material"
+transparency = 4
+cull_mode = 2
+albedo_color = Color(0.3208137, 0.6116052, 0.90635157, 0.19711603)
+metallic = 1.0
+roughness = 0.0

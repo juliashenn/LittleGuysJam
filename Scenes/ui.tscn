@@ -261,7 +261,6 @@ horizontal_alignment = 1
 libraries/ = SubResource("AnimationLibrary_2246s")
 
 [node name="black" type="ColorRect" parent="." unique_id=1068790582]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
