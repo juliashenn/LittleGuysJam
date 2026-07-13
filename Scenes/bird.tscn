@@ -12,7 +12,7 @@
 radius = 0.16857113
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7e87"]
-size = Vector3(0.15429688, 0.5841217, 0.18463135)
+size = Vector3(0.15429688, 1.8862991, 0.18463135)
 
 [node name="bird" type="Node3D" unique_id=1692351658 node_paths=PackedStringArray("birds", "anims")]
 script = ExtResource("1_xf4a6")
@@ -130,7 +130,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0057059526, -0.10641531)
 [node name="groundDetector" type="Area3D" parent="." unique_id=1138759138]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="groundDetector" unique_id=344162341]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005859375, -0.18061066, -0.027191162)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005859375, -0.8316994, -0.027191162)
 shape = SubResource("BoxShape3D_c7e87")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

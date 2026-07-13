@@ -1,11 +1,12 @@
 extends Node3D
+class_name Gazebo
 
+@onready var marker_parent: Node3D = $markers
+var markers : Array[Node] = []
+@onready var drop_off_marker: Marker3D = $dropOff
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	markers = marker_parent.get_children()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

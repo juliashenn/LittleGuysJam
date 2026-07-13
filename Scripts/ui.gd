@@ -3,12 +3,13 @@ class_name UI
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var black: ColorRect = $black
+@onready var dialogue: RichTextLabel = $dialogue
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	fadeFromBlack()
-	await get_tree().create_timer(0.5).timeout
-	credits()
+	#await get_tree().create_timer(0.5).timeout
+	#credits()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

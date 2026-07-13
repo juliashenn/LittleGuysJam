@@ -35,7 +35,7 @@ func spawn():
 		var spawned_obj = objToSpawn.instantiate() as Grabbable
 		spawned_objs.append(spawned_obj)
 		spawned_obj.set_note(selected_notes[i])
-		spawned_obj.position = Vector3(selected_points[i].x, global_position.y, selected_points[i].y)
+		spawned_obj.position = Vector3(selected_points[i].x, global_position.y + randf(), selected_points[i].y)
 		#water_obj.look_at_from_position(Vector3(selected_points[i].x, global_position.y, selected_points[i].y), Vector3.ZERO, Vector3.UP)
 	
 		add_child(spawned_obj)

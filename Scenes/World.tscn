@@ -541,6 +541,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17270482, 4.7769804)
 [node name="MeshInstance3D" parent="CharacterBody3D" index="0" unique_id=1449095299]
 layers = 4
 
+[node name="wand" parent="CharacterBody3D/Head/Camera3D" parent_id_path=PackedInt32Array(841984925, 1282670836) index="2" unique_id=1417012209]
+transform = Transform3D(0.9839664, -0.15955691, 0.07969488, -0.057159774, 0.14115345, 0.9883363, -0.16894504, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
+
 [node name="Recorder" parent="." unique_id=1496842421 instance=ExtResource("5_0fj1v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27772856, 0)
 melody = ExtResource("6_7yui6")
@@ -655,7 +658,7 @@ transform = Transform3D(-0.562572, 0, -0.8267483, 0, 1, 0, 0.8267483, 0, -0.5625
 transform = Transform3D(0.8090541, 0, 0.5877342, 0, 1, 0, -0.5877342, 0, 0.8090541, 1.5957905, 0.3757484, -0.8594769)
 
 [node name="bird" parent="." unique_id=1692351658 instance=ExtResource("24_xbk3s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.791, 0, 7.358)
 
 [node name="water" type="Node3D" parent="." unique_id=1461121226]
 

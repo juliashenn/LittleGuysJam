@@ -85,11 +85,12 @@ func bounce():
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("ground"):
 		if mesh:
-			#linear_velocity = Vector3.ZERO
-			#angular_velocity = Vector3.ZERO
-			var tween = create_tween()
-			tween.tween_property(mesh, "scale", Vector3(1, 0.7, 1)*start_scale, 0.2/squish_speed)
-			tween.tween_property(mesh, "scale", start_scale, 0.3/squish_speed)
+			poke()
+			##linear_velocity = Vector3.ZERO
+			##angular_velocity = Vector3.ZERO
+			#var tween = create_tween()
+			#tween.tween_property(mesh, "scale", Vector3(1, 0.7, 1)*start_scale, 0.2/squish_speed)
+			#tween.tween_property(mesh, "scale", start_scale, 0.3/squish_speed)
 
 func set_note(n: Note):
 	if not n: return

@@ -25,6 +25,7 @@ window/stretch/aspect="expand"
 grabbable=""
 player=""
 ground=""
+gazebo=""
 
 [input]
 

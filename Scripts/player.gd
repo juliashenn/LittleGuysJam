@@ -23,6 +23,7 @@ const FOV_CHANGE = 0.75
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var ui: UI = $UI
+@onready var bird_marker: Marker3D = $Head/Camera3D/birdMarker
 
 var found_birds : Array[Bird] = []
 var enabled := true
@@ -48,6 +49,8 @@ func _physics_process(delta: float) -> void:
 	
 	if not enabled:
 		return
+	if Input.is_action_just_pressed("call"):
+		call_bird()
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
@@ -116,3 +119,9 @@ func end_scene():
 func blink():
 	ui.fadeToBlack()
 	ui.fadeFromBlack()
+
+func call_bird():
+	for bird in found_birds:
+		if not bird.heading_home and not bird.following_player:
+			bird.go_to_player()
+			return

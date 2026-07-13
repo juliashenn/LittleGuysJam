@@ -20,7 +20,7 @@ size = Vector3(174.434, 20, 455.809)
 [sub_resource type="BoxShape3D" id="BoxShape3D_um51f"]
 size = Vector3(185.77002, 300, 10)
 
-[node name="gazebo" type="Node3D" unique_id=1615345696]
+[node name="gazebo" type="Node3D" unique_id=1615345696 groups=["gazebo"]]
 script = ExtResource("1_piy7q")
 
 [node name="gazeboEdit" parent="." unique_id=985472685 instance=ExtResource("1_313n2")]
@@ -171,5 +171,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4969893, 2.2249851, -2.2038
 
 [node name="Marker3D29" type="Marker3D" parent="markers" unique_id=2053653453]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8229365, 2.2249851, -1.8403326)
+
+[node name="dropOff" type="Marker3D" parent="." unique_id=714619483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.407, 1, 3.959)
 
 [editable path="gazeboEdit"]
