@@ -1,5 +1,73 @@
 [gd_scene format=3 uid="uid://c5fglu7coxk8e"]
 
+[ext_resource type="Script" uid="uid://duxgmtqejfgaj" path="res://Scripts/ui.gd" id="1_jxero"]
+
+[sub_resource type="Animation" id="Animation_qdvrb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("credits:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(190, 650)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("black:color:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_nf4gj"]
+resource_name = "credits"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("credits:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 29.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(190, 650), Vector2(190, -3400)]
+}
+
+[sub_resource type="Animation" id="Animation_jxero"]
+resource_name = "fadeToBlack"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("black:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2246s"]
+_data = {
+&"RESET": SubResource("Animation_qdvrb"),
+&"credits": SubResource("Animation_nf4gj"),
+&"fadeToBlack": SubResource("Animation_jxero")
+}
+
 [node name="UI" type="Control" unique_id=1968195755]
 layout_mode = 3
 anchors_preset = 15
@@ -8,6 +76,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_jxero")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=264384767]
 layout_mode = 1
@@ -26,3 +95,179 @@ alignment = 1
 layout_mode = 2
 text = "[E] "
 horizontal_alignment = 2
+
+[node name="credits" type="RichTextLabel" parent="." unique_id=31740059]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 190.0
+offset_top = 650.0
+offset_right = -170.0
+offset_bottom = 3426.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CREDITS
+Peaceful Orchestra Music 
+by lolurio 
+(modified to make short melodies)
+https://lolurio.itch.io/peaceful-orchestra-music
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+Gazebo by ROSTISLAV via TurboSquid
+https://www.turbosquid.com/FullPreview/863050 
+
+\"Magic Wand\" 
+(https://skfb.ly/6yNsv) by BozhidarKN 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Mushroom Friend\" 
+(https://skfb.ly/ory7Y) by Rick Hoppmann
+is licensed under Creative Commons Attribution-NonCommercial 
+(http://creativecommons.org/licenses/by-nc/4.0/).
+
+\"Rootieboodie\"
+(https://skfb.ly/6VIE7) by Rick Hoppmann 
+is licensed under Creative Commons Attribution-NonCommercial 
+(http://creativecommons.org/licenses/by-nc/4.0/).
+
+\"(Simple) Slime Creature\" modified as Water Blobs
+(https://skfb.ly/oV7tO) by BlaizeJ
+ is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Lotus Flower Blooming Animation\" 
+(https://skfb.ly/oHUZZ) by Alexander Ruletik 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Vintage Cello\" 
+(https://skfb.ly/6WRWx) by k4o7sprectre 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Violin\" 
+(https://skfb.ly/6CByS) by RafalTlalka 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Harp\" 
+(https://skfb.ly/6TNHX) by AlfonsoToro 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Flute\" 
+(https://skfb.ly/osotp) by Dmitrijus Polonskis 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"stylize clouds\" 
+(https://skfb.ly/6UVrM) by ragad.sallabi 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Vintage Gramophone Game-Asset by Rigdhi\" 
+(https://skfb.ly/oKJNq) by Rukh3D 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Tree Stump\" 
+(https://skfb.ly/6xpvK) by PULSAR BYTES 
+is licensed under Creative Commons Attribution-NonCommercial 
+(http://creativecommons.org/licenses/by-nc/4.0/).
+
+\"Ground\" (modified to be flater)
+(https://skfb.ly/69SYL) by Pixel 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Sheet Music\" 
+(https://skfb.ly/6WOvv) by cScott 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Music Stand\" 
+(https://skfb.ly/6WPnt) by graygabriel 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"GA Free_251_Ancient White Lotus Flower ClusterTt\" 
+(https://skfb.ly/pLLIq) by Galaxy Abundant™ 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Little Pond & fish\" (modified)
+(https://skfb.ly/6SIJU) by MotPanda 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Way Path Blocks\" 
+(https://skfb.ly/6yCSo) by Bull studios
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Garden Bridge\" 
+(https://skfb.ly/6YKNq) by Anthony Monteagudo 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Fishing Gecko\" 
+(https://skfb.ly/ooLtz) by zachariahaie
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Forest Lighting (WIP)\" (modified color and terrain)
+(https://skfb.ly/oCsyH) by Ti Mur 
+is licensed under CC Attribution-NonCommercial-ShareAlike 
+(http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+\"Garden cement fence Wall Building\" 
+(https://skfb.ly/oRFrZ) by Mehdi Shahsavan 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Mossy Log\" 
+(https://skfb.ly/puqtM) by July 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Bird - Animated Low Poly\" (https://skfb.ly/pLICz) 
+\"Bird - Animated Low Poly\" (https://skfb.ly/pLICy)
+\"Bird 3 - Animated Low Poly\" (https://skfb.ly/pLICw)
+\"Bird 4 - Animated Low Poly\" (https://skfb.ly/pLICv)
+\"Bird 5 - Animated Low Poly\" (https://skfb.ly/pLIC6)
+\"Duck Baby - Animated Low Poly\" (https://skfb.ly/pLIBY) 
+\"Rabbit Baby - Animated Low Poly\" (https://skfb.ly/pLIBw)
+\"Rabi Baby - Animated Low Poly\" (https://skfb.ly/pLIBv)
+by WildPoly3D 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Mushroom-O-Saurus\" 
+(https://skfb.ly/own7H) by tabletsheet 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Truffle Man\" 
+(https://skfb.ly/owurQ) by dotflare
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/)."
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1708598131]
+libraries/ = SubResource("AnimationLibrary_2246s")
+
+[node name="black" type="ColorRect" parent="." unique_id=1068790582]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 12.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

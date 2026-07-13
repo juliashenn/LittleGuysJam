@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bymuwsh8ao03u"]
+
+[resource]
+resource_name = "Duckling_Textured"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.92581505, 0.93, 0.6789, 1)
+emission_enabled = true
+emission = Color(0.76, 0.69882, 0.2356, 1)
+emission_energy_multiplier = 0.1
+texture_repeat = false

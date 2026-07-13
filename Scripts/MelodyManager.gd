@@ -14,6 +14,10 @@ var curr_melody: Melody
 @onready var water_spawner: Spawner = $Cloud
 @onready var mushroom_spawner: Spawner = $MushroomSpawner
 @onready var flower_spawner: Spawner = $FlowerSpawner
+@onready var cutscene_player: AnimationPlayer = $AnimationPlayer
+@onready var ui: UI = $CharacterBody3D/UI
+@onready var cutscene_anim: AnimationPlayer = $AnimationPlayer
+@onready var player: Player = $CharacterBody3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -33,12 +37,12 @@ func set_up_melody():
 	spawn()
 
 func melody_solved():
+	if curr_level != 0: 
+		cutscene_anim.play(str(curr_level))
+	player.blink()
 	curr_level += 1
 	clear_spawner()
 	set_up_melody()
-	# show instrument waking up
-	# maybe have stats like timer?
-	# set up next level
 	
 func clear_spawner():
 	water_spawner.clear()

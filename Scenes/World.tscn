@@ -22,10 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://c1a38nvysb41d" path="res://Scenes/violin.tscn" id="21_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://disgsypqv85p7" path="res://Assets/garden_cement_fence_wall_building/scene.gltf" id="21_no8kt"]
 [ext_resource type="PackedScene" uid="uid://doq85qoj2rc7q" path="res://Scenes/harp.tscn" id="22_pt3ps"]
-[ext_resource type="PackedScene" uid="uid://bj71idcynuqq" path="res://Assets/mushroom-o-saurus/scene.gltf" id="23_hmc15"]
-[ext_resource type="PackedScene" uid="uid://byav5qkgxcep6" path="res://Assets/quirky_series_-_free_animals_pack/scene.gltf" id="24_dt0r1"]
-[ext_resource type="PackedScene" uid="uid://b4y70v8llwebk" path="res://Assets/snail_garden_sculpture/scene.gltf" id="25_hmc15"]
-[ext_resource type="PackedScene" uid="uid://yno25s3prbyu" path="res://Assets/turtle_garden_sculpture/scene.gltf" id="26_dt0r1"]
+[ext_resource type="PackedScene" uid="uid://tpuacx5pg5wg" path="res://Scenes/bird.tscn" id="24_xbk3s"]
 [ext_resource type="PackedScene" uid="uid://bq5yqux4hg52u" path="res://Assets/truffle_man/scene.gltf" id="27_qebug"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7yui6"]
@@ -203,12 +200,340 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ubxuk")
 
+[sub_resource type="Animation" id="Animation_i4fjy"]
+resource_name = "cello"
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 2.055, 4.75), Vector3(0.465, 2.395, -0.48)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.29670596, 2.268928, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("cello")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1, 3.1, 15.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"awake"
+}, {
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"disable"
+}, {
+"args": [],
+"method": &"enable"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("flute")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.1, 2.1, 8.96),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"awake"
+}, {
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_qebug"]
 resource_name = "cello"
+length = 15.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.08),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 2.055, 4.75), Vector3(0.465, 2.185, 0.875)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.08),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.19198622, 0.7417649, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("cello")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1, 3.1, 15.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"awake"
+}, {
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 15.2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"disable"
+}, {
+"args": [],
+"method": &"enable"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_pt3ps"]
+resource_name = "cello"
+length = 14.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.06),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 2.055, 4.75), Vector3(-0.48, 2.36, 0.83)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.06),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.06981317, -0.7225663, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("cello")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1, 3.1, 15.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"awake"
+}, {
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 14.9),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"disable"
+}, {
+"args": [],
+"method": &"enable"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("harp")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.1, 4.1, 14.81),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"awake"
+}, {
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_hmc15"]
+resource_name = "cello"
+length = 19.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.04),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 2.055, 4.75), Vector3(-0.135, 2.497, 0.651)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.04),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.31415927, -2.0228367, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("violin")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1, 3.1, 19.39),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"awake"
+}, {
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 19.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"disable"
+}, {
+"args": [],
+"method": &"enable"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_xbk3s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.055, 4.75)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o2rbt"]
 _data = {
-&"cello": SubResource("Animation_qebug")
+&"1": SubResource("Animation_i4fjy"),
+&"2": SubResource("Animation_qebug"),
+&"3": SubResource("Animation_pt3ps"),
+&"4": SubResource("Animation_hmc15"),
+&"RESET": SubResource("Animation_xbk3s")
 }
 
 [node name="world" type="Node3D" unique_id=102234744]
@@ -282,12 +607,17 @@ transform = Transform3D(0.7660444, 0, 0.6427875, 0, 1, 0, -0.6427875, 0, 0.76604
 shape = SubResource("BoxShape3D_hgpy0")
 debug_color = Color(0.98669523, 0, 0.3264042, 1)
 
-[node name="CharacterBody3D" parent="." unique_id=841984925 node_paths=PackedStringArray("recordAudio") instance=ExtResource("4_5v1tr")]
+[node name="CharacterBody3D" parent="." unique_id=841984925 instance=ExtResource("4_5v1tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17270482, 4.7769804)
-recordAudio = NodePath("../Recorder")
+
+[node name="MeshInstance3D" parent="CharacterBody3D" index="0" unique_id=1449095299]
+layers = 4
+
+[node name="wand" parent="CharacterBody3D/Head/Camera3D" parent_id_path=PackedInt32Array(841984925, 1282670836) index="2" unique_id=1417012209]
+transform = Transform3D(0.9839664, -0.15955691, 0.07969488, -0.057159774, 0.14115345, 0.9883363, -0.16894504, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
 
 [node name="Recorder" parent="." unique_id=1496842421 instance=ExtResource("5_0fj1v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37064153, -1.2162962)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27772856, 0)
 melody = ExtResource("6_7yui6")
 
 [node name="StumpSpawner" parent="." unique_id=1271368526 node_paths=PackedStringArray("manager", "player") instance=ExtResource("7_o06y3")]
@@ -373,9 +703,6 @@ shape = SubResource("ConvexPolygonShape3D_t2t4p")
 [node name="bridge" parent="." unique_id=784187549 instance=ExtResource("18_0pcbe")]
 transform = Transform3D(0.9950041, 0, -0.09983334, 0, 1, 0, 0.09983334, 0, 0.9950041, 18.48022, 1.0723016, 10.275653)
 
-[node name="cello" parent="." unique_id=940691419 instance=ExtResource("19_axeuq")]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.9999999, -8.029339, 0, 5.183288)
-
 [node name="fences" parent="." unique_id=2014053593 instance=ExtResource("21_no8kt")]
 transform = Transform3D(4, 0, 0, 0, 6, 0, 0, 0, 4, -28.1636, -0.025406338, -9.937156)
 
@@ -450,38 +777,74 @@ transform = Transform3D(-0.99999976, 1.2095517e-30, -8.7422734e-08, 3.1554436e-3
 mesh = SubResource("ArrayMesh_gvaac")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=194768306]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.055, 4.75)
+transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0, 0.9999999, 0, 2.055, 4.75)
+cull_mask = 1048571
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=436482735]
 libraries/ = SubResource("AnimationLibrary_o2rbt")
 
+[node name="cello" parent="." unique_id=940691419 instance=ExtResource("19_axeuq")]
+transform = Transform3D(0.76479924, 0, 0.64426863, 0, 0.99999994, 0, -0.6442687, 0, 0.7647991, -1.1992887, 0.5163872, -0.9979725)
+
 [node name="flute" parent="." unique_id=387917516 instance=ExtResource("20_xbk3s")]
-transform = Transform3D(-0.016249225, 0, -0.999868, 0, 1, 0, 0.999868, 0, -0.016249225, -6.784916, 2.0971634, 6.8078623)
+transform = Transform3D(0.12372464, 0, 0.99231666, 0, 1, 0, -0.99231666, 0, 0.12372464, -1.4593804, 0.35175693, 1.2147067)
 
 [node name="violin" parent="." unique_id=601918413 instance=ExtResource("21_i4fjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.798115, 0.61359906, 6.040949)
+transform = Transform3D(-0.562572, 0, -0.8267483, 0, 1, 0, 0.8267483, 0, -0.562572, 1.6780351, 0.37987983, 1.2973708)
 
 [node name="harp" parent="." unique_id=149440918 instance=ExtResource("22_pt3ps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 5)
+transform = Transform3D(0.8090541, 0, 0.5877342, 0, 1, 0, -0.5877342, 0, 0.8090541, 1.5957905, 0.3757484, -0.8594769)
 
-[node name="Sketchfab_Scene" parent="." unique_id=549553690 instance=ExtResource("23_hmc15")]
-transform = Transform3D(-0.41151735, 0, 0.9114019, 0, 1, 0, -0.9114019, 0, -0.41151735, -3.5646958, 1.9470166, 5.1580267)
+[node name="BigMushroom" parent="." unique_id=1303560605 instance=ExtResource("27_qebug")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.260035, 0.054171085, 7.0713615)
 
-[node name="Object_7" parent="Sketchfab_Scene/Sketchfab_model/zbrush_concat_osgb_cleaner_materialmerger_gles/_sketchfab-data_processing_models_a55a1684bb5f4db691ed8b6999c0b09d_dcbc880fb6a74032a838c7a6c0ec3cde_091b3573913b49488cbf74d3f43d4949_preprocess_SubTool-7-12721251_OBJ" parent_id_path=PackedInt32Array(549553690, 2058194306) index="0" unique_id=925710727]
-transform = Transform3D(1, 0, 0, 0, 1, -3.3087225e-24, 0, -3.3087225e-24, 1, 0, 0, 0)
+[node name="Skeleton3D" parent="BigMushroom/Sketchfab_model/e4f8e14523654cbb8d2da1ed3d9e0445_fbx/Object_2/RootNode/Armature_001/Object_7" parent_id_path=PackedInt32Array(1303560605, 318175820) index="0" unique_id=530216746]
+bones/5/rotation = Quaternion(0.12908573, 0.0717179, 0.017780108, 0.9888768)
+bones/8/rotation = Quaternion(0.10977433, 0.20095973, 0.00035866996, 0.9734294)
+bones/10/rotation = Quaternion(0.625732, 0.4146939, 0.4634357, -0.47086704)
+bones/11/rotation = Quaternion(-0.42110503, -0.3025678, 0.17666757, 0.83660734)
+bones/12/rotation = Quaternion(-0.13765614, -0.025958076, -0.037650485, 0.9894238)
+bones/14/rotation = Quaternion(0.8592946, 0.28883538, 0.3444262, 0.24404411)
+bones/16/rotation = Quaternion(0.9060352, 0.2811632, 0.31586322, 0.016674012)
+bones/22/rotation = Quaternion(0.6495221, -0.37634122, -0.43430132, -0.49786612)
+bones/23/rotation = Quaternion(-0.31192788, 0.41609225, -0.3176326, 0.7928921)
+bones/24/rotation = Quaternion(-0.23898712, 0.025408799, 0.06536571, 0.9684869)
+bones/25/rotation = Quaternion(0.88506216, -0.36354974, -0.26203212, 0.12584011)
+bones/27/rotation = Quaternion(0.95980287, -0.21660131, -0.13723114, -0.11414913)
+bones/29/rotation = Quaternion(0.6078125, -0.46448952, -0.31792533, 0.5601223)
+bones/37/rotation = Quaternion(-0.17501418, -0.84150827, -0.043328524, 0.5092706)
+bones/38/rotation = Quaternion(-0.25730997, 0.056009684, 0.015113556, 0.96458596)
+bones/39/rotation = Quaternion(-0.33011484, -0.03669378, 0.04723359, 0.94204396)
+bones/41/rotation = Quaternion(0.28304607, 0.9381627, 0.19686578, -0.03129785)
+bones/42/rotation = Quaternion(0.060059395, 0.0057910476, -0.016206322, 0.99804646)
+bones/43/rotation = Quaternion(0.15813354, -0.1913679, -0.102883436, 0.9632171)
+bones/45/rotation = Quaternion(-0.17724115, -0.80691916, -0.04106743, 0.56194353)
+bones/46/rotation = Quaternion(-0.45020425, -0.024823193, -0.017856823, 0.8924019)
+bones/47/rotation = Quaternion(-0.35521924, 0.0056253355, 0.012979503, 0.934676)
+bones/49/rotation = Quaternion(0.12890273, 0.85850805, 0.116831325, -0.48238826)
+bones/50/rotation = Quaternion(-0.5767071, -0.00054695416, -0.01218826, 0.8168599)
+bones/51/rotation = Quaternion(-0.5314983, -0.055518884, -0.030232102, 0.8446972)
+bones/54/rotation = Quaternion(-0.44470602, 0.64376885, 0.22734451, 0.57975227)
+bones/55/rotation = Quaternion(0.32956406, -0.023823421, 0.03259239, 0.9432697)
+bones/57/rotation = Quaternion(-0.1982039, 0.6898543, 0.31588483, 0.62051034)
+bones/60/rotation = Quaternion(0.90548784, 0.04200566, -0.09221593, -0.41209665)
+bones/64/rotation = Quaternion(-0.038320992, 0.8453705, 0.21069245, 0.4893761)
+bones/65/rotation = Quaternion(-0.11205325, 0.007889428, -0.0016444843, 0.99366957)
+bones/66/rotation = Quaternion(-0.17986913, 0.102841415, 0.0074664555, 0.9782714)
+bones/68/rotation = Quaternion(-0.15110615, 0.92713875, 0.33700514, 0.063312076)
+bones/69/rotation = Quaternion(0.0453027, -0.018982962, 0.09888491, 0.9938859)
+bones/72/rotation = Quaternion(-0.12143665, 0.8071466, 0.19530085, 0.54371417)
+bones/73/rotation = Quaternion(-0.13655919, 0.029271819, 0.008844286, 0.99015987)
+bones/74/rotation = Quaternion(-0.25523958, -0.006955505, -0.012317977, 0.96677434)
+bones/76/rotation = Quaternion(-0.22400501, 0.8310505, 0.1769135, 0.47736612)
+bones/77/rotation = Quaternion(-0.28816852, 0.00438075, 0.011387057, 0.957502)
+bones/78/rotation = Quaternion(-0.33303234, 0.060802665, 0.017302504, 0.9407939)
 
-[node name="Sketchfab_Scene2" parent="." unique_id=21175370 instance=ExtResource("24_dt0r1")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.7395897, 0, 6.9709034)
-
-[node name="Sketchfab_Scene3" parent="." unique_id=1146567016 instance=ExtResource("25_hmc15")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.2453046, 0.29497588, 7.1987753)
-
-[node name="Sketchfab_Scene4" parent="." unique_id=128997888 instance=ExtResource("26_dt0r1")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.826313, 0.28741193, 7.5587397)
-
-[node name="Sketchfab_Scene5" parent="." unique_id=1303560605 instance=ExtResource("27_qebug")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.260035, 0.049968034, 7.0713615)
+[node name="bird" parent="." unique_id=1692351658 instance=ExtResource("24_xbk3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 7)
 
 [editable path="gazeboEdit"]
+[editable path="CharacterBody3D"]
+[editable path="CharacterBody3D/UI"]
 [editable path="fences"]
-[editable path="Sketchfab_Scene"]
+[editable path="BigMushroom"]

@@ -21,13 +21,17 @@ const FOV_CHANGE = 0.75
 
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
-@export var recordAudio: RecordPlayer
 @onready var anim: AnimationPlayer = $AnimationPlayer
+@onready var ui: UI = $UI
+
+var enabled := true
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 func _unhandled_input(event):
+	if not enabled:
+		return
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
@@ -41,8 +45,8 @@ func _physics_process(delta: float) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		#get_tree().paused = true
 	
-	if Input.is_action_just_pressed("stop"):
-		stop_audio()
+	if not enabled:
+		return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
@@ -95,7 +99,19 @@ func poke_anim():
 
 func stop_anim():
 	anim.stop(false)
+	
+func disable():
+	enabled = false
+	camera.clear_current(true)
 
-func stop_audio():
-	if recordAudio:
-		recordAudio.stop()
+func enable():
+	enabled = true
+	camera.make_current()
+
+func end_scene():
+	disable()
+	ui.credits()
+
+func blink():
+	ui.fadeToBlack()
+	ui.fadeFromBlack()

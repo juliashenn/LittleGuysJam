@@ -19,6 +19,17 @@ script = ExtResource("1_rm32i")
 [node name="Sketchfab_Scene" parent="." unique_id=801131626 instance=ExtResource("2_b88mk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.10339764, 0)
 
+[node name="Skeleton3D" parent="Sketchfab_Scene/Sketchfab_model/63afb7bae30e48289de38290f2be2373_fbx/Object_2/RootNode/Armature/Object_7" parent_id_path=PackedInt32Array(801131626, 564070640) index="0" unique_id=1249181772]
+bones/2/rotation = Quaternion(8.940695e-08, 3.1786513e-08, 1.0658139e-14, -1)
+bones/3/rotation = Quaternion(2.646978e-23, -3e-45, 1.696051e-29, 1)
+bones/4/rotation = Quaternion(-0.33653215, -0.42555106, 0.65233475, 0.52925587)
+
+[node name="Object_10" parent="Sketchfab_Scene/Sketchfab_model/63afb7bae30e48289de38290f2be2373_fbx/Object_2/RootNode/Armature/Object_7/Skeleton3D" index="0" unique_id=1780079811]
+layers = 4
+
+[node name="Object_12" parent="Sketchfab_Scene/Sketchfab_model/63afb7bae30e48289de38290f2be2373_fbx/Object_2/RootNode/Armature/Object_7/Skeleton3D" index="1" unique_id=1990722519]
+layers = 4
+
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2015714393]
 
 [node name="Interactable" type="Area3D" parent="." unique_id=874053452]
