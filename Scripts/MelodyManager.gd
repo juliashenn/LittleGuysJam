@@ -6,7 +6,7 @@ var melodyList := [preload("res://Resources/tutorial.tres"),
 	preload("res://Resources/half.tres"),
 	preload("res://Resources/eighth.tres"),
 	preload("res://Resources/mixed.tres")]
-var curr_level = 4
+var curr_level = 0
 var curr_melody: Melody
 
 @onready var recorder: RecordPlayer = $Recorder
@@ -21,13 +21,13 @@ var curr_melody: Melody
 
 @onready var final_audio: AudioStreamPlayer3D = $Camera3D/AudioStreamPlayer3D
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func start():
+	player.blink()
+	cutscene_anim.play("intro")
 	set_up_melody()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	await cutscene_anim.animation_finished
+	await get_tree().create_timer(0.5).timeout
+	player.give_dialogue(["Interact with the Record Player to hear the first melody"])
 
 func set_up_melody():
 	curr_melody = melodyList.get(curr_level)
@@ -36,6 +36,7 @@ func set_up_melody():
 	water_spawner.melody = curr_melody
 	mushroom_spawner.melody = curr_melody
 	flower_spawner.melody = curr_melody
+	stump_spawner.spawn()
 	#spawn()
 
 func melody_solved():
@@ -46,7 +47,9 @@ func melody_solved():
 	if curr_level == 5:
 		cutscene_anim.play("final")
 		return
-	clear_spawner()
+	#clear_spawner()
+	stump_spawner.clear()
+	reset_spawners()
 	set_up_melody()
 	
 func clear_spawner():
@@ -54,7 +57,12 @@ func clear_spawner():
 	mushroom_spawner.clear()
 	flower_spawner.clear()
 	stump_spawner.clear()
-	
+
+func reset_spawners():
+	water_spawner.reset()
+	mushroom_spawner.reset()
+	flower_spawner.reset()
+
 func spawn():
 	# each spawner should have their own trigger but for now
 	stump_spawner.spawn()

@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://c1a38nvysb41d" path="res://Scenes/violin.tscn" id="21_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://disgsypqv85p7" path="res://Assets/garden_cement_fence_wall_building/scene.gltf" id="21_no8kt"]
 [ext_resource type="PackedScene" uid="uid://doq85qoj2rc7q" path="res://Scenes/harp.tscn" id="22_pt3ps"]
-[ext_resource type="PackedScene" uid="uid://dss73ij45jnaa" path="res://Assets/vegetation/platano-tree/source/Platano-Tree.fbx" id="24_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://tpuacx5pg5wg" path="res://Scenes/bird.tscn" id="24_xbk3s"]
 [ext_resource type="PackedScene" uid="uid://btlxmtgvoq1vj" path="res://Assets/vegetation/maple_trees/scene.gltf" id="26_3ua1v"]
 [ext_resource type="PackedScene" uid="uid://b816c21unypv3" path="res://Assets/vegetation/cherry_blossom_trees/scene.gltf" id="26_pt3ps"]
@@ -508,6 +507,85 @@ tracks/7/keys = {
 "method": &"stop_playing"
 }]
 }
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CharacterBody3D/UI")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.3666667, 214.73334),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"credits"
+}, {
+"args": [],
+"method": &"show_end"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_o2rbt"]
+resource_name = "intro"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 2.055, 4.75), Vector3(0, 2.055, 0.21)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.9666667, 14.966666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.65449846, 2.172935, 0), Vector3(-0.65449846, -2.2165682, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/UI")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.3666667, 15),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"intro"
+}, {
+"args": [],
+"method": &"hide_dialogue"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"disable"
+}, {
+"args": [],
+"method": &"enable"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o2rbt"]
 _data = {
@@ -516,7 +594,8 @@ _data = {
 &"3": SubResource("Animation_pt3ps"),
 &"4": SubResource("Animation_hmc15"),
 &"RESET": SubResource("Animation_xbk3s"),
-&"final": SubResource("Animation_dt0r1")
+&"final": SubResource("Animation_dt0r1"),
+&"intro": SubResource("Animation_o2rbt")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_60opq"]
@@ -685,7 +764,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17270482, 4.7769804)
 layers = 4
 
 [node name="wand" parent="CharacterBody3D/Head/Camera3D" parent_id_path=PackedInt32Array(841984925, 1282670836) index="2" unique_id=1417012209]
-transform = Transform3D(0.9839664, -0.15955691, 0.07969488, -0.057159774, 0.14115345, 0.9883363, -0.16894504, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
+transform = Transform3D(0.98396635, -0.15955691, 0.07969488, -0.05715977, 0.14115345, 0.9883363, -0.16894503, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
+
+[node name="UI" parent="CharacterBody3D" index="5" unique_id=1968195755 node_paths=PackedStringArray("player", "manager")]
+player = NodePath("..")
+manager = NodePath("../..")
 
 [node name="Recorder" parent="." unique_id=1496842421 instance=ExtResource("5_0fj1v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27772856, 0)
@@ -719,7 +802,7 @@ transform = Transform3D(-4.349779, 0, -2.4656477, 0, 5, 0, 2.4656477, 0, -4.3497
 transform = Transform3D(4.498612, 0, 2.182313, 0, 5, 0, -2.182313, 0, 4.498612, -6.1762114, -4.313373, 8.092289)
 
 [node name="MushroomSpawner" parent="." unique_id=1553713561 instance=ExtResource("11_7yui6")]
-transform = Transform3D(0.946639, 0, 0.3222958, 0, 1, 0, -0.3222958, 0, 0.946639, 37.379528, 1.0204272, 10.129208)
+transform = Transform3D(0.9912882, 0, 0.13171084, 0, 1, 0, -0.13171084, 0, 0.9912882, 35.43897, 1.0204272, 9.140152)
 radius = 7.0
 spacing = 1.5
 
@@ -781,7 +864,7 @@ transform = Transform3D(0.4714332, -0.8819016, 3.8549146e-08, 1.4522393e-15, -4.
 transform = Transform3D(-0.47143325, 0.88190174, -3.854915e-08, 0, 4.371139e-08, 1, -0.88190174, -0.47143325, 2.0607002e-08, -7.7198415, -0.054671463, 5.165299)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=194768306]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999998, 0, 2.055, 4.75)
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999997, 0, 0, 0, 0.9999997, 0, 2.055, 4.75)
 cull_mask = 1048571
 fov = 60.0
 
@@ -946,21 +1029,6 @@ mesh = SubResource("ArrayMesh_gvaac")
 [node name="bridge" parent="land" unique_id=784187549 instance=ExtResource("18_0pcbe")]
 transform = Transform3D(0.9950041, 0, -0.09983334, 0, 1, 0, 0.09983334, 0, 0.9950041, 18.48022, 0.9723016, 10.275653)
 
-[node name="Platano-Tree" parent="." unique_id=458956153 instance=ExtResource("24_i4fjy")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.5803246, 0.038595296, -0.76492834)
-
-[node name="Camera" parent="Platano-Tree" index="1" unique_id=1673004265]
-visible = false
-
-[node name="Texture Group" parent="Platano-Tree" index="2" unique_id=698808261]
-visible = false
-
-[node name="Directional Light" parent="Platano-Tree" index="3" unique_id=1127662290]
-visible = false
-
-[node name="MODO_RenderSettings" parent="Platano-Tree" index="4" unique_id=965852690]
-visible = false
-
 [node name="maples" parent="." unique_id=1157814760 instance=ExtResource("26_3ua1v")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 19.10366, -1.9073486e-06, -0.5195503)
 
@@ -1044,7 +1112,6 @@ transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.
 [editable path="Cloud"]
 [editable path="Cloud/Sketchfab_Scene"]
 [editable path="land/fences"]
-[editable path="Platano-Tree"]
 [editable path="maples"]
 [editable path="maples2"]
 [editable path="cherryblossoms"]

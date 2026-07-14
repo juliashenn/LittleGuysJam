@@ -25,6 +25,8 @@ func _process(delta: float) -> void:
 		
 
 func _input(event):
+	if not player.enabled:
+		return
 	if event.is_action_pressed("poke"):
 		var hit = Get_Camera_Collision()
 		if hit:

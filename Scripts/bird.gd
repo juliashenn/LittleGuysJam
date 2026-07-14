@@ -32,9 +32,7 @@ func _ready() -> void:
 func on_interact():
 	heart_anim.play("heart")
 	discovered = true
-	var player = get_tree().get_first_node_in_group("player") as Player
-	found_bird_num = player.found_birds.size()
-	player.found_birds.append(self)
+	found_bird_num = player.add_bird(self)
 	interactable.is_interactable = false
 	await get_tree().create_timer(1.0).timeout
 	return_to_base()

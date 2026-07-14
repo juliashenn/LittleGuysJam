@@ -30,9 +30,9 @@ var has_bird_following := false
 var found_birds : Array[Bird] = []
 var enabled := true
 
-func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
+#func _ready():
+	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	#
 func _unhandled_input(event):
 	if not enabled:
 		return
@@ -40,13 +40,15 @@ func _unhandled_input(event):
 		head.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
-	if event is InputEventMouseButton:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		#get_tree().paused = false
+	#if event is InputEventMouseButton:
+		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		##get_tree().paused = false
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("cancel"):
+		freeze()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		ui.show_settings()
 		#get_tree().paused = true
 	
 	if not enabled:
@@ -109,9 +111,17 @@ func spell_anim():
 func stop_anim():
 	anim.stop(false)
 	
-func disable():
+func disable(): # for cutscenes
 	enabled = false
 	camera.clear_current(true)
+
+func freeze(): # for ui
+	enabled = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func unfreeze():
+	enabled = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func enable():
 	enabled = true
@@ -125,6 +135,17 @@ func blink():
 	ui.fadeToBlack()
 	ui.fadeFromBlack()
 
+func add_bird(bird: Bird) -> int:
+	if found_birds.size() == 0:
+		give_dialogue(["Little birds can help you carry note sprites back", "press q to call them over one at a time"])
+	var n: int
+	if bird not in found_birds:
+		n = found_birds.size()
+		found_birds.append(bird)
+	else:
+		n = found_birds.find(bird)
+	return n
+
 func call_bird():
 	if not has_bird_following:
 		for bird in found_birds:
@@ -132,3 +153,6 @@ func call_bird():
 				bird.go_to_player()
 				has_bird_following = true
 				return
+
+func give_dialogue(strs: Array[String]):
+	ui.show_dialogue(strs)

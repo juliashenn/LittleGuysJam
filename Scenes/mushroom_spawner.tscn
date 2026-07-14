@@ -5,72 +5,21 @@
 [ext_resource type="PackedScene" uid="uid://bjdvwspmx86qq" path="res://Assets/forest_lighting_wip/forestEdit.glb" id="4_7hu1l"]
 [ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="4_u5nsi"]
 [ext_resource type="PackedScene" uid="uid://cc7wc2ght1ioy" path="res://Assets/mossy_log/scene.gltf" id="5_u5nsi"]
+[ext_resource type="PackedScene" uid="uid://btlxmtgvoq1vj" path="res://Assets/vegetation/maple_trees/scene.gltf" id="6_dbj58"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u5nsi"]
 size = Vector3(26.29889, 1.0400391, 23.847778)
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_c7e87"]
-height = 6.7807617
-radius = 0.3178711
-
 [sub_resource type="SphereShape3D" id="SphereShape3D_c7e87"]
-radius = 1.612227
+radius = 10.17971
 
 [node name="MushroomSpawner" type="Node3D" unique_id=1553713561]
 script = ExtResource("1_7hu1l")
 objToSpawn = ExtResource("3_7hu1l")
 noteType = "E"
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1881846869]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.9213822, 0)
-collision_layer = 3
-
-[node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D" unique_id=1809444509]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.9720063, 2.29039, -0.9310155)
-shape = SubResource("BoxShape3D_u5nsi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=697811098]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2081263, 3.6234536, 6.5026736)
-shape = SubResource("CylinderShape3D_c7e87")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=36522353]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0480506, 3.6234536, 8.547394)
-shape = SubResource("CylinderShape3D_c7e87")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1333865656]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.993481, 3.6234536, 6.7785387)
-shape = SubResource("CylinderShape3D_c7e87")
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=640185659]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.092676, 3.6234536, 2.2007291)
-shape = SubResource("CylinderShape3D_c7e87")
-
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" unique_id=1719547880]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.140591, 3.6234536, -2.2333574)
-shape = SubResource("CylinderShape3D_c7e87")
-
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" unique_id=751866564]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5960255, 3.6234536, -6.927123)
-shape = SubResource("CylinderShape3D_c7e87")
-
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" unique_id=52624888]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2917693, 3.6234536, -9.775338)
-shape = SubResource("CylinderShape3D_c7e87")
-
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" unique_id=756444906]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09694791, 3.6234539, -7.429534)
-shape = SubResource("CylinderShape3D_c7e87")
-
-[node name="CollisionShape3D9" type="CollisionShape3D" parent="StaticBody3D" unique_id=1571288542]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1756008, 3.6234539, -3.4179835)
-shape = SubResource("CylinderShape3D_c7e87")
-
-[node name="CollisionShape3D10" type="CollisionShape3D" parent="StaticBody3D" unique_id=1706801301]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0223618, 3.6234539, 3.0361824)
-shape = SubResource("CylinderShape3D_c7e87")
-
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1827868990 groups=["ground"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.9213822, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.024088, 0)
 
 [node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1746257221]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.9720063, 2.5265636, -0.9310155)
@@ -78,17 +27,45 @@ shape = SubResource("BoxShape3D_u5nsi")
 
 [node name="forestEdit" parent="." unique_id=1523670767 instance=ExtResource("4_7hu1l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0145493, 0)
+visible = false
 
 [node name="log" parent="." unique_id=1108805346 instance=ExtResource("5_u5nsi")]
-transform = Transform3D(-0.9275184, 0, -0.37377736, 0, 1, 0, 0.37377736, 0, -0.9275184, 6.952532, -0.7961268, -3.390863)
+transform = Transform3D(-0.9275184, 0, -0.37377736, 0, 1, 0, 0.37377736, 0, -0.9275184, 6.2929955, -0.7961268, -2.3011909)
 
 [node name="Plane_220_ground_0" parent="log/Sketchfab_model/7c6f9f9c5e464ab9bfe6bc1dc28092ea_fbx/Object_2/RootNode/Plane_220" parent_id_path=PackedInt32Array(1108805346, 297984195) index="0" unique_id=188890051]
 visible = false
 
 [node name="log2" parent="." unique_id=1678336611 instance=ExtResource("5_u5nsi")]
-transform = Transform3D(-0.9159642, 0, -0.4012602, 0, 1, 0, -0.4012602, 0, 0.9159642, 6.952532, -0.7961268, 3.1153047)
+transform = Transform3D(-0.90808356, 0, 0.41878882, 0, 1, 0, -0.41878882, 0, -0.90808356, 5.9128838, -0.7961268, 3.142438)
 
 [node name="Plane_220_ground_0" parent="log2/Sketchfab_model/7c6f9f9c5e464ab9bfe6bc1dc28092ea_fbx/Object_2/RootNode/Plane_220" parent_id_path=PackedInt32Array(1678336611, 297984195) index="0" unique_id=188890051]
+visible = false
+
+[node name="log3" parent="." unique_id=1683167748 instance=ExtResource("5_u5nsi")]
+transform = Transform3D(-0.16896464, 0, 0.9856221, 0, 1, 0, -0.9856221, 0, -0.16896464, 1.6402206, -0.7961268, 6.898939)
+
+[node name="Plane_220_ground_0" parent="log3/Sketchfab_model/7c6f9f9c5e464ab9bfe6bc1dc28092ea_fbx/Object_2/RootNode/Plane_220" parent_id_path=PackedInt32Array(1683167748, 297984195) index="0" unique_id=188890051]
+visible = false
+
+[node name="log4" parent="." unique_id=138073824 instance=ExtResource("5_u5nsi")]
+transform = Transform3D(0.82490957, 0, 0.56526464, 0, 1, 0, -0.56526464, 0, 0.82490957, -3.808136, -0.7961268, 5.522512)
+
+[node name="Plane_220_ground_0" parent="log4/Sketchfab_model/7c6f9f9c5e464ab9bfe6bc1dc28092ea_fbx/Object_2/RootNode/Plane_220" parent_id_path=PackedInt32Array(138073824, 297984195) index="0" unique_id=188890051]
+visible = false
+
+[node name="Plane_220_mushrooms and rock_0" parent="log4/Sketchfab_model/7c6f9f9c5e464ab9bfe6bc1dc28092ea_fbx/Object_2/RootNode/Plane_220" parent_id_path=PackedInt32Array(138073824, 297984195) index="1" unique_id=1153963562]
+transform = Transform3D(0.92387295, -8.533925e-17, -0.3826994, 8.456935e-17, 1, -1.88344e-17, 0.3826994, -1.4964035e-17, 0.92387295, 0, 0, 0)
+
+[node name="log5" parent="." unique_id=1567300666 instance=ExtResource("5_u5nsi")]
+transform = Transform3D(-0.4255791, 0, -0.9049212, 0, 1, 0, 0.9049212, 0, -0.4255791, 2.0203342, -0.7961268, -6.057692)
+
+[node name="Plane_220_ground_0" parent="log5/Sketchfab_model/7c6f9f9c5e464ab9bfe6bc1dc28092ea_fbx/Object_2/RootNode/Plane_220" parent_id_path=PackedInt32Array(1567300666, 297984195) index="0" unique_id=188890051]
+visible = false
+
+[node name="log6" parent="." unique_id=4421170 instance=ExtResource("5_u5nsi")]
+transform = Transform3D(0.7157532, 0, -0.6983533, 0, 1, 0, 0.6983533, 0, 0.7157532, -3.2272987, -0.7961268, -5.656234)
+
+[node name="Plane_220_ground_0" parent="log6/Sketchfab_model/7c6f9f9c5e464ab9bfe6bc1dc28092ea_fbx/Object_2/RootNode/Plane_220" parent_id_path=PackedInt32Array(4421170, 297984195) index="0" unique_id=188890051]
 visible = false
 
 [node name="Area3D" type="Area3D" parent="." unique_id=259006405]
@@ -96,9 +73,78 @@ script = ExtResource("4_u5nsi")
 interact_name = "Awaken the Mushrooms"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=939812208]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7129326, -0.5400691, -0.21868193)
 shape = SubResource("SphereShape3D_c7e87")
+
+[node name="Sketchfab_Scene" parent="." unique_id=1178122005 instance=ExtResource("6_dbj58")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.47722435, -0.874788, -1.3383211)
+
+[node name="structure_2" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="0" unique_id=1387938951]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 38.214607, 0, -74.9055)
+
+[node name="foliage_3" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="1" unique_id=248343516]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 38.214607, 0, -74.9055)
+
+[node name="structure_001_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="2" unique_id=1932480003]
+transform = Transform3D(0.25619122, -0.9666261, 1.5161291e-07, 4.8801635e-08, -1.4391331e-07, -1, 0.9666261, 0.25619122, 1.0303608e-08, 96.905045, 0, -90.73244)
+
+[node name="foliage_001_5" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="3" unique_id=365003849]
+transform = Transform3D(0.25619122, -0.9666261, 1.5161291e-07, 4.8801635e-08, -1.4391331e-07, -1, 0.9666261, 0.25619122, 1.0303608e-08, 96.905045, 0, -90.73244)
+
+[node name="structure_002_6" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="4" unique_id=872617417]
+transform = Transform3D(-0.7108185, -0.7033754, 7.1033675e-08, -6.9281687e-09, -9.398821e-08, -1, 0.7033754, -0.7108185, 6.193547e-08, 125.62669, 0, -30.83483)
+
+[node name="foliage_002_7" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="5" unique_id=245946396]
+transform = Transform3D(-0.7108185, -0.7033754, 7.1033675e-08, -6.9281687e-09, -9.398821e-08, -1, 0.7033754, -0.7108185, 6.193547e-08, 125.62669, 0, -30.83483)
+
+[node name="Sketchfab_Scene2" parent="." unique_id=860655603 instance=ExtResource("6_dbj58")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.47722435, -0.874788, -1.3383211)
+
+[node name="structure_2" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="0" unique_id=1387938951]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 97.02313, 0, 19.42574)
+
+[node name="foliage_3" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="1" unique_id=248343516]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 97.02313, 0, 19.42574)
+
+[node name="structure_001_4" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="2" unique_id=1932480003]
+transform = Transform3D(-0.4406913, -0.89765877, 1.07678595e-07, 4.8801624e-08, -1.439133e-07, -1, 0.89765877, -0.4406913, 1.0722856e-07, 21.717978, 0, 88.577484)
+
+[node name="foliage_001_5" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="3" unique_id=365003849]
+transform = Transform3D(-0.4406913, -0.89765877, 1.07678595e-07, 4.8801624e-08, -1.439133e-07, -1, 0.89765877, -0.4406913, 1.0722856e-07, 21.717978, 0, 88.577484)
+
+[node name="structure_002_6" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="4" unique_id=872617417]
+transform = Transform3D(0.78233814, -0.6228539, 5.3120765e-08, -6.928165e-09, -9.398821e-08, -1, 0.6228539, 0.78233814, -7.784582e-08, 71.84581, 0, 83.10147)
+
+[node name="foliage_002_7" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="5" unique_id=245946396]
+transform = Transform3D(0.78233814, -0.6228539, 5.3120765e-08, -6.928165e-09, -9.398821e-08, -1, 0.6228539, 0.78233814, -7.784582e-08, 71.84581, 0, 83.10147)
+
+[node name="Sketchfab_Scene3" parent="." unique_id=1690179791 instance=ExtResource("6_dbj58")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.47722435, -0.874788, -1.3383211)
+
+[node name="structure_2" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="0" unique_id=1387938951]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 2.3502827, 0, -106.15715)
+
+[node name="foliage_3" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="1" unique_id=248343516]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 2.3502827, 0, -106.15715)
+
+[node name="structure_001_4" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="2" unique_id=1932480003]
+transform = Transform3D(-0.4406913, -0.89765877, 1.07678595e-07, 4.8801624e-08, -1.439133e-07, -1, 0.89765877, -0.4406913, 1.07228566e-07, -36.045692, 0, 97.95188)
+
+[node name="foliage_001_5" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="3" unique_id=365003849]
+transform = Transform3D(-0.4406913, -0.89765877, 1.07678595e-07, 4.8801624e-08, -1.439133e-07, -1, 0.89765877, -0.4406913, 1.07228566e-07, -36.045692, 0, 97.95188)
+
+[node name="structure_002_6" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="4" unique_id=872617417]
+transform = Transform3D(0.78233814, -0.6228539, 5.3120765e-08, -6.928165e-09, -9.398821e-08, -1, 0.6228539, 0.78233814, -7.784582e-08, -42.591442, 0, -81.07463)
+
+[node name="foliage_002_7" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="5" unique_id=245946396]
+transform = Transform3D(0.78233814, -0.6228539, 5.3120765e-08, -6.928165e-09, -9.398821e-08, -1, 0.6228539, 0.78233814, -7.784582e-08, -42.591442, 0, -81.07463)
 
 [editable path="forestEdit"]
 [editable path="log"]
 [editable path="log2"]
+[editable path="log3"]
+[editable path="log4"]
+[editable path="log5"]
+[editable path="log6"]
+[editable path="Sketchfab_Scene"]
+[editable path="Sketchfab_Scene2"]
+[editable path="Sketchfab_Scene3"]

@@ -6,7 +6,8 @@ class_name RecordPlayer
 
 @onready var playInteractable: Area3D = $Interactable
 @onready var stopInteractable: Interactable = $Interactable2
-
+var first_time := true
+var player: Player
 func _ready() -> void:
 	audiostream.stream = load(melody.audioFile)
 	playInteractable.is_interactable = true
@@ -14,6 +15,7 @@ func _ready() -> void:
 	
 	stopInteractable.is_interactable = false
 	stopInteractable.interact = _on_interact_stop
+	player = get_tree().get_first_node_in_group("player") as Player
 
 func _process(delta: float) -> void:
 	if not audiostream.playing and stopInteractable.is_interactable:
@@ -25,6 +27,9 @@ func _on_interact_play():
 		audiostream.play(0.0)
 		stopInteractable.is_interactable = true
 		playInteractable.is_interactable = false
+		if first_time:
+			first_time = false
+			player.give_dialogue(["Awaken the Raincloud to summon little notes"])
 
 func _on_interact_stop():
 	if stopInteractable.is_interactable:

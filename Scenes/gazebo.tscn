@@ -173,6 +173,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4969893, 2.2249851, -2.2038
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8229365, 2.2249851, -1.8403326)
 
 [node name="dropOff" type="Marker3D" parent="." unique_id=714619483]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.407, 2.2031326, 3.959)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014195681, 2.2031326, 11.49588)
 
 [editable path="gazeboEdit"]

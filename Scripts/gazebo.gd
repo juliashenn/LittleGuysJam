@@ -7,6 +7,3 @@ var markers : Array[Node] = []
 
 func _ready() -> void:
 	markers = marker_parent.get_children()
-
-func _process(delta: float) -> void:
-	pass

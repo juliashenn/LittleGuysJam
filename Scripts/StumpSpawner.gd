@@ -10,6 +10,7 @@ extends Node3D
 @export var min_radius = 3.0
 @onready var interactable: Interactable = $Area3D
 
+
 var spawned_stumps : Array[Stump] = []
 var noteToSec = {
 	"Q": 0.857, "H": 1.714, "E": 0.4285

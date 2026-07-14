@@ -1,13 +1,36 @@
 [gd_scene format=3 uid="uid://c5fglu7coxk8e"]
 
 [ext_resource type="Script" uid="uid://duxgmtqejfgaj" path="res://Scripts/ui.gd" id="1_jxero"]
+[ext_resource type="Texture2D" uid="uid://ory1ofnaw1eo" path="res://Assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/UI Big Play Button.png" id="2_mmixe"]
+[ext_resource type="FontFile" uid="uid://chyc11duibo3a" path="res://Assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_qdvrb"]
+[ext_resource type="Texture2D" uid="uid://6pi53xef21vy" path="res://Assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Dialouge UI/dialog box big.png" id="3_nf4gj"]
+[ext_resource type="Texture2D" uid="uid://cpqvhplpcfkdt" path="res://Assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/buttons/Square Buttons 26x19.png" id="3_ryf15"]
+[ext_resource type="Texture2D" uid="uid://tg6abu4378w3" path="res://Assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Setting menu.png" id="4_2246s"]
+[ext_resource type="Texture2D" uid="uid://o4sixogej1bk" path="res://Assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/UI Settings Buttons.png" id="5_q7pk6"]
+[ext_resource type="Texture2D" uid="uid://k3giookog2hc" path="res://Assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_m78vo"]
+[ext_resource type="AudioStream" uid="uid://kr0bftf4swwe" path="res://Sound/Notes/D4 Q.wav" id="7_smcll"]
+[ext_resource type="Texture2D" uid="uid://bf8gsepsje4wv" path="res://Assets/ui/pixil-frame-0 (1).png" id="10_4vbiv"]
+[ext_resource type="Texture2D" uid="uid://smb3kx3wf521" path="res://Assets/ui/pixil-frame-0.png" id="11_3r70p"]
+[ext_resource type="Texture2D" uid="uid://m6dmk1syc5jq" path="res://Assets/ui/pixil-frame-0 (2).png" id="12_8fs27"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bern5"]
+atlas = ExtResource("3_ryf15")
+region = Rect2(11, 70, 26, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gttpj"]
+atlas = ExtResource("3_ryf15")
+region = Rect2(59, 70, 26, 19)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bern5"]
+font = ExtResource("2_qdvrb")
+font_size = 18
 
 [sub_resource type="Animation" id="Animation_qdvrb"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("credits:position")
+tracks/0/path = NodePath("credits/credits:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -35,14 +58,14 @@ length = 35.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("credits:position")
+tracks/0/path = NodePath("credits/credits:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 34.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(190, 650), Vector2(190, -3600)]
+"values": [Vector2(22, 650), Vector2(22, -3600)]
 }
 
 [sub_resource type="Animation" id="Animation_jxero"]
@@ -67,6 +90,68 @@ _data = {
 &"credits": SubResource("Animation_nf4gj"),
 &"fadeToBlack": SubResource("Animation_jxero")
 }
+
+[sub_resource type="LabelSettings" id="LabelSettings_cwb4t"]
+font = ExtResource("2_qdvrb")
+font_size = 24
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smcll"]
+atlas = ExtResource("5_q7pk6")
+region = Rect2(4, 52, 24, 24)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m78vo"]
+load_path = "res://.godot/imported/UI Settings Buttons.png-bc4468c4dec5db10377e628a25d9a9d6.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m78vo"]
+atlas = SubResource("CompressedTexture2D_m78vo")
+region = Rect2(36, 52, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwb4t"]
+atlas = ExtResource("5_q7pk6")
+region = Rect2(21, 178, 6, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2pxb"]
+atlas = ExtResource("2_mmixe")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpmvg"]
+atlas = ExtResource("2_mmixe")
+region = Rect2(96, 0, 96, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wof3k"]
+font = ExtResource("2_qdvrb")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_c7e87"]
+line_spacing = 10.0
+font = ExtResource("2_qdvrb")
+font_size = 36
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_j1lyr"]
+line_spacing = 10.0
+font = ExtResource("2_qdvrb")
+font_size = 24
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7e87"]
+atlas = ExtResource("6_m78vo")
+region = Rect2(868, 4, 24, 24)
+
+[sub_resource type="LabelSettings" id="LabelSettings_626w8"]
+font = ExtResource("2_qdvrb")
+font_size = 18
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_626w8"]
+atlas = ExtResource("2_mmixe")
+region = Rect2(0, 32, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wof3k"]
+atlas = ExtResource("2_mmixe")
+region = Rect2(96, 32, 96, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gttpj"]
+font = ExtResource("2_qdvrb")
+font_size = 72
 
 [node name="UI" type="Control" unique_id=1968195755]
 layout_mode = 3
@@ -93,21 +178,33 @@ alignment = 1
 
 [node name="InteractLabel" type="Label" parent="VBoxContainer" unique_id=848640022]
 layout_mode = 2
-text = "[E] "
+theme_override_fonts/font = ExtResource("2_qdvrb")
+theme_override_font_sizes/font_size = 24
+text = "[E] Awaken the Cloud"
 horizontal_alignment = 2
 
-[node name="credits" type="RichTextLabel" parent="." unique_id=31740059]
+[node name="credits" type="Control" parent="." unique_id=73451750]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.99100006
+offset_right = -1.0
+offset_bottom = -0.16802979
+
+[node name="credits" type="RichTextLabel" parent="credits" unique_id=31740059]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 190.0
 offset_top = 650.0
-offset_right = -170.0
+offset_right = 151.0
 offset_bottom = 3426.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = ExtResource("2_qdvrb")
 text = "CREDITS
+
 Peaceful Orchestra Music 
 by lolurio 
 (modified to make short melodies)
@@ -278,6 +375,37 @@ is licensed under Creative Commons Attribution
 scroll_active = false
 horizontal_alignment = 1
 
+[node name="skip" type="TextureButton" parent="credits" unique_id=1497322328]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 4.0
+offset_right = -2.0
+offset_bottom = 43.0
+grow_horizontal = 0
+texture_normal = SubResource("AtlasTexture_bern5")
+texture_pressed = SubResource("AtlasTexture_gttpj")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="credits/skip" unique_id=2059577843]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.044
+anchor_top = -0.087000005
+anchor_right = 1.044
+anchor_bottom = -0.087000005
+offset_left = -61.432
+offset_top = 13.393
+offset_right = -9.431999
+offset_bottom = 36.393
+grow_horizontal = 2
+grow_vertical = 2
+text = "SKIP"
+label_settings = SubResource("LabelSettings_bern5")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1708598131]
 libraries/ = SubResource("AnimationLibrary_2246s")
 
@@ -291,20 +419,364 @@ offset_right = 12.0
 offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="dialogue" type="RichTextLabel" parent="." unique_id=1422310452]
+[node name="dialogue" type="Control" parent="." unique_id=1961106840]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+mouse_filter = 2
+
+[node name="dialogueBox" type="TextureRect" parent="dialogue" unique_id=1583544133]
+visible = false
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 27.0
-offset_top = -101.0
-offset_right = -23.0
-offset_bottom = -38.0
+offset_left = 65.0
+offset_top = -190.0
+offset_right = -40.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
+texture = ExtResource("3_nf4gj")
+stretch_mode = 5
+
+[node name="label" type="RichTextLabel" parent="dialogue" unique_id=1422310452]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 155.0
+offset_top = -155.0
+offset_right = -138.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("2_qdvrb")
 theme_override_font_sizes/normal_font_size = 24
-text = "Dialogue"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="instruction" type="RichTextLabel" parent="dialogue" unique_id=663949652]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 506.0
+offset_top = -52.0
+offset_right = -32.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("2_qdvrb")
+theme_override_font_sizes/normal_font_size = 16
+text = "Press Enter or C to continue"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1461413392]
+
+[node name="Settings" type="Control" parent="." unique_id=177663755]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Settings" unique_id=541651120]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 32.0
+offset_right = -8.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_2246s")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings" unique_id=1288734137]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.008
+offset_top = 133.0
+offset_right = 19.0
+offset_bottom = -82.18402
+theme_override_constants/separation = 175
+alignment = 1
+
+[node name="left" type="VBoxContainer" parent="Settings/HBoxContainer" unique_id=1188936868]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Volume" type="Control" parent="Settings/HBoxContainer/left" unique_id=142924257]
+layout_mode = 2
+
+[node name="Volume" type="Label" parent="Settings/HBoxContainer/left/Volume" unique_id=91449516]
+layout_mode = 0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 3.0
+text = "Volume"
+label_settings = SubResource("LabelSettings_cwb4t")
+
+[node name="HSlider" type="HSlider" parent="Settings/HBoxContainer/left/Volume" unique_id=835957826]
+layout_mode = 0
+offset_left = 96.0
+offset_top = -16.0
+offset_right = 396.0
+size_flags_vertical = 1
+theme_override_icons/grabber = SubResource("AtlasTexture_smcll")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_m78vo")
+theme_override_icons/grabber_disabled = SubResource("AtlasTexture_m78vo")
+theme_override_icons/tick = SubResource("AtlasTexture_cwb4t")
+max_value = 1.0
+step = 0.1
+value = 0.9
+tick_count = 10
+ticks_position = 3
+
+[node name="resetSpawners" type="TextureButton" parent="Settings/HBoxContainer/left" unique_id=640950426]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_y2pxb")
+texture_pressed = SubResource("AtlasTexture_bpmvg")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Settings/HBoxContainer/left/resetSpawners" unique_id=1668571112]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.47300002
+anchor_right = 0.504
+anchor_bottom = 0.47300002
+offset_left = -89.600006
+offset_top = -11.475002
+offset_right = 89.399994
+offset_bottom = 11.524998
+text = "Reset Spawners"
+label_settings = SubResource("LabelSettings_wof3k")
+
+[node name="right" type="VBoxContainer" parent="Settings/HBoxContainer" unique_id=77735812]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="Settings/HBoxContainer/right" unique_id=282770572]
+layout_mode = 2
+text = "CONTROLS"
+label_settings = SubResource("LabelSettings_c7e87")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Settings/HBoxContainer/right" unique_id=386646876]
+layout_mode = 2
+text = "Left Mouse Click - Poke
+Hold Right Mouse - Grab/Move
+E - Interact
+Q - Call Little Helper
+Left Shift - Sprint"
+label_settings = SubResource("LabelSettings_j1lyr")
+horizontal_alignment = 1
+
+[node name="close" type="TextureButton" parent="Settings" unique_id=559256215]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.934
+anchor_top = 0.132
+anchor_right = 0.934
+anchor_bottom = 0.132
+offset_left = -32.70398
+offset_top = -34.536003
+offset_right = 33.29602
+offset_bottom = 34.463997
+texture_normal = SubResource("AtlasTexture_c7e87")
+texture_pressed = SubResource("AtlasTexture_c7e87")
+stretch_mode = 5
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Settings" unique_id=40162193]
+stream = ExtResource("7_smcll")
+
+[node name="esc" type="Label" parent="." unique_id=1133585607]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_top = 12.0
+offset_bottom = 39.0
+grow_horizontal = 0
+text = "ESC"
+label_settings = SubResource("LabelSettings_626w8")
+
+[node name="Start" type="Control" parent="." unique_id=478330250]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchor_right = 1.003
+anchor_bottom = 1.0
+offset_right = 0.5439453
+offset_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="Start" unique_id=1207260227]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = 19.0
+color = Color(0.3019608, 0.6392157, 0.5137255, 1)
+
+[node name="start" type="TextureButton" parent="Start" unique_id=1500378391]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -209.0
+offset_top = 380.0
+offset_right = 224.0
+offset_bottom = -128.0
+texture_normal = SubResource("AtlasTexture_626w8")
+texture_pressed = SubResource("AtlasTexture_wof3k")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Start" unique_id=1442539508]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 175.0
+offset_top = -28.5
+offset_right = -149.0
+offset_bottom = 27.5
+text = "The Sleeping Orchestra"
+label_settings = SubResource("LabelSettings_gttpj")
+
+[node name="TextureRect" type="TextureRect" parent="Start" unique_id=1203514919]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 35.0
+offset_right = 395.0
+offset_bottom = 267.0
+texture = ExtResource("10_4vbiv")
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Start" unique_id=277415414]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 35.0
+offset_right = 670.0
+offset_bottom = 267.0
+texture = ExtResource("11_3r70p")
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Start" unique_id=402005573]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 35.0
+offset_right = 940.0
+offset_bottom = 267.0
+texture = ExtResource("12_8fs27")
+stretch_mode = 5
+
+[node name="end" type="Control" parent="." unique_id=668522860]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchor_right = 1.003
+anchor_bottom = 1.0
+offset_right = 0.5439453
+offset_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="end" unique_id=733901829]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = 19.0
+color = Color(0.3019608, 0.6392157, 0.5137255, 1)
+
+[node name="Label2" type="Label" parent="end" unique_id=1259548974]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 175.0
+offset_top = -28.5
+offset_right = -149.0
+offset_bottom = 27.5
+text = "Thank you for playing"
+label_settings = SubResource("LabelSettings_gttpj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="end" unique_id=885221062]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 175.0
+offset_top = 76.5
+offset_right = -149.0
+offset_bottom = 132.5
+text = "The Sleeping Orchestra"
+label_settings = SubResource("LabelSettings_gttpj")
+
+[node name="TextureRect" type="TextureRect" parent="end" unique_id=1875078931]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 35.0
+offset_right = 395.0
+offset_bottom = 267.0
+texture = ExtResource("10_4vbiv")
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="end" unique_id=109543386]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 35.0
+offset_right = 670.0
+offset_bottom = 267.0
+texture = ExtResource("11_3r70p")
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="end" unique_id=1995465630]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 35.0
+offset_right = 940.0
+offset_bottom = 267.0
+texture = ExtResource("12_8fs27")
+stretch_mode = 5
+
+[connection signal="pressed" from="credits/skip" to="." method="_on_skip_pressed"]
+[connection signal="value_changed" from="Settings/HBoxContainer/left/Volume/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Settings/HBoxContainer/left/resetSpawners" to="." method="_on_reset_spawners_pressed"]
+[connection signal="pressed" from="Settings/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Start/start" to="." method="_on_start_pressed"]
