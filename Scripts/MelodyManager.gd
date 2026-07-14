@@ -19,6 +19,8 @@ var curr_melody: Melody
 @onready var cutscene_anim: AnimationPlayer = $AnimationPlayer
 @onready var player: Player = $CharacterBody3D
 
+@onready var final_audio: AudioStreamPlayer3D = $Camera3D/AudioStreamPlayer3D
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_up_melody()
@@ -34,13 +36,16 @@ func set_up_melody():
 	water_spawner.melody = curr_melody
 	mushroom_spawner.melody = curr_melody
 	flower_spawner.melody = curr_melody
-	spawn()
+	#spawn()
 
 func melody_solved():
 	if curr_level != 0: 
 		cutscene_anim.play(str(curr_level))
 	player.blink()
 	curr_level += 1
+	if curr_level == 5:
+		cutscene_anim.play("final")
+		return
 	clear_spawner()
 	set_up_melody()
 	
@@ -56,3 +61,6 @@ func spawn():
 	water_spawner.spawn()
 	flower_spawner.spawn()
 	mushroom_spawner.spawn()
+
+func play_final():
+	final_audio.play(0.0)

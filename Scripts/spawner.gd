@@ -7,14 +7,8 @@ class_name Spawner
 @export var objToSpawn: PackedScene
 @export var noteType: String
 
-
 var spawned_objs: Array[Grabbable] = []
 
-func _ready() -> void:
-	#spawn()
-	pass
-
-	
 func spawn():
 	var selected_notes = melody.notes.filter(func(note: Note):
 		return note.Length == noteType)
@@ -35,7 +29,7 @@ func spawn():
 		var spawned_obj = objToSpawn.instantiate() as Grabbable
 		spawned_objs.append(spawned_obj)
 		spawned_obj.set_note(selected_notes[i])
-		spawned_obj.position = Vector3(selected_points[i].x, global_position.y + randf(), selected_points[i].y)
+		spawned_obj.position = Vector3(selected_points[i].x, global_position.y + randf()*10.0, selected_points[i].y)
 		#water_obj.look_at_from_position(Vector3(selected_points[i].x, global_position.y, selected_points[i].y), Vector3.ZERO, Vector3.UP)
 	
 		add_child(spawned_obj)
@@ -69,3 +63,6 @@ func clear():
 	for x in spawned_objs:
 		x.queue_free()
 	spawned_objs = []
+
+func reset():
+	clear()

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://wde1kf2aiecq"]
 
-[ext_resource type="Script" uid="uid://eu3m6i6qkyq0" path="res://Scripts/spawner.gd" id="1_tjmdm"]
+[ext_resource type="Script" uid="uid://dgt5x5qbuvk5q" path="res://Scripts/flower_spawner.gd" id="1_w8n5y"]
 [ext_resource type="PackedScene" uid="uid://bpoha66lh0cm2" path="res://Assets/little_pond__fish/scene.gltf" id="2_48ari"]
-[ext_resource type="Resource" uid="uid://hsvn73w4rc6t" path="res://Resources/tutorial.tres" id="2_w8n5y"]
 [ext_resource type="PackedScene" uid="uid://cwkdey3a4cku5" path="res://Scenes/flower.tscn" id="3_ukpqs"]
 [ext_resource type="Shader" uid="uid://bbwikcmfirh0g" path="res://Scripts/StrictShader.gdshader" id="3_wpsby"]
+[ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="6_tvjqg"]
 [ext_resource type="PackedScene" uid="uid://cuwimc6lmdjj0" path="res://Assets/ga_free_201_ancient_white_lotus_flower_clustertt/scene.gltf" id="6_ukpqs"]
 [ext_resource type="PackedScene" uid="uid://ck7t5rjxe2bmf" path="res://Assets/fishing_gecko/scene.gltf" id="7_tvjqg"]
 
@@ -69,11 +69,11 @@ shader_parameter/highlight_threshold = 0.85
 shader_parameter/master_alpha = 1.0
 shader_parameter/light_direction = Vector3(1, 2, 1)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_c7e87"]
+radius = 15.501753
+
 [node name="FlowerSpawner" type="Node3D" unique_id=1922605449]
-script = ExtResource("1_tjmdm")
-radius = 8.0
-spacing = 2.0
-melody = ExtResource("2_w8n5y")
+script = ExtResource("1_w8n5y")
 objToSpawn = ExtResource("3_ukpqs")
 noteType = "H"
 
@@ -528,6 +528,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.15593, 88.08633, -13.815384
 
 [node name="AnimationPlayer" parent="Sketchfab_Scene4" index="1" unique_id=1903804827]
 autoplay = &"Take 001"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1846206001]
+script = ExtResource("6_tvjqg")
+interact_name = "Awaken the Flowers"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1924937528]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41191673, -0.014099121, -0.28415585)
+shape = SubResource("SphereShape3D_c7e87")
 
 [editable path="Sketchfab_Scene"]
 [editable path="Sketchfab_Scene2"]

@@ -23,7 +23,9 @@ const FOV_CHANGE = 0.75
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var ui: UI = $UI
-@onready var bird_marker: Marker3D = $Head/Camera3D/birdMarker
+@export var bird_marker: Marker3D
+
+var has_bird_following := false
 
 var found_birds : Array[Bird] = []
 var enabled := true
@@ -101,6 +103,9 @@ func conduct_anim():
 func poke_anim():
 	anim.play("poke")
 
+func spell_anim():
+	anim.play("swirl")
+
 func stop_anim():
 	anim.stop(false)
 	
@@ -121,7 +126,9 @@ func blink():
 	ui.fadeFromBlack()
 
 func call_bird():
-	for bird in found_birds:
-		if not bird.heading_home and not bird.following_player:
-			bird.go_to_player()
-			return
+	if not has_bird_following:
+		for bird in found_birds:
+			if not bird.heading_home and not bird.following_player:
+				bird.go_to_player()
+				has_bird_following = true
+				return

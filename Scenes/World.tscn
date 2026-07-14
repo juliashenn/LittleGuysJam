@@ -13,11 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://bdtr842f3ujv2" path="res://Scenes/cloud.tscn" id="11_ikia7"]
 [ext_resource type="PackedScene" uid="uid://wde1kf2aiecq" path="res://Scenes/flower_spawner.tscn" id="12_7yui6"]
 [ext_resource type="PackedScene" uid="uid://bavh2uclv7soa" path="res://Scenes/stone_path.tscn" id="13_e0ngr"]
+[ext_resource type="AudioStream" uid="uid://c3hqwvfp6mln0" path="res://Sound/Journey.wav" id="13_hmc15"]
 [ext_resource type="Material" uid="uid://catm1jnr1slm7" path="res://Assets/little_pond__fish/textures/water.tres" id="17_yq1aw"]
 [ext_resource type="PackedScene" uid="uid://b8pkqbqi35p57" path="res://Scenes/bridge.tscn" id="18_0pcbe"]
 [ext_resource type="Material" uid="uid://dumn64wod5iw7" path="res://Assets/garden_cement_fence_wall_building/textures/material.tres" id="19_1cojt"]
 [ext_resource type="PackedScene" uid="uid://bbkgd1j8kt3e2" path="res://Scenes/cello.tscn" id="19_axeuq"]
-[ext_resource type="NavigationMesh" uid="uid://dj1wom3rtc2d" path="res://Resources/navMesh.tres" id="20_hmc15"]
 [ext_resource type="PackedScene" uid="uid://djho72nvixljf" path="res://Scenes/flute.tscn" id="20_xbk3s"]
 [ext_resource type="PackedScene" uid="uid://c1a38nvysb41d" path="res://Scenes/violin.tscn" id="21_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://disgsypqv85p7" path="res://Assets/garden_cement_fence_wall_building/scene.gltf" id="21_no8kt"]
@@ -367,13 +367,156 @@ tracks/1/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_dt0r1"]
+resource_name = "final"
+length = 215.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.73333335, 2, 5.9333334, 7.0333333, 8.666667, 14.066667, 19.033333, 23.5, 24.119999, 25, 27, 29.066666, 30.786667, 34.066666, 36.2, 39.033333, 42.266666, 44, 47.033333, 48.643333, 51.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.19198622, 3.1415927, 0), Vector3(-0.54454273, 3.874631, 0), Vector3(-0.54454273, 2.1380284, 0), Vector3(-0.1334165, 1.2492636, 0), Vector3(-0.429351, 3.7454765, 0), Vector3(-0.42760566, 2.3300145, 0), Vector3(-0.424115, 0.92327917, 0), Vector3(-0.424115, -0.75398225, 0), Vector3(-0.424115, -0.75398225, 0), Vector3(-0.42062435, -1.9181168, 0), Vector3(-0.42062435, -1.9966567, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 2.3561945, 0), Vector3(0, 2.3561945, 0), Vector3(0, -0.6806784, 0), Vector3(0, -0.6806784, 0), Vector3(-0.38397244, -2.146755, 0), Vector3(-0.38397244, -2.146755, 0), Vector3(-0.1308997, 0.7330383, 0), Vector3(-0.1308997, 0.7330383, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.73333335, 1.9666666, 5.9, 8.6, 14.066667, 19.1, 23.5, 24.119999, 25, 27.033333, 29.066666, 30.786667, 32.27333, 34.083332, 36.216667, 39.033333, 42.266666, 44, 47.033333, 48.643333, 51.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.33, 1.37, 6.925), Vector3(-0.33, 1.37, 8.245), Vector3(-0.33, 4.86, 8.245), Vector3(-0.33, 4.86, 8.245), Vector3(-15.33, 3.877, 5.343), Vector3(-15.555, 3.866, 6.38), Vector3(-15.427, 4, 5.272), Vector3(-14.446, 3.952, 3.595), Vector3(-14.446, 3.952, 3.595), Vector3(-14.258, 14.222, 3.61), Vector3(-9.794, 9.188, 5.205), Vector3(0, 2.055, 4.75), Vector3(0, 2.055, 2.9447298), Vector3(0, 2.055, 1.18), Vector3(-7.4505806e-08, 2.055, 0.13000001), Vector3(-7.4505806e-08, 2.055, 0.13000001), Vector3(1.1920929e-07, 2.055, 0.39), Vector3(1.1920929e-07, 2.055, 0.39), Vector3(-0.16, 2.055, 0.14), Vector3(-0.16, 2.055, 0.14), Vector3(0.085, 2.145, 0.555), Vector3(0.085, 2.145, 0.555)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.01),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_final"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"disable"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cello")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(48, 86, 152, 214.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}, {
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("flute")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.01, 214.26666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("violin")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(27.1, 86, 153.53334, 214.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}, {
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("harp")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.01, 86, 98.26667, 214.26666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}, {
+"args": [],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop_playing"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o2rbt"]
 _data = {
 &"1": SubResource("Animation_i4fjy"),
 &"2": SubResource("Animation_qebug"),
 &"3": SubResource("Animation_pt3ps"),
 &"4": SubResource("Animation_hmc15"),
-&"RESET": SubResource("Animation_xbk3s")
+&"RESET": SubResource("Animation_xbk3s"),
+&"final": SubResource("Animation_dt0r1")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_60opq"]
@@ -559,13 +702,12 @@ min_radius = 4.0
 [node name="Cloud" parent="." unique_id=1548188862 instance=ExtResource("11_ikia7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.922862, 4.5144415, 3.770307)
 radius = 4.0
-spacing = 0.75
 
 [node name="Sketchfab_Scene" parent="Cloud" index="0" unique_id=99985599]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3864126, 0, 1.723908)
 
 [node name="Sketchfab_Scene2" parent="Cloud" index="1" unique_id=1976999474]
-transform = Transform3D(-2.3262281, 0, 3.2540224, 0, 4, 0, -3.2540224, 0, -2.3262281, 3.534833, -4.038417, 6.8410983)
+transform = Transform3D(-2.3262281, 0, 3.2540224, 0, 4, 0, -3.2540224, 0, -2.3262281, 3.534833, -4.2622976, 6.8410983)
 
 [node name="Sketchfab_Scene3" parent="Cloud" index="2" unique_id=1209344850]
 transform = Transform3D(365.5165, 0, -341.1711, 0, 500.00003, 0, 341.1711, 0, 365.5165, -6.0276957, -4.0363426, -3.4335861)
@@ -639,8 +781,12 @@ transform = Transform3D(0.4714332, -0.8819016, 3.8549146e-08, 1.4522393e-15, -4.
 transform = Transform3D(-0.47143325, 0.88190174, -3.854915e-08, 0, 4.371139e-08, 1, -0.88190174, -0.47143325, 2.0607002e-08, -7.7198415, -0.054671463, 5.165299)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=194768306]
-transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0, 0.9999999, 0, 2.055, 4.75)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999998, 0, 2.055, 4.75)
 cull_mask = 1048571
+fov = 60.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Camera3D" unique_id=1179623828]
+stream = ExtResource("13_hmc15")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=436482735]
 libraries/ = SubResource("AnimationLibrary_o2rbt")
@@ -657,139 +803,147 @@ transform = Transform3D(-0.562572, 0, -0.8267483, 0, 1, 0, 0.8267483, 0, -0.5625
 [node name="harp" parent="." unique_id=149440918 instance=ExtResource("22_pt3ps")]
 transform = Transform3D(0.8090541, 0, 0.5877342, 0, 1, 0, -0.5877342, 0, 0.8090541, 1.5957905, 0.3757484, -0.8594769)
 
-[node name="bird" parent="." unique_id=1692351658 instance=ExtResource("24_xbk3s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.791, 0, 7.358)
+[node name="birds" type="Node3D" parent="." unique_id=48399393]
 
-[node name="water" type="Node3D" parent="." unique_id=1461121226]
+[node name="bird" parent="birds" unique_id=1692351658 instance=ExtResource("24_xbk3s")]
+transform = Transform3D(-0.1706233, 0, 0.98533636, 0, 1, 0, -0.98533636, 0, -0.1706233, 2.4325473, 2.3841858e-07, 6.0963397)
 
-[node name="pPlane2" type="Node3D" parent="water" unique_id=1184555181]
+[node name="bird2" parent="birds" unique_id=268172601 instance=ExtResource("24_xbk3s")]
+transform = Transform3D(-0.1706233, 0, 0.98533636, 0, 1, 0, -0.98533636, 0, -0.1706233, -13.951021, 0.34932303, -2.5095472)
+
+[node name="bird3" parent="birds" unique_id=1799114596 instance=ExtResource("24_xbk3s")]
+transform = Transform3D(-0.1706233, 0, 0.98533636, 0, 1, 0, -0.98533636, 0, -0.1706233, -24.28201, 0.10740548, 13.131612)
+
+[node name="land" type="Node3D" parent="." unique_id=1636473214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[node name="water" type="Node3D" parent="land" unique_id=1461121226]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+
+[node name="pPlane2" type="Node3D" parent="land/water" unique_id=1184555181]
 transform = Transform3D(-2.124733, 5.6364724e-23, 39.926228, -5.897036e-29, 1, -2.2587548e-21, -34.935444, -3.428036e-24, -2.4282656, 15.747005, -1.928208, -32.994164)
 
-[node name="pPlane1_water_0" type="MeshInstance3D" parent="water/pPlane2" unique_id=1938378042]
+[node name="pPlane1_water_0" type="MeshInstance3D" parent="land/water/pPlane2" unique_id=1938378042]
 mesh = SubResource("ArrayMesh_tl3mo")
 surface_material_override/0 = SubResource("StandardMaterial3D_axeuq")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="water/pPlane2/pPlane1_water_0" unique_id=1120546504]
+[node name="StaticBody3D" type="StaticBody3D" parent="land/water/pPlane2/pPlane1_water_0" unique_id=1120546504]
 collision_layer = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="water/pPlane2/pPlane1_water_0/StaticBody3D" unique_id=97648948]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="land/water/pPlane2/pPlane1_water_0/StaticBody3D" unique_id=97648948]
 shape = SubResource("ConvexPolygonShape3D_kn0ld")
 
-[node name="pPlane1_water_1" type="MeshInstance3D" parent="water/pPlane2" unique_id=2029909120]
+[node name="pPlane1_water_1" type="MeshInstance3D" parent="land/water/pPlane2" unique_id=2029909120]
 transform = Transform3D(0.67000425, -1.6768033e-21, -0.7423572, 1.6768035e-21, 1, -7.4537955e-22, 0.74235743, -7.453795e-22, 0.6700044, -0.35502446, 0, 0.60539293)
 mesh = SubResource("ArrayMesh_tl3mo")
 surface_material_override/0 = SubResource("StandardMaterial3D_axeuq")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="water/pPlane2/pPlane1_water_1" unique_id=1751235052]
+[node name="StaticBody3D" type="StaticBody3D" parent="land/water/pPlane2/pPlane1_water_1" unique_id=1751235052]
 collision_layer = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="water/pPlane2/pPlane1_water_1/StaticBody3D" unique_id=795361762]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="land/water/pPlane2/pPlane1_water_1/StaticBody3D" unique_id=795361762]
 shape = SubResource("ConvexPolygonShape3D_hgpy0")
 
-[node name="pPlane1" type="Node3D" parent="water" unique_id=323327647]
+[node name="pPlane1" type="Node3D" parent="land/water" unique_id=323327647]
 transform = Transform3D(-32.196915, -2.2142874e-23, -31.370026, 0, 1, -1.1293774e-21, 13.724386, -5.1946383e-23, -73.59294, 23.397905, -1.928208, 38.700645)
 
-[node name="pPlane1_water_0" type="MeshInstance3D" parent="water/pPlane1" unique_id=1231173321]
+[node name="pPlane1_water_0" type="MeshInstance3D" parent="land/water/pPlane1" unique_id=1231173321]
 transform = Transform3D(1.189053, -1.9548411e-22, -0.16171926, 1.8264207e-22, 1.1999999, -1.0765404e-22, 0.1617193, 8.2058555e-23, 1.1890532, 0.045454472, 1.2431165, -0.059292674)
 mesh = SubResource("ArrayMesh_tl3mo")
 surface_material_override/0 = SubResource("StandardMaterial3D_axeuq")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="water/pPlane1/pPlane1_water_0" unique_id=563092501]
+[node name="StaticBody3D" type="StaticBody3D" parent="land/water/pPlane1/pPlane1_water_0" unique_id=563092501]
 collision_layer = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="water/pPlane1/pPlane1_water_0/StaticBody3D" unique_id=964809898]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="land/water/pPlane1/pPlane1_water_0/StaticBody3D" unique_id=964809898]
 shape = SubResource("ConvexPolygonShape3D_t2t4p")
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=159327289]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-navigation_mesh = ExtResource("20_hmc15")
-
-[node name="Grounds" type="Node3D" parent="NavigationRegion3D" unique_id=798714665]
+[node name="Grounds" type="Node3D" parent="land" unique_id=798714665]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.349, 0)
 
-[node name="Ground4" parent="NavigationRegion3D/Grounds" unique_id=1069034830 instance=ExtResource("2_c5t2i")]
+[node name="Ground4" parent="land/Grounds" unique_id=1069034830 instance=ExtResource("2_c5t2i")]
 transform = Transform3D(-0.5790207, 0, 0.56194836, 0, 1, 0, -0.39336377, 0, -0.82717216, 50.636436, 1.9073486e-06, 1.2257547)
 
-[node name="Ground" parent="NavigationRegion3D/Grounds" unique_id=267341775 instance=ExtResource("2_c5t2i")]
+[node name="Ground" parent="land/Grounds" unique_id=267341775 instance=ExtResource("2_c5t2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.3, -12.748, 0, 11.296819)
 
-[node name="fences" parent="NavigationRegion3D" unique_id=2014053593 instance=ExtResource("21_no8kt")]
+[node name="fences" parent="land" unique_id=2014053593 instance=ExtResource("21_no8kt")]
 transform = Transform3D(4, 0, 0, 0, 6, 0, 0, 0, 4, -28.1636, -0.12540634, -9.937156)
 
-[node name="base" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode" parent_id_path=PackedInt32Array(2014053593, 1102461475) index="1" unique_id=1813811822]
+[node name="base" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode" parent_id_path=PackedInt32Array(2014053593, 1102461475) index="1" unique_id=1813811822]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 39.26899, 30, -168.14496)
 
-[node name="01" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="0" unique_id=1037040104]
+[node name="01" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="0" unique_id=1037040104]
 transform = Transform3D(0.70710677, -1.323489e-23, -0.7071069, -2.646978e-23, 0.9999999, 2.646978e-23, 0.7071069, -1.5777218e-30, 0.70710677, -112.26843, 0.5833702, -64.35187)
 
-[node name="01_Mat_0" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base/01" index="0" unique_id=1376562880]
+[node name="01_Mat_0" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base/01" index="0" unique_id=1376562880]
 transform = Transform3D(0.9803899, 3.4020086e-17, 0.19706565, -2.7862183e-17, 0.99999976, -3.4020046e-17, -0.19706565, 2.7862183e-17, 0.9803899, 127.7034, 0, 20.78064)
 
-[node name="02" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="1" unique_id=116491504]
+[node name="02" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="1" unique_id=116491504]
 transform = Transform3D(0.70710677, -5.293956e-23, -0.7071069, -7.940934e-23, 0.99999976, 2.646978e-23, 0.7071069, -3.1554436e-30, 0.70710677, 125.09677, 2.1991482, 180.82797)
 
-[node name="02_Mat_0" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base/02" index="0" unique_id=611071419]
+[node name="02_Mat_0" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base/02" index="0" unique_id=611071419]
 transform = Transform3D(0.6196537, -6.351484e-17, -0.7848753, 1.8295054e-16, 1, 6.351467e-17, 0.7848753, -1.8295059e-16, 0.6196537, -134.9574, 0, 4.8606567)
 
-[node name="01_Mat_1" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="2" unique_id=2138685923]
+[node name="01_Mat_1" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="2" unique_id=2138685923]
 transform = Transform3D(-4.371139e-08, -2.646978e-23, 1, 4.7331654e-30, 0.9999996, -3.970467e-23, -1, -7.888609e-31, -4.371139e-08, -892.38806, 0, 1668.1624)
 mesh = SubResource("ArrayMesh_7blyx")
 
-[node name="02_Mat_0" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="3" unique_id=1056384432]
+[node name="02_Mat_0" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="3" unique_id=1056384432]
 transform = Transform3D(-4.371139e-08, -2.646978e-23, 1, 4.7331654e-30, 0.9999996, -3.970467e-23, -1, -7.888609e-31, -4.371139e-08, -893.53625, -3.2424927e-05, 1589.3379)
 mesh = SubResource("ArrayMesh_pvoew")
 
-[node name="01_Mat_2" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="4" unique_id=2103341776]
+[node name="01_Mat_2" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="4" unique_id=2103341776]
 transform = Transform3D(-0.6784001, 4.725622e-17, 0.7871767, 1.5063517e-16, 0.99999976, 4.7256246e-17, -0.8658944, 1.3694109e-16, -0.6167274, -838.1987, 0, 1817.0433)
 mesh = SubResource("ArrayMesh_7blyx")
 
-[node name="02_Mat_2" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="5" unique_id=1313284198]
+[node name="02_Mat_2" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="5" unique_id=1313284198]
 transform = Transform3D(-4.3711374e-08, -3.970467e-23, 0.9999997, 4.7331654e-30, 0.99999917, -3.970467e-23, -0.9999997, -2.3665827e-30, -4.3711374e-08, -892.8196, -3.2424927e-05, 1749.464)
 mesh = SubResource("ArrayMesh_pvoew")
 
-[node name="01_Mat_3" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="6" unique_id=1723977970]
+[node name="01_Mat_3" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="6" unique_id=1723977970]
 transform = Transform3D(-0.10586545, 4.430584e-16, -0.9953581, 2.3506963e-17, 0.9999995, 4.4305842e-16, 1.0948937, 2.1369758e-17, -0.09624123, 20.617584, 0, 1767.4021)
 mesh = SubResource("ArrayMesh_7blyx")
 
-[node name="02_Mat_3" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="7" unique_id=2106794321]
+[node name="02_Mat_3" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="7" unique_id=2106794321]
 transform = Transform3D(-0.39740455, 4.2580198e-16, -0.9176433, 8.824147e-17, 0.9999984, 4.2580198e-16, 0.9176433, 8.824149e-17, -0.39740455, 10.448273, -1.7166138e-05, 1868.1547)
 mesh = SubResource("ArrayMesh_pvoew")
 
-[node name="02_Mat_4" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="8" unique_id=586988236]
+[node name="02_Mat_4" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="8" unique_id=586988236]
 transform = Transform3D(-0.8493778, 3.3923609e-16, -0.5277848, 1.885997e-16, 0.99999845, 3.39236e-16, 0.5277848, 1.8859968e-16, -0.8493778, 5.7411194, -3.2424927e-05, 1877.7124)
 mesh = SubResource("ArrayMesh_pvoew")
 
-[node name="02_Mat_5" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="9" unique_id=88935504]
+[node name="02_Mat_5" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/base" index="9" unique_id=88935504]
 transform = Transform3D(-0.109487094, 4.427538e-16, -0.9939879, 2.4310946e-17, 0.99999833, 4.4275402e-16, 0.9939879, 2.431108e-17, -0.109487094, 14.747681, -4.196167e-05, 1853.7146)
 mesh = SubResource("ArrayMesh_pvoew")
 
-[node name="all" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode" parent_id_path=PackedInt32Array(2014053593, 1102461475) index="2" unique_id=2044038505]
+[node name="all" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode" parent_id_path=PackedInt32Array(2014053593, 1102461475) index="2" unique_id=2044038505]
 transform = Transform3D(1, 0, 0, 0, 0.9999996, 9.264423e-23, 0, 9.264423e-23, 1, 100.976166, 29.999987, -217.04236)
 
-[node name="all_Mat_2" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="0" unique_id=1938955709]
+[node name="all_Mat_2" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="0" unique_id=1938955709]
 transform = Transform3D(-4.371138e-08, 0, -0.99999976, -1.323489e-23, 1.0000002, -7.888609e-31, 0.99999976, -7.940934e-23, -4.371138e-08, 1818.9777, 7.6293945e-06, 159.71716)
 mesh = SubResource("ArrayMesh_gvaac")
 
-[node name="all_Mat_0" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="1" unique_id=1704648784]
+[node name="all_Mat_0" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="1" unique_id=1704648784]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, -2.646978e-23, 0, -2.646978e-23, 1, 146.28183, 0, 21.623535)
 
-[node name="all_Mat_1" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="2" unique_id=1553854677]
+[node name="all_Mat_1" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="2" unique_id=1553854677]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.9999997, 5.293956e-23, 0, 6.617445e-23, 0.99999994, 940.9352, -1.9073486e-06, 20.944366)
 mesh = SubResource("ArrayMesh_gvaac")
 
-[node name="all_Mat_3" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="3" unique_id=1847976542]
+[node name="all_Mat_3" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="3" unique_id=1847976542]
 transform = Transform3D(-4.3711367e-08, 0, 0.99999976, -1.323489e-23, 1.0000004, 7.888609e-31, -0.99999976, -7.940934e-23, -4.3711367e-08, -60.10663, 1.1444092e-05, 825.652)
 mesh = SubResource("ArrayMesh_gvaac")
 
-[node name="all_Mat_4" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="4" unique_id=1401375423]
+[node name="all_Mat_4" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="4" unique_id=1401375423]
 transform = Transform3D(-0.99999976, 0, -8.7422734e-08, 6.3108872e-30, 1.0000004, -7.940934e-23, 8.7422734e-08, -7.940934e-23, -0.99999976, 613.7261, 1.1444092e-05, 941.7759)
 mesh = SubResource("ArrayMesh_gvaac")
 
-[node name="all_Mat_5" type="MeshInstance3D" parent="NavigationRegion3D/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="5" unique_id=1356128237]
+[node name="all_Mat_5" type="MeshInstance3D" parent="land/fences/Sketchfab_model/3eaa6785e8384ecd9d0d8ba0f7253ebc_fbx/RootNode/all" index="5" unique_id=1356128237]
 transform = Transform3D(-0.99999976, 1.2095517e-30, -8.7422734e-08, 4.7331654e-30, 1.0000002, -7.940934e-23, 8.7422734e-08, -5.293956e-23, -0.99999976, 1409.179, 0, 941.776)
 mesh = SubResource("ArrayMesh_gvaac")
 
-[node name="bridge" parent="NavigationRegion3D" unique_id=784187549 instance=ExtResource("18_0pcbe")]
+[node name="bridge" parent="land" unique_id=784187549 instance=ExtResource("18_0pcbe")]
 transform = Transform3D(0.9950041, 0, -0.09983334, 0, 1, 0, 0.09983334, 0, 0.9950041, 18.48022, 0.9723016, 10.275653)
 
 [node name="Platano-Tree" parent="." unique_id=458956153 instance=ExtResource("24_i4fjy")]
@@ -810,47 +964,88 @@ visible = false
 [node name="maples" parent="." unique_id=1157814760 instance=ExtResource("26_3ua1v")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 19.10366, -1.9073486e-06, -0.5195503)
 
-[node name="structure_2" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 103417539) index="0" unique_id=1341933361]
+[node name="structure_2" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 126702308) index="0" unique_id=1387938951]
 transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 276.5802, 0, -131.91211)
 
-[node name="foliage_3" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 103417539) index="1" unique_id=1225145076]
+[node name="foliage_3" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 126702308) index="1" unique_id=248343516]
 transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 276.5802, 0, -131.91211)
 
-[node name="structure_001_4" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 103417539) index="2" unique_id=1768881906]
+[node name="structure_001_4" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 126702308) index="2" unique_id=1932480003]
 transform = Transform3D(0.25619122, -0.9666261, 1.5161291e-07, 4.8801635e-08, -1.4391331e-07, -1, 0.9666261, 0.25619122, 1.0303608e-08, 216.9207, 0, -152.7052)
 
-[node name="foliage_001_5" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 103417539) index="3" unique_id=1109870332]
+[node name="foliage_001_5" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 126702308) index="3" unique_id=365003849]
 transform = Transform3D(0.25619122, -0.9666261, 1.5161291e-07, 4.8801635e-08, -1.4391331e-07, -1, 0.9666261, 0.25619122, 1.0303608e-08, 216.9207, 0, -152.7052)
 
-[node name="structure_002_6" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 103417539) index="4" unique_id=345228048]
+[node name="structure_002_6" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 126702308) index="4" unique_id=872617417]
 transform = Transform3D(-0.7108185, -0.7033754, 7.1033675e-08, -6.9281687e-09, -9.398821e-08, -1, 0.7033754, -0.7108185, 6.193547e-08, 191.34071, -3.8146973e-05, -56.14702)
 
-[node name="foliage_002_7" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 103417539) index="5" unique_id=596981222]
+[node name="foliage_002_7" parent="maples/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1157814760, 126702308) index="5" unique_id=245946396]
 transform = Transform3D(-0.7108185, -0.7033754, 7.1033675e-08, -6.9281687e-09, -9.398821e-08, -1, 0.7033754, -0.7108185, 6.193547e-08, 191.34071, -3.8146973e-05, -56.14702)
 
 [node name="maples2" parent="." unique_id=546459784 instance=ExtResource("26_3ua1v")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 22.254063, -0.5212943, -4.855583)
 
-[node name="structure_2" parent="maples2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(546459784, 103417539) index="0" unique_id=1341933361]
+[node name="structure_2" parent="maples2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(546459784, 126702308) index="0" unique_id=1387938951]
 transform = Transform3D(0.66809005, -0.7440805, 1.254426e-07, 0, -1.685874e-07, -1, 0.7440805, 0.66809005, -1.1263157e-07, 195.85568, 0, -13.886204)
 
-[node name="foliage_3" parent="maples2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(546459784, 103417539) index="1" unique_id=1225145076]
+[node name="foliage_3" parent="maples2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(546459784, 126702308) index="1" unique_id=248343516]
 transform = Transform3D(0.66809005, -0.7440805, 1.254426e-07, 0, -1.685874e-07, -1, 0.7440805, 0.66809005, -1.1263157e-07, 195.85568, 0, -13.886204)
 
-[node name="structure_002_6" parent="maples2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(546459784, 103417539) index="4" unique_id=345228048]
+[node name="structure_002_6" parent="maples2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(546459784, 126702308) index="4" unique_id=872617417]
 transform = Transform3D(-0.6555668, 0.75513715, -6.6432115e-08, -6.928165e-09, -9.398821e-08, -1, -0.75513715, -0.6555668, 6.6847264e-08, 155.74173, 0, -51.242844)
 
-[node name="foliage_002_7" parent="maples2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(546459784, 103417539) index="5" unique_id=596981222]
+[node name="foliage_002_7" parent="maples2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(546459784, 126702308) index="5" unique_id=245946396]
 transform = Transform3D(-0.6555668, 0.75513715, -6.6432115e-08, -6.928165e-09, -9.398821e-08, -1, -0.75513715, -0.6555668, 6.6847264e-08, 155.74173, 0, -51.242844)
 
-[node name="Sketchfab_Scene" parent="." unique_id=1932465243 instance=ExtResource("26_pt3ps")]
+[node name="cherryblossoms" parent="." unique_id=1932465243 instance=ExtResource("26_pt3ps")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -10.221268, -0.025381263, -10.59354)
+
+[node name="structure_2" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="0" unique_id=1801798907]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="foliage_3" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="1" unique_id=213328493]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="structure_001_4" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="2" unique_id=196301101]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="foliage_001_5" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="3" unique_id=1423215254]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="structure_002_6" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="4" unique_id=2009014641]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="foliage_002_7" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="5" unique_id=1030173254]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="cherryblossoms2" parent="." unique_id=1684453700 instance=ExtResource("26_pt3ps")]
+transform = Transform3D(-0.1, 0, 0, 0, 0.1, 0, 0, 0, -0.1, -21.554914, -0.02538031, -3.765603)
+
+[node name="structure_2" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="0" unique_id=1801798907]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="foliage_3" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="1" unique_id=213328493]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="structure_001_4" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="2" unique_id=196301101]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="foliage_001_5" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="3" unique_id=1423215254]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="structure_002_6" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="4" unique_id=2009014641]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="foliage_002_7" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="5" unique_id=1030173254]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
 
 [editable path="CharacterBody3D"]
 [editable path="CharacterBody3D/UI"]
 [editable path="Cloud"]
 [editable path="Cloud/Sketchfab_Scene"]
-[editable path="NavigationRegion3D/fences"]
+[editable path="land/fences"]
 [editable path="Platano-Tree"]
 [editable path="maples"]
 [editable path="maples2"]
+[editable path="cherryblossoms"]
+[editable path="cherryblossoms2"]

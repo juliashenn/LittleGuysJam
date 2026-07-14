@@ -75,22 +75,11 @@ func bounce():
 	active_tween.parallel().tween_property(mesh, "scale", Vector3(1.3, 0.65, 1.3) * start_scale, 0.2/squish_speed)
 	
 	active_tween.tween_property(mesh, "scale", start_scale, 0.15/squish_speed).set_ease(Tween.EASE_OUT)
-	#tween.parallel().tween_property(mesh, "position", start_pos + Vector3(0, 1, 0), 0.4)
-	#tween.parallel().tween_property(mesh, "scale", Vector3(1, 1.1, 1) * start_scale, 0.4)
-	#tween.tween_property(mesh, "position", start_pos, 0.3)
-	#tween.parallel().tween_property(mesh, "scale", Vector3(1.2, 0.7, 1.2) * start_scale, 0.3)
-	#tween.tween_property(mesh, "scale", start_scale, 0.15)
 	audio.play(0.0)
 
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("ground"):
-		if mesh:
-			poke()
-			##linear_velocity = Vector3.ZERO
-			##angular_velocity = Vector3.ZERO
-			#var tween = create_tween()
-			#tween.tween_property(mesh, "scale", Vector3(1, 0.7, 1)*start_scale, 0.2/squish_speed)
-			#tween.tween_property(mesh, "scale", start_scale, 0.3/squish_speed)
+		poke()
 
 func set_note(n: Note):
 	if not n: return

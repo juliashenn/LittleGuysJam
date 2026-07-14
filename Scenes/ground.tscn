@@ -10,10 +10,11 @@ data = PackedVector3Array(2.5544999, 0.2025, 1.1118, 2.9756, 9.9625, 1.1118, 6.8
 [node name="groundEdit" parent="." unique_id=2119080578 instance=ExtResource("2_oltiy")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="groundEdit/Sketchfab_model/d2e9bcf0493649a4899f09fb03e11a9f_fbx/RootNode/Ground/Object_4/Ground_Texture-base_0" parent_id_path=PackedInt32Array(2119080578, 1453216606) index="0" unique_id=463821444]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=463821444 groups=["ground"]]
+transform = Transform3D(2, 0, 0, 0, -7.152556e-07, 1.9999996, 0, -1.9999996, -7.152556e-07, 0, 0, 0)
 collision_layer = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="groundEdit/Sketchfab_model/d2e9bcf0493649a4899f09fb03e11a9f_fbx/RootNode/Ground/Object_4/Ground_Texture-base_0/StaticBody3D" unique_id=496602108]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=496602108]
 shape = SubResource("ConcavePolygonShape3D_688p1")
 
 [editable path="groundEdit"]

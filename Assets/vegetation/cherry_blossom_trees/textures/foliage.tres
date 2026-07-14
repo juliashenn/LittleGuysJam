@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cchcuylqh8r7v"]
+
+[ext_resource type="Texture2D" uid="uid://cbcq2xlbrxabx" path="res://Assets/vegetation/cherry_blossom_trees/textures/foliage_baseColor.png" id="1_ssasm"]
+
+[resource]
+resource_name = "foliage"
+transparency = 2
+alpha_scissor_threshold = 0.2
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_ssasm")
+roughness = 0.5
+emission_enabled = true
+emission = Color(0.7848869, 0.6831593, 0.7695761, 1)
+emission_energy_multiplier = 0.4
+metadata/_gltf_primary_texture_coord = 0

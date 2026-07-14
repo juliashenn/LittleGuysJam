@@ -8,6 +8,7 @@
 size = Vector3(0.22166443, 0.63183594, 0.19580078)
 
 [node name="Flower" type="RigidBody3D" unique_id=1557167778 node_paths=PackedStringArray("animator", "audio", "mesh")]
+continuous_cd = true
 script = ExtResource("1_hbmji")
 animator = NodePath("Node3D/Sketchfab_Scene/AnimationPlayer")
 animName = "Animation"

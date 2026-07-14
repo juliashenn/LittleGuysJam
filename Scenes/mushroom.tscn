@@ -7,6 +7,7 @@
 size = Vector3(0.45874023, 0.538208, 0.33276367)
 
 [node name="Mushroom" type="RigidBody3D" unique_id=296643333 node_paths=PackedStringArray("audio", "mesh")]
+continuous_cd = true
 script = ExtResource("1_0q7t7")
 audio = NodePath("AudioStreamPlayer3D")
 mesh = NodePath("mushroomEdit")

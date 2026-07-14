@@ -139,9 +139,10 @@ _data = {
 &"swirl": SubResource("Animation_bhhdu")
 }
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=841984925 groups=["player"]]
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=841984925 node_paths=PackedStringArray("bird_marker") groups=["player"]]
 collision_mask = 2
 script = ExtResource("1_rpqav")
+bird_marker = NodePath("birdMarker")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1449095299]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9988171, 0)
@@ -150,6 +151,9 @@ mesh = SubResource("CapsuleMesh_c7e87")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=740396785]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9988171, 0)
 shape = SubResource("ConvexPolygonShape3D_kyqiw")
+
+[node name="birdMarker" type="Marker3D" parent="." unique_id=733313465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0391152, 1.3657286, -1.7407613)
 
 [node name="Head" type="Node3D" parent="." unique_id=2131679353]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8072772, 0)
@@ -167,13 +171,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_j1lyr")
 transform = Transform3D(0.8590808, -0.44858837, 0.24647294, -0.083151676, 0.35282964, 0.9319857, -0.5050407, -0.8211457, 0.26580822, 1.0369111, -0.5657455, -0.9322877)
 
 [node name="wand" parent="Head/Camera3D" unique_id=1417012209 instance=ExtResource("3_gntrk")]
-transform = Transform3D(0.98396635, -0.15955691, 0.07969488, -0.05715977, 0.14115345, 0.9883363, -0.16894503, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
+transform = Transform3D(0.98396623, -0.15955691, 0.07969488, -0.057159767, 0.14115345, 0.9883363, -0.16894501, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
 
 [node name="GrabPoint" type="Marker3D" parent="Head/Camera3D" unique_id=1784595468]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16156769, -2.0738106)
-
-[node name="birdMarker" type="Marker3D" parent="Head/Camera3D" unique_id=733313465]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9713859, -0.4415486, -2.3938868)
 
 [node name="Interactor" type="Area3D" parent="." unique_id=1309434060 node_paths=PackedStringArray("interact_label")]
 script = ExtResource("4_dewec")

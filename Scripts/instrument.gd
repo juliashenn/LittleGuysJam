@@ -6,6 +6,7 @@ class_name Instrument
 @export var audio: AudioStreamPlayer3D
 @onready var light: SpotLight3D = $SpotLight3D
 
+var awakened := false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	light.visible = false
@@ -17,10 +18,12 @@ func _process(delta: float) -> void:
 
 func awake():
 	anim.play("awake")
+	awakened = true
 
 func play():
 	light.visible = true
-	audio.play(0.0)
+	if awakened:
+		audio.play(0.0)
 	start_particles()
 	anim.play("playing")
 
