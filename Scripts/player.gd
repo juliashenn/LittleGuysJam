@@ -24,6 +24,7 @@ const FOV_CHANGE = 0.75
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var ui: UI = $UI
 @export var bird_marker: Marker3D
+@onready var ambience: AudioStreamPlayer3D = $ambience
 
 var has_bird_following := false
 
@@ -114,6 +115,7 @@ func stop_anim():
 func disable(): # for cutscenes
 	enabled = false
 	camera.clear_current(true)
+	ambience.stop()
 
 func freeze(): # for ui
 	enabled = false
@@ -122,10 +124,14 @@ func freeze(): # for ui
 func unfreeze():
 	enabled = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if not ambience.playing:
+		ambience.play(0.0)
 
 func enable():
 	enabled = true
 	camera.make_current()
+	if not ambience.playing:
+		ambience.play(0.0)
 
 func end_scene():
 	disable()

@@ -28,10 +28,11 @@ func start():
 	await cutscene_anim.animation_finished
 	await get_tree().create_timer(0.5).timeout
 	player.give_dialogue(["Interact with the Record Player to hear the first melody"])
+	player.unfreeze()
 
 func set_up_melody():
 	curr_melody = melodyList.get(curr_level)
-	recorder.set_melody(curr_melody)
+	recorder.set_melody(curr_melody, curr_level)
 	stump_spawner.melody = curr_melody
 	water_spawner.melody = curr_melody
 	mushroom_spawner.melody = curr_melody

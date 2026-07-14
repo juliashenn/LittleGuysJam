@@ -212,6 +212,13 @@ https://lolurio.itch.io/peaceful-orchestra-music
 is licensed under Creative Commons Attribution 
 (http://creativecommons.org/licenses/by/4.0/).
 
+Sprout Lands UI Pack
+by Cup Nooble (https://cupnooble.itch.io/)
+
+natural pond with birds and reeds rustling in the wind 
+by Garuda1982 - https://freesound.org/s/641717/ 
+License: Attribution 4.0
+
 Gazebo by ROSTISLAV via TurboSquid
 https://www.turbosquid.com/FullPreview/863050 
 
@@ -315,11 +322,6 @@ is licensed under Creative Commons Attribution
 is licensed under Creative Commons Attribution 
 (http://creativecommons.org/licenses/by/4.0/).
 
-\"Forest Lighting (WIP)\" (modified color and terrain)
-(https://skfb.ly/oCsyH) by Ti Mur 
-is licensed under CC Attribution-NonCommercial-ShareAlike 
-(http://creativecommons.org/licenses/by-nc-sa/4.0/).
-
 \"Garden cement fence Wall Building\" 
 (https://skfb.ly/oRFrZ) by Mehdi Shahsavan 
 is licensed under Creative Commons Attribution 
@@ -335,9 +337,6 @@ is licensed under Creative Commons Attribution
 \"Bird 3 - Animated Low Poly\" (https://skfb.ly/pLICw)
 \"Bird 4 - Animated Low Poly\" (https://skfb.ly/pLICv)
 \"Bird 5 - Animated Low Poly\" (https://skfb.ly/pLIC6)
-\"Duck Baby - Animated Low Poly\" (https://skfb.ly/pLIBY) 
-\"Rabbit Baby - Animated Low Poly\" (https://skfb.ly/pLIBw)
-\"Rabi Baby - Animated Low Poly\" (https://skfb.ly/pLIBv)
 by WildPoly3D 
 is licensed under Creative Commons Attribution 
 (http://creativecommons.org/licenses/by/4.0/).
@@ -361,11 +360,6 @@ by creaturecreator is licensed under CC Attribution-NonCommercial-NoDerivs
 \"Maple Trees\" (https://skfb.ly/oJORp) 
 \"Cherry Blossom Trees\" (https://skfb.ly/oJEv8)
 by Jagobo is licensed under Creative Commons Attribution 
-(http://creativecommons.org/licenses/by/4.0/).
-
-\"Platano Tree\" 
-(https://skfb.ly/6TxwB) by gelmi.com.br 
-is licensed under Creative Commons Attribution 
 (http://creativecommons.org/licenses/by/4.0/).
 
 \"PUMPING HEART MODEL\" 
@@ -630,7 +624,6 @@ text = "ESC"
 label_settings = SubResource("LabelSettings_626w8")
 
 [node name="Start" type="Control" parent="." unique_id=478330250]
-visible = false
 texture_filter = 1
 layout_mode = 1
 anchor_right = 1.003

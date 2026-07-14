@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dpcc4ilat0mkx" path="res://Scripts/mushroom_spawner.gd" id="1_7hu1l"]
 [ext_resource type="PackedScene" uid="uid://b5scu561to32f" path="res://Scenes/mushroom.tscn" id="3_7hu1l"]
-[ext_resource type="PackedScene" uid="uid://bjdvwspmx86qq" path="res://Assets/forest_lighting_wip/forestEdit.glb" id="4_7hu1l"]
 [ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="4_u5nsi"]
 [ext_resource type="PackedScene" uid="uid://cc7wc2ght1ioy" path="res://Assets/mossy_log/scene.gltf" id="5_u5nsi"]
 [ext_resource type="PackedScene" uid="uid://btlxmtgvoq1vj" path="res://Assets/vegetation/maple_trees/scene.gltf" id="6_dbj58"]
@@ -22,12 +21,8 @@ noteType = "E"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.024088, 0)
 
 [node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1746257221]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.9720063, 2.5265636, -0.9310155)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.9720063, 1.6449856, -0.9310155)
 shape = SubResource("BoxShape3D_u5nsi")
-
-[node name="forestEdit" parent="." unique_id=1523670767 instance=ExtResource("4_7hu1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0145493, 0)
-visible = false
 
 [node name="log" parent="." unique_id=1108805346 instance=ExtResource("5_u5nsi")]
 transform = Transform3D(-0.9275184, 0, -0.37377736, 0, 1, 0, 0.37377736, 0, -0.9275184, 6.2929955, -0.7961268, -2.3011909)
@@ -69,6 +64,7 @@ transform = Transform3D(0.7157532, 0, -0.6983533, 0, 1, 0, 0.6983533, 0, 0.71575
 visible = false
 
 [node name="Area3D" type="Area3D" parent="." unique_id=259006405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01075089, 0)
 script = ExtResource("4_u5nsi")
 interact_name = "Awaken the Mushrooms"
 
@@ -138,7 +134,6 @@ transform = Transform3D(0.78233814, -0.6228539, 5.3120765e-08, -6.928165e-09, -9
 [node name="foliage_002_7" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="5" unique_id=245946396]
 transform = Transform3D(0.78233814, -0.6228539, 5.3120765e-08, -6.928165e-09, -9.398821e-08, -1, 0.6228539, 0.78233814, -7.784582e-08, -42.591442, 0, -81.07463)
 
-[editable path="forestEdit"]
 [editable path="log"]
 [editable path="log2"]
 [editable path="log3"]

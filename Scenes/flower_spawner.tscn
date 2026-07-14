@@ -72,6 +72,12 @@ shader_parameter/light_direction = Vector3(1, 2, 1)
 [sub_resource type="SphereShape3D" id="SphereShape3D_c7e87"]
 radius = 15.501753
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_j1lyr"]
+size = Vector3(0.7583618, 0.49897766, 2.8839722)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cwb4t"]
+size = Vector3(1.107544, 0.45007324, 0.49743652)
+
 [node name="FlowerSpawner" type="Node3D" unique_id=1922605449]
 script = ExtResource("1_w8n5y")
 objToSpawn = ExtResource("3_ukpqs")
@@ -300,7 +306,7 @@ visible = false
 autoplay = &"Take 001"
 
 [node name="Sketchfab_Scene3" parent="." unique_id=1394017331 instance=ExtResource("2_48ari")]
-transform = Transform3D(0.30192637, 0, 0.39854795, 0, 0.5, 0, -0.39854795, 0, 0.30192637, -0.27467537, 1.1057785, -6.255659)
+transform = Transform3D(0.30192637, 0, 0.39854795, 0, 0.5, 0, -0.39854795, 0, 0.30192637, -0.27467537, 0.5306387, -6.255659)
 
 [node name="pCube1" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="0" unique_id=1807369569]
 visible = false
@@ -349,12 +355,15 @@ transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -6.54541, 0.16131221, -4.3508
 
 [node name="pCube7" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="20" unique_id=1270920064]
 transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.8465773, 0.16131221, -4.3508444)
+visible = false
 
 [node name="pCube8" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="21" unique_id=1355634526]
 transform = Transform3D(0.039617658, 0, 0, 0, 0.058897197, 0, 0, 0, 1.7670494, -6.545862, 0.16151999, -4.3508687)
+visible = false
 
 [node name="pCube9" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="22" unique_id=1182600513]
 transform = Transform3D(0.04538381, 0, 0, 0, 0.058897197, 0, 0, 0, 1.7670494, -1.8467424, 0.16151999, -4.3510737)
+visible = false
 
 [node name="pSphere8" parent="Sketchfab_Scene3/Sketchfab_model/256ae75f916e40e78ac973ba22dbb243_fbx/Object_2/RootNode/Pond" parent_id_path=PackedInt32Array(1394017331, 1782353911) index="23" unique_id=1949342910]
 transform = Transform3D(0.25640273, 0, 0, 0, 0.25640273, 0, 0, 0, 0.25640273, -3.4834118, -1.3579602, 3.7910318)
@@ -398,7 +407,6 @@ transform = Transform3D(0.71033573, -0.097897656, -0.27976045, 0.120488875, 0.75
 visible = false
 
 [node name="StaticBodyforFlowers" type="StaticBody3D" parent="." unique_id=732436699]
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBodyforFlowers" unique_id=2032883960]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.532959, -0.57179785, -0.51408386)
@@ -536,6 +544,42 @@ interact_name = "Awaken the Flowers"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1924937528]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41191673, -0.014099121, -0.28415585)
 shape = SubResource("SphereShape3D_c7e87")
+
+[node name="border" type="StaticBody3D" parent="." unique_id=2039790442]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -4.8529196, 0)
+collision_layer = 3
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="border" unique_id=621024106]
+transform = Transform3D(0.9999992, 0, 0, 0, 1, 1.3552527e-20, 0, 0, 0.99999994, -1.3501492, 0.23011065, -0.16706653)
+shape = SubResource("BoxShape3D_j1lyr")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="border" unique_id=962761620]
+transform = Transform3D(0.9999992, 0, 0, 0, 1, 1.3552527e-20, 0, 0, 0.99999994, 1.3027567, 0.21688384, -0.16756178)
+shape = SubResource("BoxShape3D_j1lyr")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="border" unique_id=46837350]
+transform = Transform3D(0.92164624, 0, -0.38802937, 0, 1, 1.3552527e-20, 0.38802907, 0, 0.9216468, -0.6880822, 0.25333148, 1.2626401)
+shape = SubResource("BoxShape3D_cwb4t")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="border" unique_id=390836881]
+transform = Transform3D(0.9464502, 0, 0.3228484, 0, 1, 1.3552527e-20, -0.3228483, 0, 0.9464508, 0.5966484, 0.24743211, 1.3326005)
+shape = SubResource("BoxShape3D_cwb4t")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="border" unique_id=1040078924]
+transform = Transform3D(0.9999421, 0, 0.010699633, 0, 1, 1.3552527e-20, -0.010699657, 0, 0.99994296, 0.01470356, 0.24743211, 1.4598016)
+shape = SubResource("BoxShape3D_cwb4t")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="border" unique_id=1315813809]
+transform = Transform3D(-0.9330246, 0, 0.35981083, 0, 1, 1.3552527e-20, -0.35981056, 0, -0.93302506, 0.65441173, 0.24743211, -1.4635919)
+shape = SubResource("BoxShape3D_cwb4t")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="border" unique_id=766477693]
+transform = Transform3D(-0.9361901, 0, -0.35149255, 0, 1, 1.3552527e-20, 0.35149246, 0, -0.9361909, -0.6670565, 0.24743211, -1.4031485)
+shape = SubResource("BoxShape3D_cwb4t")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="border" unique_id=543335251]
+transform = Transform3D(-0.99915373, 0, -0.041115623, 0, 1, 1.3552527e-20, 0.04111562, 0, -0.99915457, -0.08925069, 0.24743211, -1.547995)
+shape = SubResource("BoxShape3D_cwb4t")
 
 [editable path="Sketchfab_Scene"]
 [editable path="Sketchfab_Scene2"]

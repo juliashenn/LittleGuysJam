@@ -7,7 +7,13 @@ class_name RecordPlayer
 @onready var playInteractable: Area3D = $Interactable
 @onready var stopInteractable: Interactable = $Interactable2
 var first_time := true
+var level := 0
 var player: Player
+var dialogues: Dictionary[int, String] = {
+	0:"Awaken the Raincloud to summon little notes",
+	2:"Awaken the Flowers to bloom half-note sprites",
+	3:"Awaken the Mushrooms for bouncy eighth notes"
+}
 func _ready() -> void:
 	audiostream.stream = load(melody.audioFile)
 	playInteractable.is_interactable = true
@@ -29,7 +35,8 @@ func _on_interact_play():
 		playInteractable.is_interactable = false
 		if first_time:
 			first_time = false
-			player.give_dialogue(["Awaken the Raincloud to summon little notes"])
+			if dialogues.has(level):
+				player.give_dialogue([dialogues.get(level)] as Array[String])
 
 func _on_interact_stop():
 	if stopInteractable.is_interactable:
@@ -40,7 +47,9 @@ func _on_interact_stop():
 func stop():
 	audiostream.stop()
 	
-func set_melody(m: Melody):
+func set_melody(m: Melody, l: int):
 	if m:
+		first_time = true
 		melody = m
 		audiostream.stream = load(m.audioFile)
+		level = l

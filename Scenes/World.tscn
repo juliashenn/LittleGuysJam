@@ -19,12 +19,15 @@
 [ext_resource type="Material" uid="uid://dumn64wod5iw7" path="res://Assets/garden_cement_fence_wall_building/textures/material.tres" id="19_1cojt"]
 [ext_resource type="PackedScene" uid="uid://bbkgd1j8kt3e2" path="res://Scenes/cello.tscn" id="19_axeuq"]
 [ext_resource type="PackedScene" uid="uid://djho72nvixljf" path="res://Scenes/flute.tscn" id="20_xbk3s"]
+[ext_resource type="PackedScene" uid="uid://didifov5dssjl" path="res://Assets/ground/groundEdit.glb" id="21_dt0r1"]
 [ext_resource type="PackedScene" uid="uid://c1a38nvysb41d" path="res://Scenes/violin.tscn" id="21_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://disgsypqv85p7" path="res://Assets/garden_cement_fence_wall_building/scene.gltf" id="21_no8kt"]
 [ext_resource type="PackedScene" uid="uid://doq85qoj2rc7q" path="res://Scenes/harp.tscn" id="22_pt3ps"]
 [ext_resource type="PackedScene" uid="uid://tpuacx5pg5wg" path="res://Scenes/bird.tscn" id="24_xbk3s"]
 [ext_resource type="PackedScene" uid="uid://btlxmtgvoq1vj" path="res://Assets/vegetation/maple_trees/scene.gltf" id="26_3ua1v"]
+[ext_resource type="PackedScene" uid="uid://dqe312cg27uys" path="res://Assets/vegetation/photorealistic_bush/scene.gltf" id="26_hmc15"]
 [ext_resource type="PackedScene" uid="uid://b816c21unypv3" path="res://Assets/vegetation/cherry_blossom_trees/scene.gltf" id="26_pt3ps"]
+[ext_resource type="PackedScene" uid="uid://dybcogb1au3wd" path="res://Assets/vegetation/ivy-pack-12-variations-lowpoly-lods/source/ivy.fbx" id="27_dt0r1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7yui6"]
 sky_top_color = Color(0.49803922, 0.70980394, 0.96862745, 1)
@@ -638,9 +641,6 @@ albedo_color = Color(0.3764706, 0.5294118, 0.52156866, 1)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kn0ld"]
 points = PackedVector3Array(0.1327523, 0.017568443, 0.46822375, -0.095830634, -0.012920824, -0.5076238, 0.46822375, 0.002323809, -0.24828294, 0.37671417, -0.012920824, 0.117468864, -0.38554734, 0.002323809, 0.33095938, -0.5076238, 0.017568443, -0.2787543, 0.23944981, 0.017568443, -0.49224484, -0.49224484, -0.012920824, -0.2787543, 0.3919021, 0.017568443, 0.33095938, 0.42246896, -0.012920824, -0.37026387, -0.38554734, 0.017568443, 0.33095938, 0.1327523, 0.002323809, 0.46822375, -0.05007584, 0.017568443, -0.5076238, -0.29413325, 0.002323809, 0.40709, 0.3919021, 0.002323809, 0.33095938, 0.46822375, -0.012920824, -0.20252815, 0.31567597, 0.017568443, -0.41601866, -0.46177346, 0.002323809, -0.33979255, 0.16322365, 0.002323809, -0.5076238, -0.49224484, 0.002323809, -0.11101855, -0.11101855, 0.017568443, 0.4528448, 0.40709, 0.017568443, 0.26992118, -0.20252815, -0.012920824, -0.47696137, -0.20252815, 0.002323809, -0.47696137, -0.11101855, 0.002323809, 0.4528448, 0.42246896, 0.002323809, -0.37026387, -0.41601866, 0.017568443, 0.25473326, -0.46177346, -0.012920824, -0.33979255, 0.36133522, 0.002323809, 0.36133522, -0.41601866, 0.002323809, 0.25473326, -0.019700006, -0.012920824, -0.5076238, 0.23944981, 0.002323809, -0.49224484)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hgpy0"]
-points = PackedVector3Array(0.1327523, 0.017568443, 0.46822375, -0.095830634, -0.012920824, -0.5076238, 0.46822375, 0.002323809, -0.24828294, 0.37671417, -0.012920824, 0.117468864, -0.38554734, 0.002323809, 0.33095938, -0.5076238, 0.017568443, -0.2787543, 0.23944981, 0.017568443, -0.49224484, -0.49224484, -0.012920824, -0.2787543, 0.3919021, 0.017568443, 0.33095938, 0.42246896, -0.012920824, -0.37026387, -0.38554734, 0.017568443, 0.33095938, 0.1327523, 0.002323809, 0.46822375, -0.05007584, 0.017568443, -0.5076238, -0.29413325, 0.002323809, 0.40709, 0.3919021, 0.002323809, 0.33095938, 0.46822375, -0.012920824, -0.20252815, 0.31567597, 0.017568443, -0.41601866, -0.46177346, 0.002323809, -0.33979255, 0.16322365, 0.002323809, -0.5076238, -0.49224484, 0.002323809, -0.11101855, -0.11101855, 0.017568443, 0.4528448, 0.40709, 0.017568443, 0.26992118, -0.20252815, -0.012920824, -0.47696137, -0.20252815, 0.002323809, -0.47696137, -0.11101855, 0.002323809, 0.4528448, 0.42246896, 0.002323809, -0.37026387, -0.41601866, 0.017568443, 0.25473326, -0.46177346, -0.012920824, -0.33979255, 0.36133522, 0.002323809, 0.36133522, -0.41601866, 0.002323809, 0.25473326, -0.019700006, -0.012920824, -0.5076238, 0.23944981, 0.002323809, -0.49224484)
-
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_t2t4p"]
 points = PackedVector3Array(0.1327523, 0.017568443, 0.46822375, -0.095830634, -0.012920824, -0.5076238, 0.46822375, 0.002323809, -0.24828294, 0.37671417, -0.012920824, 0.117468864, -0.38554734, 0.002323809, 0.33095938, -0.5076238, 0.017568443, -0.2787543, 0.23944981, 0.017568443, -0.49224484, -0.49224484, -0.012920824, -0.2787543, 0.3919021, 0.017568443, 0.33095938, 0.42246896, -0.012920824, -0.37026387, -0.38554734, 0.017568443, 0.33095938, 0.1327523, 0.002323809, 0.46822375, -0.05007584, 0.017568443, -0.5076238, -0.29413325, 0.002323809, 0.40709, 0.3919021, 0.002323809, 0.33095938, 0.46822375, -0.012920824, -0.20252815, 0.31567597, 0.017568443, -0.41601866, -0.46177346, 0.002323809, -0.33979255, 0.16322365, 0.002323809, -0.5076238, -0.49224484, 0.002323809, -0.11101855, -0.11101855, 0.017568443, 0.4528448, 0.40709, 0.017568443, 0.26992118, -0.20252815, -0.012920824, -0.47696137, -0.20252815, 0.002323809, -0.47696137, -0.11101855, 0.002323809, 0.4528448, 0.42246896, 0.002323809, -0.37026387, -0.41601866, 0.017568443, 0.25473326, -0.46177346, -0.012920824, -0.33979255, 0.36133522, 0.002323809, 0.36133522, -0.41601866, 0.002323809, 0.25473326, -0.019700006, -0.012920824, -0.5076238, 0.23944981, 0.002323809, -0.49224484)
 
@@ -764,9 +764,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17270482, 4.7769804)
 layers = 4
 
 [node name="wand" parent="CharacterBody3D/Head/Camera3D" parent_id_path=PackedInt32Array(841984925, 1282670836) index="2" unique_id=1417012209]
-transform = Transform3D(0.98396635, -0.15955691, 0.07969488, -0.05715977, 0.14115345, 0.9883363, -0.16894503, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
+transform = Transform3D(0.9839662, -0.15955691, 0.07969488, -0.057159763, 0.14115345, 0.9883363, -0.168945, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
 
-[node name="UI" parent="CharacterBody3D" index="5" unique_id=1968195755 node_paths=PackedStringArray("player", "manager")]
+[node name="UI" parent="CharacterBody3D" index="6" unique_id=1968195755 node_paths=PackedStringArray("player", "manager")]
 player = NodePath("..")
 manager = NodePath("../..")
 
@@ -917,15 +917,9 @@ collision_layer = 3
 shape = SubResource("ConvexPolygonShape3D_kn0ld")
 
 [node name="pPlane1_water_1" type="MeshInstance3D" parent="land/water/pPlane2" unique_id=2029909120]
-transform = Transform3D(0.67000425, -1.6768033e-21, -0.7423572, 1.6768035e-21, 1, -7.4537955e-22, 0.74235743, -7.453795e-22, 0.6700044, -0.35502446, 0, 0.60539293)
+transform = Transform3D(0.67000425, -1.6768035e-21, -0.7423572, 1.6768035e-21, 1, -7.4537955e-22, 0.74235743, -7.453795e-22, 0.6700044, -0.355, 0, 0.605)
 mesh = SubResource("ArrayMesh_tl3mo")
 surface_material_override/0 = SubResource("StandardMaterial3D_axeuq")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="land/water/pPlane2/pPlane1_water_1" unique_id=1751235052]
-collision_layer = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="land/water/pPlane2/pPlane1_water_1/StaticBody3D" unique_id=795361762]
-shape = SubResource("ConvexPolygonShape3D_hgpy0")
 
 [node name="pPlane1" type="Node3D" parent="land/water" unique_id=323327647]
 transform = Transform3D(-32.196915, -2.2142874e-23, -31.370026, 0, 1, -1.1293774e-21, 13.724386, -5.1946383e-23, -73.59294, 23.397905, -1.928208, 38.700645)
@@ -946,6 +940,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.349, 0)
 
 [node name="Ground4" parent="land/Grounds" unique_id=1069034830 instance=ExtResource("2_c5t2i")]
 transform = Transform3D(-0.5790207, 0, 0.56194836, 0, 1, 0, -0.39336377, 0, -0.82717216, 50.636436, 1.9073486e-06, 1.2257547)
+
+[node name="Ground5" type="Node3D" parent="land/Grounds" unique_id=277460146]
+transform = Transform3D(-0.85913676, 0, 0.51174605, 0, 1, 0, -0.51174605, 0, -0.85913676, 53.141346, 1.9073486e-06, -34.35968)
+
+[node name="groundEdit" parent="land/Grounds/Ground5" unique_id=2119080578 instance=ExtResource("21_dt0r1")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="Ground" parent="land/Grounds" unique_id=267341775 instance=ExtResource("2_c5t2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.3, -12.748, 0, 11.296819)
@@ -1065,54 +1065,749 @@ transform = Transform3D(-0.6555668, 0.75513715, -6.6432115e-08, -6.928165e-09, -
 [node name="foliage_002_7" parent="maples2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(546459784, 126702308) index="5" unique_id=245946396]
 transform = Transform3D(-0.6555668, 0.75513715, -6.6432115e-08, -6.928165e-09, -9.398821e-08, -1, -0.75513715, -0.6555668, 6.6847264e-08, 155.74173, 0, -51.242844)
 
-[node name="cherryblossoms" parent="." unique_id=1932465243 instance=ExtResource("26_pt3ps")]
+[node name="cherryblossoms" type="Node3D" parent="." unique_id=1719522066]
+
+[node name="cherryblossoms" parent="cherryblossoms" unique_id=1932465243 instance=ExtResource("26_pt3ps")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -10.221268, -0.025381263, -10.59354)
 
-[node name="structure_2" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="0" unique_id=1801798907]
+[node name="structure_2" parent="cherryblossoms/cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="0" unique_id=1801798907]
 transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
 
-[node name="foliage_3" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="1" unique_id=213328493]
+[node name="foliage_3" parent="cherryblossoms/cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="1" unique_id=213328493]
 transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
 
-[node name="structure_001_4" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="2" unique_id=196301101]
+[node name="structure_001_4" parent="cherryblossoms/cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="2" unique_id=196301101]
 transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
 
-[node name="foliage_001_5" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="3" unique_id=1423215254]
+[node name="foliage_001_5" parent="cherryblossoms/cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="3" unique_id=1423215254]
 transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
 
-[node name="structure_002_6" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="4" unique_id=2009014641]
+[node name="structure_002_6" parent="cherryblossoms/cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="4" unique_id=2009014641]
 transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
 
-[node name="foliage_002_7" parent="cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="5" unique_id=1030173254]
+[node name="foliage_002_7" parent="cherryblossoms/cherryblossoms/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1932465243, 1606792397) index="5" unique_id=1030173254]
 transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
 
-[node name="cherryblossoms2" parent="." unique_id=1684453700 instance=ExtResource("26_pt3ps")]
+[node name="cherryblossoms2" parent="cherryblossoms" unique_id=1684453700 instance=ExtResource("26_pt3ps")]
 transform = Transform3D(-0.1, 0, 0, 0, 0.1, 0, 0, 0, -0.1, -21.554914, -0.02538031, -3.765603)
 
-[node name="structure_2" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="0" unique_id=1801798907]
+[node name="structure_2" parent="cherryblossoms/cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="0" unique_id=1801798907]
 transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
 
-[node name="foliage_3" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="1" unique_id=213328493]
+[node name="foliage_3" parent="cherryblossoms/cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="1" unique_id=213328493]
 transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
 
-[node name="structure_001_4" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="2" unique_id=196301101]
+[node name="structure_001_4" parent="cherryblossoms/cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="2" unique_id=196301101]
 transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
 
-[node name="foliage_001_5" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="3" unique_id=1423215254]
+[node name="foliage_001_5" parent="cherryblossoms/cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="3" unique_id=1423215254]
 transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
 
-[node name="structure_002_6" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="4" unique_id=2009014641]
+[node name="structure_002_6" parent="cherryblossoms/cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="4" unique_id=2009014641]
 transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
 
-[node name="foliage_002_7" parent="cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="5" unique_id=1030173254]
+[node name="foliage_002_7" parent="cherryblossoms/cherryblossoms2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="5" unique_id=1030173254]
 transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="cherryblossoms3" parent="cherryblossoms" unique_id=2597760 instance=ExtResource("26_pt3ps")]
+transform = Transform3D(-0.068117715, 0, 0.07321187, 0, 0.1, 0, -0.07321187, 0, -0.068117715, -22.35623, -0.02538031, -18.142189)
+
+[node name="structure_2" parent="cherryblossoms/cherryblossoms3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(2597760, 1606792397) index="0" unique_id=1801798907]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="foliage_3" parent="cherryblossoms/cherryblossoms3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(2597760, 1606792397) index="1" unique_id=213328493]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="structure_001_4" parent="cherryblossoms/cherryblossoms3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(2597760, 1606792397) index="2" unique_id=196301101]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="foliage_001_5" parent="cherryblossoms/cherryblossoms3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(2597760, 1606792397) index="3" unique_id=1423215254]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="structure_002_6" parent="cherryblossoms/cherryblossoms3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(2597760, 1606792397) index="4" unique_id=2009014641]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="foliage_002_7" parent="cherryblossoms/cherryblossoms3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(2597760, 1606792397) index="5" unique_id=1030173254]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="cherryblossoms4" parent="cherryblossoms" unique_id=1828754343 instance=ExtResource("26_pt3ps")]
+transform = Transform3D(-0.09822388, 0, -0.01876358, 0, 0.1, 0, 0.01876358, 0, -0.09822388, -30.476074, -0.02538031, -7.3977566)
+
+[node name="structure_2" parent="cherryblossoms/cherryblossoms4/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1828754343, 1606792397) index="0" unique_id=1801798907]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="foliage_3" parent="cherryblossoms/cherryblossoms4/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1828754343, 1606792397) index="1" unique_id=213328493]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="structure_001_4" parent="cherryblossoms/cherryblossoms4/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1828754343, 1606792397) index="2" unique_id=196301101]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="foliage_001_5" parent="cherryblossoms/cherryblossoms4/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1828754343, 1606792397) index="3" unique_id=1423215254]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="structure_002_6" parent="cherryblossoms/cherryblossoms4/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1828754343, 1606792397) index="4" unique_id=2009014641]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="foliage_002_7" parent="cherryblossoms/cherryblossoms4/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1828754343, 1606792397) index="5" unique_id=1030173254]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="cherryblossoms5" parent="cherryblossoms" unique_id=187910039 instance=ExtResource("26_pt3ps")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 6.8902407, -0.025382217, -13.121825)
+
+[node name="structure_2" parent="cherryblossoms/cherryblossoms5/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(187910039, 1606792397) index="0" unique_id=1801798907]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="foliage_3" parent="cherryblossoms/cherryblossoms5/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(187910039, 1606792397) index="1" unique_id=213328493]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="structure_001_4" parent="cherryblossoms/cherryblossoms5/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(187910039, 1606792397) index="2" unique_id=196301101]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="foliage_001_5" parent="cherryblossoms/cherryblossoms5/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(187910039, 1606792397) index="3" unique_id=1423215254]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="structure_002_6" parent="cherryblossoms/cherryblossoms5/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(187910039, 1606792397) index="4" unique_id=2009014641]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="foliage_002_7" parent="cherryblossoms/cherryblossoms5/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(187910039, 1606792397) index="5" unique_id=1030173254]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="cherryblossoms6" parent="cherryblossoms" unique_id=497957572 instance=ExtResource("26_pt3ps")]
+transform = Transform3D(-0.1, 0, 0, 0, 0.1, 0, 0, 0, -0.1, -4.443406, -0.025381263, -6.2938876)
+
+[node name="structure_2" parent="cherryblossoms/cherryblossoms6/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(497957572, 1606792397) index="0" unique_id=1801798907]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="foliage_3" parent="cherryblossoms/cherryblossoms6/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(497957572, 1606792397) index="1" unique_id=213328493]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="structure_001_4" parent="cherryblossoms/cherryblossoms6/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(497957572, 1606792397) index="2" unique_id=196301101]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="foliage_001_5" parent="cherryblossoms/cherryblossoms6/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(497957572, 1606792397) index="3" unique_id=1423215254]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="structure_002_6" parent="cherryblossoms/cherryblossoms6/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(497957572, 1606792397) index="4" unique_id=2009014641]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="foliage_002_7" parent="cherryblossoms/cherryblossoms6/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(497957572, 1606792397) index="5" unique_id=1030173254]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="cherryblossoms7" parent="cherryblossoms" unique_id=1194277785 instance=ExtResource("26_pt3ps")]
+transform = Transform3D(-0.068117715, 0, 0.07321187, 0, 0.1, 0, -0.07321187, 0, -0.068117715, -5.2447214, -0.025381263, -20.670475)
+
+[node name="structure_2" parent="cherryblossoms/cherryblossoms7/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1194277785, 1606792397) index="0" unique_id=1801798907]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="foliage_3" parent="cherryblossoms/cherryblossoms7/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1194277785, 1606792397) index="1" unique_id=213328493]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="structure_001_4" parent="cherryblossoms/cherryblossoms7/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1194277785, 1606792397) index="2" unique_id=196301101]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="foliage_001_5" parent="cherryblossoms/cherryblossoms7/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1194277785, 1606792397) index="3" unique_id=1423215254]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="structure_002_6" parent="cherryblossoms/cherryblossoms7/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1194277785, 1606792397) index="4" unique_id=2009014641]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="foliage_002_7" parent="cherryblossoms/cherryblossoms7/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1194277785, 1606792397) index="5" unique_id=1030173254]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="cherryblossoms8" parent="cherryblossoms" unique_id=551665009 instance=ExtResource("26_pt3ps")]
+transform = Transform3D(-0.09822388, 0, -0.01876358, 0, 0.1, 0, 0.01876358, 0, -0.09822388, -13.364566, -0.025381263, -9.926042)
+
+[node name="structure_2" parent="cherryblossoms/cherryblossoms8/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(551665009, 1606792397) index="0" unique_id=1801798907]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="foliage_3" parent="cherryblossoms/cherryblossoms8/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(551665009, 1606792397) index="1" unique_id=213328493]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -115.53967, -1.9073486e-05, 54.165787)
+
+[node name="structure_001_4" parent="cherryblossoms/cherryblossoms8/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(551665009, 1606792397) index="2" unique_id=196301101]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="foliage_001_5" parent="cherryblossoms/cherryblossoms8/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(551665009, 1606792397) index="3" unique_id=1423215254]
+transform = Transform3D(0.3060069, 0.9520293, -1.1777097e-07, -1.8462188e-08, -1.1777097e-07, -1, -0.9520293, 0.3060069, -1.8462188e-08, -83.70734, 0, 45.40084)
+
+[node name="structure_002_6" parent="cherryblossoms/cherryblossoms8/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(551665009, 1606792397) index="4" unique_id=2009014641]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="foliage_002_7" parent="cherryblossoms/cherryblossoms8/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(551665009, 1606792397) index="5" unique_id=1030173254]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, -84.5632, 0, 21.810493)
+
+[node name="Sketchfab_Scene" parent="." unique_id=825947537 instance=ExtResource("26_hmc15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7184753, 13.746523, 5.387552)
+
+[node name="ivy" type="Node3D" parent="." unique_id=1876352657]
+
+[node name="ivy" parent="ivy" unique_id=1256405255 instance=ExtResource("27_dt0r1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.195036, 0.13405223, -67.114746)
+
+[node name="Filler" parent="ivy/ivy" index="0" unique_id=394729397]
+visible = false
+
+[node name="Ivy_corner_1" parent="ivy/ivy" index="1" unique_id=424385532]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 23.448458, 0, 50.52889)
+
+[node name="Ivy_corner_1_LOD1" parent="ivy/ivy/Ivy_corner_1" index="1" unique_id=1247703300]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920933e-07, -1.0000001, 0, 1.0000001, -1.1920933e-07, -0.054974288, -0.0006843209, -1.0826625e-08)
+visible = false
+
+[node name="Ivy_corner_1_LOD2" parent="ivy/ivy/Ivy_corner_1" index="2" unique_id=1610447193]
+visible = false
+
+[node name="Ivy_corner_2" parent="ivy/ivy" index="2" unique_id=2126729019]
+visible = false
+
+[node name="Ivy_corner_3" parent="ivy/ivy" index="3" unique_id=1652196620]
+visible = false
+
+[node name="Ivy_ground_1" parent="ivy/ivy" index="4" unique_id=850002481]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -42.39334, 1.6079578, 49.529263)
+
+[node name="Ivy_ground_1_LOD1" parent="ivy/ivy/Ivy_ground_1" index="1" unique_id=2104219286]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, 0.0356182, 8.881278e-05, 0)
+
+[node name="Ivy_ground_1_LOD2" parent="ivy/ivy/Ivy_ground_1" index="2" unique_id=1364695253]
+transform = Transform3D(1.0000004, 0, 0, 0, -1.1920933e-07, -1.0000002, 0, 1.0000002, -1.1920933e-07, 0.18466787, -0.0047852546, 0)
+
+[node name="Ivy_ground_2" parent="ivy/ivy" index="5" unique_id=1268863248]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -37.34876, 2.0797024, 49.613514)
+
+[node name="Ivy_ground_2_LOD1" parent="ivy/ivy/Ivy_ground_2" index="1" unique_id=182853941]
+transform = Transform3D(1.0000001, 0, 0, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, 0.08122478, -0.004125405, 0)
+
+[node name="Ivy_ground_2_LOD2" parent="ivy/ivy/Ivy_ground_2" index="2" unique_id=1530845471]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, -0.0670369, -0.0035467893, 0)
+
+[node name="Ivy_ground_3" parent="ivy/ivy" index="6" unique_id=1280176342]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -19.340847, 2.3539414, 49.702576)
+
+[node name="Ivy_ground_3_LOD1" parent="ivy/ivy/Ivy_ground_3" index="1" unique_id=1475067658]
+transform = Transform3D(1.0000001, 0, 0, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, -0.036814786, 0.0009940863, 0)
+
+[node name="Ivy_ground_3_LOD2" parent="ivy/ivy/Ivy_ground_3" index="2" unique_id=993237988]
+transform = Transform3D(1.0000004, 0, 0, 0, -1.1920933e-07, -1.0000002, 0, 1.0000002, -1.1920933e-07, 0.044417214, 0.0019967556, -0.0020017177)
+
+[node name="Ivy_ground_3_LOD0_003" parent="ivy/ivy" index="7" unique_id=522685660]
+visible = false
+
+[node name="Ivy_ground_direct_1" parent="ivy/ivy" index="8" unique_id=1706946918]
+transform = Transform3D(-100, 8.742277e-06, 0, -8.742278e-06, -99.99999, 0, 0, 0, 99.99999, -2.15588, 1.7023163, 49.445305)
+
+[node name="Ivy_ground_direct_1_LOD1" parent="ivy/ivy/Ivy_ground_direct_1" index="1" unique_id=2032142773]
+transform = Transform3D(1.0000001, 0, -7.1054274e-15, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, -0.07547894, -0.0004895516, 0)
+
+[node name="Ivy_ground_direct_1_LOD2" parent="ivy/ivy/Ivy_ground_direct_1" index="2" unique_id=1001069616]
+transform = Transform3D(1.0000001, 0, -7.1054274e-15, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, 0.13407764, 0.0002961047, 0)
+
+[node name="Ivy_ground_direct_2" parent="ivy/ivy" index="9" unique_id=154090182]
+transform = Transform3D(-100, -8.742277e-06, 0, 8.742278e-06, -99.99999, 0, 0, 0, 100.00001, -7.727173, 1.6446629, 49.55371)
+
+[node name="Ivy_ground_direct_2_LOD1" parent="ivy/ivy/Ivy_ground_direct_2" index="1" unique_id=1533231017]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, -1.1920929e-07, -0.99999994, 0, 0.9999999, -1.1920928e-07, -0.041476205, -0.004335884, 0)
+
+[node name="Ivy_ground_direct_2_LOD2" parent="ivy/ivy/Ivy_ground_direct_2" index="2" unique_id=45490848]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, -1.1920929e-07, -0.99999994, 0, 0.9999999, -1.1920928e-07, 0.032800123, -0.0043724403, 0)
+
+[node name="Ivy_ground_direct_3" parent="ivy/ivy" index="10" unique_id=968100993]
+transform = Transform3D(-100, 8.742277e-06, 0, -8.742278e-06, -99.99999, 0, 0, 0, 99.99999, 8.654943, 1.5397964, 49.491325)
+
+[node name="Ivy_ground_direct_3_LOD1" parent="ivy/ivy/Ivy_ground_direct_3" index="1" unique_id=1755546772]
+transform = Transform3D(1.0000002, 0, -1.4210855e-14, -7.1054274e-15, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, 0.07434985, 0.0035645189, 0)
+
+[node name="Ivy_ground_direct_3_LOD2" parent="ivy/ivy/Ivy_ground_direct_3" index="2" unique_id=1402537499]
+transform = Transform3D(1.0000002, 0, -1.4210855e-14, -7.1054274e-15, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, -0.06996441, 0.0013611969, 0)
+
+[node name="Ivy_wall_1" parent="ivy/ivy" index="11" unique_id=1531828747]
+transform = Transform3D(100, 0, 0, 0, -4.3711384e-06, 99.99999, 0, -99.99999, -4.3711384e-06, 12.884882, -0.048174575, 49.49271)
+
+[node name="Ivy_wall_1_LOD1" parent="ivy/ivy/Ivy_wall_1" index="1" unique_id=715445484]
+transform = Transform3D(1.0000004, 0, 0, 0, -1.1920932e-07, -1.0000002, 0, 1.0000002, -1.1920932e-07, 0.08369011, -0.0059815794, -0.006764287)
+
+[node name="Ivy_wall_1_LOD2" parent="ivy/ivy/Ivy_wall_1" index="2" unique_id=1336113255]
+transform = Transform3D(1.0000005, 0, 0, 0, -1.1920935e-07, -1.0000007, 0, 1.0000007, -1.1920935e-07, -0.30592713, -0.0014846027, -7.9744495e-09)
+
+[node name="Ivy_wall_2" parent="ivy/ivy" index="12" unique_id=2016450429]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -33.420082, 0, 49.60341)
+
+[node name="Ivy_wall_2_LOD1" parent="ivy/ivy/Ivy_wall_2" index="1" unique_id=2074777718]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920933e-07, -1.0000001, 0, 1.0000001, -1.1920933e-07, 0.06887658, -0.0002745986, -1.071021e-08)
+
+[node name="Ivy_wall_2_LOD2" parent="ivy/ivy/Ivy_wall_2" index="2" unique_id=260661221]
+transform = Transform3D(1.0000004, 0, 0, 0, -1.1920935e-07, -1.0000002, 0, 1.0000002, -1.1920935e-07, -0.12962943, -0.00080280006, -2.142042e-08)
+
+[node name="Ivy_wall_3" parent="ivy/ivy" index="13" unique_id=1196707700]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -31.133244, 0, 49.59009)
+
+[node name="Ivy_wall_3_LOD1" parent="ivy/ivy/Ivy_wall_3" index="1" unique_id=939404649]
+transform = Transform3D(1.0000005, 0, 0, 0, -1.1920935e-07, -1.0000004, 0, 1.0000004, -1.1920935e-07, -0.099947385, -0.0006657392, -1.0593794e-08)
+
+[node name="Ivy_wall_3_LOD2" parent="ivy/ivy/Ivy_wall_3" index="2" unique_id=1308461868]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920933e-07, -1.0000001, 0, 1.0000001, -1.1920933e-07, 0.17965391, -0.0027608871, -2.1536835e-08)
+
+[node name="Scene walls" parent="ivy/ivy" index="14" unique_id=202443655]
+visible = false
+
+[node name="Texture_holder_Ivy_1024" parent="ivy/ivy" index="15" unique_id=1070473536]
+visible = false
+
+[node name="Texture_holder_Ivy_2048" parent="ivy/ivy" index="16" unique_id=1309778838]
+visible = false
+
+[node name="Texture_holder_Ivy_512" parent="ivy/ivy" index="17" unique_id=1999720099]
+visible = false
+
+[node name="Texture_holder_Stem_1024" parent="ivy/ivy" index="18" unique_id=1639946771]
+visible = false
+
+[node name="Texture_holder_Stem_2048" parent="ivy/ivy" index="19" unique_id=1481575572]
+visible = false
+
+[node name="Texture_holder_Stem_512" parent="ivy/ivy" index="20" unique_id=32571325]
+visible = false
+
+[node name="ivy2" parent="ivy" unique_id=1403060466 instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.02, 0.134, 68.322)
+
+[node name="Filler" parent="ivy/ivy2" index="0" unique_id=394729397]
+visible = false
+
+[node name="Ivy_corner_1" parent="ivy/ivy2" index="1" unique_id=424385532]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 23.448458, 0, 50.52889)
+
+[node name="Ivy_corner_1_LOD0" parent="ivy/ivy2/Ivy_corner_1" index="0" unique_id=1594307855]
+transform = Transform3D(1.0000001, 6.938894e-22, -7.1054274e-15, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, 0, 0.0076450408, 9.313226e-10)
+
+[node name="Ivy_corner_1_LOD1" parent="ivy/ivy2/Ivy_corner_1" index="1" unique_id=1247703300]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920933e-07, -1.0000001, 0, 1.0000001, -1.1920933e-07, -0.054974288, -0.0006843209, -1.0826625e-08)
+visible = false
+
+[node name="Ivy_corner_1_LOD2" parent="ivy/ivy2/Ivy_corner_1" index="2" unique_id=1610447193]
+visible = false
+
+[node name="Ivy_corner_2" parent="ivy/ivy2" index="2" unique_id=2126729019]
+visible = false
+
+[node name="Ivy_corner_3" parent="ivy/ivy2" index="3" unique_id=1652196620]
+visible = false
+
+[node name="Ivy_ground_1" parent="ivy/ivy2" index="4" unique_id=850002481]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -42.39334, 1.6079578, 49.529263)
+
+[node name="Ivy_ground_1_LOD1" parent="ivy/ivy2/Ivy_ground_1" index="1" unique_id=2104219286]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, 0.0356182, 8.881278e-05, 0)
+
+[node name="Ivy_ground_1_LOD2" parent="ivy/ivy2/Ivy_ground_1" index="2" unique_id=1364695253]
+transform = Transform3D(1.0000004, 0, 0, 0, -1.1920933e-07, -1.0000002, 0, 1.0000002, -1.1920933e-07, 0.18466787, -0.0047852546, 0)
+
+[node name="Ivy_ground_2" parent="ivy/ivy2" index="5" unique_id=1268863248]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -37.34876, 2.0797024, 49.613514)
+
+[node name="Ivy_ground_2_LOD1" parent="ivy/ivy2/Ivy_ground_2" index="1" unique_id=182853941]
+transform = Transform3D(1.0000001, 0, 0, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, 0.08122478, -0.004125405, 0)
+
+[node name="Ivy_ground_2_LOD2" parent="ivy/ivy2/Ivy_ground_2" index="2" unique_id=1530845471]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, -0.0670369, -0.0035467893, 0)
+
+[node name="Ivy_ground_3" parent="ivy/ivy2" index="6" unique_id=1280176342]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -19.340847, 2.3539414, 49.702576)
+
+[node name="Ivy_ground_3_LOD1" parent="ivy/ivy2/Ivy_ground_3" index="1" unique_id=1475067658]
+transform = Transform3D(1.0000001, 0, 0, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, -0.036814786, 0.0009940863, 0)
+
+[node name="Ivy_ground_3_LOD2" parent="ivy/ivy2/Ivy_ground_3" index="2" unique_id=993237988]
+transform = Transform3D(1.0000004, 0, 0, 0, -1.1920933e-07, -1.0000002, 0, 1.0000002, -1.1920933e-07, 0.044417214, 0.0019967556, -0.0020017177)
+
+[node name="Ivy_ground_3_LOD0_003" parent="ivy/ivy2" index="7" unique_id=522685660]
+visible = false
+
+[node name="Ivy_ground_direct_1" parent="ivy/ivy2" index="8" unique_id=1706946918]
+transform = Transform3D(-100, 8.742277e-06, 0, -8.742278e-06, -99.99999, 0, 0, 0, 99.99999, -2.15588, 1.7023163, 49.445305)
+
+[node name="Ivy_ground_direct_1_LOD1" parent="ivy/ivy2/Ivy_ground_direct_1" index="1" unique_id=2032142773]
+transform = Transform3D(1.0000001, 0, -7.1054274e-15, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, -0.07547894, -0.0004895516, 0)
+
+[node name="Ivy_ground_direct_1_LOD2" parent="ivy/ivy2/Ivy_ground_direct_1" index="2" unique_id=1001069616]
+transform = Transform3D(1.0000001, 0, -7.1054274e-15, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, 0.13407764, 0.0002961047, 0)
+
+[node name="Ivy_ground_direct_2" parent="ivy/ivy2" index="9" unique_id=154090182]
+transform = Transform3D(-100, -8.742277e-06, 0, 8.742278e-06, -99.99999, 0, 0, 0, 100.00001, -7.727173, 1.6446629, 49.55371)
+
+[node name="Ivy_ground_direct_2_LOD1" parent="ivy/ivy2/Ivy_ground_direct_2" index="1" unique_id=1533231017]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, -1.1920929e-07, -0.99999994, 0, 0.9999999, -1.1920928e-07, -0.041476205, -0.004335884, 0)
+
+[node name="Ivy_ground_direct_2_LOD2" parent="ivy/ivy2/Ivy_ground_direct_2" index="2" unique_id=45490848]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, -1.1920929e-07, -0.99999994, 0, 0.9999999, -1.1920928e-07, 0.032800123, -0.0043724403, 0)
+
+[node name="Ivy_ground_direct_3" parent="ivy/ivy2" index="10" unique_id=968100993]
+transform = Transform3D(-100, 8.742277e-06, 0, -8.742278e-06, -99.99999, 0, 0, 0, 99.99999, 8.654943, 1.5397964, 49.491325)
+
+[node name="Ivy_ground_direct_3_LOD1" parent="ivy/ivy2/Ivy_ground_direct_3" index="1" unique_id=1755546772]
+transform = Transform3D(1.0000002, 0, -1.4210855e-14, -7.1054274e-15, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, 0.07434985, 0.0035645189, 0)
+
+[node name="Ivy_ground_direct_3_LOD2" parent="ivy/ivy2/Ivy_ground_direct_3" index="2" unique_id=1402537499]
+transform = Transform3D(1.0000002, 0, -1.4210855e-14, -7.1054274e-15, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, -0.06996441, 0.0013611969, 0)
+
+[node name="Ivy_wall_1" parent="ivy/ivy2" index="11" unique_id=1531828747]
+transform = Transform3D(100, 0, 0, 0, -4.3711384e-06, 99.99999, 0, -99.99999, -4.3711384e-06, 12.884882, -0.048174575, 49.49271)
+
+[node name="Ivy_wall_1_LOD1" parent="ivy/ivy2/Ivy_wall_1" index="1" unique_id=715445484]
+transform = Transform3D(1.0000005, 0, 0, -7.1054274e-15, -1.1920933e-07, -1.0000004, -4.2351647e-22, 1.0000004, -1.1920933e-07, 0.08369011, -0.00068205595, -0.0067642876)
+
+[node name="Ivy_wall_1_LOD2" parent="ivy/ivy2/Ivy_wall_1" index="2" unique_id=1336113255]
+transform = Transform3D(1.0000005, 0, 0, 0, -1.1920935e-07, -1.0000007, 0, 1.0000007, -1.1920935e-07, -0.30592713, -0.0014846027, -7.9744495e-09)
+
+[node name="Ivy_wall_2" parent="ivy/ivy2" index="12" unique_id=2016450429]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -33.420082, 0, 49.60341)
+
+[node name="Ivy_wall_2_LOD1" parent="ivy/ivy2/Ivy_wall_2" index="1" unique_id=2074777718]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920933e-07, -1.0000001, 0, 1.0000001, -1.1920933e-07, 0.06887658, -0.0002745986, -1.071021e-08)
+
+[node name="Ivy_wall_2_LOD2" parent="ivy/ivy2/Ivy_wall_2" index="2" unique_id=260661221]
+transform = Transform3D(1.0000004, 0, 0, 0, -1.1920935e-07, -1.0000002, 0, 1.0000002, -1.1920935e-07, -0.12962943, -0.00080280006, -2.142042e-08)
+
+[node name="Ivy_wall_3" parent="ivy/ivy2" index="13" unique_id=1196707700]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -31.133244, 0, 49.59009)
+
+[node name="Ivy_wall_3_LOD1" parent="ivy/ivy2/Ivy_wall_3" index="1" unique_id=939404649]
+transform = Transform3D(1.0000005, 0, 0, 0, -1.1920935e-07, -1.0000004, 0, 1.0000004, -1.1920935e-07, -0.099947385, -0.0006657392, -1.0593794e-08)
+
+[node name="Ivy_wall_3_LOD2" parent="ivy/ivy2/Ivy_wall_3" index="2" unique_id=1308461868]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920933e-07, -1.0000001, 0, 1.0000001, -1.1920933e-07, 0.17965391, -0.0027608871, -2.1536835e-08)
+
+[node name="Scene walls" parent="ivy/ivy2" index="14" unique_id=202443655]
+visible = false
+
+[node name="Texture_holder_Ivy_1024" parent="ivy/ivy2" index="15" unique_id=1070473536]
+visible = false
+
+[node name="Texture_holder_Ivy_2048" parent="ivy/ivy2" index="16" unique_id=1309778838]
+visible = false
+
+[node name="Texture_holder_Ivy_512" parent="ivy/ivy2" index="17" unique_id=1999720099]
+visible = false
+
+[node name="Texture_holder_Stem_1024" parent="ivy/ivy2" index="18" unique_id=1639946771]
+visible = false
+
+[node name="Texture_holder_Stem_2048" parent="ivy/ivy2" index="19" unique_id=1481575572]
+visible = false
+
+[node name="Texture_holder_Stem_512" parent="ivy/ivy2" index="20" unique_id=32571325]
+visible = false
+
+[node name="ivy3" parent="ivy" unique_id=134547824 instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 98.083, 0.134, 31.687)
+
+[node name="Filler" parent="ivy/ivy3" index="0" unique_id=394729397]
+visible = false
+
+[node name="Ivy_corner_1" parent="ivy/ivy3" index="1" unique_id=424385532]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 23.448458, 0, 50.52889)
+visible = false
+
+[node name="Ivy_corner_1_LOD0" parent="ivy/ivy3/Ivy_corner_1" index="0" unique_id=1594307855]
+transform = Transform3D(1.0000001, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.0076450408, 9.313226e-10)
+
+[node name="Ivy_corner_1_LOD1" parent="ivy/ivy3/Ivy_corner_1" index="1" unique_id=1247703300]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920933e-07, -1.0000001, 0, 1.0000001, -1.1920933e-07, -0.054974288, -0.0006843209, -1.0826625e-08)
+visible = false
+
+[node name="Ivy_corner_1_LOD2" parent="ivy/ivy3/Ivy_corner_1" index="2" unique_id=1610447193]
+visible = false
+
+[node name="Ivy_corner_2" parent="ivy/ivy3" index="2" unique_id=2126729019]
+visible = false
+
+[node name="Ivy_corner_3" parent="ivy/ivy3" index="3" unique_id=1652196620]
+visible = false
+
+[node name="Ivy_ground_1" parent="ivy/ivy3" index="4" unique_id=850002481]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -42.39334, 1.6079578, 49.529263)
+
+[node name="Ivy_ground_1_LOD1" parent="ivy/ivy3/Ivy_ground_1" index="1" unique_id=2104219286]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, 0.0356182, 8.881278e-05, 0)
+
+[node name="Ivy_ground_1_LOD2" parent="ivy/ivy3/Ivy_ground_1" index="2" unique_id=1364695253]
+transform = Transform3D(1.0000004, 0, 0, 0, -1.1920933e-07, -1.0000002, 0, 1.0000002, -1.1920933e-07, 0.18466787, -0.0047852546, 0)
+
+[node name="Ivy_ground_2" parent="ivy/ivy3" index="5" unique_id=1268863248]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -37.34876, 2.0797024, 49.613514)
+
+[node name="Ivy_ground_2_LOD1" parent="ivy/ivy3/Ivy_ground_2" index="1" unique_id=182853941]
+transform = Transform3D(1.0000001, 0, 0, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, 0.08122478, -0.004125405, 0)
+
+[node name="Ivy_ground_2_LOD2" parent="ivy/ivy3/Ivy_ground_2" index="2" unique_id=1530845471]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, -0.0670369, -0.0035467893, 0)
+
+[node name="Ivy_ground_3" parent="ivy/ivy3" index="6" unique_id=1280176342]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -19.340847, 2.3539414, 49.702576)
+
+[node name="Ivy_ground_3_LOD1" parent="ivy/ivy3/Ivy_ground_3" index="1" unique_id=1475067658]
+transform = Transform3D(1.0000001, 0, 0, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, -0.036814786, 0.0009940863, 0)
+
+[node name="Ivy_ground_3_LOD2" parent="ivy/ivy3/Ivy_ground_3" index="2" unique_id=993237988]
+transform = Transform3D(0.5899105, -0.80746937, 3.529561e-08, -2.7105074e-22, -4.3711417e-08, -1.0000006, 0.8074695, 0.58991045, -2.5785804e-08, 0.053667486, 0.0019967593, 0.033500016)
+
+[node name="Ivy_ground_3_LOD0_003" parent="ivy/ivy3" index="7" unique_id=522685660]
+visible = false
+
+[node name="Ivy_ground_direct_1" parent="ivy/ivy3" index="8" unique_id=1706946918]
+transform = Transform3D(-100, 1.5099579e-05, 0, -1.509958e-05, -99.99999, 0, 0, 0, 99.99999, -2.15588, 1.7023163, 49.445305)
+visible = false
+
+[node name="Ivy_ground_direct_1_LOD0" parent="ivy/ivy3/Ivy_ground_direct_1" index="0" unique_id=1141592468]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
+
+[node name="Ivy_ground_direct_1_LOD1" parent="ivy/ivy3/Ivy_ground_direct_1" index="1" unique_id=2032142773]
+transform = Transform3D(1.0000001, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.07547894, -0.0004895516, 0)
+
+[node name="Ivy_ground_direct_1_LOD2" parent="ivy/ivy3/Ivy_ground_direct_1" index="2" unique_id=1001069616]
+transform = Transform3D(1.0000001, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.13407764, 0.0002961047, 0)
+
+[node name="Ivy_ground_direct_2" parent="ivy/ivy3" index="9" unique_id=154090182]
+transform = Transform3D(-100, -1.5099579e-05, 0, 1.509958e-05, -99.99999, 0, 0, 0, 100.00001, -7.727173, 1.6446629, 49.55371)
+visible = false
+
+[node name="Ivy_ground_direct_2_LOD0" parent="ivy/ivy3/Ivy_ground_direct_2" index="0" unique_id=788461701]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
+
+[node name="Ivy_ground_direct_2_LOD1" parent="ivy/ivy3/Ivy_ground_direct_2" index="1" unique_id=1533231017]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.9999999, -4.3711385e-08, -0.041476205, -0.004335884, 0)
+
+[node name="Ivy_ground_direct_2_LOD2" parent="ivy/ivy3/Ivy_ground_direct_2" index="2" unique_id=45490848]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.9999999, -4.3711385e-08, 0.032800123, -0.0043724403, 0)
+
+[node name="Ivy_ground_direct_3" parent="ivy/ivy3" index="10" unique_id=968100993]
+transform = Transform3D(-100, 1.5099579e-05, 0, -1.509958e-05, -99.99999, 0, 0, 0, 99.99999, 8.654943, 1.5397964, 49.491325)
+visible = false
+
+[node name="Ivy_ground_direct_3_LOD0" parent="ivy/ivy3/Ivy_ground_direct_3" index="0" unique_id=1699029088]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
+
+[node name="Ivy_ground_direct_3_LOD1" parent="ivy/ivy3/Ivy_ground_direct_3" index="1" unique_id=1755546772]
+transform = Transform3D(1.0000002, -8.4703295e-22, 3.7024986e-29, 0, -4.3711392e-08, -1.0000001, 8.47033e-22, 1.0000001, -4.3711392e-08, 0.07434985, 0.0035645189, 0)
+
+[node name="Ivy_ground_direct_3_LOD2" parent="ivy/ivy3/Ivy_ground_direct_3" index="2" unique_id=1402537499]
+transform = Transform3D(1.0000002, -8.4703295e-22, 3.7024986e-29, 0, -4.3711392e-08, -1.0000001, 8.47033e-22, 1.0000001, -4.3711392e-08, -0.06996441, 0.0013611969, 0)
+
+[node name="Ivy_wall_1" parent="ivy/ivy3" index="11" unique_id=1531828747]
+transform = Transform3D(100, 0, 0, 0, -4.3711384e-06, 99.99999, 0, -99.99999, -4.3711384e-06, 12.884882, -0.048174575, 49.49271)
+visible = false
+
+[node name="Ivy_wall_1_LOD0" parent="ivy/ivy3/Ivy_wall_1" index="0" unique_id=14491438]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
+
+[node name="Ivy_wall_1_LOD1" parent="ivy/ivy3/Ivy_wall_1" index="1" unique_id=715445484]
+transform = Transform3D(1.0000005, -4.2351642e-22, 1.851249e-29, 0, -4.3711402e-08, -1.0000004, 4.2351647e-22, 1.0000004, -4.3711402e-08, 0.08369011, -0.00068205595, -0.0067642876)
+
+[node name="Ivy_wall_1_LOD2" parent="ivy/ivy3/Ivy_wall_1" index="2" unique_id=1336113255]
+transform = Transform3D(1.0000005, 0, 0, 0, -1.1920935e-07, -1.0000007, 0, 1.0000007, -1.1920935e-07, -0.30592713, -0.0014846027, -7.9744495e-09)
+
+[node name="Ivy_wall_2" parent="ivy/ivy3" index="12" unique_id=2016450429]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -33.420082, 0, 49.60341)
+
+[node name="Ivy_wall_2_LOD1" parent="ivy/ivy3/Ivy_wall_2" index="1" unique_id=2074777718]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920933e-07, -1.0000001, 0, 1.0000001, -1.1920933e-07, 0.06887658, -0.0002745986, -1.071021e-08)
+
+[node name="Ivy_wall_2_LOD2" parent="ivy/ivy3/Ivy_wall_2" index="2" unique_id=260661221]
+transform = Transform3D(1.0000004, 0, 0, 0, -1.1920935e-07, -1.0000002, 0, 1.0000002, -1.1920935e-07, -0.12962943, -0.00080280006, -2.142042e-08)
+
+[node name="Ivy_wall_3" parent="ivy/ivy3" index="13" unique_id=1196707700]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -31.133244, 0, 49.59009)
+
+[node name="Ivy_wall_3_LOD1" parent="ivy/ivy3/Ivy_wall_3" index="1" unique_id=939404649]
+transform = Transform3D(1.0000005, 0, 0, 0, -1.1920935e-07, -1.0000004, 0, 1.0000004, -1.1920935e-07, -0.099947385, -0.0006657392, -1.0593794e-08)
+
+[node name="Ivy_wall_3_LOD2" parent="ivy/ivy3/Ivy_wall_3" index="2" unique_id=1308461868]
+transform = Transform3D(0.80201566, -1.3642421e-14, -0.5973037, -0.59730375, -1.1920936e-07, -0.8020155, -7.1204155e-08, 1.0000005, -9.560771e-08, 0.15184547, -0.013054013, 0.0050464603)
+
+[node name="Scene walls" parent="ivy/ivy3" index="14" unique_id=202443655]
+visible = false
+
+[node name="Texture_holder_Ivy_1024" parent="ivy/ivy3" index="15" unique_id=1070473536]
+visible = false
+
+[node name="Texture_holder_Ivy_2048" parent="ivy/ivy3" index="16" unique_id=1309778838]
+visible = false
+
+[node name="Texture_holder_Ivy_512" parent="ivy/ivy3" index="17" unique_id=1999720099]
+visible = false
+
+[node name="Texture_holder_Stem_1024" parent="ivy/ivy3" index="18" unique_id=1639946771]
+visible = false
+
+[node name="Texture_holder_Stem_2048" parent="ivy/ivy3" index="19" unique_id=1481575572]
+visible = false
+
+[node name="Texture_holder_Stem_512" parent="ivy/ivy3" index="20" unique_id=32571325]
+visible = false
+
+[node name="ivy4" parent="ivy" unique_id=488540317 instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -76.007, 0.134, -26.908)
+
+[node name="Filler" parent="ivy/ivy4" index="0" unique_id=394729397]
+visible = false
+
+[node name="Ivy_corner_1" parent="ivy/ivy4" index="1" unique_id=424385532]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 23.448458, 0, 50.52889)
+visible = false
+
+[node name="Ivy_corner_1_LOD0" parent="ivy/ivy4/Ivy_corner_1" index="0" unique_id=1594307855]
+transform = Transform3D(1.0000001, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.0076450408, 9.313226e-10)
+
+[node name="Ivy_corner_1_LOD1" parent="ivy/ivy4/Ivy_corner_1" index="1" unique_id=1247703300]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920933e-07, -1.0000001, 0, 1.0000001, -1.1920933e-07, -0.054974288, -0.0006843209, -1.0826625e-08)
+visible = false
+
+[node name="Ivy_corner_1_LOD2" parent="ivy/ivy4/Ivy_corner_1" index="2" unique_id=1610447193]
+visible = false
+
+[node name="Ivy_corner_2" parent="ivy/ivy4" index="2" unique_id=2126729019]
+visible = false
+
+[node name="Ivy_corner_3" parent="ivy/ivy4" index="3" unique_id=1652196620]
+visible = false
+
+[node name="Ivy_ground_1" parent="ivy/ivy4" index="4" unique_id=850002481]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -42.39334, 1.6079578, 49.529263)
+
+[node name="Ivy_ground_1_LOD1" parent="ivy/ivy4/Ivy_ground_1" index="1" unique_id=2104219286]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, 0.0356182, 8.881278e-05, 0)
+
+[node name="Ivy_ground_1_LOD2" parent="ivy/ivy4/Ivy_ground_1" index="2" unique_id=1364695253]
+transform = Transform3D(1.0000004, 0, 0, 0, -1.1920933e-07, -1.0000002, 0, 1.0000002, -1.1920933e-07, 0.18466787, -0.0047852546, 0)
+
+[node name="Ivy_ground_2" parent="ivy/ivy4" index="5" unique_id=1268863248]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -37.34876, 2.0797024, 49.613514)
+
+[node name="Ivy_ground_2_LOD1" parent="ivy/ivy4/Ivy_ground_2" index="1" unique_id=182853941]
+transform = Transform3D(1.0000001, 0, 0, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, 0.08122478, -0.004125405, 0)
+
+[node name="Ivy_ground_2_LOD2" parent="ivy/ivy4/Ivy_ground_2" index="2" unique_id=1530845471]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920932e-07, -1.0000001, 0, 1.0000001, -1.1920932e-07, -0.0670369, -0.0035467893, 0)
+
+[node name="Ivy_ground_3" parent="ivy/ivy4" index="6" unique_id=1280176342]
+transform = Transform3D(100, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, -19.340847, 2.3539414, 49.702576)
+
+[node name="Ivy_ground_3_LOD1" parent="ivy/ivy4/Ivy_ground_3" index="1" unique_id=1475067658]
+transform = Transform3D(1.0000001, 0, 0, 0, -1.192093e-07, -1, 0, 1, -1.192093e-07, -0.036814786, 0.0009940863, 0)
+
+[node name="Ivy_ground_3_LOD2" parent="ivy/ivy4/Ivy_ground_3" index="2" unique_id=993237988]
+transform = Transform3D(0.88512635, -0.46535265, 2.0341211e-08, -2.7105074e-22, -4.3711417e-08, -1.0000007, 0.46535292, 0.88512623, -3.8690104e-08, 0.07696348, 0.0019967593, 0.019947723)
+
+[node name="Ivy_ground_3_LOD0_003" parent="ivy/ivy4" index="7" unique_id=522685660]
+visible = false
+
+[node name="Ivy_ground_direct_1" parent="ivy/ivy4" index="8" unique_id=1706946918]
+transform = Transform3D(-100, 1.5099579e-05, 0, -1.509958e-05, -99.99999, 0, 0, 0, 99.99999, -2.15588, 1.7023163, 49.445305)
+
+[node name="Ivy_ground_direct_1_LOD0" parent="ivy/ivy4/Ivy_ground_direct_1" index="0" unique_id=1141592468]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
+visible = false
+
+[node name="Ivy_ground_direct_1_LOD1" parent="ivy/ivy4/Ivy_ground_direct_1" index="1" unique_id=2032142773]
+transform = Transform3D(0.8938615, 0.44834402, -3.5624275e-08, 1.6026533e-08, -1.1140948e-07, -1.0000004, -0.4483441, 0.89386135, -1.0677001e-07, 0.11319141, -0.0004895795, 0.007009566)
+
+[node name="Ivy_ground_direct_1_LOD2" parent="ivy/ivy4/Ivy_ground_direct_1" index="2" unique_id=1001069616]
+transform = Transform3D(1.0000004, -3.5527137e-15, -1.4210855e-14, 0, -4.3711395e-08, -1.0000002, -7.1054274e-15, 1.0000002, -4.3711402e-08, 0.15096933, 0.00029610842, 0.0025123656)
+
+[node name="Ivy_ground_direct_2" parent="ivy/ivy4" index="9" unique_id=154090182]
+transform = Transform3D(-100, -1.5099579e-05, 0, 1.509958e-05, -99.99999, 0, 0, 0, 100.00001, -7.727173, 1.6446629, 49.55371)
+visible = false
+
+[node name="Ivy_ground_direct_2_LOD0" parent="ivy/ivy4/Ivy_ground_direct_2" index="0" unique_id=788461701]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
+
+[node name="Ivy_ground_direct_2_LOD1" parent="ivy/ivy4/Ivy_ground_direct_2" index="1" unique_id=1533231017]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.9999999, -4.3711385e-08, -0.041476205, -0.004335884, 0)
+
+[node name="Ivy_ground_direct_2_LOD2" parent="ivy/ivy4/Ivy_ground_direct_2" index="2" unique_id=45490848]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.9999999, -4.3711385e-08, 0.032800123, -0.0043724403, 0)
+
+[node name="Ivy_ground_direct_3" parent="ivy/ivy4" index="10" unique_id=968100993]
+transform = Transform3D(-100, 1.5099579e-05, 0, -1.509958e-05, -99.99999, 0, 0, 0, 99.99999, 8.654943, 1.5397964, 49.491325)
+visible = false
+
+[node name="Ivy_ground_direct_3_LOD0" parent="ivy/ivy4/Ivy_ground_direct_3" index="0" unique_id=1699029088]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
+
+[node name="Ivy_ground_direct_3_LOD1" parent="ivy/ivy4/Ivy_ground_direct_3" index="1" unique_id=1755546772]
+transform = Transform3D(1.0000002, -8.4703295e-22, 3.7024986e-29, 0, -4.3711392e-08, -1.0000001, 8.47033e-22, 1.0000001, -4.3711392e-08, 0.07434985, 0.0035645189, 0)
+
+[node name="Ivy_ground_direct_3_LOD2" parent="ivy/ivy4/Ivy_ground_direct_3" index="2" unique_id=1402537499]
+transform = Transform3D(1.0000002, -8.4703295e-22, 3.7024986e-29, 0, -4.3711392e-08, -1.0000001, 8.47033e-22, 1.0000001, -4.3711392e-08, -0.06996441, 0.0013611969, 0)
+
+[node name="Ivy_wall_1" parent="ivy/ivy4" index="11" unique_id=1531828747]
+transform = Transform3D(100, 0, 0, 0, -4.3711384e-06, 99.99999, 0, -99.99999, -4.3711384e-06, 12.884882, -0.048174575, 49.49271)
+visible = false
+
+[node name="Ivy_wall_1_LOD0" parent="ivy/ivy4/Ivy_wall_1" index="0" unique_id=14491438]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
+
+[node name="Ivy_wall_1_LOD1" parent="ivy/ivy4/Ivy_wall_1" index="1" unique_id=715445484]
+transform = Transform3D(1.0000005, -4.2351642e-22, 1.851249e-29, 0, -4.3711402e-08, -1.0000004, 4.2351647e-22, 1.0000004, -4.3711402e-08, 0.08369011, -0.00068205595, -0.0067642876)
+
+[node name="Ivy_wall_1_LOD2" parent="ivy/ivy4/Ivy_wall_1" index="2" unique_id=1336113255]
+transform = Transform3D(1.0000005, 0, 0, 0, -1.1920935e-07, -1.0000007, 0, 1.0000007, -1.1920935e-07, -0.30592713, -0.0014846027, -7.9744495e-09)
+
+[node name="Ivy_wall_2" parent="ivy/ivy4" index="12" unique_id=2016450429]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -33.420082, 0, 49.60341)
+
+[node name="Ivy_wall_2_LOD1" parent="ivy/ivy4/Ivy_wall_2" index="1" unique_id=2074777718]
+transform = Transform3D(1.0000002, 0, 0, 0, -1.1920933e-07, -1.0000001, 0, 1.0000001, -1.1920933e-07, 0.06887658, -0.0002745986, -1.071021e-08)
+
+[node name="Ivy_wall_2_LOD2" parent="ivy/ivy4/Ivy_wall_2" index="2" unique_id=260661221]
+transform = Transform3D(1.0000004, 0, 0, 0, -1.1920935e-07, -1.0000002, 0, 1.0000002, -1.1920935e-07, -0.12962943, -0.00080280006, -2.142042e-08)
+
+[node name="Ivy_wall_3" parent="ivy/ivy4" index="13" unique_id=1196707700]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -31.133244, 0, 49.59009)
+
+[node name="Ivy_wall_3_LOD1" parent="ivy/ivy4/Ivy_wall_3" index="1" unique_id=939404649]
+transform = Transform3D(1.0000005, 0, 0, 0, -1.1920935e-07, -1.0000004, 0, 1.0000004, -1.1920935e-07, -0.099947385, -0.0006657392, -1.0593794e-08)
+
+[node name="Ivy_wall_3_LOD2" parent="ivy/ivy4/Ivy_wall_3" index="2" unique_id=1308461868]
+transform = Transform3D(0.80201566, -1.3642421e-14, -0.5973037, -0.59730375, -1.1920936e-07, -0.8020155, -7.1204155e-08, 1.0000005, -9.560771e-08, 0.15184547, -0.013054013, 0.0050464603)
+
+[node name="Scene walls" parent="ivy/ivy4" index="14" unique_id=202443655]
+visible = false
+
+[node name="Texture_holder_Ivy_1024" parent="ivy/ivy4" index="15" unique_id=1070473536]
+visible = false
+
+[node name="Texture_holder_Ivy_2048" parent="ivy/ivy4" index="16" unique_id=1309778838]
+visible = false
+
+[node name="Texture_holder_Ivy_512" parent="ivy/ivy4" index="17" unique_id=1999720099]
+visible = false
+
+[node name="Texture_holder_Stem_1024" parent="ivy/ivy4" index="18" unique_id=1639946771]
+visible = false
+
+[node name="Texture_holder_Stem_2048" parent="ivy/ivy4" index="19" unique_id=1481575572]
+visible = false
+
+[node name="Texture_holder_Stem_512" parent="ivy/ivy4" index="20" unique_id=32571325]
+visible = false
 
 [editable path="CharacterBody3D"]
 [editable path="CharacterBody3D/UI"]
 [editable path="Cloud"]
 [editable path="Cloud/Sketchfab_Scene"]
+[editable path="land/Grounds/Ground5/groundEdit"]
 [editable path="land/fences"]
 [editable path="maples"]
 [editable path="maples2"]
-[editable path="cherryblossoms"]
-[editable path="cherryblossoms2"]
+[editable path="cherryblossoms/cherryblossoms"]
+[editable path="cherryblossoms/cherryblossoms2"]
+[editable path="cherryblossoms/cherryblossoms3"]
+[editable path="cherryblossoms/cherryblossoms4"]
+[editable path="cherryblossoms/cherryblossoms5"]
+[editable path="cherryblossoms/cherryblossoms6"]
+[editable path="cherryblossoms/cherryblossoms7"]
+[editable path="cherryblossoms/cherryblossoms8"]
+[editable path="ivy/ivy"]
+[editable path="ivy/ivy2"]
+[editable path="ivy/ivy3"]
+[editable path="ivy/ivy4"]

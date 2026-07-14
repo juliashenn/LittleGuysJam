@@ -58,8 +58,8 @@ func fadeFromBlack():
 	black.visible = false
 	
 func show_dialogue(strs: Array[String]):
-	player.freeze()
-	player.enabled = false
+	#player.freeze()
+	#player.enabled = false
 	dialogue.visible = true
 	dialogue_lines = strs
 	current_line = 0
@@ -108,8 +108,8 @@ func advance():
 		hide_dialogue()
 
 func hide_dialogue():
-	if not settings.visible:
-		player.unfreeze()
+	#if not settings.visible:
+		#player.unfreeze()
 	typing_audio.stop()
 	dialogue.visible = false
 	label.text = ""
