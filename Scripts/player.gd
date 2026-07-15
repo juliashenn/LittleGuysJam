@@ -192,8 +192,8 @@ func blink():
 
 func add_bird(bird: Bird) -> int:
 	if found_birds.size() == 0:
-		give_dialogue(["Little birds can help you carry note sprites to the stage...", 
-		"Once a bird returns to the gazebo, press q to call them over one at a time...",
+		give_dialogue(["Little birds can help you carry note sprites to the stage", 
+		"Once a bird returns to the gazebo, press q to call them over one at a time",
 		"Drag a note to the bird, and it'll carry it back for you"])
 	var n: int
 	if bird not in found_birds:
