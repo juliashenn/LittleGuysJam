@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://l0me6yk6koso"
+path="res://.godot/imported/D5 E.ogg-5faefb7a913303d91bdca6de5f8acdcd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound/Notes/D5 E.ogg"
+dest_files=["res://.godot/imported/D5 E.ogg-5faefb7a913303d91bdca6de5f8acdcd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

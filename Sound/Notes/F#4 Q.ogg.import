@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c623tvn8lf62b"
+path="res://.godot/imported/F#4 Q.ogg-9a2b8a6c3c3bdcc6e9f85d38e336ca87.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound/Notes/F#4 Q.ogg"
+dest_files=["res://.godot/imported/F#4 Q.ogg-9a2b8a6c3c3bdcc6e9f85d38e336ca87.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

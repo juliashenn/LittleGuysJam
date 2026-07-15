@@ -2097,6 +2097,53 @@ _subresources={
 "slice_99/start_frame": 0,
 "slices/amount": 0
 }
+},
+"materials": {
+"Boat": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/fishing_gecko/textures/Boat.tres",
+"use_external/path": "uid://dbklygbb7vx0a"
+},
+"Emissive_Assets": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/fishing_gecko/textures/Emissive_Assets.tres",
+"use_external/path": "uid://dd5mdjy0f7k2b"
+},
+"Line": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/fishing_gecko/textures/Line.tres",
+"use_external/path": "uid://c0h0ydyxyqyhy"
+},
+"MAT_Fish": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/fishing_gecko/textures/MAT_Fish.tres",
+"use_external/path": "uid://hwcw6g1jsuin"
+},
+"Plinth": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/fishing_gecko/textures/Plinth.tres",
+"use_external/path": "uid://bdriwj7ni5huy"
+},
+"Rocks": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/fishing_gecko/textures/Rocks.tres",
+"use_external/path": "uid://7mndqp465vyq"
+},
+"Texture_Atlas": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/fishing_gecko/textures/Texture_Atlas.tres",
+"use_external/path": "uid://dmdt5wtn4yonr"
+},
+"Water": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/fishing_gecko/textures/Water.tres",
+"use_external/path": "uid://crdao5y7xrnit"
+},
+"lambert8": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/fishing_gecko/textures/lambert8.tres",
+"use_external/path": "uid://cs1sk5hsoabxn"
+}
 }
 }
 gltf/naming_version=2

@@ -1,15 +1,11 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cr6fyja3jud7n"]
 
-[ext_resource type="Texture2D" uid="uid://g5p2eh4xfkvf" path="res://Assets/vintage_gramophone_game-asset_by_rigdhi/textures/disk_baseColor.png" id="1_1ix85"]
-[ext_resource type="Texture2D" uid="uid://g4tvo8oupkcw" path="res://Assets/vintage_gramophone_game-asset_by_rigdhi/textures/disk_normal.png" id="2_r2dgi"]
-
 [resource]
 resource_name = "disk"
 cull_mode = 2
-albedo_texture = ExtResource("1_1ix85")
+albedo_color = Color(0, 0, 0, 1)
 metallic = 0.1697406
 roughness = 0.21225168
 emission_energy_multiplier = 2.304707
 normal_enabled = true
-normal_texture = ExtResource("2_r2dgi")
 metadata/_gltf_primary_texture_coord = 0

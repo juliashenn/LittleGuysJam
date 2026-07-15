@@ -3,6 +3,7 @@ class_name UI
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var black: ColorRect = $black
+@onready var interact_label: Label = $VBoxContainer/InteractLabel
 
 #dialogue
 @onready var dialogue: Control = $dialogue
@@ -13,7 +14,6 @@ var full_text: String = ""
 var current_text: String = ""
 var char_index := 0
 var is_typing := false
-@onready var typing_audio: AudioStreamPlayer3D = $AudioStreamPlayer3D
 @export var typing_speed := 0.1
 
 # settings
@@ -24,6 +24,7 @@ var is_typing := false
 @onready var test_audio: AudioStreamPlayer3D = $Settings/AudioStreamPlayer3D
 @onready var credit: Control = $credits
 @onready var start: Control = $Start
+@onready var start_song: AudioStreamPlayer3D = $Start/startSong
 @onready var end: Control = $end
 var ending := false
 @onready var esc: Label = $esc
@@ -44,6 +45,8 @@ func credits():
 	ending = true
 	esc.visible = false
 	credit.visible = true
+	dialogue.visible = false
+	interact_label.visible = false
 	anim.play("credits")
 
 func fadeToBlack():
@@ -72,20 +75,16 @@ func start_line(str: String):
 	is_typing = true
 	label.text = ""
 	set_process(true)
-	typing_audio.play(0.0)
 
 func _process(delta):
 	if not is_typing:
 		return
 	if char_index < full_text.length():
-		if not typing_audio.playing:
-			typing_audio.play(0.0)
 		current_text += full_text[char_index]
 		label.text = current_text
 		char_index += 1
 		await get_tree().create_timer(typing_speed).timeout
 	else:
-		typing_audio.stop()
 		is_typing = false
 		
 func _unhandled_input(event: InputEvent):
@@ -104,13 +103,11 @@ func advance():
 	if current_line < dialogue_lines.size():
 		start_line(dialogue_lines[current_line])
 	else:
-		typing_audio.stop()
 		hide_dialogue()
 
 func hide_dialogue():
 	#if not settings.visible:
 		#player.unfreeze()
-	typing_audio.stop()
 	dialogue.visible = false
 	label.text = ""
 
@@ -128,8 +125,7 @@ func _on_h_slider_value_changed(value: float) -> void:
 
 
 func _on_close_pressed() -> void:
-	if not dialogue.visible:
-		player.unfreeze()
+	player.unfreeze()
 	settings.visible = false
 
 func show_end():
@@ -151,10 +147,31 @@ func intro():
 func _on_start_pressed() -> void:
 	start.visible = false
 	manager.start()
+	await manager.cutscene_anim.animation_finished
+	var tween = create_tween()
+	tween.tween_property(start_song, "volume_db", -75, 2.0)
+	await tween.finished
+	start_song.stop()
 
-func _on_reset_spawners_pressed() -> void:
-	manager.reset_spawners()
-	if not dialogue.visible:
-		player.unfreeze()
+func _on_reset_water_pressed() -> void:
+	manager.water_spawner.reset()
+	player.unfreeze()
 	settings.visible = false
-	show_dialogue(["Spawners have been reset"])
+	player.give_dialogue(["water drops have returned to their slumber"])
+
+func _on_reset_flower() -> void:
+	manager.flower_spawner.reset()
+	player.unfreeze()
+	settings.visible = false
+	player.give_dialogue(["flowers have returned to their slumber"])
+
+func _on_reset_mushroom() -> void:
+	manager.mushroom_spawner.reset()
+	player.unfreeze()
+	settings.visible = false
+	player.give_dialogue(["mushrooms have returned to their slumber"])
+
+
+func _on_skip_to_end_pressed() -> void:
+	settings.visible = false
+	manager.cutscene_anim.play("final")

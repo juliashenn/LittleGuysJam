@@ -8,7 +8,7 @@ class_name Melody
 		#return resource_path.get_basename().get_file()
 var audioFile: String:
 	get:
-		return "res://Sound/" + fileName + ".wav"
+		return "res://Sound/" + fileName + ".ogg"
 
 var quarternotes: Array[Note]:
 	get:

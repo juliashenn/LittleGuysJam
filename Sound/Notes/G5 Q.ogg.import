@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://uf0kvj3v3ule"
+path="res://.godot/imported/G5 Q.ogg-05be77b1b9b014903d15184575dbd96f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound/Notes/G5 Q.ogg"
+dest_files=["res://.godot/imported/G5 Q.ogg-05be77b1b9b014903d15184575dbd96f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://dpcc4ilat0mkx" path="res://Scripts/mushroom_spawner.gd" id="1_7hu1l"]
 [ext_resource type="PackedScene" uid="uid://b5scu561to32f" path="res://Scenes/mushroom.tscn" id="3_7hu1l"]
 [ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="4_u5nsi"]
+[ext_resource type="PackedScene" uid="uid://b816c21unypv3" path="res://Assets/vegetation/cherry_blossom_trees/scene.gltf" id="5_dbj58"]
 [ext_resource type="PackedScene" uid="uid://cc7wc2ght1ioy" path="res://Assets/mossy_log/scene.gltf" id="5_u5nsi"]
-[ext_resource type="PackedScene" uid="uid://btlxmtgvoq1vj" path="res://Assets/vegetation/maple_trees/scene.gltf" id="6_dbj58"]
+[ext_resource type="Material" uid="uid://b3ja478r60dyj" path="res://Assets/vegetation/cherry_blossom_trees/textures/redfoliage.tres" id="6_dbj58"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u5nsi"]
 size = Vector3(26.29889, 1.0400391, 23.847778)
@@ -71,68 +72,104 @@ interact_name = "Awaken the Mushrooms"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=939812208]
 shape = SubResource("SphereShape3D_c7e87")
 
-[node name="Sketchfab_Scene" parent="." unique_id=1178122005 instance=ExtResource("6_dbj58")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.47722435, -0.874788, -1.3383211)
+[node name="Sketchfab_Scene" parent="." unique_id=1684453700 instance=ExtResource("5_dbj58")]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, -1.3007827, 0)
 
-[node name="structure_2" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="0" unique_id=1387938951]
-transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 38.214607, 0, -74.9055)
+[node name="structure_2" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="0" unique_id=1801798907]
+transform = Transform3D(1, 0, 0, 0, -1.6858742e-07, -1, 0, 1, -1.6858742e-07, 69.47864, 0, 43.421036)
 
-[node name="foliage_3" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="1" unique_id=248343516]
-transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 38.214607, 0, -74.9055)
+[node name="foliage_3" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="1" unique_id=213328493]
+transform = Transform3D(1, 0, 0, 0, -1.6858742e-07, -1, 0, 1, -1.6858742e-07, 69.47864, 0, 43.421036)
 
-[node name="structure_001_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="2" unique_id=1932480003]
-transform = Transform3D(0.25619122, -0.9666261, 1.5161291e-07, 4.8801635e-08, -1.4391331e-07, -1, 0.9666261, 0.25619122, 1.0303608e-08, 96.905045, 0, -90.73244)
+[node name="Object_6" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/foliage_3" index="0" unique_id=1781415253]
+surface_material_override/0 = ExtResource("6_dbj58")
 
-[node name="foliage_001_5" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="3" unique_id=365003849]
-transform = Transform3D(0.25619122, -0.9666261, 1.5161291e-07, 4.8801635e-08, -1.4391331e-07, -1, 0.9666261, 0.25619122, 1.0303608e-08, 96.905045, 0, -90.73244)
+[node name="structure_001_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="2" unique_id=196301101]
+transform = Transform3D(0.3060069, 0.95202935, -1.1777098e-07, -1.8462188e-08, -1.1777098e-07, -1, -0.95202935, 0.3060069, -1.8462188e-08, 84.06799, 0, 15.099164)
 
-[node name="structure_002_6" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="4" unique_id=872617417]
-transform = Transform3D(-0.7108185, -0.7033754, 7.1033675e-08, -6.9281687e-09, -9.398821e-08, -1, 0.7033754, -0.7108185, 6.193547e-08, 125.62669, 0, -30.83483)
+[node name="foliage_001_5" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="3" unique_id=1423215254]
+transform = Transform3D(0.3060069, 0.95202935, -1.1777098e-07, -1.8462188e-08, -1.1777098e-07, -1, -0.95202935, 0.3060069, -1.8462188e-08, 84.06799, 0, 15.099164)
 
-[node name="foliage_002_7" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1178122005, 126702308) index="5" unique_id=245946396]
-transform = Transform3D(-0.7108185, -0.7033754, 7.1033675e-08, -6.9281687e-09, -9.398821e-08, -1, 0.7033754, -0.7108185, 6.193547e-08, 125.62669, 0, -30.83483)
+[node name="Object_10" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/foliage_001_5" index="0" unique_id=1153961706]
+surface_material_override/0 = ExtResource("6_dbj58")
 
-[node name="Sketchfab_Scene2" parent="." unique_id=860655603 instance=ExtResource("6_dbj58")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.47722435, -0.874788, -1.3383211)
+[node name="Object_11" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/foliage_001_5" index="1" unique_id=1789340560]
+surface_material_override/0 = ExtResource("6_dbj58")
 
-[node name="structure_2" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="0" unique_id=1387938951]
-transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 97.02313, 0, 19.42574)
+[node name="structure_002_6" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="4" unique_id=2009014641]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 82.67604, 0, -41.32176)
 
-[node name="foliage_3" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="1" unique_id=248343516]
-transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 97.02313, 0, 19.42574)
+[node name="foliage_002_7" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1684453700, 1606792397) index="5" unique_id=1030173254]
+transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 82.67604, 0, -41.32176)
 
-[node name="structure_001_4" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="2" unique_id=1932480003]
-transform = Transform3D(-0.4406913, -0.89765877, 1.07678595e-07, 4.8801624e-08, -1.439133e-07, -1, 0.89765877, -0.4406913, 1.0722856e-07, 21.717978, 0, 88.577484)
+[node name="Object_15" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/foliage_002_7" index="0" unique_id=2147313873]
+surface_material_override/0 = ExtResource("6_dbj58")
 
-[node name="foliage_001_5" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="3" unique_id=365003849]
-transform = Transform3D(-0.4406913, -0.89765877, 1.07678595e-07, 4.8801624e-08, -1.439133e-07, -1, 0.89765877, -0.4406913, 1.0722856e-07, 21.717978, 0, 88.577484)
+[node name="Sketchfab_Scene2" parent="." unique_id=1999745108 instance=ExtResource("5_dbj58")]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, -1.3007827, 0)
 
-[node name="structure_002_6" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="4" unique_id=872617417]
-transform = Transform3D(0.78233814, -0.6228539, 5.3120765e-08, -6.928165e-09, -9.398821e-08, -1, 0.6228539, 0.78233814, -7.784582e-08, 71.84581, 0, 83.10147)
+[node name="structure_2" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1999745108, 1606792397) index="0" unique_id=1801798907]
+transform = Transform3D(0.5489693, -0.83584267, 1.4091255e-07, 0, -1.6858746e-07, -1, 0.83584267, 0.5489693, -9.254933e-08, 22.30615, 7.335957e-06, 75.2997)
 
-[node name="foliage_002_7" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(860655603, 126702308) index="5" unique_id=245946396]
-transform = Transform3D(0.78233814, -0.6228539, 5.3120765e-08, -6.928165e-09, -9.398821e-08, -1, 0.6228539, 0.78233814, -7.784582e-08, 71.84581, 0, 83.10147)
+[node name="foliage_3" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1999745108, 1606792397) index="1" unique_id=213328493]
+transform = Transform3D(0.5489693, -0.83584267, 1.4091255e-07, 0, -1.6858746e-07, -1, 0.83584267, 0.5489693, -9.254933e-08, 22.30615, 7.335957e-06, 75.2997)
 
-[node name="Sketchfab_Scene3" parent="." unique_id=1690179791 instance=ExtResource("6_dbj58")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.47722435, -0.874788, -1.3383211)
+[node name="Object_6" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode/foliage_3" index="0" unique_id=1781415253]
+surface_material_override/0 = ExtResource("6_dbj58")
 
-[node name="structure_2" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="0" unique_id=1387938951]
-transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 2.3502827, 0, -106.15715)
+[node name="structure_001_4" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1999745108, 1606792397) index="2" unique_id=196301101]
+transform = Transform3D(0.3060069, 0.95202935, -1.1777101e-07, -1.8462188e-08, -1.1777101e-07, -1, -0.95202935, 0.3060069, -1.8462188e-08, -42.205242, 0, -63.65812)
 
-[node name="foliage_3" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="1" unique_id=248343516]
-transform = Transform3D(1, 0, 0, 0, -1.685874e-07, -1, 0, 1, -1.685874e-07, 2.3502827, 0, -106.15715)
+[node name="foliage_001_5" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1999745108, 1606792397) index="3" unique_id=1423215254]
+transform = Transform3D(0.3060069, 0.95202935, -1.1777101e-07, -1.8462188e-08, -1.1777101e-07, -1, -0.95202935, 0.3060069, -1.8462188e-08, -42.205242, 0, -63.65812)
 
-[node name="structure_001_4" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="2" unique_id=1932480003]
-transform = Transform3D(-0.4406913, -0.89765877, 1.07678595e-07, 4.8801624e-08, -1.439133e-07, -1, 0.89765877, -0.4406913, 1.07228566e-07, -36.045692, 0, 97.95188)
+[node name="Object_10" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode/foliage_001_5" index="0" unique_id=1153961706]
+surface_material_override/0 = ExtResource("6_dbj58")
 
-[node name="foliage_001_5" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="3" unique_id=365003849]
-transform = Transform3D(-0.4406913, -0.89765877, 1.07678595e-07, 4.8801624e-08, -1.439133e-07, -1, 0.89765877, -0.4406913, 1.07228566e-07, -36.045692, 0, 97.95188)
+[node name="Object_11" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode/foliage_001_5" index="1" unique_id=1789340560]
+surface_material_override/0 = ExtResource("6_dbj58")
 
-[node name="structure_002_6" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="4" unique_id=872617417]
-transform = Transform3D(0.78233814, -0.6228539, 5.3120765e-08, -6.928165e-09, -9.398821e-08, -1, 0.6228539, 0.78233814, -7.784582e-08, -42.591442, 0, -81.07463)
+[node name="structure_002_6" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1999745108, 1606792397) index="4" unique_id=2009014641]
+transform = Transform3D(1, 0, 0, 0, -1.6858742e-07, -1, 0, 1, -1.6858742e-07, 3.8221583, 0, -53.04383)
 
-[node name="foliage_002_7" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1690179791, 126702308) index="5" unique_id=245946396]
-transform = Transform3D(0.78233814, -0.6228539, 5.3120765e-08, -6.928165e-09, -9.398821e-08, -1, 0.6228539, 0.78233814, -7.784582e-08, -42.591442, 0, -81.07463)
+[node name="foliage_002_7" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1999745108, 1606792397) index="5" unique_id=1030173254]
+transform = Transform3D(1, 0, 0, 0, -1.6858742e-07, -1, 0, 1, -1.6858742e-07, 3.8221583, 0, -53.04383)
+
+[node name="Object_15" parent="Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode/foliage_002_7" index="0" unique_id=2147313873]
+surface_material_override/0 = ExtResource("6_dbj58")
+
+[node name="Sketchfab_Scene3" parent="." unique_id=1296032633 instance=ExtResource("5_dbj58")]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, -1.3007827, 0)
+
+[node name="structure_2" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1296032633, 1606792397) index="0" unique_id=1801798907]
+transform = Transform3D(0.5489694, -0.8358427, 1.4091255e-07, 0, -1.6858748e-07, -1, 0.8358427, 0.5489694, -9.2549335e-08, 22.211056, 7.6293945e-06, -104.28589)
+
+[node name="foliage_3" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1296032633, 1606792397) index="1" unique_id=213328493]
+transform = Transform3D(0.5489694, -0.8358427, 1.4091255e-07, 0, -1.6858748e-07, -1, 0.8358427, 0.5489694, -9.2549335e-08, 22.211056, 7.6293945e-06, -104.28589)
+
+[node name="Object_6" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode/foliage_3" index="0" unique_id=1781415253]
+surface_material_override/0 = ExtResource("6_dbj58")
+
+[node name="structure_001_4" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1296032633, 1606792397) index="2" unique_id=196301101]
+transform = Transform3D(-0.9269385, 0.37521368, -2.7075993e-08, -1.8462186e-08, -1.1777105e-07, -1, -0.37521368, -0.9269385, 1.1609377e-07, -14.282641, -7.6293945e-06, 64.297714)
+
+[node name="foliage_001_5" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1296032633, 1606792397) index="3" unique_id=1423215254]
+transform = Transform3D(-0.9269385, 0.37521368, -2.7075993e-08, -1.8462186e-08, -1.1777105e-07, -1, -0.37521368, -0.9269385, 1.1609377e-07, -14.282641, -7.6293945e-06, 64.297714)
+
+[node name="Object_10" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode/foliage_001_5" index="0" unique_id=1153961706]
+surface_material_override/0 = ExtResource("6_dbj58")
+
+[node name="Object_11" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode/foliage_001_5" index="1" unique_id=1789340560]
+surface_material_override/0 = ExtResource("6_dbj58")
+
+[node name="structure_002_6" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1296032633, 1606792397) index="4" unique_id=2009014641]
+transform = Transform3D(1, 0, 0, 0, -1.6858743e-07, -1, 0, 1, -1.6858743e-07, 73.48323, 7.6293945e-06, -69.77098)
+
+[node name="foliage_002_7" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(1296032633, 1606792397) index="5" unique_id=1030173254]
+transform = Transform3D(1, 0, 0, 0, -1.6858743e-07, -1, 0, 1, -1.6858743e-07, 73.48323, 7.6293945e-06, -69.77098)
+
+[node name="Object_15" parent="Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode/foliage_002_7" index="0" unique_id=2147313873]
+surface_material_override/0 = ExtResource("6_dbj58")
 
 [editable path="log"]
 [editable path="log2"]

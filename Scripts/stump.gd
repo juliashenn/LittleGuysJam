@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is Grabbable and not holding_note:
 		var obj = body as Grabbable
+		obj.drop()
 		holding_note = obj
 		
 		if obj.active_tween:
@@ -36,7 +37,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		obj.rotation = Vector3.ZERO
 		obj.freeze = true
 		light.show()
-		obj.grabbed = false
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body is Grabbable and holding_note:

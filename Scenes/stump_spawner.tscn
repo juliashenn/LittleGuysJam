@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://m4ovyu3yrs7s" path="res://Scripts/StumpSpawner.gd" id="1_3mtug"]
 [ext_resource type="PackedScene" uid="uid://bjepdprrhssu8" path="res://Assets/music_stand/scene.gltf" id="2_h1qk8"]
+[ext_resource type="Resource" uid="uid://hsvn73w4rc6t" path="res://Resources/tutorial.tres" id="2_r31oc"]
 [ext_resource type="Material" uid="uid://cmjwirjmqlsaa" path="res://Assets/sheet-music/source/secretpaper.tres" id="3_x0jf6"]
 [ext_resource type="Material" uid="uid://d3rmaym1ckefa" path="res://Assets/sheet-music/source/line5.tres" id="4_bg14r"]
 [ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="5_bg14r"]
@@ -32,6 +33,7 @@ shader_parameter/master_alpha = 0.6
 
 [node name="stumpSpawner" type="Node3D" unique_id=1744331624]
 script = ExtResource("1_3mtug")
+melody = ExtResource("2_r31oc")
 
 [node name="Sketchfab_Scene" parent="." unique_id=1676072025 instance=ExtResource("2_h1qk8")]
 transform = Transform3D(-2.6226834e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226834e-08, 0, 0.5901824, 0)

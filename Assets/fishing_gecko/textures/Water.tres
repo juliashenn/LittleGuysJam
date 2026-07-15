@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://crdao5y7xrnit"]
+
+[ext_resource type="Texture2D" uid="uid://dbni11rwr317f" path="res://Assets/fishing_gecko/textures/Water_baseColor.png" id="1_t1c78"]
+
+[resource]
+resource_name = "Water"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_t1c78")
+metallic = 1.0
+metallic_texture_channel = 2
+roughness = 0.6
+roughness_texture_channel = 1
+normal_enabled = true
+metadata/_gltf_primary_texture_coord = 0

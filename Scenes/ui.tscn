@@ -8,10 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://tg6abu4378w3" path="res://Assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Setting menu.png" id="4_2246s"]
 [ext_resource type="Texture2D" uid="uid://o4sixogej1bk" path="res://Assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/UI Settings Buttons.png" id="5_q7pk6"]
 [ext_resource type="Texture2D" uid="uid://k3giookog2hc" path="res://Assets/Sprout Lands - UI Pack - Basic pack/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_m78vo"]
-[ext_resource type="AudioStream" uid="uid://kr0bftf4swwe" path="res://Sound/Notes/D4 Q.wav" id="7_smcll"]
+[ext_resource type="AudioStream" uid="uid://cumnivuuvtqof" path="res://Sound/Notes/D4 Q.ogg" id="9_3r70p"]
 [ext_resource type="Texture2D" uid="uid://bf8gsepsje4wv" path="res://Assets/ui/pixil-frame-0 (1).png" id="10_4vbiv"]
 [ext_resource type="Texture2D" uid="uid://smb3kx3wf521" path="res://Assets/ui/pixil-frame-0.png" id="11_3r70p"]
 [ext_resource type="Texture2D" uid="uid://m6dmk1syc5jq" path="res://Assets/ui/pixil-frame-0 (2).png" id="12_8fs27"]
+[ext_resource type="AudioStream" uid="uid://cwt4mkxifwud7" path="res://Sound/shortJourney.ogg" id="13_3r70p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bern5"]
 atlas = ExtResource("3_ryf15")
@@ -37,7 +38,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(190, 650)]
+"values": [Vector2(22, 650)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -184,6 +185,7 @@ text = "[E] Awaken the Cloud"
 horizontal_alignment = 2
 
 [node name="credits" type="Control" parent="." unique_id=73451750]
+visible = false
 layout_mode = 1
 anchor_right = 1.0
 anchor_bottom = 0.99100006
@@ -195,14 +197,13 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 190.0
+offset_left = 22.0
 offset_top = 650.0
-offset_right = 151.0
+offset_right = -17.0
 offset_bottom = 3426.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/line_separation = 4
-theme_override_fonts/normal_font = ExtResource("2_qdvrb")
 text = "CREDITS
 
 Peaceful Orchestra Music 
@@ -218,6 +219,13 @@ by Cup Nooble (https://cupnooble.itch.io/)
 natural pond with birds and reeds rustling in the wind 
 by Garuda1982 - https://freesound.org/s/641717/ 
 License: Attribution 4.0
+
+13326 magic short harp spell 
+by Robinhood76 - https://freesound.org/s/789027/
+License: Attribution NonCommercial 4.0
+
+Character Footsteps (Dirt & Grass)
+by nebula audio (https://nebula-audio.itch.io/)
 
 Gazebo by ROSTISLAV via TurboSquid
 https://www.turbosquid.com/FullPreview/863050 
@@ -362,6 +370,16 @@ by creaturecreator is licensed under CC Attribution-NonCommercial-NoDerivs
 by Jagobo is licensed under Creative Commons Attribution 
 (http://creativecommons.org/licenses/by/4.0/).
 
+\"Photorealistic Bush\" 
+(https://skfb.ly/6RntG) by Adrian Sheremet 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
+\"Ivy pack (12 variations, lowpoly, LODs)\" 
+(https://skfb.ly/ptz7X) by LOLIPOP 
+is licensed under Creative Commons Attribution 
+(http://creativecommons.org/licenses/by/4.0/).
+
 \"PUMPING HEART MODEL\" 
 (https://skfb.ly/6RIR7) by omarelone 
 is licensed under Creative Commons Attribution 
@@ -424,6 +442,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -1.0
 offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="dialogueBox" type="TextureRect" parent="dialogue" unique_id=1583544133]
@@ -479,10 +499,7 @@ text = "Press Enter or C to continue"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1461413392]
-
 [node name="Settings" type="Control" parent="." unique_id=177663755]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -519,8 +536,11 @@ alignment = 1
 [node name="left" type="VBoxContainer" parent="Settings/HBoxContainer" unique_id=1188936868]
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 20
 alignment = 1
+
+[node name="Label" type="Label" parent="Settings/HBoxContainer/left" unique_id=295831372]
+layout_mode = 2
 
 [node name="Volume" type="Control" parent="Settings/HBoxContainer/left" unique_id=142924257]
 layout_mode = 2
@@ -549,26 +569,70 @@ value = 0.9
 tick_count = 10
 ticks_position = 3
 
-[node name="resetSpawners" type="TextureButton" parent="Settings/HBoxContainer/left" unique_id=640950426]
+[node name="resetWater" type="TextureButton" parent="Settings/HBoxContainer/left" unique_id=640950426]
 texture_filter = 1
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_y2pxb")
 texture_pressed = SubResource("AtlasTexture_bpmvg")
-stretch_mode = 5
+stretch_mode = 0
 
-[node name="Label" type="Label" parent="Settings/HBoxContainer/left/resetSpawners" unique_id=1668571112]
+[node name="Label" type="Label" parent="Settings/HBoxContainer/left/resetWater" unique_id=1668571112]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.504
 anchor_top = 0.47300002
 anchor_right = 0.504
 anchor_bottom = 0.47300002
-offset_left = -89.600006
+offset_left = -115.600006
+offset_top = -10.299999
+offset_right = 122.399994
+offset_bottom = 12.700001
+text = "Reset Water Spawner"
+label_settings = SubResource("LabelSettings_wof3k")
+
+[node name="resetFlower" type="TextureButton" parent="Settings/HBoxContainer/left" unique_id=1219235499]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_y2pxb")
+texture_pressed = SubResource("AtlasTexture_bpmvg")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Settings/HBoxContainer/left/resetFlower" unique_id=1698848247]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.47300002
+anchor_right = 0.504
+anchor_bottom = 0.47300002
+offset_left = -115.600006
 offset_top = -11.475002
-offset_right = 89.399994
+offset_right = 135.4
 offset_bottom = 11.524998
-text = "Reset Spawners"
+text = "Reset Flower Spawner"
+label_settings = SubResource("LabelSettings_wof3k")
+
+[node name="resetMushroom" type="TextureButton" parent="Settings/HBoxContainer/left" unique_id=2076575851]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_y2pxb")
+texture_pressed = SubResource("AtlasTexture_bpmvg")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Settings/HBoxContainer/left/resetMushroom" unique_id=1963385118]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.47300002
+anchor_right = 0.504
+anchor_bottom = 0.47300002
+offset_left = -125.600006
+offset_top = -11.475002
+offset_right = 152.4
+offset_bottom = 11.524998
+text = "Reset Mushroom Spawner"
 label_settings = SubResource("LabelSettings_wof3k")
 
 [node name="right" type="VBoxContainer" parent="Settings/HBoxContainer" unique_id=77735812]
@@ -588,9 +652,35 @@ text = "Left Mouse Click - Poke
 Hold Right Mouse - Grab/Move
 E - Interact
 Q - Call Little Helper
-Left Shift - Sprint"
+Left Shift - Sprint
+
+Quarter Note (Water) - one beat
+Half Note (flower) - two Beats
+Eighth Note (mushroom) - half a Beat"
 label_settings = SubResource("LabelSettings_j1lyr")
 horizontal_alignment = 1
+
+[node name="skipToEnd" type="TextureButton" parent="Settings/HBoxContainer/right" unique_id=2028476404]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_y2pxb")
+texture_pressed = SubResource("AtlasTexture_bpmvg")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Settings/HBoxContainer/right/skipToEnd" unique_id=1130788977]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.47300002
+anchor_right = 0.504
+anchor_bottom = 0.47300002
+offset_left = -137.6
+offset_top = -11.474987
+offset_right = 148.4
+offset_bottom = 11.525013
+text = "Skip to end credit scene"
+label_settings = SubResource("LabelSettings_wof3k")
 
 [node name="close" type="TextureButton" parent="Settings" unique_id=559256215]
 texture_filter = 1
@@ -609,7 +699,8 @@ texture_pressed = SubResource("AtlasTexture_c7e87")
 stretch_mode = 5
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Settings" unique_id=40162193]
-stream = ExtResource("7_smcll")
+stream = ExtResource("9_3r70p")
+volume_db = -15.413
 
 [node name="esc" type="Label" parent="." unique_id=1133585607]
 layout_mode = 1
@@ -624,6 +715,7 @@ text = "ESC"
 label_settings = SubResource("LabelSettings_626w8")
 
 [node name="Start" type="Control" parent="." unique_id=478330250]
+visible = false
 texture_filter = 1
 layout_mode = 1
 anchor_right = 1.003
@@ -694,6 +786,12 @@ offset_right = 940.0
 offset_bottom = 267.0
 texture = ExtResource("12_8fs27")
 stretch_mode = 5
+
+[node name="startSong" type="AudioStreamPlayer3D" parent="Start" unique_id=921125409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.391579, -3.8364525, 4.7873545)
+stream = ExtResource("13_3r70p")
+volume_db = -27.272
+autoplay = true
 
 [node name="end" type="Control" parent="." unique_id=668522860]
 visible = false
@@ -770,6 +868,9 @@ stretch_mode = 5
 
 [connection signal="pressed" from="credits/skip" to="." method="_on_skip_pressed"]
 [connection signal="value_changed" from="Settings/HBoxContainer/left/Volume/HSlider" to="." method="_on_h_slider_value_changed"]
-[connection signal="pressed" from="Settings/HBoxContainer/left/resetSpawners" to="." method="_on_reset_spawners_pressed"]
+[connection signal="pressed" from="Settings/HBoxContainer/left/resetWater" to="." method="_on_reset_water_pressed"]
+[connection signal="pressed" from="Settings/HBoxContainer/left/resetFlower" to="." method="_on_reset_flower"]
+[connection signal="pressed" from="Settings/HBoxContainer/left/resetMushroom" to="." method="_on_reset_mushroom"]
+[connection signal="pressed" from="Settings/HBoxContainer/right/skipToEnd" to="." method="_on_skip_to_end_pressed"]
 [connection signal="pressed" from="Settings/close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Start/start" to="." method="_on_start_pressed"]

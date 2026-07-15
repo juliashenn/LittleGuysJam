@@ -31,6 +31,7 @@ layers = 4
 layers = 4
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2015714393]
+volume_db = -16.147
 
 [node name="Interactable" type="Area3D" parent="." unique_id=874053452]
 script = ExtResource("3_b88mk")

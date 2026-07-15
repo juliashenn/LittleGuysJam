@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bfdcqep6ccsq6" path="res://Scripts/instrument.gd" id="1_68lnk"]
 [ext_resource type="PackedScene" uid="uid://doa5va1h7mpk0" path="res://Assets/harp (2)/scene.gltf" id="1_twqlc"]
-[ext_resource type="AudioStream" uid="uid://cmx71v0sy38ec" path="res://Sound/eighthHarp.wav" id="3_m88r8"]
+[ext_resource type="AudioStream" uid="uid://b5euu803xg8l6" path="res://Sound/eighthHarp.ogg" id="3_m88r8"]
 
 [sub_resource type="Animation" id="Animation_twqlc"]
 length = 0.001
@@ -62,6 +62,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_m88r8"]
 resource_name = "playing"
 length = 2.714
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -136,11 +137,12 @@ hue_variation_max = 0.17
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1603222478]
 stream = ExtResource("3_m88r8")
+volume_db = -15.945
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1588740574]
 transform = Transform3D(0.9889981, -0.009120327, -0.14764668, 0.1479281, 0.060975477, 0.98711663, 0, -0.9980976, 0.06165378, -0.8552811, 4.8782444, -0.1750243)
 light_color = Color(0.99, 0.90684, 0.8118, 1)
-light_energy = 10.0
+light_energy = 3.0
 spot_range = 7.1883674
 spot_angle = 25.071375
 

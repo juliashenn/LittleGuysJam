@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c45cnahf6gw27"
+path="res://.godot/imported/GRASS - Walk 1.ogg-7d95b9b75ea3bdae782c69150da86c6e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Walk/Grass/GRASS - Walk 1.ogg"
+dest_files=["res://.godot/imported/GRASS - Walk 1.ogg-7d95b9b75ea3bdae782c69150da86c6e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

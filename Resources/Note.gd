@@ -13,4 +13,4 @@ var Length: String:
 		return fileName.substr(fileName.length() - 1, fileName.length())
 var audioFile: String:
 	get:
-		return "res://Sound/Notes/" + fileName + ".wav"
+		return "res://Sound/Notes/" + fileName + ".ogg"

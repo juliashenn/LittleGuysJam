@@ -38,17 +38,32 @@ func set_up_melody():
 	mushroom_spawner.melody = curr_melody
 	flower_spawner.melody = curr_melody
 	stump_spawner.spawn()
+	player.global_position = Vector3(0,0.173, 4.777)
+	player.look_at(Vector3.ZERO, Vector3.UP)
 	#spawn()
 
+var completion_dialogue : Array[String] = [
+	"",
+	"The Flute remembers its melody",
+	"the cello awakens",
+	"the harp joins the orchestra",
+	"the violin awakens, and the orchestra is whole once more"
+]
+
+func trigger_completion_dialogue():
+	player.give_dialogue([completion_dialogue[curr_level]])
+	
 func melody_solved():
 	if curr_level != 0: 
 		cutscene_anim.play(str(curr_level))
+		await cutscene_anim.animation_finished
+		if curr_level == 5:
+			cutscene_anim.play("final")
+			return
+	else:
+		player.give_dialogue(["You've learned to conduct the little note sprites", "now, help the sleeping instruments remember their melodies"])
 	player.blink()
 	curr_level += 1
-	if curr_level == 5:
-		cutscene_anim.play("final")
-		return
-	#clear_spawner()
 	stump_spawner.clear()
 	reset_spawners()
 	set_up_melody()

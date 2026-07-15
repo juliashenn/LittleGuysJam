@@ -71,6 +71,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if discovered and body is Grabbable and not holding_note:
 		var obj = body as Grabbable
 		holding_note = obj
+		obj.drop()
 		
 		if obj.active_tween:
 			obj.active_tween.kill()
@@ -83,7 +84,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		obj.angular_velocity = Vector3.ZERO
 		obj.rotation = Vector3.ZERO
 		obj.freeze = true
-		obj.grabbed = false
 		return_to_base()
 
 #func _on_area_3d_body_exited(body: Node3D) -> void:

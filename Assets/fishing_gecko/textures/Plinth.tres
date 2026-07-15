@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bdriwj7ni5huy"]
+
+[ext_resource type="Texture2D" uid="uid://nbvh3jijo7ak" path="res://Assets/fishing_gecko/textures/Plinth_baseColor.png" id="1_dxoe1"]
+
+[resource]
+resource_name = "Plinth"
+cull_mode = 2
+albedo_texture = ExtResource("1_dxoe1")
+metallic = 1.0
+metallic_texture_channel = 2
+roughness_texture_channel = 1
+normal_enabled = true
+metadata/_gltf_primary_texture_coord = 0

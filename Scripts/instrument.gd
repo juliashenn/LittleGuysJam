@@ -7,14 +7,10 @@ class_name Instrument
 @onready var light: SpotLight3D = $SpotLight3D
 
 var awakened := false
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	light.visible = false
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func awake():
 	anim.play("awake")
@@ -37,3 +33,6 @@ func start_particles():
 func stop_particles():
 	particles.emitting = false
 	
+func sleep():
+	anim.play("RESET")
+	stop_particles()

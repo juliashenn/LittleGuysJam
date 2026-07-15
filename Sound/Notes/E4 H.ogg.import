@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bg2thih16snmg"
+path="res://.godot/imported/E4 H.ogg-4118dfe9329981219e23e453c003b003.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound/Notes/E4 H.ogg"
+dest_files=["res://.godot/imported/E4 H.ogg-4118dfe9329981219e23e453c003b003.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

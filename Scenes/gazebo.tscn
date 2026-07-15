@@ -2,17 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://caqj217q8yhw" path="res://Assets/gazebo/gazeboEdit.glb" id="1_313n2"]
 [ext_resource type="Script" uid="uid://8ald8y070p6" path="res://Scripts/gazebo.gd" id="1_piy7q"]
-[ext_resource type="Shader" uid="uid://dik4ajeh61bsn" path="res://Scripts/shader.gdshader" id="2_piy7q"]
+[ext_resource type="Shader" uid="uid://bbwikcmfirh0g" path="res://Scripts/StrictShader.gdshader" id="3_5ekmt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5ekmt"]
 render_priority = 0
-shader = ExtResource("2_piy7q")
-shader_parameter/base_color = Color(0.5847179, 0.9676589, 0.5116678, 1)
+shader = ExtResource("3_5ekmt")
+shader_parameter/base_color = Color(0.40784314, 0.63529414, 0.64705884, 1)
 shader_parameter/shadow_color = Color(0.37254903, 0.42352942, 0.5568628, 1)
-shader_parameter/highlight_color = Color(0.5800856, 0.8192399, 0.53436303, 1)
+shader_parameter/highlight_color = Color(0.41568628, 0.7254902, 0.5803922, 1)
 shader_parameter/shadow_threshold = 0.7
-shader_parameter/highlight_threshold = 0.85
-shader_parameter/master_alpha = 0.9
+shader_parameter/highlight_threshold = 0.9
+shader_parameter/master_alpha = 1.0
+shader_parameter/light_direction = Vector3(1, 2, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yt2kp"]
 size = Vector3(174.434, 20, 455.809)

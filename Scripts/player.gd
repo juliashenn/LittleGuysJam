@@ -25,7 +25,8 @@ const FOV_CHANGE = 0.75
 @onready var ui: UI = $UI
 @export var bird_marker: Marker3D
 @onready var ambience: AudioStreamPlayer3D = $ambience
-
+@onready var footsteps: AudioStreamPlayer3D = $footsteps
+@onready var wand_sound: AudioStreamPlayer3D = $wandSound
 var has_bird_following := false
 
 var found_birds : Array[Bird] = []
@@ -44,6 +45,39 @@ func _unhandled_input(event):
 	#if event is InputEventMouseButton:
 		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		##get_tree().paused = false
+
+@export var step_interval: float = 0.5
+var step_timer := 0.3
+
+var last_sound 
+var sounds = [
+	preload("res://Assets/Walk/Grass/GRASS - Walk 1.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 2.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 3.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 4.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 5.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 6.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 7.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 8.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 1.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 2.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 3.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 4.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 5.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 6.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 7.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 8.wav"),
+]
+
+func play_random_footstep():
+	if sounds.size() == 0:
+		return
+	var new_sound = sounds.pick_random()
+	while new_sound == last_sound and sounds.size() > 1:
+		new_sound = sounds.pick_random()
+	last_sound = new_sound
+	footsteps.stream = new_sound
+	footsteps.play()
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("cancel"):
@@ -93,6 +127,17 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 	
+	if is_on_floor() and Vector2(velocity.x, velocity.z).length() > 0.5:
+		if velocity.length() > SPRINT_SPEED - 0.5:
+			step_timer -= 1.3 * delta
+		else:
+			step_timer -= delta
+		if step_timer <= 0:
+			play_random_footstep()
+			step_timer = step_interval
+	else:
+		step_timer = 0.3
+	
 	
 func _headbob(t) -> Vector3:
 	var pos = Vector3.ZERO
@@ -105,9 +150,12 @@ func conduct_anim():
 
 func poke_anim():
 	anim.play("poke")
+	
+
 
 func spell_anim():
 	anim.play("swirl")
+	wand_sound.play(0.0)
 
 func stop_anim():
 	anim.stop(false)
@@ -143,7 +191,8 @@ func blink():
 
 func add_bird(bird: Bird) -> int:
 	if found_birds.size() == 0:
-		give_dialogue(["Little birds can help you carry note sprites back", "press q to call them over one at a time"])
+		give_dialogue(["Little birds can help you carry note sprites to the stage", 
+		"Once a bird returns to the gazebo, press q to call them over one at a time",])
 	var n: int
 	if bird not in found_birds:
 		n = found_birds.size()

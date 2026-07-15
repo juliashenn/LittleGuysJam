@@ -7,6 +7,8 @@
 size = Vector3(0.29943848, 0.27490234, 0.30828857)
 
 [node name="WaterDrop" type="RigidBody3D" unique_id=1689167999 node_paths=PackedStringArray("audio", "mesh") groups=["grabbable"]]
+collision_layer = 5
+collision_mask = 6
 continuous_cd = true
 script = ExtResource("1_gf4bk")
 audio = NodePath("AudioStreamPlayer3D")
@@ -22,3 +24,4 @@ transform = Transform3D(-0.35, 0, -3.059797e-08, 0, 0.35, 0, 3.059797e-08, 0, -0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2013069252]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15129188, 0)
+volume_db = -15.413

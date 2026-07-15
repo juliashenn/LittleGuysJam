@@ -38,6 +38,8 @@ func _physics_process(delta: float) -> void:
 		angular_velocity = Vector3.ZERO 
 	
 func grab():
+	set_collision_layer_value(3, false)
+	set_collision_mask_value(3, false)
 	grabbed = true
 	#freeze_mode = RigidBody3D.FREEZE_MODE_KINEMATIC
 	freeze = false
@@ -45,6 +47,8 @@ func grab():
 	angular_velocity = Vector3.ZERO
 
 func drop():
+	set_collision_layer_value(3, true)
+	set_collision_mask_value(3, true)
 	grabbed = false
 	freeze = false
 	

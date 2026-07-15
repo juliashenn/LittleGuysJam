@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://beayf64ckollv" path="res://Assets/violin (2)/violinEdit.glb" id="1_bufdo"]
 [ext_resource type="Script" uid="uid://bfdcqep6ccsq6" path="res://Scripts/instrument.gd" id="1_y3wmp"]
-[ext_resource type="AudioStream" uid="uid://sxbyf6bu07vi" path="res://Sound/mixedViolin.wav" id="3_mr8ln"]
+[ext_resource type="AudioStream" uid="uid://cth6s01yhcyxc" path="res://Sound/mixedViolin.ogg" id="3_mr8ln"]
 
 [sub_resource type="Animation" id="Animation_y3wmp"]
 length = 0.001
@@ -192,11 +192,12 @@ hue_variation_max = 0.17
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1287141320]
 stream = ExtResource("3_mr8ln")
+volume_db = -15.413
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=921670603]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 3.8226233, -0.42986262)
 light_color = Color(0.99, 0.90684, 0.8118, 1)
-light_energy = 10.0
+light_energy = 3.0
 spot_angle = 25.071375
 
 [editable path="violinEdit"]

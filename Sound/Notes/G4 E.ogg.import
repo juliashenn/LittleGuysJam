@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqn46wae0mlii"
+path="res://.godot/imported/G4 E.ogg-b33f612a06973673b18e530a0348c190.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound/Notes/G4 E.ogg"
+dest_files=["res://.godot/imported/G4 E.ogg-b33f612a06973673b18e530a0348c190.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
