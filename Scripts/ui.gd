@@ -115,6 +115,7 @@ func show_settings():
 	if ending:
 		return
 	player.freeze()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	settings.visible = true
 
 
@@ -127,6 +128,7 @@ func _on_h_slider_value_changed(value: float) -> void:
 func _on_close_pressed() -> void:
 	player.unfreeze()
 	settings.visible = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func show_end():
 	player.freeze()
@@ -146,6 +148,7 @@ func intro():
 
 func _on_start_pressed() -> void:
 	start.visible = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	manager.start()
 	await manager.cutscene_anim.animation_finished
 	var tween = create_tween()

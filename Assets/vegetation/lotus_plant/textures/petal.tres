@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b3n7f7m3p58p8"]
+
+[resource]
+resource_name = "petal"
+cull_mode = 2
+metallic_texture_channel = 2
+roughness_texture_channel = 1
+metadata/_gltf_primary_texture_coord = 0

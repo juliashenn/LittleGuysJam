@@ -39,7 +39,30 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"VASE2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/vegetation/lotus_plant/textures/VASE2.tres",
+"use_external/path": "uid://cigcb8wq7bq2i"
+},
+"flower_xin": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/vegetation/lotus_plant/textures/flower_xin.tres",
+"use_external/path": "uid://dxmn0nes6rwnf"
+},
+"petal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/vegetation/lotus_plant/textures/petal.tres",
+"use_external/path": "uid://b3n7f7m3p58p8"
+},
+"stem": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/vegetation/lotus_plant/textures/stem.tres",
+"use_external/path": "uid://dc50vjf5cbp6h"
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

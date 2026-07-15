@@ -3,8 +3,8 @@ class_name Bird
 
 @onready var interactable: Interactable = $Area3D
 @onready var marker: Marker3D = $Marker3D
-@onready var heart: Node3D = $"PUMPING HEART MODEL"
 @onready var heart_anim: AnimationPlayer = $AnimationPlayer
+@onready var heart: Node3D = $heart
 
 @export var fly_speed: float = 10.0
 @export var bird_ind: int

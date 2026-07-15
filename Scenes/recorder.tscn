@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://rq8w5nybu10x"]
 
 [ext_resource type="Script" uid="uid://c7vv2lelexeqt" path="res://Scripts/recordPlayer.gd" id="1_rm32i"]
-[ext_resource type="PackedScene" uid="uid://dcct2s64uo2tx" path="res://Assets/vintage_gramophone_game-asset_by_rigdhi/scene.gltf" id="2_b88mk"]
 [ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="3_b88mk"]
+[ext_resource type="PackedScene" uid="uid://biw5dvv5lx4u6" path="res://Assets/phonograph_record_player/scene.gltf" id="3_hyly4"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c7e87"]
 radius = 0.77736306
@@ -15,20 +15,6 @@ size = Vector3(0.44335938, 1, 0.46240234)
 
 [node name="Record Player" type="Node3D" unique_id=1496842421]
 script = ExtResource("1_rm32i")
-
-[node name="Sketchfab_Scene" parent="." unique_id=801131626 instance=ExtResource("2_b88mk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.10339764, 0)
-
-[node name="Skeleton3D" parent="Sketchfab_Scene/Sketchfab_model/63afb7bae30e48289de38290f2be2373_fbx/Object_2/RootNode/Armature/Object_7" parent_id_path=PackedInt32Array(801131626, 564070640) index="0" unique_id=1249181772]
-bones/2/rotation = Quaternion(8.940695e-08, 3.1786513e-08, 1.0658139e-14, -1)
-bones/3/rotation = Quaternion(2.646978e-23, -3e-45, 1.696051e-29, 1)
-bones/4/rotation = Quaternion(-0.33653215, -0.42555106, 0.65233475, 0.52925587)
-
-[node name="Object_10" parent="Sketchfab_Scene/Sketchfab_model/63afb7bae30e48289de38290f2be2373_fbx/Object_2/RootNode/Armature/Object_7/Skeleton3D" index="0" unique_id=1780079811]
-layers = 4
-
-[node name="Object_12" parent="Sketchfab_Scene/Sketchfab_model/63afb7bae30e48289de38290f2be2373_fbx/Object_2/RootNode/Armature/Object_7/Skeleton3D" index="1" unique_id=1990722519]
-layers = 4
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2015714393]
 volume_db = -16.147
@@ -67,5 +53,11 @@ collision_layer = 3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1274305591]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013671875, 0.4085469, -0.008056641)
 shape = SubResource("BoxShape3D_c7e87")
+
+[node name="Sketchfab_Scene" parent="." unique_id=791006758 instance=ExtResource("3_hyly4")]
+transform = Transform3D(1.0459, 0, -1.0752178, 0, 1.5, 0, 1.0752178, 0, 1.0459, 0, 0, 0)
+
+[node name="pCube2_lambert1_0" parent="Sketchfab_Scene/Sketchfab_model/bba49edda2bb4f9a8ffd9a68d340ba93_fbx/RootNode/pCube2" parent_id_path=PackedInt32Array(791006758, 1025615899) index="0" unique_id=2052965881]
+layers = 4
 
 [editable path="Sketchfab_Scene"]

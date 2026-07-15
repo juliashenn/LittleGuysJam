@@ -3,10 +3,7 @@
 [ext_resource type="Script" uid="uid://pkp3p63at1vg" path="res://Scripts/cloud.gd" id="1_lgnxl"]
 [ext_resource type="PackedScene" uid="uid://csekk8stq7bjn" path="res://Assets/stylize_clouds/scene.gltf" id="1_sm7h7"]
 [ext_resource type="PackedScene" uid="uid://bty0aodt8jxnf" path="res://Scenes/water_drop.tscn" id="3_pdgc3"]
-[ext_resource type="PackedScene" uid="uid://dcd088340l807" path="res://Assets/vegetation/raingardenandwater/scene.gltf" id="5_xmwcc"]
-[ext_resource type="PackedScene" uid="uid://byec3bxgupxt2" path="res://Assets/vegetation/rain_garden_3/scene.gltf" id="6_sdvkw"]
 [ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="6_xmwcc"]
-[ext_resource type="PackedScene" uid="uid://xwwvxs4o7tv" path="res://Assets/vegetation/rain_garden_v2/scene.gltf" id="7_ibnag"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c7e87"]
 radius = 9.200883
@@ -42,14 +39,5 @@ interact_name = "Awaken the Raincloud"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=468812968]
 shape = SubResource("SphereShape3D_c7e87")
-
-[node name="Sketchfab_Scene2" parent="." unique_id=323139516 instance=ExtResource("5_xmwcc")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -7, 0, -7)
-
-[node name="Sketchfab_Scene3" parent="." unique_id=1420816699 instance=ExtResource("6_sdvkw")]
-transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, -7, 0, 12)
-
-[node name="Sketchfab_Scene4" parent="." unique_id=1612335459 instance=ExtResource("7_ibnag")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -7, 0, -7)
 
 [editable path="Sketchfab_Scene"]

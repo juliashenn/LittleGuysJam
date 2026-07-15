@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
-mouse_cursor/custom_image="uid://b1512t4jyt66s"
+mouse_cursor/custom_image="uid://c2hgs51d167dy"
 
 [global_group]
 

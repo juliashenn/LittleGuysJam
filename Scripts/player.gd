@@ -34,7 +34,7 @@ var enabled := true
 
 #func _ready():
 	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	#
+	##
 func _unhandled_input(event):
 	if not enabled:
 		return
@@ -51,22 +51,22 @@ var step_timer := 0.3
 
 var last_sound 
 var sounds = [
-	preload("res://Assets/Walk/Grass/GRASS - Walk 1.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk 2.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk 3.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk 4.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk 5.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk 6.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk 7.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk 8.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk short 1.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk short 2.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk short 3.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk short 4.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk short 5.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk short 6.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk short 7.wav"),
-	preload("res://Assets/Walk/Grass/GRASS - Walk short 8.wav"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 1.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 2.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 3.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 4.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 5.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 6.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 7.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk 8.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 1.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 2.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 3.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 4.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 5.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 6.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 7.ogg"),
+	preload("res://Assets/Walk/Grass/GRASS - Walk short 8.ogg"),
 ]
 
 func play_random_footstep():

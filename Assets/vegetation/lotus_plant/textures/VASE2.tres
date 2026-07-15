@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cigcb8wq7bq2i"]
+
+[resource]
+resource_name = "VASE2"
+cull_mode = 2
+albedo_color = Color(0.53240097, 0.7412173, 0.7891631, 1)
+roughness = 0.0863636

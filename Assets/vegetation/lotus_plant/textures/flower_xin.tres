@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dxmn0nes6rwnf"]
+
+[resource]
+resource_name = "flower_xin"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.7028998, 0.41825035, 1)
+roughness = 0.33

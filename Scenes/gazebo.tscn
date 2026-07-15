@@ -27,7 +27,7 @@ script = ExtResource("1_piy7q")
 [node name="gazeboEdit" parent="." unique_id=985472685 instance=ExtResource("1_313n2")]
 transform = Transform3D(0.016, 0, 0, 0, 0.016, 0, 0, 0, 0.016, 0, 0, 0)
 
-[node name="Gazebo" parent="gazeboEdit" index="0" unique_id=1876600754]
+[node name="Gazebo" parent="gazeboEdit" index="0" unique_id=756301389]
 surface_material_override/1 = SubResource("ShaderMaterial_5ekmt")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="gazeboEdit" unique_id=296999874]

@@ -173,7 +173,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_j1lyr")
 transform = Transform3D(0.8590808, -0.44858837, 0.24647294, -0.083151676, 0.35282964, 0.9319857, -0.5050407, -0.8211457, 0.26580822, 1.0369111, -0.5657455, -0.9322877)
 
 [node name="wand" parent="Head/Camera3D" unique_id=1417012209 instance=ExtResource("3_gntrk")]
-transform = Transform3D(0.9839656, -0.15955691, 0.07969488, -0.057159726, 0.14115345, 0.9883363, -0.16894491, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
+transform = Transform3D(0.9839655, -0.15955691, 0.07969488, -0.057159726, 0.14115345, 0.9883363, -0.1689449, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
 
 [node name="GrabPoint" type="Marker3D" parent="Head/Camera3D" unique_id=1784595468]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16156769, -2.0738106)

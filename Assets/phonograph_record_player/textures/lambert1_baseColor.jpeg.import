@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxq6ucejt64m6"
-path.s3tc="res://.godot/imported/Material_57_baseColor.png-d9f16c0a451d90c2485460d033486318.s3tc.ctex"
+uid="uid://bgm34vf43cg2h"
+path.s3tc="res://.godot/imported/lambert1_baseColor.jpeg-d2503268b7845480c893dd6f49c368a8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/way_path_blocks/textures/Material_57_baseColor.png"
-dest_files=["res://.godot/imported/Material_57_baseColor.png-d9f16c0a451d90c2485460d033486318.s3tc.ctex"]
+source_file="res://Assets/phonograph_record_player/textures/lambert1_baseColor.jpeg"
+dest_files=["res://.godot/imported/lambert1_baseColor.jpeg-d2503268b7845480c893dd6f49c368a8.s3tc.ctex"]
 
 [params]
 

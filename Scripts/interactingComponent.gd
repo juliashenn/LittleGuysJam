@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 		var target = get_nearest_interactable()
 		if target:
 			if target.interact_name and interact_label:
-				interact_label.text = "[E]" + target.interact_name
+				interact_label.text = "E - " + target.interact_name
 				interact_label.show()
 		else:
 			if interact_label:

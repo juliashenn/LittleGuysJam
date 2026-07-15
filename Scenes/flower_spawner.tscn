@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bpoha66lh0cm2" path="res://Assets/little_pond__fish/scene.gltf" id="2_48ari"]
 [ext_resource type="PackedScene" uid="uid://cwkdey3a4cku5" path="res://Scenes/flower.tscn" id="3_ukpqs"]
 [ext_resource type="Shader" uid="uid://bbwikcmfirh0g" path="res://Scripts/StrictShader.gdshader" id="3_wpsby"]
+[ext_resource type="PackedScene" uid="uid://bwo0n43tmjdao" path="res://Assets/vegetation/lotus_plant/scene.gltf" id="5_tvjqg"]
 [ext_resource type="Script" uid="uid://hshwdww0eufg" path="res://Scripts/interactable.gd" id="6_tvjqg"]
-[ext_resource type="PackedScene" uid="uid://beds033pjflhy" path="res://Assets/ga_free_201_ancient_white_lotus_flower_clustertt/scene.gltf" id="6_ukpqs"]
 [ext_resource type="PackedScene" uid="uid://ck7t5rjxe2bmf" path="res://Assets/fishing_gecko/scene.gltf" id="7_tvjqg"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tvjqg"]
@@ -449,29 +449,59 @@ shape = SubResource("BoxShape3D_c7e87")
 [node name="FakeFlowers" type="Node3D" parent="." unique_id=1341365848]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4763079, 0, 2.0527544)
 
-[node name="Sketchfab_Scene5" parent="FakeFlowers" unique_id=1575668223 instance=ExtResource("6_ukpqs")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8.363453, -0.8137814, 1.9512811)
+[node name="Sketchfab_Scene" parent="FakeFlowers" unique_id=1107470232 instance=ExtResource("5_tvjqg")]
+transform = Transform3D(1.4974526, 0, 1.3257586, 0, 2, 0, -1.3257586, 0, 1.4974526, -8.149443, -0.407264, 2.1787872)
 
-[node name="Sketchfab_Scene6" parent="FakeFlowers" unique_id=1640829139 instance=ExtResource("6_ukpqs")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.033552, -0.8137809, 8.047569)
+[node name="Object_40" parent="FakeFlowers/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/���������_010_21" parent_id_path=PackedInt32Array(1107470232, 1926210284) index="0" unique_id=850402620]
+visible = false
 
-[node name="Sketchfab_Scene7" parent="FakeFlowers" unique_id=940535069 instance=ExtResource("6_ukpqs")]
-transform = Transform3D(1.3014907, 0, 1.5185921, 0, 2, 0, -1.5185921, 0, 1.3014907, -7.7967606, -0.8137809, 9.224182)
+[node name="Sketchfab_Scene2" parent="FakeFlowers" unique_id=1104875011 instance=ExtResource("5_tvjqg")]
+transform = Transform3D(1.4974526, 0, 1.3257586, 0, 2, 0, -1.3257586, 0, 1.4974526, -10.558628, -0.407264, -8.251377)
 
-[node name="Sketchfab_Scene8" parent="FakeFlowers" unique_id=1771302389 instance=ExtResource("6_ukpqs")]
-transform = Transform3D(1.3014907, 0, 1.5185921, 0, 2, 0, -1.5185921, 0, 1.3014907, 7.5627995, -0.8137809, 3.5001206)
+[node name="Object_40" parent="FakeFlowers/Sketchfab_Scene2/Sketchfab_model/root/GLTF_SceneRootNode/���������_010_21" parent_id_path=PackedInt32Array(1104875011, 1926210284) index="0" unique_id=850402620]
+visible = false
 
-[node name="Sketchfab_Scene9" parent="FakeFlowers" unique_id=1756480477 instance=ExtResource("6_ukpqs")]
-transform = Transform3D(1.9888982, 0, 0.21043801, 0, 2, 0, -0.21043801, 0, 1.9888982, 5.9727807, -0.8137809, -11.414236)
+[node name="Sketchfab_Scene3" parent="FakeFlowers" unique_id=1001907416 instance=ExtResource("5_tvjqg")]
+transform = Transform3D(1.5863756, 0, -1.2179544, 0, 2, 0, 1.2179544, 0, 1.5863756, -10.874564, -0.407264, -8.010238)
 
-[node name="Sketchfab_Scene10" parent="FakeFlowers" unique_id=376476606 instance=ExtResource("6_ukpqs")]
-transform = Transform3D(-1.4894881, 0, 1.3347005, 0, 2, 0, -1.3347005, 0, -1.4894881, 4.50997, -0.8137809, -10.77823)
+[node name="Object_40" parent="FakeFlowers/Sketchfab_Scene3/Sketchfab_model/root/GLTF_SceneRootNode/���������_010_21" parent_id_path=PackedInt32Array(1001907416, 1926210284) index="0" unique_id=850402620]
+visible = false
 
-[node name="Sketchfab_Scene11" parent="FakeFlowers" unique_id=2043351378 instance=ExtResource("6_ukpqs")]
-transform = Transform3D(-1.4894881, 0, 1.3347005, 0, 2, 0, -1.3347005, 0, -1.4894881, -6.683746, -0.8137809, -11.477837)
+[node name="Sketchfab_Scene4" parent="FakeFlowers" unique_id=1491979137 instance=ExtResource("5_tvjqg")]
+transform = Transform3D(-0.719988, 0, -1.8659095, 0, 2, 0, 1.8659095, 0, -0.719988, 0.29536533, -0.407264, -11.463426)
 
-[node name="Sketchfab_Scene12" parent="FakeFlowers" unique_id=1167076066 instance=ExtResource("6_ukpqs")]
-transform = Transform3D(-0.5100048, 0, 1.9338809, 0, 2, 0, -1.9338809, 0, -0.5100048, -8.178364, -0.8137809, -9.601616)
+[node name="Object_40" parent="FakeFlowers/Sketchfab_Scene4/Sketchfab_model/root/GLTF_SceneRootNode/���������_010_21" parent_id_path=PackedInt32Array(1491979137, 1926210284) index="0" unique_id=850402620]
+visible = false
+
+[node name="Sketchfab_Scene5" parent="FakeFlowers" unique_id=122906973 instance=ExtResource("5_tvjqg")]
+transform = Transform3D(1.6311053, 0, -1.1573658, 0, 2, 0, 1.1573658, 0, 1.6311053, 0.8259139, -0.407264, -10.756555)
+
+[node name="Object_40" parent="FakeFlowers/Sketchfab_Scene5/Sketchfab_model/root/GLTF_SceneRootNode/���������_010_21" parent_id_path=PackedInt32Array(122906973, 1926210284) index="0" unique_id=850402620]
+visible = false
+
+[node name="Sketchfab_Scene6" parent="FakeFlowers" unique_id=1173506876 instance=ExtResource("5_tvjqg")]
+transform = Transform3D(-0.57674843, 0, 1.9150355, 0, 2, 0, -1.9150355, 0, -0.57674843, 0.5361295, -0.407264, -11.470596)
+
+[node name="Object_40" parent="FakeFlowers/Sketchfab_Scene6/Sketchfab_model/root/GLTF_SceneRootNode/���������_010_21" parent_id_path=PackedInt32Array(1173506876, 1926210284) index="0" unique_id=850402620]
+visible = false
+
+[node name="Sketchfab_Scene7" parent="FakeFlowers" unique_id=2122413020 instance=ExtResource("5_tvjqg")]
+transform = Transform3D(-0.719988, 0, -1.8659095, 0, 2, 0, 1.8659095, 0, -0.719988, 6.487356, -0.4072621, 5.7359753)
+
+[node name="Object_40" parent="FakeFlowers/Sketchfab_Scene7/Sketchfab_model/root/GLTF_SceneRootNode/���������_010_21" parent_id_path=PackedInt32Array(2122413020, 1926210284) index="0" unique_id=850402620]
+visible = false
+
+[node name="Sketchfab_Scene8" parent="FakeFlowers" unique_id=1490797663 instance=ExtResource("5_tvjqg")]
+transform = Transform3D(1.6311053, 0, -1.1573658, 0, 2, 0, 1.1573658, 0, 1.6311053, 7.0179043, -0.4072621, 6.4428463)
+
+[node name="Object_40" parent="FakeFlowers/Sketchfab_Scene8/Sketchfab_model/root/GLTF_SceneRootNode/���������_010_21" parent_id_path=PackedInt32Array(1490797663, 1926210284) index="0" unique_id=850402620]
+visible = false
+
+[node name="Sketchfab_Scene9" parent="FakeFlowers" unique_id=817457740 instance=ExtResource("5_tvjqg")]
+transform = Transform3D(-0.57674843, 0, 1.9150355, 0, 2, 0, -1.9150355, 0, -0.57674843, 6.728121, -0.4072621, 5.7288046)
+
+[node name="Object_40" parent="FakeFlowers/Sketchfab_Scene9/Sketchfab_model/root/GLTF_SceneRootNode/���������_010_21" parent_id_path=PackedInt32Array(817457740, 1926210284) index="0" unique_id=850402620]
+visible = false
 
 [node name="gekko" parent="." unique_id=332197065 instance=ExtResource("7_tvjqg")]
 transform = Transform3D(-0.7901573, 0, -0.612904, 0, 1, 0, 0.612904, 0, -0.7901573, 12.522456, -0.17200118, -5.259756)
@@ -628,5 +658,13 @@ shape = SubResource("BoxShape3D_cwb4t")
 [editable path="Sketchfab_Scene"]
 [editable path="Sketchfab_Scene2"]
 [editable path="Sketchfab_Scene3"]
+[editable path="FakeFlowers/Sketchfab_Scene"]
+[editable path="FakeFlowers/Sketchfab_Scene2"]
+[editable path="FakeFlowers/Sketchfab_Scene3"]
+[editable path="FakeFlowers/Sketchfab_Scene4"]
 [editable path="FakeFlowers/Sketchfab_Scene5"]
+[editable path="FakeFlowers/Sketchfab_Scene6"]
+[editable path="FakeFlowers/Sketchfab_Scene7"]
+[editable path="FakeFlowers/Sketchfab_Scene8"]
+[editable path="FakeFlowers/Sketchfab_Scene9"]
 [editable path="gekko"]
