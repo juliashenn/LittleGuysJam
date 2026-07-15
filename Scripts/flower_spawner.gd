@@ -5,7 +5,7 @@ extends Spawner
 var player: Player
 
 func _ready() -> void:
-	interactable.is_interactable = true
+	interactable.is_interactable = false
 	interactable.interact = awaken
 	
 	gekko_interactable.is_interactable = true
@@ -22,6 +22,9 @@ func awaken():
 func reset():
 	interactable.is_interactable = true
 	clear()
+	
+func disable():
+	interactable.is_interactable = false
 
 func gekko():
 	gekko_interactable.is_interactable = false

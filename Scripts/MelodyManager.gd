@@ -40,6 +40,8 @@ func set_up_melody():
 	stump_spawner.spawn()
 	player.global_position = Vector3(0,0.173, 4.777)
 	player.look_at(Vector3.ZERO, Vector3.UP)
+	if curr_level > 1:
+		player.give_dialogue(["the record player has a new melody"])
 	#spawn()
 
 var completion_dialogue : Array[String] = [
@@ -61,7 +63,9 @@ func melody_solved():
 			cutscene_anim.play("final")
 			return
 	else:
-		player.give_dialogue(["You've learned to conduct the little note sprites", "now, help the sleeping instruments remember their melodies"])
+		player.give_dialogue(["You've learned to conduct the little note sprites", 
+		"now, help the sleeping instruments remember their melodies",
+		"go back to the record player to learn the next melody"])
 	player.blink()
 	curr_level += 1
 	stump_spawner.clear()
@@ -76,8 +80,11 @@ func clear_spawner():
 
 func reset_spawners():
 	water_spawner.reset()
-	mushroom_spawner.reset()
-	flower_spawner.reset()
+	if curr_level > 1:
+		flower_spawner.reset()
+	if curr_level > 2:
+		mushroom_spawner.reset()
+	
 
 func spawn():
 	# each spawner should have their own trigger but for now

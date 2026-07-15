@@ -42,8 +42,9 @@ func _unhandled_input(event):
 		head.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
-	#if event is InputEventMouseButton:
-		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if event is InputEventMouseButton:
+		if not ui.settings.visible:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		##get_tree().paused = false
 
 @export var step_interval: float = 0.5
@@ -191,8 +192,9 @@ func blink():
 
 func add_bird(bird: Bird) -> int:
 	if found_birds.size() == 0:
-		give_dialogue(["Little birds can help you carry note sprites to the stage", 
-		"Once a bird returns to the gazebo, press q to call them over one at a time",])
+		give_dialogue(["Little birds can help you carry note sprites to the stage...", 
+		"Once a bird returns to the gazebo, press q to call them over one at a time...",
+		"Drag a note to the bird, and it'll carry it back for you"])
 	var n: int
 	if bird not in found_birds:
 		n = found_birds.size()

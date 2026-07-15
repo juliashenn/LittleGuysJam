@@ -892,7 +892,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17270482, 4.7769804)
 layers = 4
 
 [node name="wand" parent="CharacterBody3D/Head/Camera3D" parent_id_path=PackedInt32Array(841984925, 1282670836) index="2" unique_id=1417012209]
-transform = Transform3D(0.9839653, -0.15955691, 0.07969488, -0.05715971, 0.14115345, 0.9883363, -0.16894485, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
+transform = Transform3D(0.9839652, -0.15955691, 0.07969488, -0.057159707, 0.14115345, 0.9883363, -0.16894484, -0.9770453, 0.12977006, 1.0930812, -0.5579251, -0.9446107)
 
 [node name="UI" parent="CharacterBody3D" index="8" unique_id=1968195755 node_paths=PackedStringArray("player", "manager")]
 player = NodePath("..")

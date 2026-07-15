@@ -40,7 +40,6 @@ func spawn():
 		stump_obj.position = Vector3(cos(ang), 0, sin(ang)) * radius
 		stump_obj.rotation.y = ang 
 		add_child(stump_obj)
-		print(stump_obj.global_rotation)
 		
 func check_solution():
 	if not melody:

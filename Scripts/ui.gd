@@ -51,7 +51,6 @@ func credits():
 
 func fadeToBlack():
 	black.visible = true
-	print("fading to")
 	anim.play("fadeToBlack")
 	await anim.animation_finished
 	
@@ -61,6 +60,9 @@ func fadeFromBlack():
 	black.visible = false
 	
 func show_dialogue(strs: Array[String]):
+	if dialogue.visible:
+		dialogue_lines += strs
+		return
 	#player.freeze()
 	#player.enabled = false
 	dialogue.visible = true
@@ -163,16 +165,18 @@ func _on_reset_water_pressed() -> void:
 	player.give_dialogue(["water drops have returned to their slumber"])
 
 func _on_reset_flower() -> void:
-	manager.flower_spawner.reset()
-	player.unfreeze()
-	settings.visible = false
-	player.give_dialogue(["flowers have returned to their slumber"])
+	if manager.curr_level > 1:
+		manager.flower_spawner.reset()
+		player.unfreeze()
+		settings.visible = false
+		player.give_dialogue(["flowers have returned to their slumber"])
 
 func _on_reset_mushroom() -> void:
-	manager.mushroom_spawner.reset()
-	player.unfreeze()
-	settings.visible = false
-	player.give_dialogue(["mushrooms have returned to their slumber"])
+	if manager.curr_level > 2:
+		manager.mushroom_spawner.reset()
+		player.unfreeze()
+		settings.visible = false
+		player.give_dialogue(["mushrooms have returned to their slumber"])
 
 
 func _on_skip_to_end_pressed() -> void:

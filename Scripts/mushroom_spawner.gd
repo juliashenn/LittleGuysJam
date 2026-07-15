@@ -1,10 +1,10 @@
 extends Spawner
 @onready var interactable: Interactable = $Area3D
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	interactable.is_interactable = true
+	interactable.is_interactable = false
 	interactable.interact = light_fire
+	
 
 func light_fire():
 	interactable.is_interactable = false
@@ -16,3 +16,6 @@ func light_fire():
 func reset():
 	clear()
 	interactable.is_interactable = true
+
+func disable():
+	interactable.is_interactable = false

@@ -453,6 +453,7 @@ offset_right = -138.0
 offset_bottom = -47.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/line_separation = 7
 theme_override_constants/outline_size = 3
 theme_override_fonts/normal_font = ExtResource("2_qdvrb")
 theme_override_font_sizes/normal_font_size = 24

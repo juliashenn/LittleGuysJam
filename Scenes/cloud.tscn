@@ -18,19 +18,19 @@ noteType = "Q"
 [node name="Sketchfab_Scene" parent="." unique_id=99985599 instance=ExtResource("1_sm7h7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24793577, 0, 1.7239082)
 
-[node name="Sketchfab_model" parent="Sketchfab_Scene" index="0" unique_id=758403000]
+[node name="Sketchfab_model" parent="Sketchfab_Scene" index="0" unique_id=1831713817]
 transform = Transform3D(3, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0, 0)
 
-[node name="Cube_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 1541339133) index="0" unique_id=2073212958]
+[node name="Cube_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 628639611) index="0" unique_id=802924925]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="Object_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cube_4" index="0" unique_id=1442292334]
+[node name="Object_4" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Cube_4" index="0" unique_id=1557499722]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8418285, -4.351738e-08, 0.9955616)
 
-[node name="Cube_001_5" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 1541339133) index="1" unique_id=613575571]
+[node name="Cube_001_5" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 628639611) index="1" unique_id=1481269989]
 visible = false
 
-[node name="Cube_002_6" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 1541339133) index="2" unique_id=1225849940]
+[node name="Cube_002_6" parent="Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode" parent_id_path=PackedInt32Array(99985599, 628639611) index="2" unique_id=796443498]
 visible = false
 
 [node name="Area3D" type="Area3D" parent="." unique_id=482328205]
