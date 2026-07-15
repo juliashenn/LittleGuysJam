@@ -28,6 +28,7 @@ var is_typing := false
 @onready var end: Control = $end
 var ending := false
 @onready var esc: Label = $esc
+@onready var progress_text: RichTextLabel = $dialogue/instruction/progress
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -36,12 +37,14 @@ func _ready() -> void:
 	start.visible = true
 	credit.visible = false
 	settings.visible = false
+	dialogue.visible = false
 	#await get_tree().create_timer(0.5).timeout
 	#player.freeze()
 	#show_dialogue("hihi")
 	#credits()
 	
 func credits():
+	start_song.stop()
 	ending = true
 	esc.visible = false
 	credit.visible = true
@@ -62,6 +65,7 @@ func fadeFromBlack():
 func show_dialogue(strs: Array[String]):
 	if dialogue.visible:
 		dialogue_lines += strs
+		progress_text.text = str(current_line + 1) + "/" + str(dialogue_lines.size())
 		return
 	#player.freeze()
 	#player.enabled = false
@@ -77,7 +81,19 @@ func start_line(str: String):
 	is_typing = true
 	label.text = ""
 	set_process(true)
+	progress_text.text = str(current_line + 1) + "/" + str(dialogue_lines.size())
 
+#func type_line():
+	#while char_index < full_text.length():
+		#if not is_typing:
+			#break
+		#current_text += full_text[char_index]
+		#label.text = current_text
+		#char_index += 1
+		#await get_tree().create_timer(typing_speed).timeout
+	#label.text = full_text  # ensure full text always shows at end
+	#is_typing = false
+	
 func _process(delta):
 	if not is_typing:
 		return

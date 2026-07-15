@@ -6,20 +6,16 @@ class_name Instrument
 @export var audio: AudioStreamPlayer3D
 @onready var light: SpotLight3D = $SpotLight3D
 
-var awakened := false
-
 func _ready() -> void:
 	light.visible = false
 
 
 func awake():
 	anim.play("awake")
-	awakened = true
 
 func play():
 	light.visible = true
-	if awakened:
-		audio.play(0.0)
+	audio.play(0.0)
 	start_particles()
 	anim.play("playing")
 
@@ -36,3 +32,8 @@ func stop_particles():
 func sleep():
 	anim.play("RESET")
 	stop_particles()
+
+func start_play_anim():
+	light.visible = true
+	anim.play("playing")
+	start_particles()

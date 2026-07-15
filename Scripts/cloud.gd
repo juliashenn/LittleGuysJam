@@ -20,7 +20,7 @@ func awaken():
 		player.give_dialogue(["Place the little guys on the tree stumps in the order you heard them",
 		"left click to hear a little guy's note",
 		"hold right to grab and move them",
-		"lost a little guy? press esc to restart the note spawners"])
+		"lost a little guy? press M to restart the note spawners"])
 		
 func reset():
 	interactable.is_interactable = true

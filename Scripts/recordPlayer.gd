@@ -10,9 +10,11 @@ var first_time := true
 var level := 0
 var player: Player
 var dialogues: Dictionary[int, String] = {
-	0:"Awaken the Raincloud to summon little notes",
+	0:"Awaken the Raincloud to summon quarter-note sprites",
+	1: "Sounds like more quarter-note sprites",
 	2:"Awaken the Flowers to bloom half-note sprites",
-	3:"Awaken the Mushrooms for bouncy eighth notes"
+	3:"You'll need both water and mushroom sprites for this melody",
+	4:"Gather every kind of sprite for this final melody"
 }
 func _ready() -> void:
 	audiostream.stream = load(melody.audioFile)

@@ -11,7 +11,7 @@ class_name Bird
 @export var birds: Array[Node3D] = []
 @export var anims: Array[AnimationPlayer] = []
 var anim_prefix: String = ""
-var found_bird_num: int
+var found_bird_num: int = -1
 var holding_note: Grabbable
 var discovered: bool = false
 var gazebo: Gazebo
@@ -31,11 +31,14 @@ func _ready() -> void:
 
 func on_interact():
 	heart_anim.play("heart")
-	discovered = true
-	found_bird_num = player.add_bird(self)
-	interactable.is_interactable = false
-	await get_tree().create_timer(1.0).timeout
-	return_to_base()
+	if not discovered:
+		discovered = true
+		interactable.is_interactable = false
+		found_bird_num = player.add_bird(self)
+		interactable.key = "Q - "
+		interactable.interact_name = "Call Bird Over"
+		await get_tree().create_timer(1.0).timeout
+		return_to_base()
 
 func set_bird(i: int):
 	bird_ind = i
@@ -70,6 +73,8 @@ func _process(delta: float) -> void:
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if discovered and body is Grabbable and not holding_note:
 		var obj = body as Grabbable
+		if not obj.grabbed:
+			return
 		holding_note = obj
 		obj.drop()
 		
@@ -95,6 +100,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 func go_to_player():
 	heading_home = false
 	following_player = true
+	interactable.is_interactable = false
 	fly()
 	if active_tween: active_tween.kill()
 	var distance = (global_position - player.bird_marker.global_position).length()
@@ -129,6 +135,7 @@ func return_to_base():
 		active_tween.tween_property(self, "global_position", gazebo.markers[found_bird_num].global_position, 0.3*distance)
 		await active_tween.finished
 	idle()
+	interactable.is_interactable = true
 	heading_home = false
 
 func enable_heart():

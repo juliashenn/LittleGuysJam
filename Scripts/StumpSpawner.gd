@@ -44,6 +44,7 @@ func spawn():
 func check_solution():
 	if not melody:
 		return
+	var failed := false
 	var count = melody.notes.size()
 	player.conduct_anim()
 	for i in count:
@@ -57,12 +58,14 @@ func check_solution():
 			else:
 				spawned_stumps[i].incorrect_light()
 				obj.poke() # failed
-				await get_tree().create_timer(2.0).timeout
-				failed()
-				return
+				await get_tree().create_timer(noteToSec.get(note.Length)).timeout
+				failed = true
 		else:
-			failed()
-			return
+			await get_tree().create_timer(noteToSec.get(melody.notes[i].Length)).timeout
+			failed = true
+	if failed:
+		failed()
+		return
 	solved()
 	
 func failed():

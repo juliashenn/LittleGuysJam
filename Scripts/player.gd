@@ -6,7 +6,7 @@ const WALK_SPEED = 5.0
 const SPRINT_SPEED = 7.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.005
-const GRAVITY = 10.0
+const GRAVITY = 15.0
 
 #head bob
 const BOB_FREQ = 2.0
